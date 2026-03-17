@@ -31,9 +31,9 @@
 ?>
 <section id="services" style="<?php echo esc_attr($about_backg); ?>"  class="<?php echo esc_attr($img_bg); ?> position-relative">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-end mb-5">
             <div class="col-lg-6 col-md-6">
-                <div class="about-head section_main_head">
+                <div class="services-head section_main_head">
                     <?php if(get_theme_mod('internet_service_provider_pro_services_tagline')!=''){ ?>
                         <span class="section-tagline">
                             <?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_tagline')); ?>
@@ -63,7 +63,7 @@
                     for($i=1; $i<=$about_list_no; $i++)
                     {
                 ?>
-                <div class="col-lg-3 col-md-3 col-sm-6 mb-4 services-box text-center" data-aos="fade-up"
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-4 services-box" data-aos="fade-up"
                     data-aos-duration="2000">
                     <div class="services-block">
                         <?php if(get_theme_mod('internet_service_provider_pro_services_box_image'.$i)!=''){ ?>
@@ -77,14 +77,14 @@
                                             for($j=1; $j<=3; $j++)
                                             {
                                             ?>
-                                                <img src="<?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_customer_image'.$j.$i)); ?>"
+                                                <img src="<?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_customer_image'.$i.$j)); ?>"
                                             >
                                         <?php } ?>
                                         <span class="more-customer"><i class="fa-solid fa-plus"></i></span>
                                     </div>
                                 </div>
                                 <div class="pricing-box">
-                                    <div class="pricing-box-title d-flex align-items-center justify-content-between">
+                                    <div class="pricing-box-title d-flex align-items-center justify-content-between mb-2">
                                         <?php if(get_theme_mod('internet_service_provider_pro_services_box_start_now'.$i)!=''){ ?>
                                             <span class="start-now">
                                                 <?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_start_now'.$i)); ?>

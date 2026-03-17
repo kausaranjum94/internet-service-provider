@@ -2007,15 +2007,15 @@
 
     for($j=1;$j<=3;$j++)
     {
-      $wp_customize->add_setting('internet_service_provider_pro_services_box_customer_image'.$j.$i,array(
+      $wp_customize->add_setting('internet_service_provider_pro_services_box_customer_image'.$i.$j,array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
       ));
       $wp_customize->add_control(
-        new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_services_box_customer_image'.$j.$i,array(
+        new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_services_box_customer_image'.$i.$j,array(
         'label' => __('Add Image','internet-service-provider-pro'),
         'section' => 'internet_service_provider_pro_services',
-        'settings' => 'internet_service_provider_pro_services_box_customer_image'.$j.$i
+        'settings' => 'internet_service_provider_pro_services_box_customer_image'.$i.$j
       )));
     } 
 

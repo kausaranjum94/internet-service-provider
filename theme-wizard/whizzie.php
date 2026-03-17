@@ -1719,16 +1719,17 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
         for($i=1; $i<=3; $i++)
         {	
+			set_theme_mod( 'internet_service_provider_pro_services_box_image'.$i, get_template_directory_uri().'/assets/images/services/service'.$i.'.png');
         	set_theme_mod( 'internet_service_provider_pro_services_box_title'.$i, $services_title[$i-1] );
 			set_theme_mod( 'internet_service_provider_pro_services_box_text'.$i, $services_text[$i-1] );
 			set_theme_mod( 'internet_service_provider_pro_services_box_start_now'.$i, 'Start on' );
 			set_theme_mod( 'internet_service_provider_pro_services_box_start_now_pricing'.$i, $services_price[$i-1] );
-			for($i=1; $i<=3; $i++)
+			for($j=1; $j<=3; $j++)
         	{
-				set_theme_mod( 'internet_service_provider_pro_services_box_customer_image'.$i, get_template_directory_uri().'/assets/images/services/customer'.$i.'.png');
+				set_theme_mod( 'internet_service_provider_pro_services_box_customer_image'.$i.$j, get_template_directory_uri().'/assets/images/services/customer'.$j.'.png');
 			}
-			set_theme_mod( 'internet_service_provider_pro_services_icon_box_link_icon'.$i, 'fa-solid fa-arrow-right' );
-			set_theme_mod( 'internet_service_provider_pro_services_icon_box_link_icon_url'.$i, home_url('/contact') );
+			set_theme_mod( 'internet_service_provider_pro_services_box_link_icon'.$i, 'fa-solid fa-arrow-right' );
+			set_theme_mod( 'internet_service_provider_pro_services_box_link_icon_url'.$i, home_url('/contact') );
 		} 
 
 		// ------------- Why Choose Us -------------

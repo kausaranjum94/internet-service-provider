@@ -375,13 +375,119 @@ span.pricing-text2 {
   line-height: 27px;
   font-size: 16px;
 }
-
+/* ---------------------- Services ------------------------ */
 .about-image2 img {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   margin-top: 6em;
 }
+.section_main_head span.section-tagline {
+  padding: 7px 23px;
+  border: 1px solid var(--primary-color);
+  color: #1C1C1F;
+  font-weight: 500;
+  font-size: 16px;
+}
+span.section-text {
+  font-size: 20px;
+  max-width: 49%;
+  display: block;
+  margin: 0 0 0 auto;
+}
+.services-head {
+  max-width: 85%;
+}
+.section_main_head h3 {
+  color: #1C1C1F;
+  font-weight: 400;
+  font-size: 48px;
+}
+.services-block {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.services-block-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(212, 229, 236, 0) 22.42%, rgba(6, 182, 212, 0.76) 84.15%);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.pricing-box {
+  background-color: white;
+  max-width: 44%;
+  padding: 14px 17px;
+  text-align: center;
+  margin: 0 0 0 auto;
+  border-radius: 10px;
+}
+.pricing-box-title a i{
+    transform: rotate(-45deg);
+}
+span.start-now-pricing {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: -1px;
+    display: inline-block;
+}
+.start-now {
+  color: #1C1C1F;
+  font-weight: 300;
+}
+.services-block-bottom-content h6 {
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  max-width: 57%;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.services-block-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 37px;
+}
+.services-block-bottom-content .box-text {
+  font-size: 16px;
+  color: white;
+}
+.services-block:hover .services-block-content{
+  background: #1C1C1F;
+}
+.services-block-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+span.more-customer {
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 50%;
+  color: #1C1C1F;
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #1C1C1F;
+  margin-left: -13px;
+}
 
+.services-block-bottom-content {
+    padding-top: 22px;
+}
+.services-block:hover .services-block-bottom-content {
+    border-top: 1px solid #3C3C3C;
+}
 /* Why Choose us */
 #why-choose-us {
   background-color: var(--secondary-color);
