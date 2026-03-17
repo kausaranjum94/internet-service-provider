@@ -1570,7 +1570,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		
 
 		// -------------- Section Ordering ---------------
-		set_theme_mod( 'internet_service_provider_pro_section_ordering_settings_repeater', 'main-banner,about-us,why-choose-us,design-philosophy,kitchen-style,kitchen-tab,process,smart-storage,projects,testimonials,latest-news,sustainability-commitment,pormotional-banner,team,content-area');
+		set_theme_mod( 'internet_service_provider_pro_section_ordering_settings_repeater', 'main-banner,about-us,services,why-choose-us,design-philosophy,kitchen-style,kitchen-tab,process,smart-storage,projects,testimonials,latest-news,sustainability-commitment,pormotional-banner,team,content-area');
 
 		// topbar
 
@@ -1657,25 +1657,79 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			set_theme_mod( 'internet_service_provider_pro_main_banner_column_image_pricing_text', '$59/month' );
 			set_theme_mod( 'internet_service_provider_pro_main_banner_column_image_pricing_text2', '350 Mbps' );
 
+			set_theme_mod( 'internet_service_provider_pro_main_banner_column_image_pricing_link', '#' );
+
 			set_theme_mod( 'internet_service_provider_pro_main_banner_last_column_text', 'Work, stream & play without limits Feature Text' );
 
 			set_theme_mod( 'internet_service_provider_pro_main_banner_column_image2', get_template_directory_uri().'/assets/images/main-banner/main-banner-column2.png');
 
 			set_theme_mod( 'internet_service_provider_pro_main_banner_last_column_text2', 'Consistent speed with dependable uptime' );
 
+		// ------------  Our partner  ------------
+
+			set_theme_mod( 'internet_service_provider_pro_partner_heading', 'Trusted by thousands companies.' );
+
+			set_theme_mod( 'internet_service_provider_pro_partner_number', '6' );
+
+			for($i=1; $i<=6; $i++) {
+				set_theme_mod('internet_service_provider_pro_partner_image'.$i, get_template_directory_uri() . '/assets/images/partner/partner'.$i.'.png');
+				// set_theme_mod('internet_service_provider_pro_partner_hover_image'.$i, get_template_directory_uri() . '/assets/images/partner/partner-hover'.$i.'.png');
+			}
+
 		// ------------- About Us -------------
 
-			set_theme_mod( 'internet_service_provider_pro_about_us_tagline', 'Redefining the Heart of Your Home' );
-			set_theme_mod( 'internet_service_provider_pro_about_us_main_heading', 'Crafting kitchens that are as functional as they are beautiful, designed for the way you live.' );
+			set_theme_mod( 'internet_service_provider_pro_about_us_tagline', 'Who we are' );
+			set_theme_mod( 'internet_service_provider_pro_about_us_main_heading', 'The faces behind your fastest connection.' );
 
-			set_theme_mod( 'internet_service_provider_pro_about_us_text', 'At KitchenCraft Studio, we believe the kitchen is more than a place to cook — it’s the heart of the home. Our team of designers, craftsmen, and innovators work together to create modular kitchens that blend functionality, elegance, and individuality.' );
+			set_theme_mod( 'internet_service_provider_pro_about_us_text', 'At DataNest, we believe internet speed is essential. Our mission is to provide ultra-fast, reliable internet to homes and businesses.' );
 
 			set_theme_mod( 'internet_service_provider_pro_about_us_column_image', get_template_directory_uri().'/assets/images/about-us/about1.png');
-			set_theme_mod( 'internet_service_provider_pro_about_us_column_image2', get_template_directory_uri().'/assets/images/about-us/about2.png');
 
-			set_theme_mod( 'internet_service_provider_pro_about_us_button_title', 'Learn More About Us' );  
-			set_theme_mod( 'internet_service_provider_pro_about_us_button_icon', 'fa-solid fa-arrow-right' );
+			set_theme_mod( 'internet_service_provider_pro_about_us_button_title', 'Learn More' );  
 			set_theme_mod( 'internet_service_provider_pro_about_us_button_url', home_url('/about') );
+			
+		/* --------------------- Records ---------------------*/
+
+			set_theme_mod( 'internet_service_provider_pro_records_image', get_template_directory_uri().'/assets/images/about-us/about2.png');
+
+			set_theme_mod( 'internet_service_provider_pro_records_number', '3' );
+
+			$record_number = array('500','99.9','250');
+			$record_sign = array('+ Mbps','%','K+');
+			$record_title = array('Avg Download Speed','Uptime Guarantee','Customers Served');
+
+			for($i=1; $i<=3; $i++)
+			{	
+				set_theme_mod( 'internet_service_provider_pro_records_no'.$i, $record_number[$i-1] );
+				set_theme_mod( 'internet_service_provider_pro_records_sign'.$i, $record_sign[$i-1] );
+				set_theme_mod( 'internet_service_provider_pro_records_title'.$i, $record_title[$i-1] );
+			}
+
+		// ------------- Services -------------
+
+		set_theme_mod( 'internet_service_provider_pro_services_tagline', 'Service' );
+        set_theme_mod( 'internet_service_provider_pro_services_main_heading', 'Internet Services Built for Your Digital Life' );
+		set_theme_mod( 'internet_service_provider_pro_services_text', 'Because Fast Isn’t Enough You Need Internet You Can Trust.' );
+
+		set_theme_mod( 'internet_service_provider_pro_services_box_number', '3');
+
+        $services_title = array('High-Speed Fiber Internet','Business Connectivity','GamerX Package');
+		$services_text = array('Reliable internet solutions for home and business.','High-speed bandwidth and static IPs for modern businesses.','Ultra-low latency internet for serious gamers. No lag. Just play.');
+		$services_price = array('$29/month','$49/month','$79/month');
+
+        for($i=1; $i<=3; $i++)
+        {	
+        	set_theme_mod( 'internet_service_provider_pro_services_box_title'.$i, $services_title[$i-1] );
+			set_theme_mod( 'internet_service_provider_pro_services_box_text'.$i, $services_text[$i-1] );
+			set_theme_mod( 'internet_service_provider_pro_services_box_start_now'.$i, 'Start on' );
+			set_theme_mod( 'internet_service_provider_pro_services_box_start_now_pricing'.$i, $services_price[$i-1] );
+			for($i=1; $i<=3; $i++)
+        	{
+				set_theme_mod( 'internet_service_provider_pro_services_box_customer_image'.$i, get_template_directory_uri().'/assets/images/services/customer'.$i.'.png');
+			}
+			set_theme_mod( 'internet_service_provider_pro_services_icon_box_link_icon'.$i, 'fa-solid fa-arrow-right' );
+			set_theme_mod( 'internet_service_provider_pro_services_icon_box_link_icon_url'.$i, home_url('/contact') );
+		} 
 
 		// ------------- Why Choose Us -------------
 
@@ -2236,81 +2290,81 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			"Eco-Friendly Modular Kitchen Designs for Sustainable Living"
 		];
 
-     	for($i=1;$i<=10;$i++){
+     	// for($i=1;$i<=10;$i++){
 
-			$content = '
-			<h3>Introduction</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry\'s standard dummy text ever since the 1500s.</p>
+		// 	$content = '
+		// 	<h3>Introduction</h3>
+		// 	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry\'s standard dummy text ever since the 1500s.</p>
 
-			<h4>Design Inspiration</h4>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-			<p>Lorem Ipsum passages are often used to demonstrate visual form without relying on meaningful content.</p>
+		// 	<h4>Design Inspiration</h4>
+		// 	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+		// 	<p>Lorem Ipsum passages are often used to demonstrate visual form without relying on meaningful content.</p>
 
-			<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC. Regular cleaning and proper care ensure longevity and durability of any design element.</p>
+		// 	<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC. Regular cleaning and proper care ensure longevity and durability of any design element.</p>
 
-			<p>Our support team is always ready to assist. Lorem Ipsum helps to focus on design rather than content during development stages. Feedback and queries are answered within 24 hours, ensuring customer satisfaction.</p>
+		// 	<p>Our support team is always ready to assist. Lorem Ipsum helps to focus on design rather than content during development stages. Feedback and queries are answered within 24 hours, ensuring customer satisfaction.</p>
 
-			<p>Lorem Ipsum is dummy text, but it plays a crucial role in design mockups and layouts. It allows designers to visualize structure without distraction.</p>
-			';
+		// 	<p>Lorem Ipsum is dummy text, but it plays a crucial role in design mockups and layouts. It allows designers to visualize structure without distraction.</p>
+		// 	';
 
-			$excerpt = 'Discover this year’s hottest kitchen styles — from bold color accents to eco-friendly finishes that redefine modern living.';
+		// 	$excerpt = 'Discover this year’s hottest kitchen styles — from bold color accents to eco-friendly finishes that redefine modern living.';
 
-            // Create post object
-            $my_post = array(
-               'post_title'    => $posttitle[$i-1],
-               'post_content'  => $content,
-			   'post_excerpt'  => $excerpt,
-               'post_status'   => 'publish',
-               'post_type'     => 'post',
-               'post_category' => ''
-            );
-             // Insert the post into the database
-            $tcpost_id = wp_insert_post( $my_post );
+        //     // Create post object
+        //     $my_post = array(
+        //        'post_title'    => $posttitle[$i-1],
+        //        'post_content'  => $content,
+		// 	   'post_excerpt'  => $excerpt,
+        //        'post_status'   => 'publish',
+        //        'post_type'     => 'post',
+        //        'post_category' => ''
+        //     );
+        //      // Insert the post into the database
+        //     $tcpost_id = wp_insert_post( $my_post );
 
-			add_post_meta( $tcpost_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
+		// 	add_post_meta( $tcpost_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
-            $image_url = get_template_directory_uri().'/assets/images/blog/blog'.$i.'.png';
+        //     $image_url = get_template_directory_uri().'/assets/images/blog/blog'.$i.'.png';
 
-            $image_name= 'blog'.$i.'.png';
-            $upload_dir       = wp_upload_dir();
-            // Set upload folder
-            $image_data       = file_get_contents($image_url);
-            // Get image data
-            $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name );
-            // Generate unique name
-            $filename= basename( $unique_file_name );
-            // Create image file name
-            // Check folder permission and define file location
-            if( wp_mkdir_p( $upload_dir['path'] ) ) {
-               $file = $upload_dir['path'] . '/' . $filename;
-            } else {
-               $file = $upload_dir['basedir'] . '/' . $filename;
-            }
-            // Create the image  file on the server
-            file_put_contents( $file, $image_data );
-            // Check image file type
-            $wp_filetype = wp_check_filetype( $filename, null );
-            // Set attachment data
-            $attachment = array(
-               'post_mime_type' => $wp_filetype['type'],
-               'post_title'     => sanitize_file_name( $filename ),
-               'post_content'   => '',
-			   'post_excerpt'  => $excerpt,
-               'post_type'     => 'post',
-               'post_status'    => 'inherit'
-            );
+        //     $image_name= 'blog'.$i.'.png';
+        //     $upload_dir       = wp_upload_dir();
+        //     // Set upload folder
+        //     $image_data       = file_get_contents($image_url);
+        //     // Get image data
+        //     $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name );
+        //     // Generate unique name
+        //     $filename= basename( $unique_file_name );
+        //     // Create image file name
+        //     // Check folder permission and define file location
+        //     if( wp_mkdir_p( $upload_dir['path'] ) ) {
+        //        $file = $upload_dir['path'] . '/' . $filename;
+        //     } else {
+        //        $file = $upload_dir['basedir'] . '/' . $filename;
+        //     }
+        //     // Create the image  file on the server
+        //     file_put_contents( $file, $image_data );
+        //     // Check image file type
+        //     $wp_filetype = wp_check_filetype( $filename, null );
+        //     // Set attachment data
+        //     $attachment = array(
+        //        'post_mime_type' => $wp_filetype['type'],
+        //        'post_title'     => sanitize_file_name( $filename ),
+        //        'post_content'   => '',
+		// 	   'post_excerpt'  => $excerpt,
+        //        'post_type'     => 'post',
+        //        'post_status'    => 'inherit'
+        //     );
 
-            // Create the attachment
-            $attach_id = wp_insert_attachment( $attachment, $file, $tcpost_id );
-            // Include image.php
-            require_once(ABSPATH . 'wp-admin/includes/image.php');
-            // Define attachment metadata
-            $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-            // Assign metadata to attachment
-             wp_update_attachment_metadata( $attach_id, $attach_data );
-            // And finally assign featured image to post
-            set_post_thumbnail( $tcpost_id, $attach_id );
-        }
+        //     // Create the attachment
+        //     $attach_id = wp_insert_attachment( $attachment, $file, $tcpost_id );
+        //     // Include image.php
+        //     require_once(ABSPATH . 'wp-admin/includes/image.php');
+        //     // Define attachment metadata
+        //     $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+        //     // Assign metadata to attachment
+        //      wp_update_attachment_metadata( $attach_id, $attach_data );
+        //     // And finally assign featured image to post
+        //     set_post_thumbnail( $tcpost_id, $attach_id );
+        // }
 
         //Insert Image for Hello World
 

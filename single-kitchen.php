@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single kitchen.
  *
- * @package buildora-architect-pro
+ * @package internet-service-provider-pro
  */
 get_header();
 get_template_part('template-parts/banner'); 

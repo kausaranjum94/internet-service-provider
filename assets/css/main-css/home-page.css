@@ -178,21 +178,113 @@ span.text-span{
 .main-banner-row {
   padding-top: 2em;
 }
-
-#main-banner {
-  padding: 0;
-}
 .main-banner-link a {
     color: #1C1C1F;
     font-weight: 400;
     text-decoration: underline;
     margin-left: 17px;
 }
+.banner-roght-column-image {
+  text-align: center;
+}
+.banner-roght-column-image img {
+    width: 100%;
+}
+#main-banner .container {
+    position: relative;
+    z-index: 9;
+}
 .customer-number {
   color: #000000;
   font-weight: 400;
   font-size: 30px;
   display: block;
+}
+.rating-records {
+  box-shadow: 0px 23px 27.3px -11px #1B1E3040;
+  padding: 22px 17px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 9em;
+  background-color: white;
+  left: -63px;
+}
+.banner-roght-column-image img {
+  border-radius: 20px;
+  margin: 19px 0;
+}
+span.right-column-text2 {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  max-width: 61%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.main-banner-vector-shape {
+  position: absolute;
+  bottom: 0;
+}
+#main-banner {
+  padding: 0;
+  padding-bottom: 8em;
+}
+.rating-records a i {
+  color: #1C1C1F;
+  transform: rotate(-56deg);
+  font-size: 24px;
+  margin-left: 9px;
+}
+.banner-head-outer {
+    padding-top: 25px;
+}
+span.right-column-text {
+  color: #1C1C1F;
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 60%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+span.pricing-text {
+  background-color: var(--primary-color);
+  padding: 7px 17px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+}
+.customer-image img:first-child {
+    margin-left: 0;
+}
+.rating-records {
+  box-shadow: 0px 23px 27.3px -11px #1B1E3040;
+  padding: 25px 19px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 11em;
+  background-color: white;
+  left: -63px;
+}
+.rating-box{
+  margin-bottom: 19px;
+}
+.customer-records {
+  margin-left: 29px;
+}
+.banner-column-image {
+    position: relative;
+}
+span.pricing-text2 {
+  font-weight: 300;
+  color: #1C1C1F;
+  display: block;
+  font-size: 33px;
+  margin-top: 10px;
+}
+.banner-column-image img {
+  border-radius: 20px;
 }
 .customer-image img {
     margin-left: -15px;
@@ -218,40 +310,70 @@ span.text-span{
   width: 100%;
   height: 100%;
 }
-.main-banner-shape::before {
-    content: "";
-    display: block;
-    background: var(--b, white);
-    padding-top: 46%;
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(100% 0, 100% 100%, 100% 100%, 58% 100%, 58% 85%, 0 85%, 0 0);
+/* ---------------------- Partner ------------------------ */
+#our-partner .section_main_head  h3 {
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 1em;
 }
-
+.owl-carousel .owl-item .logo-images img {
+  width: auto !important;
+}
+.owl-carousel .owl-item .logo-images img {
+  width: auto !important;
+  height: 29px;
+}
+#our-partner {
+  padding-bottom: 8em;
+}
+/* ---------------------- Records ------------------------ */
+.records-row {
+  border: 1px solid #3C3C3C;
+  box-shadow: 0px 23px 27.3px -11px #1B1E3040;
+  padding: 30px;
+  border-radius: 20px;
+}
+.full-height-width-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.count-box-number.box-count {
+  color: white;
+  font-weight: 400;
+  font-size: 31px;
+}
+.record_detail h6{
+  color: #BABABA;
+  font-weight: 400;
+}
 /* ---------------------- About us ------------------------ */
 #about-us {
   overflow: hidden;
+  background-color: var(--secondary-color);
 }
-
 #about-us h3 {
-  color: #30373F;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 39px;
+  color: white;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 56px;
   margin-bottom: 13px;
 }
 
-.about-image1 img {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+.about-image img {
+    border-radius: 20px;
 }
-
+.about-head-outer a.theme_button {
+  padding: 13px 34px;
+}
+.records-image img {
+  border-radius: 20px;
+}
 #about-us .section-text {
-  color: #30373F;
-  font-weight: 300;
+  color: #BABABA;
+  font-weight: 400;
   line-height: 27px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .about-image2 img {

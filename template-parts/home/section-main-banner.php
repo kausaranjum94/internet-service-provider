@@ -20,11 +20,10 @@
   
 ?>
 <section id="main-banner" class="<?php echo esc_attr($img_bg); ?>  position-relative">
-    <!-- <div class="main-banner-shape" style="--b:url(<?php echo esc_attr($about_backg); ?>) center/cover; ">
-    </div> -->
+    
     <div class="container">
         <div class="main-banner-row row">
-            <div class="col-lg-4 col-md-4" data-aos="fade-right" data-aos-duration="2000">
+            <div class="col-lg-5 col-md-5" data-aos="fade-right" data-aos-duration="2000">
                 <div class="banner-head-outer">
                     <div class="banner-head pb-2">
                         <?php if(get_theme_mod('internet_service_provider_pro_main_banner_tagline')!=''){ ?>
@@ -87,7 +86,7 @@
                                     <?php } ?>
                                 </div>
                             </div>
-                            <div class="rating-records">
+                            <div class="customer-records">
                                 <?php if(get_theme_mod('internet_service_provider_pro_main_banner_customer_number')!=''){ ?>
                                     <span class="customer-number" data-aos="fade-up" data-aos-duration="1100">
                                         <?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_customer_number')); ?>
@@ -117,12 +116,17 @@
                         <?php if(get_theme_mod('internet_service_provider_pro_main_banner_column_image_pricing_text2')!=''){ ?>
                             <span class="pricing-text2" data-aos="fade-up" data-aos-duration="1100">
                                 <?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_column_image_pricing_text2')); ?>
+                                <?php if(get_theme_mod('internet_service_provider_pro_main_banner_column_image_pricing_text2')!=''){ ?>
+                                    <a href="<?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_column_image_pricing_link')); ?>" data-aos="fade-up" data-aos-duration="1100">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                <?php } ?>
                             </span>
                         <?php } ?>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4">
+            <div class="col-lg-3 col-md-3">
                 <div class="banner-roght-column-image">
                     <?php if(get_theme_mod('internet_service_provider_pro_main_banner_last_column_text')!=''){ ?>
                         <span class="right-column-text" data-aos="fade-up" data-aos-duration="1100">
@@ -133,12 +137,17 @@
                         <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_column_image2')); ?>">
                     <?php } ?>
                     <?php if(get_theme_mod('internet_service_provider_pro_main_banner_last_column_text2')!=''){ ?>
-                        <span class="right-column-text" data-aos="fade-up" data-aos-duration="1100">
+                        <span class="right-column-text2" data-aos="fade-up" data-aos-duration="1100">
                             <?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_last_column_text2')); ?>
                         </span>
                     <?php } ?>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="main-banner-vector-shape">
+        <?php if(get_theme_mod('internet_service_provider_pro_main_banner_vector_image')!=''){ ?>
+            <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_vector_image')); ?>">
+        <?php } ?>
     </div>
 </section>

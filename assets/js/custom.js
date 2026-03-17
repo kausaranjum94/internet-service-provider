@@ -184,6 +184,70 @@ jQuery(document).ready(function ($) {
     mouseDrag: true
   });
 
+  var owl = jQuery('#our-partner .owl-carousel');
+    owl.owlCarousel({
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    lazyLoad: true,
+    autoplayTimeout: parseInt(jQuery("#our-partner").data('speed')),
+    loop: jQuery("#our-partner").data('loops'),
+    dots: true,
+    autoplayHoverPause: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    responsive: {
+      0: {
+        items: 2
+      },
+      576: {
+        items: 3
+      },
+      768: {
+        items: 4
+      },
+      900: {
+        items: 5
+      },
+      1024: {
+        items: 6
+      }
+    },
+    autoplayHoverPause: true,
+    mouseDrag: true
+  });
+
+  var owl = jQuery('#records .owl-carousel');
+    owl.owlCarousel({
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    lazyLoad: true,
+    autoplayTimeout: parseInt(jQuery("#records").data('speed')),
+    loop: jQuery("#records").data('loops'),
+    dots: true,
+    autoplayHoverPause: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    responsive: {
+      0: {
+        items: 2
+      },
+      576: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      900: {
+        items: 3
+      },
+      1024: {
+        items: 3
+      }
+    },
+    autoplayHoverPause: true,
+    mouseDrag: true
+  });
+
   var owl = jQuery('#kitchen-tabs .owl-carousel');
   owl.owlCarousel({
     margin: 20,

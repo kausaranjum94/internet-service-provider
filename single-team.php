@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single team.
  *
- * @package buildora-architect-pro
+ * @package internet-service-provider-pro
  */
 get_header();
 get_template_part('template-parts/banner'); 
@@ -53,7 +53,7 @@ get_template_part('template-parts/banner');
                                         </a>
                                     <?php } if(get_post_meta($post->ID,'meta-team-pinterest',true)!= ''){ ?>
                                         <a href="<?php echo esc_html(get_post_meta($post->ID,'meta-team-pinterest',true)); ?>">
-                                            <i class="fab fa-pinterest-p align-middle "></i><span class="screen-reader-text"><?php echo esc_html('pinterest', 'buildora-architect-pro' ) ; ?></span>
+                                            <i class="fab fa-pinterest-p align-middle "></i><span class="screen-reader-text"><?php echo esc_html('pinterest', 'internet-service-provider-pro' ) ; ?></span>
                                         </a>
                                     <?php } ?>
                                 </div>
