@@ -2445,6 +2445,70 @@
     'type'    => 'text'
   ));
 
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_column_image',array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_why_choose_us_column_image',array(
+    'label' => __('Column Image','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'settings' => 'internet_service_provider_pro_why_choose_us_column_image'
+  )));
+
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_column_image_title',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_why_choose_us_column_image_title',array(
+    'label' => __('Image Title','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'setting' => 'internet_service_provider_pro_why_choose_us_column_image_title',
+    'type'    => 'text'
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_column_image_title_image',array(
+    'default' => '',
+    'sanitize_callback' => 'esc_url_raw',
+  ));
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_why_choose_us_column_image_title_image',array(
+    'label' => __('Title Image','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'settings' => 'internet_service_provider_pro_why_choose_us_column_image_title_image'
+  )));
+
+  $wp_customize->add_setting(
+		'internet_service_provider_pro_why_choose_us_column_image_link_icon',
+		array(
+			'default'     => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+	$wp_customize->add_control(
+		new internet_service_provider_pro_Fontawesome_Icon_Chooser(
+			$wp_customize,
+			'internet_service_provider_pro_why_choose_us_column_image_link_icon',
+			array(
+			'settings'    => 'internet_service_provider_pro_why_choose_us_column_image_link_icon',
+			'section'   => 'internet_service_provider_pro_why_choose_us',
+			'type'      => 'icon',
+			'label'     => esc_html__( 'Choose  Icon', 'internet-service-provider-pro' ),
+			)
+		)
+	);
+
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_column_image_link',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_why_choose_us_column_image_link',array(
+    'label' => __('Add Link','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'setting' => 'internet_service_provider_pro_why_choose_us_column_image_link',
+    'type'    => 'text'
+  ));
+
   $wp_customize->add_setting( 'internet_service_provider_pro_why_choose_us_icon_box',
     array(
     'default' => '',
@@ -2484,28 +2548,18 @@
       'section' => 'internet_service_provider_pro_why_choose_us'
     )));
 
-    $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_icon_box_image'.$i,array(
+    $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_icon_box_step'.$i,array(
       'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
+      'sanitize_callback' => 'sanitize_text_field'
     ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_why_choose_us_icon_box_image'.$i,array(
-      'label' => __('Image','internet-service-provider-pro'),
+    $wp_customize->add_control('internet_service_provider_pro_why_choose_us_icon_box_step'.$i,array(
+      'label' => __('Add Step ','internet-service-provider-pro'),
       'section' => 'internet_service_provider_pro_why_choose_us',
-      'settings' => 'internet_service_provider_pro_why_choose_us_icon_box_image'.$i
-    )));
-    $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_icon_box_hover_image'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
+      'setting' => 'internet_service_provider_pro_why_choose_us_icon_box_step'.$i,
+      'type'    => 'text'
     ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_why_choose_us_icon_box_hover_image'.$i,array(
-      'label' => __('Hover Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_why_choose_us',
-      'settings' => 'internet_service_provider_pro_why_choose_us_icon_box_hover_image'.$i
-    )));
 
-	$wp_customize->add_setting('internet_service_provider_pro_why_choose_us_icon_box_title'.$i,array(
+	  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_icon_box_title'.$i,array(
       'default' => '',
       'sanitize_callback' => 'sanitize_text_field'
     ));
@@ -2527,37 +2581,63 @@
       'type'    => 'text'
     ));
 
-	$wp_customize->add_setting(
-		'internet_service_provider_pro_why_choose_us_icon_box_link_icon'.$i,
-		array(
-			'default'     => '',
-			'sanitize_callback' => 'sanitize_text_field'
-		)
-	);
-	$wp_customize->add_control(
-		new internet_service_provider_pro_Fontawesome_Icon_Chooser(
-			$wp_customize,
-			'internet_service_provider_pro_why_choose_us_icon_box_link_icon'.$i,
-			array(
-			'settings'    => 'internet_service_provider_pro_why_choose_us_icon_box_link_icon'.$i,
-			'section'   => 'internet_service_provider_pro_why_choose_us',
-			'type'      => 'icon',
-			'label'     => esc_html__( 'Choose  Icon', 'internet-service-provider-pro' ),
-			)
-		)
-	);
-
-    $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_icon_box_link_icon_url'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_why_choose_us_icon_box_link_icon_url'.$i,array(
-      'label' => __('Url ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_why_choose_us',
-      'setting' => 'internet_service_provider_pro_why_choose_us_icon_box_link_icon_url'.$i,
-      'type'    => 'url'
-    ));
   }
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_why_choose_us_bottom_content_settings',
+    array(
+    'default' => '',
+    'transport' => 'postMessage',
+    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_why_choose_us_bottom_content_settings',
+    array(
+    'label' => __('Bottom Content Settings','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us'
+  )));
+
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_bottom_block_text',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_why_choose_us_bottom_block_text',array(
+    'label' => __('Add Text','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'setting' => 'internet_service_provider_pro_why_choose_us_bottom_block_text',
+    'type'    => 'text'
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_bottom_block_tagline',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_why_choose_us_bottom_block_tagline',array(
+    'label' => __('Add Tagline','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'setting' => 'internet_service_provider_pro_why_choose_us_bottom_block_tagline',
+    'type'    => 'text'
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_bottom_block_speed_text',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_why_choose_us_bottom_block_speed_text',array(
+    'label' => __('Speed Text','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'setting' => 'internet_service_provider_pro_why_choose_us_bottom_block_speed_text',
+    'type'    => 'text'
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_why_choose_us_bottom_block_speed',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_why_choose_us_bottom_block_speed',array(
+    'label' => __('Add Speed','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_why_choose_us',
+    'setting' => 'internet_service_provider_pro_why_choose_us_bottom_block_speed',
+    'type'    => 'text'
+  ));
 
   $wp_customize->add_setting( 'internet_service_provider_pro_why_choose_us_color_settings',
     array(

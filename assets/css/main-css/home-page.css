@@ -489,23 +489,86 @@ span.more-customer {
     border-top: 1px solid #3C3C3C;
 }
 /* Why Choose us */
-#why-choose-us {
-  background-color: var(--secondary-color);
-  max-width: 95%;
-  margin: 0 auto;
+
+.why-choose-us-head {
+    max-width: 50%;
+    margin: 0 auto;
+}
+.why-choose-us-image, .why-choose-us-image img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.image-caption .media {
+  background-color: white;
+  padding: 14px 17px 14px 15px;
   border-radius: 30px;
+  align-items: center;
 }
-
-#why-choose-us h3 {
+span.image-caption-img {
+  background-color: var(--primary-color);
+  width: 29px;
+  height: 29px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.why-choose-us-image {
+    position: relative;
+}
+.why-choose-us-image .image-caption-img img {
+    width: auto !important;
+    height: auto !important;
+}
+.image-caption .media-body {
+    color: #1C1C1F;
+    font-weight: 500;
+    font-size: 16px;
+}
+.image-caption{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+.caption-icon-url a {
+  width: 58px;
+  height: 58px;
+  background-color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   color: white;
 }
-
+.caption-icon-url a:hover{
+  background-color: black;
+  color: white;
+}
 .why-choose-us-block h6 {
-  color: white;
-  font-weight: 600;
-  font-size: 18px;
-  display: block;
-  margin: 13px 0;
+    color: #1C1C1F;
+    font-weight: 400;
+    font-size: 24px;
+    display: block;
+    max-width: 58%;
+    margin-bottom: 0;
+}
+.why-choose-us-block .media {
+    align-items: center;
+}
+span.why-choose-us-step {
+    width: 39px;
+    height: 40px;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #1C1C1F;
+    border: 1px solid var(--primary-color);
+    margin-right: 12px;
 }
 
 .icon-url a {
@@ -519,21 +582,41 @@ span.more-customer {
   color: var(--primary-color);
   margin-top: 17px;
 }
-
-.box-text {
-  color: white;
-}
-
-.why-choose-us-block:hover h6,
-.why-choose-us-block:hover .box-text {
-  color: var(--primary-color);
-}
-
 .why-choose-us-block:hover .icon-url a {
   background-color: var(--primary-color);
   color: white;
 }
+.whychoose-box {
+    margin-bottom: 3em;
+    padding-bottom: 4em;
+    border-bottom: 1px solid #D9D9D9;
+}
+.why-choose-us-bottom-tagline {
+    background-color: var(--primary-color);
+    padding: 7px 14px;
+    color: white;
+    border-radius: 10px;
+    margin: 0 0 0 auto;
+    display: inline-block;
+    float: right;
+}
+.why-choose-us-bottom-speed-text {
+  color: #BABABA;
+  font-size: 16px;
+  margin-top: 8em;
+  display: block;
+}
+.why-choose-us-bottom-speed {
+    color: white;
+    font-size: 36px;
+    font-weight: 300;
+}
 
+.why-choose-us-bottom-block {
+  background-color: #1C1C1F;
+  padding: 2em 2em;
+  border-radius: 20px;
+}
 /*--------------------- Design Philosophy ------------------------*/
 
 .design-philosophy-head {

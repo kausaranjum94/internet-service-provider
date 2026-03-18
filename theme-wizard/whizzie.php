@@ -1734,23 +1734,37 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 		// ------------- Why Choose Us -------------
 
-		set_theme_mod( 'internet_service_provider_pro_why_choose_us_tagline', 'Why Modular Kitchens?' );
-        set_theme_mod( 'internet_service_provider_pro_why_choose_us_main_heading', 'Smart, Stylish, and Built to Last' );
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_tagline', 'Why choose us' );
+        set_theme_mod( 'internet_service_provider_pro_why_choose_us_main_heading', 'Why DataNest Is the Preferred Internet Provider' );
 
-		set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_number', '4');
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_column_image', get_template_directory_uri().'/assets/images/why-choose-us/why-choose-us-column-image.png');
 
-        $why_choose_box_title = array('Space Efficiency','Easy Maintenance','Modern Aesthetics','Flexible Layouts');
-		$why_choose_box_text = array('Make the most of every inch of your kitchen.','designed for quick cleaning and lasting beauty.','Sleek, stylish designs that match your home’s vibe.','Adaptable designs for spaces of any shape or size.');
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_column_image_title', 'Join the 250k+ DataNest users' );
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_column_image_title_image', get_template_directory_uri().'/assets/images/why-choose-us/icon.png');
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_column_image_link_icon', 'fa-solid fa-arrow-right' );
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_column_image_link', home_url('/contact') );
 
-        for($i=1; $i<=4; $i++)
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_number', '3');
+
+        $why_choose_box_title = array('Speed You Can Rely On','Smart Infrastructure','Secure & Private');
+		$why_choose_box_text = array('Fast connection at peak hours for streaming, gaming, or work.','Powered by fiber optics and real-time optimization.','Advanced network protection keeps your data safe from threats.');
+		$why_choose_box_step = array('01','02','03');
+
+        for($i=1; $i<=3; $i++)
         {	
-			set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_image'.$i, get_template_directory_uri().'/assets/images/why-choose-us/why-choose-icon'.$i.'.png');
-			set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_hover_image'.$i, get_template_directory_uri().'/assets/images/why-choose-us/why-choose-icon-hover'.$i.'.png');
         	set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_title'.$i, $why_choose_box_title[$i-1] );
 			set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_text'.$i, $why_choose_box_text[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_link_icon'.$i, 'fa-solid fa-arrow-right' );
-			set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_link_icon_url'.$i, '#' );
+			set_theme_mod( 'internet_service_provider_pro_why_choose_us_icon_box_step'.$i, $why_choose_box_step[$i-1] );
 		} 
+
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_bottom_block_text', 'Smooth streaming, gaming, and downloading at all times');
+
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_bottom_block_tagline', 'Guaranteed');
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_bottom_block_tagline_icon', 'Guaranteed');
+
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_bottom_block_speed_text', 'Speed up to');
+
+		set_theme_mod( 'internet_service_provider_pro_why_choose_us_bottom_block_speed', '350 Mbps');
 
 		// ------------- Design Philosophy -------------
 

@@ -3,9 +3,6 @@
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1120px;
   }
-  .why-choose-us-block {
-      padding: 0 36px;
-  }
   .design-philosophy-head.section_main_head.pb-5.text-center {
     max-width: 68%;
   }
