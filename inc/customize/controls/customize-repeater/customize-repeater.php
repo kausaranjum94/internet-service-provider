@@ -45,7 +45,7 @@ class internet_service_provider_pro_Repeater_Custom_Control extends WP_Customize
 	 */
 	public function render_content() {
 
-		$section_name = array("slider","our-bestseller","benefits-of-cosmetics","about","offer-banner","our-products","categories","makers","banner","testimonial","contact","blog-post");
+		$section_name = array("main-banner","about-us","services","why-choose-us","exclusive-offers","map-area","pricing-plan","testimonials","content-area");
 		$string_array = rtrim(implode(',', $section_name), ',');
 	?>
 	    <div class="sortable_repeater_control">

@@ -582,22 +582,20 @@ select.header-search-select {
 } */
 
 .copyright-outer .term-info{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
 }
 
 #footer {
     color: #fff;
     text-align: left;
-    padding: 135px 0 0 0;
+    padding: 115px 0 0 0;
     background: var(--secondary-color);
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
 }
 .footer_hide {
   display: none;
@@ -925,12 +923,6 @@ padding-bottom: 70px;
 /* ----------------------Newsletter ----------------*/
 #newsletter-section {
   padding: 0;
-  margin-bottom: -73px;
-}
-.newsletter-container {
-  background-color: var(--primary-color);
-  border-radius: 20px;
-  padding: 22px;
 }
 .newsletter-container a.insta {
   color: transparent;
@@ -966,9 +958,9 @@ span.social-icons-title {
 }
 #newsletter-section h3 {
   color: white;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 25px;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 42px;
 }
 #newsletter-section span.section-tagline {
     color: white;
@@ -1002,37 +994,34 @@ span.social-icons-title {
   height: 152px;
 }
 .newsletter_shortcode input[type="text"], .newsletter_shortcode input[type="tel"], .newsletter_shortcode input[type="email"], .newsletter_shortcode input[type="phno"], .newsletter_shortcode input[type="password"], .newsletter_shortcode textarea {
-  background-color: transparent;
-  border: none;
-  color: #212121;
-  padding: 9px 25px 9px 25px;
-  font-family: var(--primary-font);
-  border: none;
-  font-size: 12px;
-  border-radius: 0;
-  width: 87%;
-  border: none;
-  border-bottom: 2px dashed white;
+    background-color: #06B6D41F;
+    border: none;
+    color: white;
+    padding: 11px 25px 11px 25px;
+    font-family: var(--primary-font);
+    border: none;
+    font-size: 14px;
+    border-radius: 39px;
+    width: 73%;
+    border: none;
+    border: 2px solid var(--primary-color);
 }
 .newsletter_shortcode input[type="text"]::placeholder, .newsletter_shortcode input[type="tel"]::placeholder, .newsletter_shortcode input[type="email"]::placeholder, .newsletter_shortcode input[type="phno"]::placeholder, .newsletter_shortcode input[type="password"]::placeholder, .newsletter_shortcode textarea::placeholder{
   color: #000000;
 }
 .newsletter_shortcode input[type="submit"] {
-  padding: 6px 9px;
-  color: black;
-  background-color: white;
-  border-radius: 6px;
+  padding: 12px 31px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 32px;
   box-shadow: none;
-  font-family: "Font Awesome 6 Free";
-  letter-spacing: 0.45px;
-  font-size: 24px;
+  font-size: 17px;
   position: relative;
-  top: 10px;
   margin-left: 10px;
 }
 .newsletter_shortcode input[type="submit"]:hover {
-  background-color: var(--secondary-color);
-  color: white;
+    background-color: white;
+    color: var(--primary-color);
 }
 #newsletter_section .section_main_head h3 {
   padding-bottom: 2px;

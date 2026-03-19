@@ -357,10 +357,6 @@ a.theme_button.theme_button2:before {
   background-color: var(--primary-color);
   color: white;
 }
-.theme_button span:hover {
-  color: rgb(255,255,255);
-  transition: 0.2s 0.1s;
-}
 .theme_button span {
   transition: 0.2s;
 }

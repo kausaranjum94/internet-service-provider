@@ -57,7 +57,7 @@
                         <div class="about-btn_btn mt-5">
                             <a class="theme_button"
                                 href="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_about_us_button_url')); ?>">
-                                <?php echo esc_html(get_theme_mod('internet_service_provider_pro_about_us_button_title')); ?>
+                                <span><?php echo esc_html(get_theme_mod('internet_service_provider_pro_about_us_button_title')); ?></span>
                             </a>
                         </div>
                         <?php } ?>

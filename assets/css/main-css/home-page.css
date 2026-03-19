@@ -708,6 +708,260 @@ span.why-choose-us-step {
 .exclusive-offers-block-inner{
   z-index: 9;
 }
+/*--------------------- Map Area ------------------------*/
+#map-area .section-text, #testimonials .section-text {
+    max-width: 56%;
+    margin: 0 0 0 auto;
+}
+
+.ticker-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+}
+.map-area-name {
+    border: 1px solid #BABABA;
+    padding: 9px 17px;
+    border-radius: 40px;
+    color: #1C1C1F;
+    font-size: 20px;
+}
+.ticker {
+    display: inline-flex;
+    animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker li {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+@keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+#map-area ul {
+    margin: 0 !important;
+}
+
+#map-container {
+  width: 100%;
+  max-width: 100%;
+  height: 793px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+#map-image {
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    object-fit: cover;
+}
+
+/*-------------- Pricing Plans ---------------*/
+#pricing-plan .owl-carousel .owl-stage-outer {
+  padding: 41px 0;
+}
+.plan-head {
+    max-width: 41%;
+    margin: 0 auto;
+    text-align: center;
+}
+.plan-info h5 {
+  color: #1A1A1A;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 0;
+}
+.plan-features ul {
+  margin: 0;
+}
+.plan-btn a.theme_button2 {
+  padding: 12px 44px;
+  background-color: white;
+}
+.plan-btn a.theme_button2 {
+  padding: 12px 44px;
+  background-color: #1A1A1A;
+  color: white;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 33px;
+}
+.plan-btn a.theme_button2:hover {
+    color: white;
+}
+.plan-info:hover .plan-btn a.theme_button2 {
+  color: white;
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+.plan-info:hover .plan-btn a.theme_button2:before {
+  background-color: var(--color-primary);
+  opacity: 1;
+  transform: skewX(-45deg) scale(1, 1);
+}
+.plan-heading h4 {
+  color: #1C1C1F;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.plan-image {
+  background-color: #1C1C1F;
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.plan-info {
+  background-color: #EFEFEF;
+  padding: 25px 25px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px -2px #0000001A;
+}
+.plan-text {
+    font-weight: 400;
+    font-size: 13px;
+}
+.plan-btn a.theme_button {
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-size: 16px;
+}
+.plan_price {
+  display: flex;
+  color: var(--primary-color);
+  font-size: 38px;
+  font-weight: 300;
+  margin-top: 11px;
+}
+.plan_package {
+  color: #1A1A1A;
+  font-weight: 400;
+  font-size: 20px;
+  display: block;
+  position: relative;
+  top: 18px;
+  margin-left: 11px;
+}
+.plan-discount {
+  display: inline-block;
+  padding: 0;
+  font-size: 13px;
+  color: #1A1A1A;
+  font-weight: 700;
+  border-radius: 9px;
+  margin-bottom: 4px;
+}
+.plan-feature-heading {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  border-bottom: 1px solid #3C3C3C;
+  padding-bottom: 16px;
+}
+.plan-features ul li {
+    color: #BABABA;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    list-style: none;
+    margin-bottom: 17px;
+}
+.plan-feature-icon {
+    background-color: var(--primary-color);
+    color: white;
+    width: 24px;
+    display: inline-flex;
+    font-size: 11px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 8px;
+}
+.feature-box {
+  background-color: #1C1C1F;
+  margin-top: 34px;
+  border-radius: 20px;
+  padding: 26px;
+}
+.plan-features ul li i {
+  color: var(--color-primary);
+}
+.plan-head .plan-info a.theme_button2:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.plan-price {
+  margin-top: 23px;
+  margin-bottom: 4px;
+}
+.plan-btn {
+    padding-top: 43px;
+}
+.plan-btn a.theme_button:before {
+    border-radius: 10px !important;
+}
+.recommended_box  .plan-info,  .plan-info:hover {
+  background-color: var(--primary-color);
+}
+.recommended_box .plan-info {
+  position: relative;
+  overflow: hidden;
+}
+.plan-details {
+  position: relative;
+  z-index: 9;
+}
+.recommended_box .plan-info h4, .recommended_box .plan-info .plan_price, .recommended_box .plan-info span.plan_package, .recommended_box .plan-info .plan-text, .recommended_box .plan-info span.plan-short-text,  .plan-info:hover h4,  .plan-info:hover .plan_price,  .plan-info:hover span.plan_package,  .plan-info:hover .plan-text,  .plan-info:hover span.plan-short-text {
+  color: white;
+}
+.recommended_box .plan-info .feature-box, .plan-info:hover .feature-box {
+    background-color: white;
+}
+.recommended_box .plan-info .plan-feature-heading, .plan-info:hover .plan-feature-heading{
+  color: #1C1C1F;
+}
+.recommended_box .plan-info .plan-features ul li, .plan-info:hover .plan-features ul li{
+  color: #656565;
+}
+.recommended_box .plan-info .plan-feature-heading, .plan-info:hover .plan-feature-heading{
+  border-bottom: 1px solid #D9D9D9
+}
+.recommended_box .plan-info .plan-btn a.theme_button, .plan-info:hover .plan-btn a.theme_button{
+  background-color: #1C1C1F;
+  color: white;
+}
+.recommended_box .plan-info .plan-btn a.theme_button:hover{
+  color: #1C1C1F;
+}
+.recommended_box .plan-info .plan-btn .theme_button::before, .plan-info:hover .plan-btn .theme_button::before, .recommended_box:hover .plan-info .plan-btn .theme_button::before{
+  background-color: white;
+}
+.plan-info:hover .plan-btn a.theme_button {
+  color: white;
+}
+.plan-info .plan-btn a.theme_button:hover {
+    color: #1C1C1F;
+}
 /*--------------------- Design Philosophy ------------------------*/
 
 .design-philosophy-head {
@@ -1234,28 +1488,70 @@ button.owl-dot.active {
 }
 
 /*------------------ Testimonials ---------------*/
-.testimonial-blockquote {
-  max-width: 74%;
-  margin: 0 0 0 auto;
+.testonials-block-top-content {
+    background-color: #EFEFEF;
+    padding: 30px;
+    border-radius: 30px;
+    height: 100%;
 }
-.testimonials-head{
-  max-width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-#testimonials .section_main_head .section-text {
-  color: white;
-  font-size: 16px;
-}
-.testimonial_outer  i {
-  color: var(--primary-color);
-  font-size: 29px;
-  margin-bottom: 14px;
-  transition: 0.5s;
+.testimonial-content p {
+  color: #656565;
+  font-size: 17px;
 }
 .testimonials-info {
     margin: 11px 0 29px 0;
 }
+.testimonials--video-image{
+    position: relative;
+}
+.testonials-block-top-content svg {
+  position: absolute;
+  right: 24px;
+  width: 60px;
+  top: 11px;
+}
+.testimonial-content {
+    padding-top: 39px;
+    max-width: 80%;
+}
+.testimonials--video-image img {
+    border-radius: 30px;
+}
+.video-block-innner {
+  position: absolute;
+  bottom: 38px;
+  right: 20px;
+}
+.video-block-innner a {
+    font-size: 20px;
+    background-color: var(--primary-color);
+    width: 58px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px;
+    border-radius: 50%;
+    margin-right: 12px;
+    color: white;
+}
+.video-block-innner a:hover{
+  background-color: white;
+  color: var(--primary-color);
+}
+/* Base row setup */
+.testonials-block-blocks {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Even rows: swap order */
+.testonials-block-blocks.even .testonials-block-top {
+    order: 2;
+}
+.testonials-block-blocks.odd .testonials-block-bottom {
+  order: 1;
+}
+
 .testimonials-image img {
     width: 100%;
     height: 100%;
@@ -1293,24 +1589,19 @@ button.owl-dot.active {
     -ms-flex: 1;
     flex: 1;
 }
-h5.testimonial-title {
-  padding-bottom: 0;
-  padding-top: 0;
-  color: var(--secondary-color);
-  font-weight: 500;
-  font-size: 17px;
-  transition: 0.5s;
+.testimonial-title {
+    padding-bottom: 0;
+    padding-top: 0;
+    color: #1C1C1F;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 0.5s;
+    margin-top: 4em;
 }
 .testimonials-info p {
     font-weight: 300;
     color: var(--secondary-color);
     font-size: 14px;
-}
-.testimonial_outer  i {
-  color: #FFA308;
-  font-size: 11px;
-  margin-bottom: 0;
-  transition: 0.5s;
 }
 .testimonials-image-box .media {
     align-items: center;
@@ -1345,8 +1636,12 @@ h5.testimonial-title {
 .testimonial-block:hover, .testimonial-block{
     transition: 0.5s;
 }
-
-
+.testimonial_outer:hover .testonials-block-top-content {
+  background-color: #1C1C1F;
+}
+.testimonial_outer:hover .testimonial-content p, .testimonial_outer:hover .testimonial-title{
+    color: white;
+}
 /* -------------------- slider css ------------------*/
 
 .sustainability-commitment-image img {

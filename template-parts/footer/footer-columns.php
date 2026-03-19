@@ -15,6 +15,7 @@ if( get_theme_mod('internet_service_provider_pro_section_footer_bgcolor','') ) {
 ?>
 <?php if (get_theme_mod('internet_service_provider_pro_custom_footer_widget_section', 'true') !='') { ?>
 <section id="footer" class="<?php echo esc_attr($img_bg); ?>"  style="<?php echo esc_attr( $footer_backg ); ?>">
+	<?php get_template_part( 'template-parts/footer/newsletter' ); ?>
 <?php if ( get_theme_mod('internet_service_provider_pro_genral_section_show_scroll_top',true) == "1" ) { ?>
 	<a href="javascript:" id="return-to-top"><i
 			class="<?php echo esc_html(get_theme_mod('internet_service_provider_pro_genral_section_show_scroll_top_icon')); ?>"></i><span

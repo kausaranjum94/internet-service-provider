@@ -1570,7 +1570,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		
 
 		// -------------- Section Ordering ---------------
-		set_theme_mod( 'internet_service_provider_pro_section_ordering_settings_repeater', 'main-banner,about-us,services,why-choose-us,exclusive-offers,map-area,design-philosophy,kitchen-style,kitchen-tab,process,smart-storage,projects,testimonials,latest-news,sustainability-commitment,pormotional-banner,team,content-area');
+		set_theme_mod( 'internet_service_provider_pro_section_ordering_settings_repeater', 'main-banner,about-us,services,why-choose-us,exclusive-offers,map-area,pricing-plan,testimonials,content-area');
 
 		// topbar
 
@@ -1798,9 +1798,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		} 
 
 		// ------------- Map Area -------------
-
 		
-
 		set_theme_mod( 'internet_service_provider_pro_map_area_tagline', 'Map Area' );
         set_theme_mod( 'internet_service_provider_pro_map_area_main_heading', 'Enjoy Blazing-Fast Connectivity Everywhere' );
 
@@ -1841,444 +1839,94 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod( 'internet_service_provider_pro_map_area_map_image', get_template_directory_uri().'/assets/images/map-image.png');
 
 
-		// ------------- Design Philosophy -------------
+		// -------------- Pricing Plans -----------------
 
-		set_theme_mod( 'internet_service_provider_pro_design_philosophy_tagline', 'Our Design Philosophy' );
-        set_theme_mod( 'internet_service_provider_pro_design_philosophy_main_heading', 'Every detail matters — from the placement of your sink to the finish of your cabinet handles.' );
+		set_theme_mod( 'internet_service_provider_pro_pricing_plan_tagline', 'Pricing & Plans');
+        set_theme_mod( 'internet_service_provider_pro_pricing_plan_main_heading', 'Flexible Internet Plans for Every User');
+		
+        set_theme_mod( 'internet_service_provider_pro_pricing_plan_number', '3');
 
-		set_theme_mod( 'internet_service_provider_pro_design_philosophy_box_number', '3');
+        $plan_price = array('29.99','99.99','399.99');
 
-        $why_choose_box_title = array('Open-Plan Kitchen','Compact Kitchen','Luxury Kitchen');
-		$why_choose_box_text = array('For large, modern, airy spaces.','For smart, space-saving urban designs.','For high-end finishes and premium feel.');
 
-        for($i=1; $i<=3; $i++)
+		$plan_feature1 = array(
+			'100 Mbps Download Speed',
+			'Unlimited Data Usage',
+			'Free Wi-Fi Router',
+			'24/7 Technical Support',
+		);
+
+		$plan_feature2 = array(
+			'500 Mbps Download Speed',
+			'Unlimited Data with SLA',
+			'Business-Class Wi-Fi Router',
+			'Dedicated Customer Portal',
+		);
+
+		$plan_feature3 = array(
+			'1 Gbps+ Dedicated Bandwidth',
+			'Multi-Location Connectivity',
+			'Redundant Backup Connection',
+			'Customizable Security Suite',
+		);
+
+        $plan_title = array('Home','Business ','Enterprise');
+		$plan_text = array('Homes & Casual Users','Small & Medium Businesses','Large Enterprises & ISPs');
+
+		$plan_short_text = array('*Paid annually at $360/year','*Paid annually at $1.199/year','*Paid annually at $4,799/year');
+
+		$plan_btn_title = array('Get Started','Get Started','Get Started');
+
+        for($i=1;$i<=3;$i++)
         {	
-			set_theme_mod( 'internet_service_provider_pro_design_philosophy_box_image'.$i, get_template_directory_uri().'/assets/images/design-philosophy/design-philosophy-image'.$i.'.png');
-        	set_theme_mod( 'internet_service_provider_pro_design_philosophy_box_title'.$i, $why_choose_box_title[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_design_philosophy_box_text'.$i, $why_choose_box_text[$i-1] );
-		} 
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_image'.$i, get_template_directory_uri().'/assets/images/pricing-plan/plan-icon'.$i.'.png');
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_hover_image'.$i, get_template_directory_uri().'/assets/images/pricing-plan/plan-icon-hover'.$i.'.png');
+        	set_theme_mod( 'internet_service_provider_pro_pricing_plan_title'.$i, $plan_title[$i-1] );
+        	set_theme_mod( 'internet_service_provider_pro_pricing_plan_price'.$i, $plan_price[$i-1] );
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_price_cur'.$i, '$');
 
-	// ------------ Kitchen Style  ------------
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_text'.$i, $plan_text[$i-1]);
 
-        set_theme_mod( 'internet_service_provider_pro_kitchen_style_tagline', 'Find Your Perfect Style' );
-        set_theme_mod( 'internet_service_provider_pro_kitchen_style_main_heading', 'Choose from a wide range of designs to match your personality and space.' );
-        set_theme_mod( 'internet_service_provider_pro_kitchen_style_section_button_title', 'Explore Styles & Start Your Design' );
-		set_theme_mod( 'internet_service_provider_pro_kitchen_style_section_button_icon', 'fa-solid fa-arrow-right' );
-		set_theme_mod( 'internet_service_provider_pro_kitchen_style_section_button_url', home_url('/Kitchens') );
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_short_text'.$i, $plan_short_text[$i-1]);
 
-        set_theme_mod( 'internet_service_provider_pro_kitchen_style_number', '6');
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_starter_features_heading'.$i, 'What included?');
 
-		set_theme_mod( 'internet_service_provider_pro_kitchen_style_box_link_icon', 'fa-solid fa-arrow-right' );
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_duration'.$i, '/month*' );
 
-		set_theme_mod( 'internet_service_provider_pro_kitchen_style_category', 'Kitchen Style' );
-        
-		$categories = array(
-			'Kitchen Style' => array(
-				'L-Shaped Kitchen',
-				'U-Shaped Kitchen',
-				'Island Kitchen',
-				'Parallel Kitchen',
-				'Peninsula Kitchen',
-				'Galley Kitchen'
-			),
-			'Wood' => array(
-				'Solid Wood Veneer',
-				'Engineered Wood',
-				'Oak Wood',
-				'Walnut Wood',
-				'Teak Wood',
-				'Maple Wood'
-			),
-			'Laminates' => array(
-				'Glossy Laminate',
-				'Matte Laminate',
-				'Textured Laminate',
-				'High Pressure Laminate',
-				'Acrylic Laminate',
-				'PVC Laminate'
-			),
-			'Stone & Surfaces' => array(
-				'Granite Surface',
-				'Quartz Countertop',
-				'Marble Finish',
-				'Concrete Surface',
-				'Nano White Stone',
-				'Soapstone Surface'
-			),
-			'Metal & Hardware' => array(
-				'Stainless Steel Sink',
-				'Aluminium Shutter',
-				'Brass Hinges',
-				'Copper Finish Handle',
-				'Steel Drawer System',
-				'Zinc Alloy Knob'
-			),
-			'Channels & Drawers' => array(
-				'Soft Close Drawer',
-				'Tandem Box',
-				'Cutlery Organizer',
-				'Corner Carousel',
-				'Pull-out Pantry',
-				'Bottle Rack Drawer'
-			),
-			'Handles & Knobs' => array(
-				'Classic Round Knob',
-				'Bar Handle',
-				'Profile Handle',
-				'Vintage Brass Knob',
-				'Minimalist Edge Handle',
-				'Crystal Glass Knob'
-			)
-			);
+    		set_theme_mod( 'internet_service_provider_pro_pricing_plan_feature_no'.$i, '4');
 
-			$content = '
-			<!-- wp:paragraph -->
-			<p>Choosing Modular iKitchen means investing in a lifestyle upgrade. Our clients enjoy personalized consultations, quick installations, and long-term value through durable designs. Beyond the build, we offer dedicated after-sales support, ensuring your kitchen remains as functional and beautiful as the day it was installed.</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":4,"className":"mt-3"} -->
-			<h4 class="wp-block-heading mt-3">Highlights</h4>
-			<!-- /wp:heading -->
-
-			<!-- wp:columns {"className":"mt-3"} -->
-			<div class="wp-block-columns mt-3"><!-- wp:column {"className":"p-4","style":{"color":{"background":"#f4f4f4"}}} -->
-			<div class="wp-block-column p-4 has-background" style="background-color:#f4f4f4"><!-- wp:heading {"level":4} -->
-			<h4 class="wp-block-heading">Contemporary Elegance</h4>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"className":"mt-3"} -->
-			<p class="mt-3">Sleek lines, glossy finishes, and minimalist aesthetics define this collection. Perfect for urban homes, these kitchens emphasize clean design and modern functionality.</p>
-			<!-- /wp:paragraph --></div>
-			<!-- /wp:column -->
-
-			<!-- wp:column {"className":"p-4","style":{"color":{"background":"#f4f4f4"}}} -->
-			<div class="wp-block-column p-4 has-background" style="background-color:#f4f4f4"><!-- wp:heading {"level":4} -->
-			<h4 class="wp-block-heading">Luxury Island Kitchens Style</h4>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"className":"mt-3"} -->
-			<p class="mt-3">Designed for spacious homes, island kitchens combine functionality with grandeur. Large countertops double as dining spaces, while premium finishes add a touch of luxury.</p>
-			<!-- /wp:paragraph --></div>
-			<!-- /wp:column -->
-
-			<!-- wp:column {"className":"p-4","style":{"color":{"background":"#f4f4f4"}}} -->
-			<div class="wp-block-column p-4 has-background" style="background-color:#f4f4f4"><!-- wp:heading {"level":4} -->
-			<h4 class="wp-block-heading">Space-Saving Solutions</h4>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph {"className":"mt-3"} -->
-			<p class="mt-3">Compact yet efficient, these kitchens are tailored for apartments and studios. Foldable counters, vertical storage, and integrated appliances make small spaces feel expansive.</p>
-			<!-- /wp:paragraph --></div>
-			<!-- /wp:column --></div>
-			<!-- /wp:columns -->
-
-			<!-- wp:paragraph -->
-			<p>Our portfolio is a testament to the harmony of design, functionality, and craftsmanship. Each project reflects our passion for creating kitchens that inspire joy, efficiency, and togetherness. With Modular iKitchen, you don’t just get a kitchen—you gain a space that enhances your daily life and becomes a centerpiece of your home.</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph -->
-			<p>Quality is at the core of our portfolio. We source premium materials—ranging from durable laminates and acrylics to natural wood finishes—that guarantee longevity and resilience. Countertops are selected not only for their beauty but also for their resistance to heat, stains, and wear.</p>
-			<!-- /wp:paragraph -->
-			';
-
-
-			$excerpt = 'Ideal for efficient workflows spaces.';
-
-			foreach($categories as $cat_name => $titles){
-				// Ensure taxonomy term exists
-				$term = term_exists($cat_name, 'kitchen_category');
-				if(!$term){
-					$term = wp_insert_term($cat_name, 'kitchen_category');
+    		for($j=1;$j<=4;$j++)
+        	{
+				if($i == 1){
+					set_theme_mod( 'internet_service_provider_pro_pricing_plan_feature_title'.$i.$j, $plan_feature1[$j-1]); 
+				}else if($i == 2){
+					set_theme_mod( 'internet_service_provider_pro_pricing_plan_feature_title'.$i.$j, $plan_feature2[$j-1]);  
+				}else if($i == 3){
+					set_theme_mod( 'internet_service_provider_pro_pricing_plan_feature_title'.$i.$j, $plan_feature3[$j-1]);  
 				}
-				$term_id = is_array($term) ? $term['term_id'] : $term;
+        	}
 
-				foreach($titles as $index => $ts_title){
-					$my_post = array(
-						'post_title'   => wp_strip_all_tags($ts_title),
-						'post_content' => $content,
-						'post_excerpt' => $excerpt,
-						'post_status'  => 'publish',
-						'post_type'    => 'kitchen',
-					);
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_button_title'.$i, $plan_btn_title[$i-1] ); 
+			set_theme_mod( 'internet_service_provider_pro_pricing_plan_button_url'.$i, home_url('/contact') ); 
 
-					$theme_post_id = wp_insert_post($my_post);
-
-					add_post_meta( $theme_post_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-
-					// Assign taxonomy term by ID
-					wp_set_object_terms($theme_post_id, (int)$term_id, 'kitchen_category');
-
-					// Build image name using slug + index
-					$cat_slug   = sanitize_title($cat_name); // "Kitchen Style" → "kitchen-style"
-					$image_name = $cat_slug . '-' . ($index+1) . '.png';
-					$image_url  = get_template_directory_uri().'/assets/images/kitchen/'.$image_name;
-
-					$upload_dir = wp_upload_dir();
-					$image_data = @file_get_contents($image_url);
-
-					if($image_data){
-						$unique_file_name = wp_unique_filename($upload_dir['path'], $image_name);
-						$filename = basename($unique_file_name);
-						$file = $upload_dir['path'].'/'.$filename;
-						file_put_contents($file, $image_data);
-
-						$wp_filetype = wp_check_filetype($filename, null);
-						$attachment = array(
-							'post_mime_type' => $wp_filetype['type'],
-							'post_title'     => sanitize_file_name($filename),
-							'post_content'   => '',
-							'post_status'    => 'inherit'
-						);
-
-						$attach_id = wp_insert_attachment($attachment, $file, $theme_post_id);
-						require_once(ABSPATH.'wp-admin/includes/image.php');
-						$attach_data = wp_generate_attachment_metadata($attach_id, $file);
-						wp_update_attachment_metadata($attach_id, $attach_data);
-						set_post_thumbnail($theme_post_id, $attach_id);
-					}
-				}
+			if($i == 2){
+				set_theme_mod( 'internet_service_provider_pro_pricing_plan_recommended'.$i, '1' ); 
 			}
-
-		// ------------  Kitchen Tab  ------------
-
-		set_theme_mod( 'internet_service_provider_pro_kitchen_tab_tagline', 'Premium Quality, Inside and Out' );
-    	set_theme_mod( 'internet_service_provider_pro_kitchen_tab_main_heading', 'From quartz countertops to matte-finish cabinets, we use only the best materials.' );
-    	set_theme_mod( 'internet_service_provider_pro_kitchen_tab_text', 'There are many majority have suffered alteration in have suffered alteration majority have in some form, humour or randomised words.' );
-
-    	set_theme_mod( 'internet_service_provider_pro_kitchen_tab_number', '6');
-
-        $tab_title = array('Wood','Laminates','Stone & Surfaces','Metal & Hardware','Channels & Drawers','Handles & Knobs');
-
-        for($i=1; $i<=6; $i++)
-        {	
-        	set_theme_mod( 'internet_service_provider_pro_kitchen_tab_tab_title'.$i, $tab_title[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_kitchen_tab_limit'.$i, '6' );
-			set_theme_mod( 'internet_service_provider_pro_kitchen_tab_category'.$i, $tab_title[$i-1] );
-		}
-
-		set_theme_mod( 'internet_service_provider_pro_kitchen_tab_box_link_icon', 'fa-solid fa-arrow-right');
-
-		// ------------- Process -------------
-
-		set_theme_mod( 'internet_service_provider_pro_process_tagline', 'Our Process' );
-        set_theme_mod( 'internet_service_provider_pro_process_main_heading', 'From Dream to Reality' );
-
-		set_theme_mod( 'internet_service_provider_pro_process_icon_box_number', '5');
-
-        $why_choose_box_title = array('Consult','Design','Approval','Installation', 'Handover');
-		$why_choose_box_text = array('We begin with understanding your lifestyle, needs, and budget.','Our designers create personalized 3D layouts for your kitchen.','You review and approve the design before we move forward.','Our expert team ensures flawless assembly and fitting.','Enjoy your brand-new modular kitchen, ready to use!');
-
-        for($i=1; $i<=5; $i++)
-        {	
-			set_theme_mod( 'internet_service_provider_pro_process_icon_box_image'.$i, get_template_directory_uri().'/assets/images/process/process'.$i.'.png');
-			set_theme_mod( 'internet_service_provider_pro_process_icon_box_hover_image'.$i, get_template_directory_uri().'/assets/images/process/process-hover'.$i.'.png');
-        	set_theme_mod( 'internet_service_provider_pro_process_icon_box_title'.$i, $why_choose_box_title[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_process_icon_box_text'.$i, $why_choose_box_text[$i-1] );
-		} 
-
-	// ------------- Smart Storage -------------
-
-		set_theme_mod( 'internet_service_provider_pro_smart_storage_tagline', 'Smart Storage, Seamless Cooking' );
-        set_theme_mod( 'internet_service_provider_pro_smart_storage_main_heading', 'Maximize your kitchen space with innovative storage solutions and ergonomic accessories.' );
-
-		set_theme_mod( 'internet_service_provider_pro_smart_storage_icon_box_number', '3');
-
-        $smart_storage_title = array('Pull-Out Drawers','Corner Units','Soft-Close Cabinets');
-		$smart_storage_text = array('Easily access every corner with smooth glide pull-out drawers.','Turn tricky corners into usable storage with innovative corner solutions.','No slamming — gentle, noiseless closing every time.');
-
-        for($i=1; $i<=3; $i++)
-        {	
-			set_theme_mod( 'internet_service_provider_pro_smart_storage_icon_box_main_image'.$i, get_template_directory_uri().'/assets/images/smart-storage/smart-storage'.$i.'.png');
-			set_theme_mod( 'internet_service_provider_pro_smart_storage_icon_box_image'.$i, get_template_directory_uri().'/assets/images/smart-storage/smart-storage-icon'.$i.'.png');
-        	set_theme_mod( 'internet_service_provider_pro_smart_storage_icon_box_title'.$i, $smart_storage_title[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_smart_storage_icon_box_text'.$i, $smart_storage_text[$i-1] );
-		} 
-
-	// ------------  Projects  ------------
-	
-		set_theme_mod( 'internet_service_provider_pro_projects_tagline', 'Kitchens That Inspire' );
-		set_theme_mod( 'internet_service_provider_pro_projects_main_heading', 'Explore our completed projects across different styles and spaces.' );
-
-		set_theme_mod( 'internet_service_provider_pro_projects_project_name', 'Project Name: ' );
-		set_theme_mod('internet_service_provider_pro_projects_project_name_image', get_template_directory_uri() . '/assets/images/projects/project-name.png');
-
-		set_theme_mod( 'internet_service_provider_pro_projects_location', 'Location: ' );
-		set_theme_mod('internet_service_provider_pro_projects_location_image', get_template_directory_uri() . '/assets/images/projects/project-location.png');
-
-		set_theme_mod( 'internet_service_provider_pro_projects_style', 'Style: ' );
-		set_theme_mod('internet_service_provider_pro_projects_style_image', get_template_directory_uri() . '/assets/images/projects/project-style.png');
-
-		set_theme_mod( 'internet_service_provider_pro_projects_button_title', 'See More Inspiring Projects' );  
-		set_theme_mod( 'internet_service_provider_pro_projects_button_icon', 'fa-solid fa-arrow-right' );
-		set_theme_mod( 'internet_service_provider_pro_projects_button_url', home_url('/portfolio') );
-
-        set_theme_mod( 'internet_service_provider_pro_projects_number', '4' );
-
-		$internet_service_provider_projects = [
-			[
-				'title'       => 'Scandinavian Light Kitchen',
-				'description' => 'Bright, airy modular design with clean lines and natural wood accents.',
-				'location'    => 'Stockholm, Sweden',
-				'style'       => 'Scandinavian Minimalist',
-			],
-			[
-				'title'       => 'Industrial Loft Kitchen',
-				'description' => 'Exposed brick and steel elements paired with modular cabinetry for urban living.',
-				'location'    => 'New York City, USA',
-				'style'       => 'Industrial Modern',
-			],
-			[
-				'title'       => 'Mediterranean Charm Kitchen',
-				'description' => 'Warm tones, tiled backsplashes, and modular layouts inspired by coastal living.',
-				'location'    => 'Barcelona, Spain',
-				'style'       => 'Mediterranean Classic',
-			],
-			[
-				'title'       => 'Futuristic Smart Kitchen',
-				'description' => 'Integrated smart appliances with modular adaptability and sleek finishes.',
-				'location'    => 'Tokyo, Japan',
-				'style'       => 'Futuristic Contemporary',
-			],
-		];
-
-        for($i=1;$i<=4;$i++)
-        {
-          $ts_title = $internet_service_provider_projects[$i-1]['title'];
-
-		  $content = '
-			<!-- wp:paragraph -->
-			<p>Our modular kitchen solutions are designed to blend functionality with aesthetics, offering a seamless cooking experience tailored to modern lifestyles. Each design is crafted with precision, ensuring maximum space utilization, ergonomic layouts, and stylish finishes that elevate the heart of your home.</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":4} -->
-			<h4 class="wp-block-heading">Why Choose Modular iKitchen?</h4>
-			<!-- /wp:heading -->
-
-			<!-- wp:paragraph -->
-			<p>A modular kitchen is more than just cabinetry—it’s a lifestyle upgrade. With customizable modules, smart storage solutions, and durable materials, our kitchens are built to adapt to your needs while maintaining timeless elegance.</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:heading {"level":5} -->
-			<h5 class="wp-block-heading">Key Features</h5>
-			<!-- /wp:heading -->
-
-			<!-- wp:list -->
-			<ul class="wp-block-list"><!-- wp:list-item -->
-			<li><strong>Customizable Layouts</strong>: Choose from L-shaped, U-shaped, parallel, or island designs to suit your space.</li>
-			<!-- /wp:list-item -->
-
-			<!-- wp:list-item -->
-			<li><strong>Smart Storage Solutions</strong>: Pull-out drawers, corner units, and vertical storage maximize efficiency.</li>
-			<!-- /wp:list-item -->
-
-			<!-- wp:list-item -->
-			<li><strong>Premium Materials</strong>: High-quality laminates, acrylics, and wooden finishes for durability and style.</li>
-			<!-- /wp:list-item -->
-
-			<!-- wp:list-item -->
-			<li><strong>Ergonomic Design</strong>: Thoughtfully planned work triangles for effortless movement between stove, sink, and refrigerator.</li>
-			<!-- /wp:list-item -->
-
-			<!-- wp:list-item -->
-			<li><strong>Modern Accessories</strong>: Soft-close hinges, integrated lighting, and modular organizers for convenience.</li>
-			<!-- /wp:list-item --></ul>
-			<!-- /wp:list -->
-
-			<!-- wp:paragraph -->
-			<p>Quality is at the core of our portfolio. We source premium materials—ranging from durable laminates and acrylics to natural wood finishes—that guarantee longevity and resilience.</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:quote -->
-			<blockquote class="wp-block-quote"><!-- wp:paragraph -->
-			<p>We approach kitchen design with a philosophy rooted in adaptability and personalization. Every household has unique needs, and our modular solutions are crafted to reflect those differences. From compact apartments to sprawling villas, we tailor layouts that maximize space, enhance workflow, and create a welcoming environment</p>
-			<!-- /wp:paragraph --></blockquote>
-			<!-- /wp:quote -->
-
-			<!-- wp:paragraph -->
-			<p>Quality is at the core of our portfolio. We source premium materials—ranging from durable laminates and acrylics to natural wood finishes—that guarantee longevity and resilience. Countertops are selected not only for their beauty but also for their resistance to heat, stains, and wear. Hardware such as hinges, sliders, and handles are chosen for smooth functionality, ensuring that every drawer and cabinet operates seamlessly.</p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph -->
-			<p></p>
-			<!-- /wp:paragraph -->
-			';
-
-          // Create post object
-          $my_post = array(
-           'post_title'    => wp_strip_all_tags( $ts_title ),
-           'post_content'  => $content,
-           'post_status'   => 'publish',
-           'post_type'     => 'projects',   
-		   'post_excerpt'     => $internet_service_provider_projects[$i-1]['description'],
-          );
-
-           // Insert the post into the database
-          $theme_post_id = wp_insert_post( $my_post );
-
-		  add_post_meta( $theme_post_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-
-		  update_post_meta( $theme_post_id,'internet_service_provider_pro_posttype_projects_style', $internet_service_provider_projects[$i-1]['style']);
-		  update_post_meta( $theme_post_id,'internet_service_provider_pro_posttype_projects_location', $internet_service_provider_projects[$i-1]['location']);
-		  update_post_meta( $theme_post_id,'internet_service_provider_pro_posttype_projects_video_url','https://www.youtube.com/watch?v=rto_SOlD-oU');
-		  update_post_meta( $theme_post_id,'internet_service_provider_pro_posttype_projects_video_text', $internet_service_provider_projects[$i-1]['description']);
-			     
-          $image_url = get_template_directory_uri().'/assets/images/projects/project'.$i.'.png';
-          $image_name= 'project'.$i.'.png';
-          $upload_dir = wp_upload_dir(); 
-          // Set upload folder
-          $image_data = file_get_contents($image_url); 
-          // Get image data
-          $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name ); 
-          // Generate unique name
-          $filename= basename( $unique_file_name ); 
-          // Create image file name
-          // Check folder permission and define file location
-          if( wp_mkdir_p( $upload_dir['path'] ) ) {
-             $file = $upload_dir['path'] . '/' . $filename;
-          } else {
-             $file = $upload_dir['basedir'] . '/' . $filename;
-          }
-          // Create the image  file on the server
-          file_put_contents( $file, $image_data );
-          // Check image file type
-          $wp_filetype = wp_check_filetype( $filename, null );
-          // Set attachment data
-          $attachment = array(
-           'post_mime_type' => $wp_filetype['type'],
-           'post_title'     => sanitize_file_name( $filename ),
-           'post_content'   => '',
-           'post_type'     => 'projects',
-           'post_status'    => 'inherit'
-          );
-
-          // Create the attachment
-          $attach_id = wp_insert_attachment( $attachment, $file, $theme_post_id );
-          // Include image.php
-          require_once(ABSPATH . 'wp-admin/includes/image.php');
-          // Define attachment metadata
-          $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-          // Assign metadata to attachment
-           wp_update_attachment_metadata( $attach_id, $attach_data );
-          // And finally assign featured image to post
-          set_post_thumbnail( $theme_post_id, $attach_id );
         }
 
-	// ------------ Testimonial  ------------
+		// ------------ Testimonial  ------------
 
-		set_theme_mod('internet_service_provider_pro_testimonials_image', get_template_directory_uri() . '/assets/images/testimonials/testimonials-bg.png');
+		set_theme_mod('internet_service_provider_pro_testimonials_tagline', 'Testimonials');
+		set_theme_mod('internet_service_provider_pro_testimonials_main_heading', 'Customer Experiences with DataNest');
+		set_theme_mod('internet_service_provider_pro_testimonials_text', 'Here’s how DataNest is changing the way people experience the internet across Indonesia.');
 
-		set_theme_mod('internet_service_provider_pro_testimonials_tagline', 'Designed With Love, Loved by Clients');
-		set_theme_mod('internet_service_provider_pro_testimonials_main_heading', 'See what homeowners say about their KitchenCraft experience.');
-
-		set_theme_mod('internet_service_provider_pro_testimonials_number', '6');
+		set_theme_mod('internet_service_provider_pro_testimonials_number', '4');
 
 		$testimonials_title = array(
-			'— Emma R.',
-			'— Daniel M.',
-			'— Sofia L.',
-			'— Samuel C',
-			'— Nadia S',
-			'— Sam M'
+			'Michael S.',
+			'Sarah L.',
+			'Sofia L.',
+			'Samuel C',
 		);
 
 		$testimonials_location = array(
@@ -2291,15 +1939,13 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		);
 
 		$testimonials_quote = array(
-			'"KitchenCraft transformed our outdated space into something truly stunning. The design team listened carefully to our needs and delivered a kitchen that feels both modern and timeless."',
-			'"From the first consultation to the final handover, everything was seamless. The attention to detail is incredible — I finally enjoy cooking and hosting in my new kitchen!"',
-			'"I was amazed at how efficiently the project was managed. The materials are premium, the finishes flawless, and the layout perfectly suits my lifestyle."',
-			'"KitchenCraft transformed our outdated space into something truly stunning. The design team listened carefully to our needs and delivered a kitchen that feels both modern and timeless."',
-			'"From the first consultation to the final handover, everything was seamless. The attention to detail is incredible — I finally enjoy cooking and hosting in my new kitchen!"',
-			'"I was amazed at how efficiently the project was managed. The materials are premium, the finishes flawless, and the layout perfectly suits my lifestyle."',
+			'I used to struggle with video calls dropping. With DataNest, my meetings run smooth, even during heavy rain.',
+			'From the first consultation to the final handover, everything was seamless. The attention to detail is incredible — I finally enjoy cooking and hosting in my new kitchen!',
+			'I used to struggle with video calls dropping. With DataNest, my meetings run smooth, even during heavy rain.',
+			'From the first consultation to the final handover, everything was seamless. The attention to detail is incredible — I finally enjoy cooking and hosting in my new kitchen!',
 		);
 
-		for ($i = 1; $i <= 6; $i++) {
+		for ($i = 1; $i <= 4; $i++) {
 			$ts_title = $testimonials_title[$i - 1];
 
 			// Create post object
@@ -2315,9 +1961,11 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 			add_post_meta( $theme_post_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
-			update_post_meta($theme_post_id, 'internet_service_provider_pro_posttype_testimonial_location', $testimonials_location[$i - 1]);
+			add_post_meta( $theme_post_id, 'internet_service_provider_pro_posttype_testimonial_video_url', 'https://www.youtube.com/watch?v=l6MLY0Kqsk0' );
 
-			update_post_meta($theme_post_id, 'internet_service_provider_pro_posttype_star_review', '5');
+			$Second_image_url = get_template_directory_uri() . '/assets/images/testimonials/testimonialimg-video' . $i . '.png';
+			
+			add_post_meta( $theme_post_id, 'internet_service_provider_pro_posttype_testimonial_image_2', $Second_image_url );
 
 			$image_url = get_template_directory_uri() . '/assets/images/testimonials/testimonialimg' . $i . '.png';
 			$image_name = 'testimonialimg' . $i . '.png';
@@ -2506,127 +2154,16 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		// And finally assign featured image to post
 		set_post_thumbnail( $theme_post_id, $attach_id );
 
-		// ------------- Sustainability Commitment -------------
-
-		set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_tagline', 'Sustainability Commitment' );
-        set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_main_heading', 'Using sustainable materials and responsible processes to protect our planet.' );
-
-		set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_icon_box_number', '4');
-
-        $sustainability_commitment_title = array('Recyclable Materials','Low VOC Paints','Energy-Saving Appliances', 'FSC-Certified Wood');
-		$sustainability_commitment_text = array('of wood sourced sustainably','  reduction in material waste','eco-friendly finishes', 'lower carbon footprint kitchens');
-
-		$sustainability_commitment_percentage = array('70%','90%','100%', '50%');
-
-        for($i=1; $i<=4; $i++)
-        {	
-			
-			set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_icon_box_image'.$i, get_template_directory_uri().'/assets/images/sustainability-commitment/sustainability-commitment'.$i.'.png');
-        	set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_icon_box_title'.$i, $sustainability_commitment_title[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_icon_box_text'.$i, $sustainability_commitment_text[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_icon_box_percentage'.$i, $sustainability_commitment_percentage[$i-1] );
-		} 
-
-		set_theme_mod( 'internet_service_provider_pro_sustainability_commitment_column_image', get_template_directory_uri().'/assets/images/sustainability-commitment/sustainability-commitment-image.png');
-
-		// ------------ Promotional Banner  ------------
-
-		set_theme_mod( 'internet_service_provider_pro_pormotional_banner_bgimage', get_template_directory_uri().'/assets/images/promo-banner-image.png');
-
-        set_theme_mod( 'internet_service_provider_pro_pormotional_banner_tagline', 'Let’s Create Your Dream Kitchen' );
-        set_theme_mod( 'internet_service_provider_pro_pormotional_banner_main_heading', 'Book a free consultation with our expert designers today' );
-        set_theme_mod( 'internet_service_provider_pro_pormotional_banner_section_button_title', 'Book Free Consultation' );
-		set_theme_mod( 'internet_service_provider_pro_pormotional_banner_section_button_icon', 'fa-solid fa-arrow-right' );
-		set_theme_mod( 'internet_service_provider_pro_pormotional_banner_section_button_url', home_url('/contact') );
-
-		  // ------------ Team  ------------
-        set_theme_mod( 'internet_service_provider_pro_team_tagline', 'Our Talented Team' );
-        set_theme_mod( 'internet_service_provider_pro_team_main_heading', 'Meet the experts who bring your dream kitchen to life.' );
-
-        set_theme_mod( 'internet_service_provider_pro_team_number', '4');
-
-        $team_name = array('Emma Collins','Liam Anderson','Sofia Martinez','David Williams');
-
-        for($i=1;$i<=4;$i++)
-        {
-          $ts_title = $team_name[$i-1];
-          $content = 'Suspendisse et porttitor leo. Sed porttitor dui sit amet luctus bibendum. Sed pulvinar diam lacus, ut elementum nisl volutpat in. Nullam vitae nulla dolor. Pellentesque viverra arcu ut Curabitur tempor mauris ex, eget porta tellus posuere maximus.';
-
-          // Create post object
-          $my_post = array(
-           'post_title'    => wp_strip_all_tags( $ts_title ),
-           'post_content'  => $content,
-           'post_status'   => 'publish',
-           'post_type'     => 'team',   
-          );
-
-           // Insert the post into the database
-          $theme_post_id = wp_insert_post( $my_post );
-
-		  add_post_meta( $theme_post_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-
-
-      		update_post_meta( $theme_post_id,'meta-team-designation','Lead Designer');
-      		update_post_meta( $theme_post_id,'meta-team-email','support@gmail.com');
-      		update_post_meta( $theme_post_id,'meta-team-phone','568 586 8956');
-      		update_post_meta( $theme_post_id,'meta-team-facebookurl','https://www.facebook.com/');
-      		update_post_meta( $theme_post_id,'meta-team-linkdenurl','https://www.linkedin.com/');
-      		update_post_meta( $theme_post_id,'meta-team-twitterurl','https://www.twitter.com/');
-      		update_post_meta( $theme_post_id,'meta-team-tinstagram','https://www.instagram.com/');
-      		update_post_meta( $theme_post_id,'meta-team-pinterest','https://www.pinterest.com/');
-			     
-          $image_url = get_template_directory_uri().'/assets/images/team/team'.$i.'.png';
-          $image_name= 'team'.$i.'.png';
-          $upload_dir = wp_upload_dir(); 
-          // Set upload folder
-          $image_data = file_get_contents($image_url); 
-          // Get image data
-          $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name ); 
-          // Generate unique name
-          $filename= basename( $unique_file_name ); 
-          // Create image file name
-          // Check folder permission and define file location
-          if( wp_mkdir_p( $upload_dir['path'] ) ) {
-             $file = $upload_dir['path'] . '/' . $filename;
-          } else {
-             $file = $upload_dir['basedir'] . '/' . $filename;
-          }
-          // Create the image  file on the server
-          file_put_contents( $file, $image_data );
-          // Check image file type
-          $wp_filetype = wp_check_filetype( $filename, null );
-          // Set attachment data
-          $attachment = array(
-           'post_mime_type' => $wp_filetype['type'],
-           'post_title'     => sanitize_file_name( $filename ),
-           'post_content'   => '',
-           'post_type'     => 'team',
-           'post_status'    => 'inherit'
-          );
-
-          // Create the attachment
-          $attach_id = wp_insert_attachment( $attachment, $file, $theme_post_id );
-          // Include image.php
-          require_once(ABSPATH . 'wp-admin/includes/image.php');
-          // Define attachment metadata
-          $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-          // Assign metadata to attachment
-           wp_update_attachment_metadata( $attach_id, $attach_data );
-          // And finally assign featured image to post
-          set_post_thumbnail( $theme_post_id, $attach_id );
-        }
-
 		/*----------------- Newsletter -----------------*/
 
-		set_theme_mod( 'internet_service_provider_pro_newsletter_tagline', 'Stay Updated' );
-        set_theme_mod( 'internet_service_provider_pro_newsletter_main_heading', 'Get the latest kitchen trends, design tips, and special offers straight to your inbox.' );
+        set_theme_mod( 'internet_service_provider_pro_newsletter_main_heading', 'Subscribe for the latest news, exclusive deals, and network updates.' );
 
 		set_theme_mod( 'internet_service_provider_pro_newsletter_social_icons_title', 'Follow Us : ' );
 
         // contact form shortcode
 		 $cf7title = "Newsletter";
 		 $cf7content = '
-		 [email* your-email][submit "&#xf1d8;"]
+		 [email* your-email placeholder="Enter your email here"][submit "Start Now!"]
 
 		 [_site_title] "[your-subject]"
 		 [_site_title] <themespride@gmail.com>
@@ -2679,7 +2216,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		 $cf7post_id = wp_insert_post( $cf7_post );
 
 		 add_post_meta($cf7post_id, "_form", '
-		[email* your-email][submit "&#xf1d8;"]');
+		[email* your-email placeholder="Enter your email here"][submit "Start Now!"]');
 
 		 $cf7mail_data  = array('subject' => '[_site_title] "[your-subject]"',
 				 'sender' => '[_site_title] <themespride@gmail.com>',

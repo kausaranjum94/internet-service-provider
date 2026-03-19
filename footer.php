@@ -9,7 +9,7 @@
 ?>
 <div class="clearfix"></div>
 <div class="outer-footer">
-    <?php get_template_part( 'template-parts/footer/newsletter' ); ?>
+    
     <?php get_template_part( 'template-parts/footer/footer-columns' ); ?>
     
 </div>

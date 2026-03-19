@@ -289,6 +289,8 @@ function internet_service_provider_pro_scripts() {
 
 	wp_enqueue_script( 'jquery.fancybox.min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array('jquery'),'', true );
 
+	wp_enqueue_script( 'panzoom.min', get_template_directory_uri() . '/assets/js/panzoom.min.js', array('jquery'),'', true );
+
 	
  //wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/assets/js/SmoothScroll.js',array('jquery'),'',true);
  // wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/assets/js/SmoothScroll.js', array( 'jquery' ) );

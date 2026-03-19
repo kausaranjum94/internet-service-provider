@@ -184,6 +184,39 @@ jQuery(document).ready(function ($) {
     mouseDrag: true
   });
 
+   var owl = jQuery('#pricing-plan .owl-carousel');
+    owl.owlCarousel({
+    margin: 15,
+    nav: false,
+    autoplay : true,
+    lazyLoad: true,
+    autoplayTimeout: parseInt(jQuery("#pricing-plan").data('speed')),
+    loop: jQuery("#pricing-plan").data('loops'),
+    dots: false,
+    autoplayHoverPause:true,
+    rtl:rtl_direction(),
+    navText : ['<i class="fas fa-angle-left"></i>','<i class="fas fa-angle-right"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      768: {
+        items: 3,
+      },
+      900: {
+        items: 3,
+      },
+      1024: {
+        items: 3
+      }
+    },
+    autoplayHoverPause : true,
+    mouseDrag: true
+  });
+
   var owl = jQuery('#our-partner .owl-carousel');
     owl.owlCarousel({
     margin: 10,
@@ -548,3 +581,17 @@ jQuery(document).ready(function ($) {
   });
 
 });
+
+const elem = document.getElementById('map-image');
+  const panzoom = Panzoom(elem, {
+    maxScale: 5,
+    minScale: 1,
+    step: 0.3,
+    contain: 'outside'   // allows zoom beyond container edges
+  });
+
+  // Enable wheel zoom
+  elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+
+  // Optional: start zoomed in so it fills nicely
+  panzoom.zoom(1.2);

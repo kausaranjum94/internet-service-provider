@@ -4026,2777 +4026,84 @@
     'responsive' => false
   )));
 
-
-  // ------------- Design Philosophy -------------
-  $wp_customize->add_section('internet_service_provider_pro_design_philosophy',array(
-    'title' => __('Design Philosophy','internet-service-provider-pro'),
+  // -------------- Pricing Plan --------------
+  $wp_customize->add_section('internet_service_provider_pro_pricing_plan',array(
+    'title' => __('Pricing Plan','internet-service-provider-pro'),
     'panel' => 'internet_service_provider_pro_panel_id',
   ));
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_enable',
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_enable',
       array(
     'default' => 'Enable',
     'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_enable',
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_enable',
     array(
     'type' => 'radio',
     'label' => __('Do you want this section', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
+    'section' => 'internet_service_provider_pro_pricing_plan',
     'choices' => array(
     'Enable' => __('Enable', 'internet-service-provider-pro'),
     'Disable' => __('Disable', 'internet-service-provider-pro')
   )));
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_design_philosophy_enable', array(
-    'selector' => '#about-us h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_design_philosophy_enable',
+  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_pricing_plan_enable', array(
+    'selector' => '#pricing-plan h3',
+    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_pricing_plan_enable',
   ));
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_settings',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_settings',
     array(
     'default' => '',
     'transport' => 'postMessage',
     'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_settings',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_settings',
     array(
     'label' => __('Section Background Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_bgcolor', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_bgcolor', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_bgcolor', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_bgcolor', array(
     'label' => __('Section Background Color', 'internet-service-provider-pro'),
     'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_bgcolor',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_bgcolor',
   )));
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_bgimage',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_bgimage',array(
     'default' => '',
     'sanitize_callback' => 'esc_url_raw',
   ));
   $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_design_philosophy_bgimage',array(
+    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_pricing_plan_bgimage',array(
     'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 430px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_bgimage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_bgimage_setting', array(
-      'default'         => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_bgimage_setting', array(
-      'type'      => 'radio',
-      'label'     => __('Choose image option', 'internet-service-provider-pro'),
-      'section'   => 'internet_service_provider_pro_design_philosophy',
-      'choices'   => array(
-        'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
-        'bg-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),                    
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_content_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_content_settings',
-    array(
-    'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_tagline',array(
-    'label' => __('Section Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'setting' => 'internet_service_provider_pro_design_philosophy_tagline',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_main_heading',array(
-    'label' => __('Section Main Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'setting' => 'internet_service_provider_pro_design_philosophy_main_heading',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box',
-    array(
-    'label' => __('Boxes','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_number',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_box_number',array(
-    'label' => __('Number of Boxes to show','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'setting' => 'internet_service_provider_pro_design_philosophy_box_number',
-    'type'    => 'text'
-  ));
-
-  $design_philosophy_box = get_theme_mod('internet_service_provider_pro_design_philosophy_box_number');
-
-  for($i=1;$i<=$design_philosophy_box;$i++)
-  {
-    $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box_settings'.$i,
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-    ));
-    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box_settings'.$i,
-      array(
-      'label' => __('Box ','internet-service-provider-pro').$i,
-      'section' => 'internet_service_provider_pro_design_philosophy'
-    )));
-
-    $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_image'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_design_philosophy_box_image'.$i,array(
-      'label' => __('Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_design_philosophy',
-      'settings' => 'internet_service_provider_pro_design_philosophy_box_image'.$i
-    )));
-
-	$wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_title'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_design_philosophy_box_title'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_design_philosophy',
-      'setting' => 'internet_service_provider_pro_design_philosophy_box_title'.$i,
-      'type'    => 'text'
-    ));
-    
-    $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_text'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_design_philosophy_box_text'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_design_philosophy',
-      'setting' => 'internet_service_provider_pro_design_philosophy_box_text'.$i,
-      'type'    => 'text'
-    ));
-
-  }
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_color_settings',
-  array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_design_philosophy_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_design_philosophy',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'setting' => 'internet_service_provider_pro_design_philosophy_tagline_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_design_philosophy_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_design_philosophy',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'setting' => 'internet_service_provider_pro_design_philosophy_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box_title_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box_title_ct_pallete',
-    array(
-    'label' => __('Box Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box_title_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box_title_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_box_title_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_title_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_design_philosophy_box_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_design_philosophy',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_title_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_box_title_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'setting' => 'internet_service_provider_pro_design_philosophy_box_title_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box_text_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box_text_ct_pallete',
-    array(
-    'label' => __('Box Text Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box_text_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box_text_color', array(
-    'label' => __(' Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_box_text_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_text_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_design_philosophy_box_text_font_family', array(
-    'section'  => 'internet_service_provider_pro_design_philosophy',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_box_text_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_design_philosophy_box_text_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'setting' => 'internet_service_provider_pro_design_philosophy_box_text_font_size',
-    'type'    => 'number'
-  ));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box_border_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box_border_color', array(
-    'label' => __('Box Border Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_box_border_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_design_philosophy_box_hover_text_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_design_philosophy_box_hover_text_color', array(
-    'label' => __('Box Hover Text Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'settings' => 'internet_service_provider_pro_design_philosophy_box_hover_text_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_design_philosophy_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_design_philosophy_spacing', array(
-    'section' => 'internet_service_provider_pro_design_philosophy',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_design_philosophy_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_design_philosophy_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_design_philosophy_spacing_bottom_desktop',
-      'desktop_right' => 'internet_service_provider_pro_design_philosophy_spacing_right_desktop'
-  ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-// ------------- Kitchen Style -------------
-  $wp_customize->add_section('internet_service_provider_pro_kitchen_style',array(
-    'title' => __('Design Philosophy','internet-service-provider-pro'),
-    'panel' => 'internet_service_provider_pro_panel_id',
-  ));
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_enable',
-      array(
-    'default' => 'Enable',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_enable',
-    array(
-    'type' => 'radio',
-    'label' => __('Do you want this section', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'choices' => array(
-    'Enable' => __('Enable', 'internet-service-provider-pro'),
-    'Disable' => __('Disable', 'internet-service-provider-pro')
-  )));
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_kitchen_style_enable', array(
-    'selector' => '#about-us h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_kitchen_style_enable',
-  ));
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_settings',
-    array(
-    'label' => __('Section Background Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_bgcolor', array(
-    'label' => __('Section Background Color', 'internet-service-provider-pro'),
-    'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_bgcolor',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_bgimage',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_kitchen_style_bgimage',array(
-    'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 430px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_bgimage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_bgimage_setting', array(
-      'default'         => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_bgimage_setting', array(
-      'type'      => 'radio',
-      'label'     => __('Choose image option', 'internet-service-provider-pro'),
-      'section'   => 'internet_service_provider_pro_kitchen_style',
-      'choices'   => array(
-        'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
-        'bg-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),                    
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_content_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_content_settings',
-    array(
-    'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_tagline',array(
-    'label' => __('Section Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_tagline',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_main_heading',array(
-    'label' => __('Section Main Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_main_heading',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_number',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_number',array(
-    'label' => __('Number of post to show','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_number',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting(
-		'internet_service_provider_pro_kitchen_style_box_link_icon',
-		array(
-			'default'     => '',
-			'sanitize_callback' => 'sanitize_text_field'
-		)
-	);
-	$wp_customize->add_control(
-		new internet_service_provider_pro_Fontawesome_Icon_Chooser(
-			$wp_customize,
-			'internet_service_provider_pro_kitchen_style_box_link_icon',
-			array(
-			'settings'    => 'internet_service_provider_pro_kitchen_style_box_link_icon',
-			'section'   => 'internet_service_provider_pro_kitchen_style',
-			'type'      => 'icon',
-			'label'     => esc_html__( 'Choose  Icon', 'internet-service-provider-pro' ),
-			)
-		)
-	);
-
-	$args = array(
-    'type'                     => 'kitchen',
-    'child_of'                 => 0,
-    'parent'                   => '',
-    'orderby'                  => 'term_group',
-    'order'                    => 'ASC',
-    'hide_empty'               => false,
-    'hierarchical'             => 1,
-    'number'                   => '',
-    'taxonomy'                 => 'kitchen_category',
-    'pad_counts'               => false
-  );
-  $categories = get_categories( $args );
-  $cats = array();
-  $i = 0;
-  foreach($categories as $category){
-      if($i==0){
-          $default = $category->slug;
-          $i++;
-      }
-      $cats[$category->slug] = $category->name;
-  }
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_category',array(
-      'sanitize_callback' => 'sanitize_text_field',
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_category',array(
-      'type'    => 'select',
-      'choices' => $cats,
-      'label' => __('Select category','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-  ));
-  
-	$wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_section_button',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_section_button',
-    array(
-    'label' => __('Section Button','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_section_button_title',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_section_button_title',array(
-    'label' => __('Section Button Title','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_section_button_title',
-    'type'    => 'text'
-  ));
-	
-	$wp_customize->add_setting(
-		'internet_service_provider_pro_kitchen_style_section_button_icon',
-		array(
-			'default'     => '',
-			'sanitize_callback' => 'sanitize_text_field'
-		)
-	);
-	$wp_customize->add_control(
-		new internet_service_provider_pro_Fontawesome_Icon_Chooser(
-			$wp_customize,
-			'internet_service_provider_pro_kitchen_style_section_button_icon',
-			array(
-			'settings'    => 'internet_service_provider_pro_kitchen_style_section_button_icon',
-			'section'   => 'internet_service_provider_pro_kitchen_style',
-			'type'      => 'icon',
-			'label'     => esc_html__( 'Choose  Icon', 'internet-service-provider-pro' ),
-			)
-		)
-	);
-
-  $wp_customize->add_setting('internet_service_provider_pro_tekitchen_style_section_button_url',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_tekitchen_style_section_button_url',array(
-    'label' => __('Section Button Url','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_tekitchen_style',
-    'setting' => 'internet_service_provider_pro_tekitchen_style_section_button_url',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_color_settings',
-  array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_kitchen_style_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_kitchen_style',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_tagline_font_size',
-    'type'    => 'number'
-  ));
-  
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_kitchen_style_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_kitchen_style',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_title_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_title_ct_pallete',
-    array(
-    'label' => __('Box Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_title_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_title_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_title_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_box_title_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_kitchen_style_box_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_kitchen_style',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_box_title_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_box_title_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_box_title_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_text_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_text_ct_pallete',
-    array(
-    'label' => __('Box Text Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_text_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_text_color', array(
-    'label' => __(' Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_text_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_box_text_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_kitchen_style_box_text_font_family', array(
-    'section'  => 'internet_service_provider_pro_kitchen_style',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_box_text_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_box_text_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'setting' => 'internet_service_provider_pro_kitchen_style_box_text_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_link_icon_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_link_icon_ct_pallete',
-    array(
-    'label' => __('Box Link Icon Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_link_icon_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_link_icon_color', array(
-    'label' => __('Icon Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_link_icon_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_link_icon_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_link_icon_bgcolor', array(
-    'label' => __('Icon Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_link_icon_bgcolor',
-  )));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_link_icon_hover_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_link_icon_hover_color', array(
-    'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_link_icon_hover_color',
-  )));
-
-  
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_link_icon_hover_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_link_icon_hover_bgcolor', array(
-    'label' => __('Icon Hover Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_link_icon_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_bgcolor', array(
-    'label' => __('Box Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_hover_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_hover_bgcolor', array(
-    'label' => __('Box Hover Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_box_hover_content_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_box_hover_content_color', array(
-    'label' => __('Box Hover Content Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'settings' => 'internet_service_provider_pro_kitchen_style_box_hover_content_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_ct_pallete',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_ct_pallete',
-      array(
-      'label' => __('Section Button Typography ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_color', array(
-      'label' => __('Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_button_font_family',array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-      'internet_service_provider_pro_kitchen_style_button_font_family', array(
-      'section'  => 'internet_service_provider_pro_kitchen_style',
-      'label'    => __('Font Family','internet-service-provider-pro'),
-      'type'     => 'select',
-      'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_button_font_size',array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_style_button_font_size',array(
-      'label' => __('Font Size','internet-service-provider-pro'),
-      
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'setting' => 'internet_service_provider_pro_kitchen_style_button_font_size',
-      'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_bgcolor', array(
-      'label' => __('Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_icon_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_icon_color', array(
-      'label' => __('Icon Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_icon_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_icon_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_icon_bgcolor', array(
-      'label' => __('Icon Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_icon_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_icon_hover_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_icon_hover_color', array(
-      'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_icon_hover_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_icon_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_icon_hover_bgcolor', array(
-      'label' => __('Icon Hover Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_icon_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_hover_bgcolor', array(
-      'label' => __('Hover Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_button_text_color_hover', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_button_text_color_hover', array(
-      'label' => __('Hover Text Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_button_text_color_hover',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_style_overlay_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_style_overlay_color', array(
-      'label' => __('Overlay Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_style',
-      'settings' => 'internet_service_provider_pro_kitchen_style_overlay_color',
-  )));
-  
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_style_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_kitchen_style_spacing', array(
-    'section' => 'internet_service_provider_pro_kitchen_style',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_kitchen_style_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_kitchen_style_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_kitchen_style_spacing_bottom_desktop',
-      'desktop_right' => 'internet_service_provider_pro_kitchen_style_spacing_right_desktop'
-  ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-  /*------------------ Kitchen Tab -------------------*/
-
-  $wp_customize->add_section('internet_service_provider_pro_kitchen_tab',array(
-    'title' => __('Kitchen Material Tab','internet-service-provider-pro'),
-    'panel' => 'internet_service_provider_pro_panel_id',
-  ));
-  $wp_customize->add_setting('internet_service_provider_pro_radio_kitchen_tab_enable',
-      array(
-          'default' => 'Enable',
-          'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_radio_kitchen_tab_enable',
-      array(
-          'type' => 'radio',
-          'label' => __('Do you want this section', 'internet-service-provider-pro'),
-          'section' => 'internet_service_provider_pro_kitchen_tab',
-          'choices' => array(
-          'Enable' => __('Enable', 'internet-service-provider-pro'),
-          'Disable' => __('Disable', 'internet-service-provider-pro')
-      ),
-  ));
-
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_radio_kitchen_tab_enable', array(
-      'selector' => '#our_kitchen_tab h3',
-      'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_radio_kitchen_tab_enable',
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_bgcolor', array(
-    'label' => __('Background Color', 'internet-service-provider-pro'),
-    'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_bgcolor',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_bgimage',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-  new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_kitchen_tab_bgimage',array(
-    'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 900px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_bgimage'
-  )));
-          
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_bgimage_attachment', array(
-    'default'         => 'bwt-scroll',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_bgimage_attachment', array(
-    'type'      => 'radio',
-    'label'     => __('Choose image option', 'internet-service-provider-pro'),
-    'section'   => 'internet_service_provider_pro_kitchen_tab',
-    'choices'   => array(
-    'bwt-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),  
-    'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),                  
-  ),));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_bgimage_size', array(
-    'default' => '',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_bgimage_size', array(
-    'type' => 'radio',
-    'label' => __('Background Image Size', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'choices' => array(
-        'bg-auto' => __('Auto', 'internet-service-provider-pro'),
-        'bg-cover' => __('Cover', 'internet-service-provider-pro'),
-        'bg-contain' => __('Contain', 'internet-service-provider-pro'),
-        'bg-xy' => __('Cover X & Y', 'internet-service-provider-pro'),
-        'bg-x' => __('Cover X', 'internet-service-provider-pro'),
-    )
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_content_settings',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_content_settings',
-    array(
-    'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_tagline',array(
-    'label' => __('Section Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'setting' => 'internet_service_provider_pro_kitchen_tab_tagline',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_main_heading',array(
-    'label' => __('Section Main Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'setting' => 'internet_service_provider_pro_kitchen_tab_main_heading',
-    'type'    => 'text'
-  ));
-
-  //choose category
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_number',array(
-    'default'   => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
-
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_number',array(
-    'label' => __('Number of Tabs to show','internet-service-provider-pro'),
-    'section'   => 'internet_service_provider_pro_kitchen_tab',
-    'type'      => 'number'
-  ));
-  $count =  get_theme_mod('internet_service_provider_pro_kitchen_tab_number');
-
-  $args = array(
-       'type'                     => 'kitchen',
-        'child_of'                 => 0,
-        'parent'                   => '',
-        'orderby'                  => 'term_group',
-        'order'                    => 'ASC',
-        'hide_empty'               => false,
-        'hierarchical'             => 1,
-        'number'                   => '',
-        'taxonomy'                 => 'kitchen_category',
-        'pad_counts'               => false
-    );
-    $categories = get_categories( $args );
-    $cats = array();
-    $i = 0;
-    foreach($categories as $category){
-        if($i==0){
-            $default = $category->slug;
-            $i++;
-        } 
-        $cats[$category->slug] = $category->name;
-    }
-
-    for($i=1;$i<=$count;$i++) {
-
-        $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_tab_settings'.$i,
-        array(
-          'default' => '',
-          'transport' => 'postMessage',
-          'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-        ));
-        $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_tab_settings'.$i,
-          array(
-          'label' => __('Tab ','internet-service-provider-pro').$i,
-          'section' => 'internet_service_provider_pro_kitchen_tab'
-        )));
-
-        $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_tab_title'.$i,array(
-            'default'=> __('','internet-service-provider-pro'),
-            'sanitize_callback' => 'sanitize_text_field'
-        ));
-        $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_tab_title'.$i,array(
-            'label' => __('Tab Title','internet-service-provider-pro'),
-            'section'=> 'internet_service_provider_pro_kitchen_tab',
-            'setting'=> 'internet_service_provider_pro_kitchen_tab_tab_title'.$i,
-            'type'=> 'text'
-        ));
-        $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_category'.$i,array(
-            'sanitize_callback' => 'sanitize_text_field',
-        ));
-        $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_category'.$i,array(
-            'type'    => 'select',
-            'choices' => $cats,
-            'label' => __('Select category','internet-service-provider-pro').$i,
-            'section' => 'internet_service_provider_pro_kitchen_tab',
-        ));
-        $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_limit'.$i,array(
-          'default'   => '',
-          'sanitize_callback' => 'sanitize_text_field',
-        ));
-
-        $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_limit'.$i,array(
-          'label' => __('Number of Product to show in this category','internet-service-provider-pro').$i,
-          'section'   => 'internet_service_provider_pro_kitchen_tab',
-          'type'      => 'number'
-        ));
-    }
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_carousel_loop',
-   array(
-      'default' => 1,
-      'transport' => 'refresh',
-      'sanitize_callback' => 'internet_service_provider_pro_switch_sanitization'
-  )); 
-  $wp_customize->add_control( new internet_service_provider_pro_Toggle_Switch_Custom_control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_carousel_loop',
-     array(
-        'label' => esc_html__( 'Carousel Loop', 'internet-service-provider-pro' ),
-        'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_carousel_speed',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_carousel_speed',array(
-    'label' => __('Carousel Speed','internet-service-provider-pro'),
-    'description'=>__('Ex. 1000 for One second','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'setting' => 'internet_service_provider_pro_kitchen_tab_carousel_speed',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_carousel_nav', array(
-      'default' => 1,
-      'transport' => 'refresh',
-      'sanitize_callback' => 'internet_service_provider_pro_switch_sanitization'
-  ));
-  $wp_customize->add_control(new internet_service_provider_pro_Toggle_Switch_Custom_control($wp_customize, 'internet_service_provider_pro_kitchen_tab_carousel_nav', array(
-      'label' => esc_html__('Carousel Nav', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_carousel_dots', array(
-      'default' => 1,
-      'transport' => 'refresh',
-      'sanitize_callback' => 'internet_service_provider_pro_switch_sanitization'
-  ));
-  $wp_customize->add_control(new internet_service_provider_pro_Toggle_Switch_Custom_control($wp_customize, 'internet_service_provider_pro_kitchen_tab_carousel_dots', array(
-      'label' => esc_html__('Carousel Dots', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting(
-		'internet_service_provider_pro_kitchen_tab_box_link_icon',
-		array(
-			'default'     => '',
-			'sanitize_callback' => 'sanitize_text_field'
-		)
-	);
-	$wp_customize->add_control(
-		new internet_service_provider_pro_Fontawesome_Icon_Chooser(
-			$wp_customize,
-			'internet_service_provider_pro_kitchen_tab_box_link_icon',
-			array(
-			'settings'    => 'internet_service_provider_pro_kitchen_tab_box_link_icon',
-			'section'   => 'internet_service_provider_pro_kitchen_tab',
-			'type'      => 'icon',
-			'label'     => esc_html__( 'Link Icon', 'internet-service-provider-pro' ),
-			)
-		)
-	);
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_content_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_content_color_settings',
-    array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-  'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_kitchen_tab_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_kitchen_tab',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'description' => __('Add font size in px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'setting' => 'internet_service_provider_pro_kitchen_tab_tagline_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_kitchen_tab_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_kitchen_tab',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'description' => __('Add font size in px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'setting' => 'internet_service_provider_pro_kitchen_tab_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_title_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_title_ct_pallete',
-    array(
-    'label' => __('Tab Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_title_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_title_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_title_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_title_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_kitchen_tab_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_kitchen_tab',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_title_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_title_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'description' => __('Add font size in px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'setting' => 'internet_service_provider_pro_kitchen_tab_title_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_title_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_title_bgcolor', array(
-    'label' => __('Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_title_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_active_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_active_bgcolor', array(
-    'label' => __('Active Tab Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_active_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_active_title_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_active_title_color', array(
-    'label' => __('Active Tab Title Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_active_title_color',
-  )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_title_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-    ));
-    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_title_ct_pallete',
-    array(
-      'label' => __('Box Title Typography ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab'
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_title_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_title_color', array(
-      'label'    => __( 'Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_title_color',
-    )));
-
-    $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_box_title_font_family',array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-     ));
-    $wp_customize->add_control(
-        'internet_service_provider_pro_kitchen_tab_box_title_font_family', array(
-        'section'  => 'internet_service_provider_pro_kitchen_tab',
-        'label'    => __( 'Font Family','internet-service-provider-pro'),
-        'type'     => 'select',
-        'choices'  => $font_array,
-    ));
-
-    $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_box_title_font_size', array(
-        'default' => '',
-        'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_kitchen_tab_box_title_font_size', array(
-        'label' => __('Font Size', 'internet-service-provider-pro'),
-        'section' => 'internet_service_provider_pro_kitchen_tab',
-        'setting' => 'internet_service_provider_pro_kitchen_tab_box_title_font_size',
-        'type' => 'number'
-    ));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_link_icon_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-    ));
-    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_link_icon_ct_pallete',
-    array(
-      'label' => __('Link Icon Typography ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab'
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_link_icon_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_link_icon_color', array(
-      'label'    => __( 'Icon Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_link_icon_color',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_link_icon_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_link_icon_bgcolor', array(
-      'label'    => __( 'Icon Background Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_link_icon_bgcolor',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_link_icon_hover_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_link_icon_hover_color', array(
-      'label'    => __( 'Icon Hover Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_link_icon_hover_color',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_link_icon_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_link_icon_hover_bgcolor', array(
-      'label'    => __( 'Icon Hover Background Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_link_icon_hover_bgcolor',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_bgcolor', array(
-      'label'    => __( 'Box Background Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_bgcolor',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_hover_bgcolor', array(
-      'label'    => __( 'Box Hover Background Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_hover_bgcolor',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_nav_icon_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-    ));
-    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_nav_icon_ct_pallete',
-    array(
-      'label' => __('Nav Icon Typography ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab'
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_nav_icon_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_nav_icon_color', array(
-      'label'    => __( 'Icon Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_nav_icon_color',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_nav_icon_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_nav_icon_bgcolor', array(
-      'label'    => __( 'Icon Background Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_nav_icon_bgcolor',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_nav_icon_hover_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_nav_icon_hover_color', array(
-      'label'    => __( 'Icon Hover Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_nav_icon_hover_color',
-    )));
-
-    $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_box_nav_icon_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-    ));
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_box_nav_icon_hover_bgcolor', array(
-      'label'    => __( 'Icon Hover Background Color','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'settings' => 'internet_service_provider_pro_kitchen_tab_box_nav_icon_hover_bgcolor',
-    )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_dots_ct_pallete',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_dots_ct_pallete',
-  array(
-    'label' => __('Dots Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_dots_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_dots_color', array(
-    'label'    => __( 'Dots Color','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_dots_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_kitchen_tab_active_dots_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_kitchen_tab_active_dots_color', array(
-    'label'    => __( 'Active Dots Color','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_kitchen_tab',
-    'settings' => 'internet_service_provider_pro_kitchen_tab_active_dots_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_kitchen_tab_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-    $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_kitchen_tab_spacing', array(
-      'section' => 'internet_service_provider_pro_kitchen_tab',
-      'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-      'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_kitchen_tab_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_kitchen_tab_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_kitchen_tab_spacing_bottom_desktop',
-        'desktop_right' => 'internet_service_provider_pro_kitchen_tab_spacing_right_desktop'
-    ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-    
-  // ------------- Process -------------
-  $wp_customize->add_section('internet_service_provider_pro_process',array(
-    'title' => __('Process','internet-service-provider-pro'),
-    'panel' => 'internet_service_provider_pro_panel_id',
-  ));
-  $wp_customize->add_setting('internet_service_provider_pro_process_enable',
-      array(
-    'default' => 'Enable',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_enable',
-    array(
-    'type' => 'radio',
-    'label' => __('Do you want this section', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'choices' => array(
-    'Enable' => __('Enable', 'internet-service-provider-pro'),
-    'Disable' => __('Disable', 'internet-service-provider-pro')
-  )));
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_process_enable', array(
-    'selector' => '#about-us h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_process_enable',
-  ));
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_settings',
-    array(
-    'label' => __('Section Background Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_bgcolor', array(
-    'label' => __('Section Background Color', 'internet-service-provider-pro'),
-    'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_bgcolor',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_process_bgimage',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_process_bgimage',array(
-    'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 430px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_bgimage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_bgimage_setting', array(
-      'default'         => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_bgimage_setting', array(
-      'type'      => 'radio',
-      'label'     => __('Choose image option', 'internet-service-provider-pro'),
-      'section'   => 'internet_service_provider_pro_process',
-      'choices'   => array(
-        'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
-        'bg-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),                    
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_content_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_content_settings',
-    array(
-    'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_tagline',array(
-    'label' => __('Section Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'setting' => 'internet_service_provider_pro_process_tagline',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_main_heading',array(
-    'label' => __('Section Main Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'setting' => 'internet_service_provider_pro_process_main_heading',
-    'type'    => 'text'
-  ));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_icon_box',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_icon_box',
-    array(
-    'label' => __('Image Box','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_icon_box_number',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_icon_box_number',array(
-    'label' => __('Number of Boxes to show','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'setting' => 'internet_service_provider_pro_process_icon_box_number',
-    'type'    => 'text'
-  ));
-
-  $process_icon_box = get_theme_mod('internet_service_provider_pro_process_icon_box_number');
-
-  for($i=1;$i<=$process_icon_box;$i++)
-  {
-    $wp_customize->add_setting( 'internet_service_provider_pro_process_icon_box_settings'.$i,
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-    ));
-    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_icon_box_settings'.$i,
-      array(
-      'label' => __('Box ','internet-service-provider-pro').$i,
-      'section' => 'internet_service_provider_pro_process'
-    )));
-
-    $wp_customize->add_setting('internet_service_provider_pro_process_icon_box_image'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_process_icon_box_image'.$i,array(
-      'label' => __('Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_process',
-      'settings' => 'internet_service_provider_pro_process_icon_box_image'.$i
-    )));
-    $wp_customize->add_setting('internet_service_provider_pro_process_icon_box_hover_image'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_process_icon_box_hover_image'.$i,array(
-      'label' => __('Hover Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_process',
-      'settings' => 'internet_service_provider_pro_process_icon_box_hover_image'.$i
-    )));
-
-	$wp_customize->add_setting('internet_service_provider_pro_process_icon_box_title'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_process_icon_box_title'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_process',
-      'setting' => 'internet_service_provider_pro_process_icon_box_title'.$i,
-      'type'    => 'text'
-    ));
-    
-    $wp_customize->add_setting('internet_service_provider_pro_process_icon_box_text'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_process_icon_box_text'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_process',
-      'setting' => 'internet_service_provider_pro_process_icon_box_text'.$i,
-      'type'    => 'text'
-    ));
-
-    $wp_customize->add_setting('internet_service_provider_pro_process_icon_box_link_icon_url'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_process_icon_box_link_icon_url'.$i,array(
-      'label' => __('Url ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_process',
-      'setting' => 'internet_service_provider_pro_process_icon_box_link_icon_url'.$i,
-      'type'    => 'url'
-    ));
-  }
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_color_settings',
-  array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_process_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_process',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_process',
-    'setting' => 'internet_service_provider_pro_process_tagline_font_size',
-    'type'    => 'number'
-  ));
-  
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_process_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_process',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_process',
-    'setting' => 'internet_service_provider_pro_process_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_box_title_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_box_title_ct_pallete',
-    array(
-    'label' => __('Box Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_box_title_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_box_title_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_box_title_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_process_box_title_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_process_box_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_process',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_box_title_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_box_title_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_process',
-    'setting' => 'internet_service_provider_pro_process_box_title_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_box_text_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_process_box_text_ct_pallete',
-    array(
-    'label' => __('Box Text Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_box_text_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_box_text_color', array(
-    'label' => __(' Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_box_text_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_process_box_text_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_process_box_text_font_family', array(
-    'section'  => 'internet_service_provider_pro_process',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_box_text_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_process_box_text_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'setting' => 'internet_service_provider_pro_process_box_text_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_box_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_box_bgcolor', array(
-    'label' => __('Box Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_box_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_box_hover_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_box_hover_bgcolor', array(
-    'label' => __('Box Hover Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_box_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_process_box_hover_content_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_process_box_hover_content_color', array(
-    'label' => __('Box Hover Content Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_process',
-    'settings' => 'internet_service_provider_pro_process_box_hover_content_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_process_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_process_spacing', array(
-    'section' => 'internet_service_provider_pro_process',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_process_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_process_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_process_spacing_bottom_desktop',
-      'desktop_right' => 'internet_service_provider_pro_process_spacing_right_desktop'
-  ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-  // ------------- Smart Storage -------------
-  $wp_customize->add_section('internet_service_provider_pro_smart_storage',array(
-    'title' => __('Smart Storage','internet-service-provider-pro'),
-    'panel' => 'internet_service_provider_pro_panel_id',
-  ));
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_enable',
-      array(
-    'default' => 'Enable',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_enable',
-    array(
-    'type' => 'radio',
-    'label' => __('Do you want this section', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'choices' => array(
-    'Enable' => __('Enable', 'internet-service-provider-pro'),
-    'Disable' => __('Disable', 'internet-service-provider-pro')
-  )));
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_smart_storage_enable', array(
-    'selector' => '#about-us h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_smart_storage_enable',
-  ));
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_settings',
-    array(
-    'label' => __('Section Background Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_bgcolor', array(
-    'label' => __('Section Background Color', 'internet-service-provider-pro'),
-    'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_bgcolor',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_bgimage',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_smart_storage_bgimage',array(
-    'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 430px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_bgimage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_bgimage_setting', array(
-      'default'         => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_bgimage_setting', array(
-      'type'      => 'radio',
-      'label'     => __('Choose image option', 'internet-service-provider-pro'),
-      'section'   => 'internet_service_provider_pro_smart_storage',
-      'choices'   => array(
-        'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
-        'bg-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),                    
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_content_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_content_settings',
-    array(
-    'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_tagline',array(
-    'label' => __('Section Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'setting' => 'internet_service_provider_pro_smart_storage_tagline',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_main_heading',array(
-    'label' => __('Section Main Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'setting' => 'internet_service_provider_pro_smart_storage_main_heading',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_icon_box',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_icon_box',
-    array(
-    'label' => __('Image Box','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_icon_box_number',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_icon_box_number',array(
-    'label' => __('Number of Boxes to show','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'setting' => 'internet_service_provider_pro_smart_storage_icon_box_number',
-    'type'    => 'text'
-  ));
-
-  $smart_storage_icon_box = get_theme_mod('internet_service_provider_pro_smart_storage_icon_box_number');
-
-  for($i=1;$i<=$smart_storage_icon_box;$i++)
-  {
-    $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_icon_box_settings'.$i,
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-    ));
-    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_icon_box_settings'.$i,
-      array(
-      'label' => __('Box ','internet-service-provider-pro').$i,
-      'section' => 'internet_service_provider_pro_smart_storage'
-    )));
-
-    $wp_customize->add_setting('internet_service_provider_pro_smart_storage_icon_box_main_image'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_smart_storage_icon_box_main_image'.$i,array(
-      'label' => __('Main Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_smart_storage',
-      'settings' => 'internet_service_provider_pro_smart_storage_icon_box_main_image'.$i
-    )));
-
-    $wp_customize->add_setting('internet_service_provider_pro_smart_storage_icon_box_image'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_smart_storage_icon_box_image'.$i,array(
-      'label' => __('Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_smart_storage',
-      'settings' => 'internet_service_provider_pro_smart_storage_icon_box_image'.$i
-    )));
-
-	  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_icon_box_title'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_smart_storage_icon_box_title'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_smart_storage',
-      'setting' => 'internet_service_provider_pro_smart_storage_icon_box_title'.$i,
-      'type'    => 'text'
-    ));
-    
-    $wp_customize->add_setting('internet_service_provider_pro_smart_storage_icon_box_text'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_smart_storage_icon_box_text'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_smart_storage',
-      'setting' => 'internet_service_provider_pro_smart_storage_icon_box_text'.$i,
-      'type'    => 'text'
-    ));
-
-    $wp_customize->add_setting('internet_service_provider_pro_smart_storage_icon_box_link_icon_url'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_smart_storage_icon_box_link_icon_url'.$i,array(
-      'label' => __('Url ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_smart_storage',
-      'setting' => 'internet_service_provider_pro_smart_storage_icon_box_link_icon_url'.$i,
-      'type'    => 'url'
-    ));
-  }
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_color_settings',
-  array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_smart_storage_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_smart_storage',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'setting' => 'internet_service_provider_pro_smart_storage_tagline_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_smart_storage_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_smart_storage',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'setting' => 'internet_service_provider_pro_smart_storage_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_title_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_title_ct_pallete',
-    array(
-    'label' => __('Box Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_title_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_title_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_box_title_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_box_title_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_smart_storage_box_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_smart_storage',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_box_title_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_box_title_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'setting' => 'internet_service_provider_pro_smart_storage_box_title_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_text_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_text_ct_pallete',
-    array(
-    'label' => __('Box Text Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_text_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_text_color', array(
-    'label' => __(' Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_box_text_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_box_text_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_smart_storage_box_text_font_family', array(
-    'section'  => 'internet_service_provider_pro_smart_storage',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_box_text_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_smart_storage_box_text_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'setting' => 'internet_service_provider_pro_smart_storage_box_text_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_image_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_image_bgcolor', array(
-    'label' => __('Box Image Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_box_image_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_image_border_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_image_border_color', array(
-    'label' => __('Box Image Border Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_box_image_border_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_image_hover_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_image_hover_bgcolor', array(
-    'label' => __('Box Image Hover Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_box_image_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_smart_storage_box_hover_content_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_smart_storage_box_hover_content_color', array(
-    'label' => __('Box Hover Content Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'settings' => 'internet_service_provider_pro_smart_storage_box_hover_content_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_smart_storage_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_smart_storage_spacing', array(
-    'section' => 'internet_service_provider_pro_smart_storage',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_smart_storage_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_smart_storage_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_smart_storage_spacing_bottom_desktop',
-      'desktop_right' => 'internet_service_provider_pro_smart_storage_spacing_right_desktop'
-  ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-  // --------------- Projects  --------------
-  $wp_customize->add_section('internet_service_provider_pro_projects',array(
-    'title' => __('Projects','internet-service-provider-pro'),
-    'panel' => 'internet_service_provider_pro_panel_id',
-  ));
-  $wp_customize->add_setting('internet_service_provider_pro_projects_enable',
-      array(
-    'default' => 'Enable',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_enable',
-    array(
-    'type' => 'radio',
-    'label' => __('Do you want this section', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'choices' => array(
-    'Enable' => __('Enable', 'internet-service-provider-pro'),
-    'Disable' => __('Disable', 'internet-service-provider-pro')
-  )));
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_projects_enable', array(
-    'selector' => '#projects h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_projects_enable',
-  ));
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_settings',
-    array(
-    'label' => __('Section Background Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
-  )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_bgcolor', array(
-    'label' => __('Section Background Color', 'internet-service-provider-pro'),
-    'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_bgcolor',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_projects_bgimage',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_projects_bgimage',array(
-    'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 420px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_bgimage'
+    'description' => __('Dimension 1600px * 830px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_bgimage'
   )));
   //Work Column Layout
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_bgimage_setting', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_bgimage_setting', array(
       'default'         => '',
       'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_bgimage_setting', array(
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_bgimage_setting', array(
       'type'      => 'radio',
       'label'     => __('Choose image option', 'internet-service-provider-pro'),
-      'section'   => 'internet_service_provider_pro_projects',
+      'section'   => 'internet_service_provider_pro_pricing_plan',
       'choices'   => array(
         'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
         'bg-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),                    
   )));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_bgimage_size', array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_bgimage_size', array(
       'default' => '',
       'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_bgimage_size', array(
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_bgimage_size', array(
       'type' => 'radio',
       'label' => __('Background Image Size', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
+      'section' => 'internet_service_provider_pro_pricing_plan',
       'choices' => array(
           'bg-auto' => __('Auto', 'internet-service-provider-pro'),
           'bg-cover' => __('Cover', 'internet-service-provider-pro'),
@@ -6806,625 +4113,1019 @@
       )
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_content_settings',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_content_settings',
     array(
     'default' => '',
     'transport' => 'postMessage',
     'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_content_settings',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_content_settings',
     array(
     'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_tagline',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_tagline',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_tagline',array(
-    'label' => __('Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_tagline',
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_tagline',array(
+    'label' => __('Section Tagline','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_tagline',
     'type'    => 'text'
   ));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_main_heading',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_main_heading',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_main_heading',array(
-    'label' => __('Main Heading 1','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_main_heading',
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_main_heading',array(
+    'label' => __('Section Main Heading','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_main_heading',
     'type'    => 'text'
   ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_number',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_number',array(
-    'label' => __('Number of projects to show','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_number',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_project_name',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_project_name',array(
-    'label' => __('Project Name Text','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_project_name',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_project_name_image',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_projects_project_name_image',array(
-    'label' => __('Add Image','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_project_name_image'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_location',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_location',array(
-    'label' => __('Location Text','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_location',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_location_image',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_projects_location_image',array(
-    'label' => __('Add Image','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_location_image'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_style',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_style',array(
-    'label' => __('Style Text','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_style',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_style_image',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_projects_style_image',array(
-    'label' => __('Add Image','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_style_image'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_section_button',
-		array(
-		'default' => '',
-		'transport' => 'postMessage',
-		'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-	));
-	$wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_section_button',
-		array(
-		'label' => __('Section Button','internet-service-provider-pro'),
-		'section' => 'internet_service_provider_pro_projects'
-	)));
-
-	$wp_customize->add_setting('internet_service_provider_pro_projects_button_title',array(
-		'default' => '',
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-	$wp_customize->add_control('internet_service_provider_pro_projects_button_title',array(
-		'label' => __('Section Button Title','internet-service-provider-pro'),
-		'section' => 'internet_service_provider_pro_projects',
-		'setting' => 'internet_service_provider_pro_projects_button_title',
-		'type'    => 'text'
-	));
-
-	$wp_customize->add_setting(
-		'internet_service_provider_pro_projects_button_icon',
-		array(
-			'default'     => '',
-			'sanitize_callback' => 'sanitize_text_field'
-		)
-	);
-	$wp_customize->add_control(
-		new internet_service_provider_pro_Fontawesome_Icon_Chooser(
-			$wp_customize,
-			'internet_service_provider_pro_projects_button_icon',
-			array(
-			'settings'    => 'internet_service_provider_pro_projects_button_icon',
-			'section'   => 'internet_service_provider_pro_projects',
-			'type'      => 'icon',
-			'label'     => esc_html__( 'Choose  Icon', 'internet-service-provider-pro' ),
-			)
-		)
-	);
-	
-	$wp_customize->add_setting('internet_service_provider_pro_projects_button_url',array(
-		'default' => '',
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-	$wp_customize->add_control('internet_service_provider_pro_projects_button_url',array(
-		'label' => __('Section Button Url','internet-service-provider-pro'),
-		'section' => 'internet_service_provider_pro_projects',
-		'setting' => 'internet_service_provider_pro_projects_button_url',
-		'type'    => 'text'
-	));
   
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_color_settings',
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_number',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_number',array(
+    'label' => __('No Of Plans To Show','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_number',
+    'type'    => 'number'
+  ));
+  $plan_no=get_theme_mod('internet_service_provider_pro_pricing_plan_number');
+  for($i=1;$i<=$plan_no;$i++)
+  {
+    $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_box_settings'.$i,
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+    ));
+    $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_box_settings'.$i,
+      array(
+      'label' => __('Plan ','internet-service-provider-pro').$i,
+      'section' => 'internet_service_provider_pro_pricing_plan'
+    )));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_image'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(
+      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_pricing_plan_image'.$i,array(
+      'label' => __('Add Image','internet-service-provider-pro'),
+      'description' => __('Dimension 21px * 21px','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'settings' => 'internet_service_provider_pro_pricing_plan_image'.$i
+    )));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_hover_image'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(
+      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_pricing_plan_hover_image'.$i,array(
+      'label' => __('Add Hover Image','internet-service-provider-pro'),
+      'description' => __('Dimension 21px * 21px','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'settings' => 'internet_service_provider_pro_pricing_plan_hover_image'.$i
+    )));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_title'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_title'.$i,array(
+      'label' => __('Plan Title ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_title'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_text'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_text'.$i,array(
+      'label' => __('Plan Text ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_text'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_price'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_price'.$i,array(
+      'label' => __('Plan Price ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_price'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_price_cur'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_price_cur'.$i,array(
+      'label' => __('Plan Price Currency ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_price_cur'.$i,
+      'type'    => 'text'
+    ));
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_duration'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_duration'.$i,array(
+      'label' => __('Plan Package ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_duration'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_short_text'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_short_text'.$i,array(
+      'label' => __('Short Text ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_short_text'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_starter_features_heading'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_starter_features_heading'.$i,array(
+      'label' => __('Feature Heading ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_starter_features_heading'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_feature_no'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_feature_no'.$i,array(
+      'label' => __('No Of Features To Show ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_feature_no'.$i,
+      'type'    => 'number'
+    ));
+
+    $plan_feature=get_theme_mod('internet_service_provider_pro_pricing_plan_feature_no'.$i);
+    for($j=1;$j<=$plan_feature;$j++)
+    { 
+      $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_feature_title'.$i.$j,array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field'
+      ));
+      $wp_customize->add_control('internet_service_provider_pro_pricing_plan_feature_title'.$i.$j,array(
+        'label' => __('Feature ','internet-service-provider-pro').$j,
+        'section' => 'internet_service_provider_pro_pricing_plan',
+        'setting' => 'internet_service_provider_pro_pricing_plan_feature_title'.$i.$j,
+        'type'    => 'text'
+      ));
+
+    }
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_button_title'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_button_title'.$i,array(
+      'label' => __('Plan Button Title ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_button_title'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_button_url'.$i,array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control('internet_service_provider_pro_pricing_plan_button_url'.$i,array(
+      'label' => __('Plan Button Url ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'setting' => 'internet_service_provider_pro_pricing_plan_button_url'.$i,
+      'type'    => 'text'
+    ));
+
+    $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended'.$i, array(
+      'default' => 1,
+      'transport' => 'refresh',
+      'sanitize_callback' => 'internet_service_provider_pro_switch_sanitization'
+    ));
+    $wp_customize->add_control( new internet_service_provider_pro_Toggle_Switch_Custom_control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended'.$i,
+      array(
+          'label' => __( 'Recommended','internet-service-provider-pro' ),
+          'section' => 'internet_service_provider_pro_pricing_plan'
+      )
+    ) );
+
+  }
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_carousel_loop',
+   array(
+      'default' => 1,
+      'transport' => 'refresh',
+      'sanitize_callback' => 'internet_service_provider_pro_switch_sanitization'
+  )); 
+  $wp_customize->add_control( new internet_service_provider_pro_Toggle_Switch_Custom_control( $wp_customize, 'internet_service_provider_pro_pricing_plan_carousel_loop',
+     array(
+        'label' => esc_html__( 'Carousel Loop', 'internet-service-provider-pro' ),
+        'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_carousel_speed',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_carousel_speed',array(
+    'label' => __('Carousel Speed','internet-service-provider-pro'),
+    'description'=>__('Ex. 1000 for One second','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_carousel_speed',
+    'type'    => 'number'
+  ));
+
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_color_settings',
     array(
     'default' => '',
     'transport' => 'postMessage',
     'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_color_settings',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_color_settings',
   array(
     'label' => __('Section Color & Typography','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_tagline_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_tagline_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
       'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_tagline_ct_pallete',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_tagline_ct_pallete',
     array(
     'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_tagline_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_tagline_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_tagline_color', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_tagline_color', array(
     'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_tagline_color',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_tagline_color',
   )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_tagline_font_family',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_tagline_font_family',array(
     'default' => '',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_text_field'
   ));
   $wp_customize->add_control(
-    'internet_service_provider_pro_projects_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_projects',
+    'internet_service_provider_pro_pricing_plan_tagline_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
     'label'    => __('Font Family','internet-service-provider-pro'),
     'type'     => 'select',
     'choices'  => $font_array,
   ));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_tagline_font_size',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_tagline_font_size',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_tagline_font_size',array(
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_tagline_font_size',array(
     'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_tagline_font_size',
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_tagline_font_size',
     'type'    => 'number'
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_main_heading_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_main_heading_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
       'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_main_heading_ct_pallete',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_main_heading_ct_pallete',
     array(
     'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_main_heading_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_main_heading_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_main_heading_color', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_main_heading_color', array(
     'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_main_heading_color',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_main_heading_color',
   )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_main_heading_font_family',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_main_heading_font_family',array(
     'default' => '',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_text_field'
   ));
   $wp_customize->add_control(
-    'internet_service_provider_pro_projects_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_projects',
+    'internet_service_provider_pro_pricing_plan_main_heading_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
     'label'    => __('Font Family','internet-service-provider-pro'),
     'type'     => 'select',
     'choices'  => $font_array,
   ));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_main_heading_font_size',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_main_heading_font_size',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_main_heading_font_size',array(
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_main_heading_font_size',array(
     'label' => __('Font Size','internet-service-provider-pro'),
     'description' => __('Add font size in px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_main_heading_font_size',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_main_heading_font_size',
     'type'    => 'number'
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_meta_details_title_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_section_button_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
       'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_box_meta_details_title_ct_pallete',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_section_button_ct_pallete',
     array(
-    'label' => __('Meta Details Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'label' => __('Section Button Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_meta_details_title_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_section_button_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_meta_details_title_color', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_section_button_color', array(
     'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_meta_details_title_color',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_section_button_color',
   )));
-  $wp_customize->add_setting('internet_service_provider_pro_projects_box_meta_details_title_font_family',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_section_button_font_family',array(
     'default' => '',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_text_field'
   ));
   $wp_customize->add_control(
-    'internet_service_provider_pro_projects_box_meta_details_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_projects',
+    'internet_service_provider_pro_pricing_plan_section_button_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
     'label'    => __('Font Family','internet-service-provider-pro'),
     'type'     => 'select',
     'choices'  => $font_array,
   ));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_box_meta_details_title_font_size',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_section_button_font_size',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_box_meta_details_title_font_size',array(
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_section_button_font_size',array(
     'label' => __('Font Size','internet-service-provider-pro'),
     'description' => __('Add font size in px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_box_meta_details_title_font_size',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_section_button_font_size',
     'type'    => 'number'
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_meta_details_text_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_section_button_bgcolor', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_section_button_bgcolor', array(
+    'label' => __('Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_section_button_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_section_button_hover_bgcolor', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_section_button_hover_bgcolor', array(
+    'label' => __('Hover Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_section_button_hover_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_section_button_text_color_hover', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_section_button_text_color_hover', array(
+    'label' => __('Hover Text Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_section_button_text_color_hover',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_title_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
       'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_box_meta_details_text_ct_pallete',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_title_ct_pallete',
     array(
-    'label' => __('Meta Details Text Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'label' => __('Plan Title Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_meta_details_text_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_title_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_meta_details_text_color', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_title_color', array(
     'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_meta_details_text_color',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_title_color',
   )));
-  $wp_customize->add_setting('internet_service_provider_pro_projects_box_meta_details_text_font_family',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_title_font_family',array(
     'default' => '',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_text_field'
   ));
   $wp_customize->add_control(
-    'internet_service_provider_pro_projects_box_meta_details_text_font_family', array(
-    'section'  => 'internet_service_provider_pro_projects',
+    'internet_service_provider_pro_pricing_plan_title_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
     'label'    => __('Font Family','internet-service-provider-pro'),
     'type'     => 'select',
     'choices'  => $font_array,
   ));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_box_meta_details_text_font_size',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_title_font_size',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_box_meta_details_text_font_size',array(
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_title_font_size',array(
     'label' => __('Font Size','internet-service-provider-pro'),
     'description' => __('Add font size in px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_box_meta_details_text_font_size',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_title_font_size',
     'type'    => 'number'
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_bgcolor', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_text_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_text_ct_pallete',
+    array(
+    'label' => __('Plan Text Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_text_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_bgcolor', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_text_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_text_color',
+  )));
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_text_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_pricing_plan_text_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_text_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_text_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_text_font_size',
+    'type'    => 'number'
+  ));
+
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_price_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_price_ct_pallete',
+    array(
+    'label' => __('Plan Price Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_price_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_price_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_price_color',
+  )));
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_price_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_pricing_plan_price_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_price_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_price_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_price_font_size',
+    'type'    => 'number'
+  ));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_package_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_package_ct_pallete',
+    array(
+    'label' => __('Plan Package Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_package_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_package_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_package_color',
+  )));
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_package_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_pricing_plan_package_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_package_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_package_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_package_font_size',
+    'type'    => 'number'
+  ));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_heading_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_heading_ct_pallete',
+    array(
+    'label' => __('Feature Heading Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_heading_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_heading_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_feature_heading_color',
+  )));
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_feature_heading_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_pricing_plan_feature_heading_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_feature_heading_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_feature_heading_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_feature_heading_font_size',
+    'type'    => 'number'
+  ));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_heading_icon_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_heading_icon_color', array(
+    'label' => __('Icon Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_feature_heading_icon_color',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_ct_pallete',
+    array(
+    'label' => __('Plan Feature Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_feature_color',
+  )));
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_feature_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_pricing_plan_feature_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_feature_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_feature_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_feature_font_size',
+    'type'    => 'number'
+  ));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_icon_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_icon_color', array(
+    'label' => __('Features Icon Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_feature_icon_color',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_icon_color2', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_icon_color2', array(
+    'label' => '',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_feature_icon_color2',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_feature_button_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_feature_button_ct_pallete',
+    array(
+    'label' => __('Plan Button Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_button_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_button_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_button_color',
+  )));
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_button_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_pricing_plan_button_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_button_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_button_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_button_font_size',
+    'type'    => 'number'
+  ));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_button_bgcolor', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_button_bgcolor', array(
+    'label' => __('Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_button_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_button_bgcolor_hover', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_button_bgcolor_hover', array(
+    'label' => __('Hover Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_button_bgcolor_hover',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_button_color_hover', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_button_color_hover', array(
+    'label' => __('Hover Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_button_color_hover',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_box_bgcolor', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_box_bgcolor', array(
     'label' => __('Box Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_bgcolor',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_box_bgcolor',
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_video_title_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
       'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_box_video_title_ct_pallete',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_ct_pallete',
     array(
-    'label' => __('Video Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'label' => __('Recommended Plan Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_video_title_color', array(
+   $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_title_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_title_ct_pallete',
+    array(
+    'label' => __('Recommended Title Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_title_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_video_title_color', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_title_color', array(
     'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_video_title_color',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_recommended_title_color',
   )));
-  $wp_customize->add_setting('internet_service_provider_pro_projects_box_video_title_font_family',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_recommended_title_font_family',array(
     'default' => '',
     'capability' => 'edit_theme_options',
     'sanitize_callback' => 'sanitize_text_field'
   ));
   $wp_customize->add_control(
-    'internet_service_provider_pro_projects_box_video_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_projects',
+    'internet_service_provider_pro_pricing_plan_recommended_title_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
     'label'    => __('Font Family','internet-service-provider-pro'),
     'type'     => 'select',
     'choices'  => $font_array,
   ));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_box_video_title_font_size',array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_recommended_title_font_size',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_box_video_title_font_size',array(
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_recommended_title_font_size',array(
     'label' => __('Font Size','internet-service-provider-pro'),
     'description' => __('Add font size in px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'setting' => 'internet_service_provider_pro_projects_box_video_title_font_size',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_recommended_title_font_size',
     'type'    => 'number'
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_video_icon_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_or_text_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
       'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_box_video_icon_ct_pallete',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_or_text_ct_pallete',
     array(
-    'label' => __('Video Icon Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects'
+    'label' => __('Recommended Or Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_video_icon_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_or_text_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_video_icon_color', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_or_text_color', array(
     'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_video_icon_color',
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_recommended_or_text_color',
   )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_video_icon_border_color', array(
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_recommended_or_text_font_family',array(
     'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_video_icon_border_color', array(
-    'label' => __('Border Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_video_icon_border_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_video_icon_hover_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_video_icon_hover_color', array(
-    'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_video_icon_hover_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_box_video_icon_hover_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_box_video_icon_hover_bgcolor', array(
-    'label' => __('Icon Hover background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_projects',
-    'settings' => 'internet_service_provider_pro_projects_box_video_icon_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_ct_pallete',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_projects_button_ct_pallete',
-      array(
-      'label' => __('Section Button Typography ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_color', array(
-      'label' => __('Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_projects_button_font_family',array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'sanitize_text_field'
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
   ));
   $wp_customize->add_control(
-      'internet_service_provider_pro_projects_button_font_family', array(
-      'section'  => 'internet_service_provider_pro_projects',
-      'label'    => __('Font Family','internet-service-provider-pro'),
-      'type'     => 'select',
-      'choices'  => $font_array,
+    'internet_service_provider_pro_pricing_plan_recommended_or_text_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
   ));
 
-  $wp_customize->add_setting('internet_service_provider_pro_projects_button_font_size',array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_recommended_or_text_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
   ));
-  $wp_customize->add_control('internet_service_provider_pro_projects_button_font_size',array(
-      'label' => __('Font Size','internet-service-provider-pro'),
-      
-      'section' => 'internet_service_provider_pro_projects',
-      'setting' => 'internet_service_provider_pro_projects_button_font_size',
-      'type'    => 'number'
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_recommended_or_text_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_recommended_or_text_font_size',
+    'type'    => 'number'
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_bgcolor', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_link_ct_pallete',
+    array(
       'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_bgcolor', array(
-      'label' => __('Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_bgcolor',
+  $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_link_ct_pallete',
+    array(
+    'label' => __('Recommended Link Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_icon_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_link_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_icon_color', array(
-      'label' => __('Icon Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_icon_color',
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_link_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_recommended_link_color',
+  )));
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_recommended_link_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_pricing_plan_recommended_link_font_family', array(
+    'section'  => 'internet_service_provider_pro_pricing_plan',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_recommended_link_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_pricing_plan_recommended_link_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'description' => __('Add font size in px','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'setting' => 'internet_service_provider_pro_pricing_plan_recommended_link_font_size',
+    'type'    => 'number'
+  ));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_pricing_plan_recommended_box_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pricing_plan_recommended_box_color', array(
+    'label' => __('Recommended Box Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_pricing_plan',
+    'settings' => 'internet_service_provider_pro_pricing_plan_recommended_box_color',
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_icon_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_spacing_left_desktop', array(
+      'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_icon_bgcolor', array(
-      'label' => __('Icon Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_icon_bgcolor',
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_spacing_top_desktop', array(
+      'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_spacing_bottom_desktop', array(
+      'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_pricing_plan_spacing_right_desktop', array(
+      'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
+  ));
+
+  $wp_customize->add_control(new TP_Dimensions_Control($wp_customize, 'internet_service_provider_pro_pricing_plan_spacing', array(
+      'section' => 'internet_service_provider_pro_pricing_plan',
+      'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
+      'settings' => array(
+          'desktop_left' => 'internet_service_provider_pro_pricing_plan_spacing_left_desktop',
+          'desktop_top' => 'internet_service_provider_pro_pricing_plan_spacing_top_desktop',
+          'desktop_bottom' => 'internet_service_provider_pro_pricing_plan_spacing_bottom_desktop',
+          'desktop_right' => 'internet_service_provider_pro_pricing_plan_spacing_right_desktop'
+      ),
+      'input_attrs' => array(
+          'min' => 0,
+          'max' => 100,
+          'step' => 1,
+      ),
+      'responsive' => false
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_icon_hover_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_icon_hover_color', array(
-      'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_icon_hover_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_icon_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_icon_hover_bgcolor', array(
-      'label' => __('Icon Hover Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_icon_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_hover_bgcolor', array(
-      'label' => __('Hover Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_projects_button_text_color_hover', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_projects_button_text_color_hover', array(
-      'label' => __('Hover Text Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_projects',
-      'settings' => 'internet_service_provider_pro_projects_button_text_color_hover',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_projects_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_projects_spacing', array(
-    'section' => 'internet_service_provider_pro_projects',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_projects_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_projects_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_projects_spacing_bottom_desktop',
-        'desktop_right' => 'internet_service_provider_pro_projects_spacing_right_desktop'
-    ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
+  
   // -------------- Testimonials --------------
   $wp_customize->add_section('internet_service_provider_pro_testimonials',array(
     'title' => __('Testimonials','internet-service-provider-pro'),
@@ -7520,6 +5221,17 @@
     'type'    => 'text'
   ));
 
+  $wp_customize->add_setting('internet_service_provider_pro_testimonials_text',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_textarea_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_testimonials_text',array(
+    'label' => __('Section Text','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'setting' => 'internet_service_provider_pro_testimonials_text',
+    'type'    => 'textarea'
+  ));
+
   $wp_customize->add_setting('internet_service_provider_pro_testimonials_number',array(
     'default' => '',
     'sanitize_callback' => 'sanitize_text_field'
@@ -7530,53 +5242,6 @@
     'setting' => 'internet_service_provider_pro_testimonials_number',
     'type'    => 'number'
   ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_testimonials_image',array(
-        'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-     new WP_Customize_Image_Control($wp_customize,'internet_service_provider_pro_testimonials_image',
-      array(
-      'label' => __('Add Image','internet-service-provider-pro'),
-      'description' => __('Dimension 820px * 820px','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_testimonials',
-      'settings' => 'internet_service_provider_pro_testimonials_image',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_carousel_loop',
-  array(
-      'default' => 1,
-      'transport' => 'refresh',
-      'sanitize_callback' => 'internet_service_provider_pro_switch_sanitization'
-  )); 
-  $wp_customize->add_control( new internet_service_provider_pro_Toggle_Switch_Custom_control( $wp_customize, 'internet_service_provider_pro_testimonials_carousel_loop',
-    array(
-        'label' => esc_html__( 'Carousel Loop', 'internet-service-provider-pro' ),
-        'section' => 'internet_service_provider_pro_testimonials'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_testimonials_carousel_speed',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_testimonials_carousel_speed',array(
-    'label' => __('Carousel Speed','internet-service-provider-pro'),
-    'description'=>__('Ex. 1000 for One second','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_testimonials',
-    'setting' => 'internet_service_provider_pro_testimonials_carousel_speed',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_testimonials_carousel_dots', array(
-      'default' => 1,
-      'transport' => 'refresh',
-      'sanitize_callback' => 'internet_service_provider_pro_switch_sanitization'
-  ));
-  $wp_customize->add_control(new internet_service_provider_pro_Toggle_Switch_Custom_control($wp_customize, 'internet_service_provider_pro_testimonials_carousel_dots', array(
-      'label' => esc_html__('Carousel Dots', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_testimonials'
-  )));
 
   $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_color_settings',
     array(
@@ -8503,1399 +6168,6 @@
         'desktop_top' => 'internet_service_provider_pro_latest_news_spacing_top_desktop',
         'desktop_bottom' => 'internet_service_provider_pro_latest_news_spacing_bottom_desktop',
         'desktop_right' => 'internet_service_provider_pro_latest_news_spacing_right_desktop'
-    ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-  // ------------- Sustainability Commitment -------------
-  $wp_customize->add_section('internet_service_provider_pro_sustainability_commitment',array(
-    'title' => __('Sustainability Commitment','internet-service-provider-pro'),
-    'panel' => 'internet_service_provider_pro_panel_id',
-  ));
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_enable',
-      array(
-    'default' => 'Enable',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_enable',
-    array(
-    'type' => 'radio',
-    'label' => __('Do you want this section', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'choices' => array(
-    'Enable' => __('Enable', 'internet-service-provider-pro'),
-    'Disable' => __('Disable', 'internet-service-provider-pro')
-  )));
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_sustainability_commitment_enable', array(
-    'selector' => '#about-us h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_sustainability_commitment_enable',
-  ));
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_settings',
-    array(
-    'label' => __('Section Background Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_bgcolor', array(
-    'label' => __('Section Background Color', 'internet-service-provider-pro'),
-    'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_bgcolor',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_bgimage',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_sustainability_commitment_bgimage',array(
-    'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 430px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_bgimage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_bgimage_setting', array(
-      'default'         => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_bgimage_setting', array(
-      'type'      => 'radio',
-      'label'     => __('Choose image option', 'internet-service-provider-pro'),
-      'section'   => 'internet_service_provider_pro_sustainability_commitment',
-      'choices'   => array(
-        'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
-        'bg-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),                    
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_bgimage_size', array(
-      'default' => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_bgimage_size', array(
-      'type' => 'radio',
-      'label' => __('Background Image Size', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sustainability_commitment',
-      'choices' => array(
-          'bg-auto' => __('Auto', 'internet-service-provider-pro'),
-          'bg-cover' => __('Cover', 'internet-service-provider-pro'),
-          'bg-contain' => __('Contain', 'internet-service-provider-pro'),
-          'bg-xy' => __('Cover X & Y', 'internet-service-provider-pro'),
-          'bg-x' => __('Cover X', 'internet-service-provider-pro'),
-      )
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_content_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_content_settings',
-    array(
-    'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_tagline',array(
-    'label' => __('Section Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_tagline',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_main_heading',array(
-    'label' => __('Section Main Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_main_heading',
-    'type'    => 'text'
-  ));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_icon_box',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_icon_box',
-    array(
-    'label' => __('Image Box','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_icon_box_number',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_icon_box_number',array(
-    'label' => __('Number of Boxes to show','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_icon_box_number',
-    'type'    => 'text'
-  ));
-
-  $sustainability_commitment_icon_box = get_theme_mod('internet_service_provider_pro_sustainability_commitment_icon_box_number');
-
-  for($i=1;$i<=$sustainability_commitment_icon_box;$i++)
-  {
-    $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_icon_box_settings'.$i,
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-    ));
-    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_icon_box_settings'.$i,
-      array(
-      'label' => __('Box ','internet-service-provider-pro').$i,
-      'section' => 'internet_service_provider_pro_sustainability_commitment'
-    )));
-
-    $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_icon_box_image'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_sustainability_commitment_icon_box_image'.$i,array(
-      'label' => __('Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sustainability_commitment',
-      'settings' => 'internet_service_provider_pro_sustainability_commitment_icon_box_image'.$i
-    )));
-
-	  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_icon_box_title'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_icon_box_title'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sustainability_commitment',
-      'setting' => 'internet_service_provider_pro_sustainability_commitment_icon_box_title'.$i,
-      'type'    => 'text'
-    ));
-
-    $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_icon_box_percentage'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_icon_box_percentage'.$i,array(
-      'label' => __('Percentage ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sustainability_commitment',
-      'setting' => 'internet_service_provider_pro_sustainability_commitment_icon_box_percentage'.$i,
-      'type'    => 'text'
-    ));
-    
-    $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_icon_box_text'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_icon_box_text'.$i,array(
-      'label' => __('Title ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sustainability_commitment',
-      'setting' => 'internet_service_provider_pro_sustainability_commitment_icon_box_text'.$i,
-      'type'    => 'text'
-    ));
-
-    $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_icon_box_link_icon_url'.$i,array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw'
-    ));
-    $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_icon_box_link_icon_url'.$i,array(
-      'label' => __('Url ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sustainability_commitment',
-      'setting' => 'internet_service_provider_pro_sustainability_commitment_icon_box_link_icon_url'.$i,
-      'type'    => 'url'
-    ));
-  }
-
-   $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_column_image',array(
-      'default' => '',
-      'sanitize_callback' => 'esc_url_raw',
-    ));
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_sustainability_commitment_column_image',array(
-      'label' => __('Column Image','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sustainability_commitment',
-      'settings' => 'internet_service_provider_pro_sustainability_commitment_column_image'
-    )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_color_settings',
-  array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_sustainability_commitment_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_sustainability_commitment',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_tagline_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_sustainability_commitment_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_sustainability_commitment',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_title_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_title_ct_pallete',
-    array(
-    'label' => __('Box Title Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_title_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_title_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_box_title_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_box_title_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_sustainability_commitment_box_title_font_family', array(
-    'section'  => 'internet_service_provider_pro_sustainability_commitment',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_box_title_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_box_title_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_box_title_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_text_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_text_ct_pallete',
-    array(
-    'label' => __('Box Text Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_text_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_text_color', array(
-    'label' => __(' Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_box_text_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_box_text_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_sustainability_commitment_box_text_font_family', array(
-    'section'  => 'internet_service_provider_pro_sustainability_commitment',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_box_text_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_box_text_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_box_text_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_percentage_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_percentage_ct_pallete',
-    array(
-    'label' => __('Box Percentage Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_percentage_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_percentage_color', array(
-    'label' => __(' Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_box_percentage_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_box_percentage_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_sustainability_commitment_box_percentage_font_family', array(
-    'section'  => 'internet_service_provider_pro_sustainability_commitment',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_box_percentage_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_sustainability_commitment_box_percentage_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'setting' => 'internet_service_provider_pro_sustainability_commitment_box_percentage_font_size',
-    'type'    => 'number'
-  ));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_bgcolor', array(
-    'label' => __('Box Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_box_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_hover_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_hover_bgcolor', array(
-    'label' => __('Box Hover Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_box_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_image_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_image_bgcolor', array(
-    'label' => __('Box Image Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_box_image_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_sustainability_commitment_box_hover_image_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_sustainability_commitment_box_hover_image_bgcolor', array(
-    'label' => __('Box Hover Image Background Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'settings' => 'internet_service_provider_pro_sustainability_commitment_box_hover_image_bgcolor',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_sustainability_commitment_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_sustainability_commitment_spacing', array(
-    'section' => 'internet_service_provider_pro_sustainability_commitment',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_sustainability_commitment_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_sustainability_commitment_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_sustainability_commitment_spacing_bottom_desktop',
-      'desktop_right' => 'internet_service_provider_pro_sustainability_commitment_spacing_right_desktop'
-  ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-  // ------------- Promotional Banner -------------
-  $wp_customize->add_section('internet_service_provider_pro_pormotional_banner',array(
-    'title' => __('Promotional Banner','internet-service-provider-pro'),
-    'panel' => 'internet_service_provider_pro_panel_id',
-  ));
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_enable',
-      array(
-    'default' => 'Enable',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_enable',
-    array(
-    'type' => 'radio',
-    'label' => __('Do you want this section', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'choices' => array(
-    'Enable' => __('Enable', 'internet-service-provider-pro'),
-    'Disable' => __('Disable', 'internet-service-provider-pro')
-  )));
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_pormotional_banner_enable', array(
-    'selector' => '#about-us h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_pormotional_banner_enable',
-  ));
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_settings',
-    array(
-    'label' => __('Section Background Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner'
-  )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_bgcolor', array(
-    'label' => __('Section Background Color', 'internet-service-provider-pro'),
-    'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'settings' => 'internet_service_provider_pro_pormotional_banner_bgcolor',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_bgimage',array(
-    'default' => '',
-    'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-    new WP_Customize_Image_Control( $wp_customize,'internet_service_provider_pro_pormotional_banner_bgimage',array(
-    'label' => __('Section Background Image','internet-service-provider-pro'),
-    'description' => __('Dimension 1600px * 430px','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'settings' => 'internet_service_provider_pro_pormotional_banner_bgimage'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_bgimage_setting', array(
-      'default'         => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_bgimage_setting', array(
-      'type'      => 'radio',
-      'label'     => __('Choose image option', 'internet-service-provider-pro'),
-      'section'   => 'internet_service_provider_pro_pormotional_banner',
-      'choices'   => array(
-        'bg-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
-        'bg-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),                    
-  )));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_content_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_content_settings',
-    array(
-    'label' => __('Section Content Settings','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_tagline',array(
-    'label' => __('Section Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'setting' => 'internet_service_provider_pro_pormotional_banner_tagline',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_main_heading',array(
-    'label' => __('Section Main Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'setting' => 'internet_service_provider_pro_pormotional_banner_main_heading',
-    'type'    => 'text'
-  ));
-
-	$wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_section_button',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_section_button',
-    array(
-    'label' => __('Section Button','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_section_button_title',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_section_button_title',array(
-    'label' => __('Section Button Title','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'setting' => 'internet_service_provider_pro_pormotional_banner_section_button_title',
-    'type'    => 'text'
-  ));
-	
-	$wp_customize->add_setting(
-		'internet_service_provider_pro_pormotional_banner_section_button_icon',
-		array(
-			'default'     => '',
-			'sanitize_callback' => 'sanitize_text_field'
-		)
-	);
-	$wp_customize->add_control(
-		new internet_service_provider_pro_Fontawesome_Icon_Chooser(
-			$wp_customize,
-			'internet_service_provider_pro_pormotional_banner_section_button_icon',
-			array(
-			'settings'    => 'internet_service_provider_pro_pormotional_banner_section_button_icon',
-			'section'   => 'internet_service_provider_pro_pormotional_banner',
-			'type'      => 'icon',
-			'label'     => esc_html__( 'Choose  Icon', 'internet-service-provider-pro' ),
-			)
-		)
-	);
-
-  $wp_customize->add_setting('internet_service_provider_pro_tepormotional_banner_section_button_url',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_tepormotional_banner_section_button_url',array(
-    'label' => __('Section Button Url','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_tepormotional_banner',
-    'setting' => 'internet_service_provider_pro_tepormotional_banner_section_button_url',
-    'type'    => 'text'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_color_settings',
-  array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'settings' => 'internet_service_provider_pro_pormotional_banner_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_pormotional_banner_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_pormotional_banner',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'setting' => 'internet_service_provider_pro_pormotional_banner_tagline_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'settings' => 'internet_service_provider_pro_pormotional_banner_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_pormotional_banner_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_pormotional_banner',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'setting' => 'internet_service_provider_pro_pormotional_banner_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_ct_pallete',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_ct_pallete',
-      array(
-      'label' => __('Section Button Typography ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_color', array(
-      'label' => __('Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_button_font_family',array(
-      'default' => '',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-      'internet_service_provider_pro_pormotional_banner_button_font_family', array(
-      'section'  => 'internet_service_provider_pro_pormotional_banner',
-      'label'    => __('Font Family','internet-service-provider-pro'),
-      'type'     => 'select',
-      'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_button_font_size',array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_pormotional_banner_button_font_size',array(
-      'label' => __('Font Size','internet-service-provider-pro'),
-      
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'setting' => 'internet_service_provider_pro_pormotional_banner_button_font_size',
-      'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_bgcolor', array(
-      'label' => __('Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_icon_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_icon_color', array(
-      'label' => __('Icon Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_icon_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_icon_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_icon_bgcolor', array(
-      'label' => __('Icon Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_icon_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_icon_hover_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_icon_hover_color', array(
-      'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_icon_hover_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_icon_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_icon_hover_bgcolor', array(
-      'label' => __('Icon Hover Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_icon_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_hover_bgcolor', array(
-      'label' => __('Hover Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_pormotional_banner_button_text_color_hover', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_pormotional_banner_button_text_color_hover', array(
-      'label' => __('Hover Text Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_pormotional_banner',
-      'settings' => 'internet_service_provider_pro_pormotional_banner_button_text_color_hover',
-  )));
-
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_pormotional_banner_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_pormotional_banner_spacing', array(
-    'section' => 'internet_service_provider_pro_pormotional_banner',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_pormotional_banner_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_pormotional_banner_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_pormotional_banner_spacing_bottom_desktop',
-      'desktop_right' => 'internet_service_provider_pro_pormotional_banner_spacing_right_desktop'
-  ),
-    'input_attrs' => array(
-        'min' => 0,
-        'max' => 100,
-        'step' => 1,
-    ),
-    'responsive' => false
-  )));
-
-  /*--------------------Team Section------------------------------*/
-  $wp_customize->add_section('internet_service_provider_pro_team',array(
-      'title'         => __('Team','internet-service-provider-pro'),
-      'panel'         => 'internet_service_provider_pro_panel_id',
-  ));
-  
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_option',
-  array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  )
-  );
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_option',
-  array(
-      'label' => __('team Option','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_team'
-  )
-  ) );
-  $wp_customize->add_setting('internet_service_provider_pro_radio_team_enable',array(
-      'default'           => 'Enable',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_radio_team_enable', array(
-      'type'        => 'radio',
-      'label'       => 'Do you want this section',
-      'section'     => 'internet_service_provider_pro_team',
-      'choices'     => array(
-          'Enable'  => 'Enable',
-          'Disable' => 'Disable'
-      ),
-  ));  
-  $wp_customize->selective_refresh->add_partial( 'internet_service_provider_pro_radio_team_enable', array(
-    'selector' => '#our-team h3',
-    'render_callback' => 'internet_service_provider_pro_customize_partial_internet_service_provider_pro_radio_team_enable',
-  ) ); 
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_back_option',
-    array(
-        'default' => '',
-        'transport' => 'postMessage',
-        'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  )
-  );
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_back_option',
-    array(
-        'label' => __('Section Background Option','internet-service-provider-pro'),
-        'section' => 'internet_service_provider_pro_team'
-    )
-  ) );  
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_bgcolor', array(
-        'label' => __('Background Color', 'internet-service-provider-pro'),
-        'description'   => __('Either add background color or background image, if you add both background color will be top most priority','internet-service-provider-pro'),
-        'section' => 'internet_service_provider_pro_team',
-        'settings' => 'internet_service_provider_pro_team_bgcolor',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_team_bgimage',array(
-      'default' =>'',
-      'sanitize_callback' => 'esc_url_raw',
-  ));
-  $wp_customize->add_control(
-      new WP_Customize_Image_Control(
-          $wp_customize,
-          'internet_service_provider_pro_team_bgimage',
-          array(
-              'label' => __('Background image','internet-service-provider-pro'),
-              'description' => __('Dimension 1600px * 900px','internet-service-provider-pro'),
-              'section' => 'internet_service_provider_pro_team',
-              'settings' => 'internet_service_provider_pro_team_bgimage'
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_bgimage_attachment', array(
-      'default' => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_bgimage_attachment', array(
-      'type' => 'radio',
-      'label' => __('Choose image option', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_team',
-      'choices' => array(
-          'bg-fixed' => __('Fixed', 'internet-service-provider-pro'),
-          'bg-scroll' => __('Scroll', 'internet-service-provider-pro')
-      )
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_bgimage_size', array(
-      'default' => '',
-      'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_bgimage_size', array(
-      'type' => 'radio',
-      'label' => __('Background Image Size', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_team',
-      'choices' => array(
-          'bg-auto' => __('Auto', 'internet-service-provider-pro'),
-          'bg-cover' => __('Cover', 'internet-service-provider-pro'),
-          'bg-contain' => __('Contain', 'internet-service-provider-pro'),
-          'bg-xy' => __('Cover X & Y', 'internet-service-provider-pro'),
-          'bg-x' => __('Cover X', 'internet-service-provider-pro'),
-      )
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_content_option',
-    array(
-        'default' => '',
-        'transport' => 'postMessage',
-        'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  )
-  );
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_content_option',
-    array(
-        'label' => __('Section Content Option','internet-service-provider-pro'),
-        'section' => 'internet_service_provider_pro_team'
-    )
-  ) );
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_tagline',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_tagline',array(
-    'label' => __('Tagline','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'setting' => 'internet_service_provider_pro_team_tagline',
-    'type'  => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_main_heading',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field',
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_main_heading',array(
-    'label' => __('Main Heading 1','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'setting' => 'internet_service_provider_pro_team_main_heading',
-    'type'  => 'text'
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_number',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_number',array(
-    'label' => __('No of team to show','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'setting' => 'internet_service_provider_pro_team_number',
-    'type'    => 'number'
-  ));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_content_color_settings',
-    array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_content_color_settings',
-    array(
-    'label' => __('Section Color & Typography','internet-service-provider-pro'),
-  'section' => 'internet_service_provider_pro_team'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_tagline_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_tagline_ct_pallete',
-    array(
-    'label' => __('Tagline Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_tagline_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_tagline_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'settings' => 'internet_service_provider_pro_team_tagline_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_tagline_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_team_tagline_font_family', array(
-    'section'  => 'internet_service_provider_pro_team',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_tagline_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_tagline_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'setting' => 'internet_service_provider_pro_team_tagline_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_main_heading_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_main_heading_ct_pallete',
-    array(
-    'label' => __('Main Heading Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_main_heading_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_main_heading_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'settings' => 'internet_service_provider_pro_team_main_heading_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_main_heading_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_team_main_heading_font_family', array(
-    'section'  => 'internet_service_provider_pro_team',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_main_heading_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_main_heading_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_team',
-    'setting' => 'internet_service_provider_pro_team_main_heading_font_size',
-    'type'    => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_name_ct_pallete',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_name_ct_pallete',
-  array(
-    'label' => __('Team Name Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_name_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_name_color', array(
-    'label'    => __( 'Color','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'settings' => 'internet_service_provider_pro_team_name_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_name_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-   ));
-  $wp_customize->add_control(
-      'internet_service_provider_pro_team_name_font_family', array(
-      'section'  => 'internet_service_provider_pro_team',
-      'label'    => __( 'Font Family','internet-service-provider-pro'),
-      'type'     => 'select',
-      'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_name_font_size', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_name_font_size', array(
-      'label' => __('Font Size', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_team',
-      'setting' => 'internet_service_provider_pro_team_name_font_size',
-      'type' => 'number'
-  ));
-
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_desig_ct_pallete',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_desig_ct_pallete',
-  array(
-    'label' => __('Desgination Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_desig_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_desig_color', array(
-    'label'    => __( 'Color','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'settings' => 'internet_service_provider_pro_team_desig_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_desig_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
-   ));
-  $wp_customize->add_control(
-      'internet_service_provider_pro_team_desig_font_family', array(
-      'section'  => 'internet_service_provider_pro_team',
-      'label'    => __( 'Font Family','internet-service-provider-pro'),
-      'type'     => 'select',
-      'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_desig_font_size', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_desig_font_size', array(
-      'label' => __('Font Size', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_team',
-      'setting' => 'internet_service_provider_pro_team_desig_font_size',
-      'type' => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_social_profile_ct_pallete',
-  array(
-    'default' => '',
-    'transport' => 'postMessage',
-    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_team_social_profile_ct_pallete',
-  array(
-    'label' => __('Social Profile Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_social_profile_icon_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_social_profile_icon_color', array(
-    'label'    => __( 'Icon Color','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'settings' => 'internet_service_provider_pro_team_social_profile_icon_color',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_social_profile_icon_font_size', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_team_social_profile_icon_font_size', array(
-      'label' => __('Icon Font Size', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_team',
-      'setting' => 'internet_service_provider_pro_team_social_profile_icon_font_size',
-      'type' => 'number'
-  ));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_social_profile_box_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_social_profile_box_bgcolor', array(
-    'label'    => __( 'Box Background Color','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'settings' => 'internet_service_provider_pro_team_social_profile_box_bgcolor',
-  )));
-  $wp_customize->add_setting( 'internet_service_provider_pro_team_social_profile_box_hover_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_team_social_profile_box_hover_bgcolor', array(
-    'label'    => __( 'Box Hover Background Color','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_team',
-    'settings' => 'internet_service_provider_pro_team_social_profile_box_hover_bgcolor',
-  )));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_spacing_left_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_spacing_top_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_spacing_bottom_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_team_spacing_right_desktop', array(
-    'sanitize_callback' => 'internet_service_provider_pro_sanitize_number_blank',
-  ));
-
-  $wp_customize->add_control(new VW_Dimensions_Control($wp_customize, 'internet_service_provider_pro_team_spacing', array(
-    'section' => 'internet_service_provider_pro_team',
-    'label' => esc_html__('Section Spacing(px)', 'internet-service-provider-pro'),
-    'settings' => array(
-        'desktop_left' => 'internet_service_provider_pro_team_spacing_left_desktop',
-        'desktop_top' => 'internet_service_provider_pro_team_spacing_top_desktop',
-        'desktop_bottom' => 'internet_service_provider_pro_team_spacing_bottom_desktop',
-        'desktop_right' => 'internet_service_provider_pro_team_spacing_right_desktop'
     ),
     'input_attrs' => array(
         'min' => 0,
