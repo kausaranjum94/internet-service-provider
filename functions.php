@@ -263,7 +263,7 @@ function internet_service_provider_pro_scripts() {
 	    wp_enqueue_style( 'amp-style', get_template_directory_uri().'/assets/css/main-css/amp-style.css',true, null,'all' );
 	}else{
 		wp_enqueue_style( 'animation-wow', get_template_directory_uri().'/assets/css/animate.css' );
-		wp_enqueue_style( 'owl-carousel-style', get_template_directory_uri().'/assets/css/owl.carousel.css' );x
+		wp_enqueue_style( 'owl-carousel-style', get_template_directory_uri().'/assets/css/owl.carousel.css' );
 	}
 
 	wp_enqueue_style( 'animation-wow', get_template_directory_uri().'/assets/css/animate.css' );

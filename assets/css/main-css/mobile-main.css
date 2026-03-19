@@ -630,14 +630,15 @@
     bottom: 73px;
     font-size: 13px;
   }
-}
-@media screen and (max-width: 767px) and (min-width: 576px) {
-  .banner-details {
+   .banner-details {
     padding: 71px 10px 71px 50px;
   } 
   .banner-details {
     max-width: 58%;
   }
+}
+@media screen and (max-width: 767px) and (min-width: 576px) {
+ 
   .process-box {
     flex: 0 0 calc( 50% - 10px );
   } 
@@ -650,6 +651,134 @@
   }
 }
 @media screen and (max-width:767px) {
+  #about-us h3 {
+    color: white;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 31px;
+    margin-bottom: 13px;
+  }
+  .about-btn_btn{
+    margin-top: 20px !important;
+    margin-bottom: 19px;
+  }
+  .records-row {
+    padding: 8px;
+  }
+  .record_detail .media {
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+  }
+  span.section-text {
+    max-width: 100%;
+  }
+  span.section-text {
+    text-align: center;
+  }
+  .services-head {
+    text-align: center;
+    max-width: 100%;
+  }
+  .section_main_head h3 {
+    font-size: 24px;
+  }
+  .pricing-box {
+    max-width: 67%;
+  }
+  #our-partner {
+    padding-bottom: 1em;
+  }
+  .services-block-bottom-content h6 {
+    font-size: 20px;
+  }
+  .customer-image img {
+    margin-left: -15px;
+    width: 37px;
+  }
+  .services-block-content {
+    padding: 16px;
+  }
+  .why-choose-us-head {
+    max-width: 100%;
+  }
+  .whychoose-box {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+  }
+  .why-choose-us-block h6 {
+    font-size: 15px;
+  }
+  .whychoose-icon-box {
+    margin-top: 11px;
+  }
+  span.why-choose-us-bottom-text {
+    margin-bottom: 10px;
+    display: block;
+  }
+  #exclusive-offers .section-text {
+    max-width: 100%;
+  }
+  .exclusive-offers-head-listing {
+    padding-bottom: 1em;
+  }
+  .exclusive-offers-speed {
+    margin-top: 28px;
+  }
+  .exclusive-offers-block {
+    margin-bottom: 10px;
+  }
+  #map-area .section-text, #testimonials .section-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  .map-area-head.section_main_head {
+    text-align: center;
+  }
+  .map-area-name {
+    font-size: 11px;
+  }
+  #map-container {
+    height: 312px;
+  }
+  .customer-image {
+    display: none;
+  } 
+  .plan-head {
+    max-width: 100%;
+  }
+  .plan-info {
+    padding: 14px 15px;
+  }
+  .plan-btn {
+    padding-top: 2px;
+  }
+  .plan-features ul li {
+    font-size: 12px;
+  }
+  .feature-box {
+    margin-top: 34px;
+    padding: 17px;
+  }
+  .testimonial-title {
+    margin-top: 1em;
+  }
+  .testimonial-content {
+    max-width: 100%;
+  }
+  #footer h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  #footer {
+    padding: 22px 0 0 0;
+  }
+  .banner-head-outer {
+    text-align: center;
+  }
+  .testimonials--video-image {
+    margin: 10px 0;
+  }
   #site-sticky-menu1 {
     text-align: center;
     margin-bottom: 15px;
@@ -679,11 +808,6 @@
   }
   .main-banner-row {
     padding-top: 0;
-  }
-  #main-banner {
-    position: unset;
-    padding: 0;
-    background-color: rgb(48 55 64 / 95%);
   }
   .main-banner-btn {
     margin-top: 0px;
@@ -784,8 +908,17 @@
   .newsletter_shortcode input[type="submit"] {
     margin-left: 10px;
   }
+  .newsletter_shortcode input[type="submit"] {
+    margin-top: 12px;
+  }
   .newsletter_shortcode input[type="text"], .newsletter_shortcode input[type="tel"], .newsletter_shortcode input[type="email"], .newsletter_shortcode input[type="phno"], .newsletter_shortcode input[type="password"], .newsletter_shortcode textarea {
-    width: 79%;
+    width: 100%;
+  }
+  .location .contact-text {
+    max-width: 100%;
+  }
+  .contact_widget {
+    margin-top: 1em !important;
   }
   .about-head {
     margin-top: 18px;
@@ -797,12 +930,6 @@
   #latest-news {
     margin: 1em auto;
   } 
-  a.theme_button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 4px 5px 4px 12px;
-    font-size: 13px;
-  }
   .wc-block-cart-item__total-price-and-sale-badge-wrapper{
     align-items: center !important;
     margin: 10px 0;
@@ -1133,10 +1260,6 @@
   }
   .custom-social-icons{
     justify-content: center;
-  }
-  #masthead {
-    position: unset;
-    background-color: var(--secondary-color);
   }
   .socialbox {
     margin-top: 10px;

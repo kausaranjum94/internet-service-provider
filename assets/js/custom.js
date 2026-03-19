@@ -257,12 +257,12 @@ jQuery(document).ready(function ($) {
     lazyLoad: true,
     autoplayTimeout: parseInt(jQuery("#records").data('speed')),
     loop: jQuery("#records").data('loops'),
-    dots: true,
+    dots: false,
     autoplayHoverPause: true,
     navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
     responsive: {
       0: {
-        items: 2
+        items: 1
       },
       576: {
         items: 2
