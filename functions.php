@@ -263,15 +263,12 @@ function internet_service_provider_pro_scripts() {
 	    wp_enqueue_style( 'amp-style', get_template_directory_uri().'/assets/css/main-css/amp-style.css',true, null,'all' );
 	}else{
 		wp_enqueue_style( 'animation-wow', get_template_directory_uri().'/assets/css/animate.css' );
-		wp_enqueue_style( 'owl-carousel-style', get_template_directory_uri().'/assets/css/owl.carousel.css' );
-		wp_enqueue_style( 'swipper-slider-style', get_template_directory_uri().'/assets/css/swiper-bundle.min.css' );
+		wp_enqueue_style( 'owl-carousel-style', get_template_directory_uri().'/assets/css/owl.carousel.css' );x
 	}
 
 	wp_enqueue_style( 'animation-wow', get_template_directory_uri().'/assets/css/animate.css' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/assets/css/fontawesome-all.min.css' );
 	wp_enqueue_style( 'effect', get_template_directory_uri().'/assets/css/effect.css' );
-	wp_enqueue_style( 'magnific-popup-css', get_template_directory_uri() . '/assets/css/magnific-popup.css');
-	wp_enqueue_style( 'jquery-ui.min.css', get_template_directory_uri() . '/assets/css/jquery-ui.min.css');
 	wp_enqueue_style( 'aos',get_template_directory_uri().'/assets/css/aos.css' );
 
 	wp_enqueue_style( 'jquery.fancybox.min', get_template_directory_uri().'/assets/css/jquery.fancybox.min.css' );
@@ -281,11 +278,8 @@ function internet_service_provider_pro_scripts() {
 	wp_enqueue_script( 'tether', get_template_directory_uri() . '/assets/js/tether.js', array('jquery'), '',true);
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js',array('jquery'),'',true);
 	wp_enqueue_script( 'bootstrap-notify-js', get_template_directory_uri() . '/assets/js/bootstrap-notify.min.js', array( 'bootstrap' ) );
-	wp_enqueue_script( 'superfsh', get_template_directory_uri() . '/assets/js/jquery.superfish.min.js',array('jquery'),'',true);
-	wp_enqueue_script( 'magnific-popup-js', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.js',array('jquery'),'',true);
 	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.js',array('jquery'),'',true);
 	wp_enqueue_script( 'animation-aos', get_template_directory_uri() . '/assets/js/aos.js', array( 'jquery' ) );
-	wp_enqueue_script( 'swipper-slider', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array( 'jquery' ) );
 
 	wp_enqueue_script( 'jquery.fancybox.min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array('jquery'),'', true );
 

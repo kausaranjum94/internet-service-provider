@@ -256,13 +256,6 @@ aside#search-3 {
 }
 
 /*------------------ Comments BOX ------------------*/
-#comments {
-    float: left;
-    width: 100%;
-    margin-top: 10px;
-        display: flex;
-            justify-content: space-between;
-}
 #comments h2.comments-title {
     font-size: 20px;
     font-weight: bold;
@@ -272,11 +265,18 @@ aside#search-3 {
     font-weight: bold;
     clear: both;
 }
+.comment-list li {
+    list-style: none;
+}
+.comment-list {
+    margin: 0;
+    margin-bottom: 31px;
+}
 #comments input[type="text"], #comments input[type="email"], #comments textarea {
-  padding: 3px 10px;
-  font-size: 18px;
-  border: 1px solid #2F363C;
-  border-radius: 6px;
+    padding: 11px 10px;
+    font-size: 18px;
+    border: 1px solid #2F363C;
+    border-radius: 6px;
 }
 #comments textarea {
     height: 120px;
@@ -373,13 +373,21 @@ letter-spacing: 0px;
 color: #000;
 text-transform: capitalize;
 }
-.comment-body>p , .comment-body>.reply{
-      padding-left: 11%;
+.reply>a {
+    font: 500 14px / 26px var(--primary-font);
+    letter-spacing: 0px;
+    color: #000000;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 7px 21px;
+    border-radius: 10px;
 }
-.reply>a{
-  font: 500 14px / 26px var(--primary-font);
-  letter-spacing: 0px;
-  color: #000000;
+.post-content-wrap {
+    max-width: 79%;
+    margin: 0 auto;
+}
+.post-meta-inner {
+    justify-content: space-around !important;
 }
 /*--------------- Sidebar -----------------*/
 #sidebar .textwidget input[type="submit"] {
@@ -448,8 +456,15 @@ text-transform: capitalize;
   font-weight: 700;
   color: var(--primary-color);
 }
-.wp-block-heading {
-  font-size: 18px;
+.wp-block-heading, #sidebar .widget-title{
+    font-size: 18px;
+    padding: 12px 23px;
+    border: 1px solid var(--primary-color);
+    color: #1C1C1F;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 22px;
+    display: inline-block;
 }
 #sidebar .widget_recent_entries ul li a:hover,#sidebar .widget_categories a:hover, #sidebar .widget_custom_html a:hover{
   color: var(--primary-color);
@@ -1087,10 +1102,32 @@ section#page-with-left-sidebar ,section#page-with-right-sidebar{
   text-transform: capitalize;
   color: #000000;
 }
-.meta-heading{
-  font: 500 16px / 26px var(--primary-font);
-  letter-spacing: 0px;
-  color: #000000;
+.meta-heading {
+    /* font: 500 16px / 26px var(--primary-font); */
+    letter-spacing: 0px;
+    color: #656565;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.comment-list li {
+    list-style: none;
+    background-color: #f8f8f8;
+    padding: 26px;
+    border-radius: 23px;
+}
+.news-box h5 a:hover {
+    color: var(--primary-color);
+}
+.post-image-block img {
+    border-radius: 30px;
+}
+.meta-details span.seperator {
+    width: 5px;
+    height: 5px;
+    margin: 0 10px;
+    background-color: #656565;
+    border-radius: 50%;
 }
 .social-share-icon-main{
   position: absolute;
@@ -1145,11 +1182,6 @@ section#page-with-left-sidebar ,section#page-with-right-sidebar{
   flex-wrap: wrap;
 
 
-}
-.comment-list{
-  list-style-type: none;
-  width: 55%;
-    order: 2;
 }
 #comments h2.comments-title {
   display: none;

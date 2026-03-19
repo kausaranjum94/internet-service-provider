@@ -220,12 +220,12 @@ function internet_service_provider_pro_section_about_us_shortcode( ){
 }
 add_shortcode( 'internet-service-provider-pro-about-us', 'internet_service_provider_pro_section_about_us_shortcode' );
 
-function internet_service_provider_pro_section_kitchen_style_shortcode( ){
+function internet_service_provider_pro_section_services_shortcode( ){
   ob_start();
-  echo get_template_part( 'template-parts/home/section-kitchen-style' );
+  echo get_template_part( 'template-parts/home/section-services' );
   return ob_get_clean();
 }
-add_shortcode( 'internet-service-provider-pro-kitchen-style', 'internet_service_provider_pro_section_kitchen_style_shortcode' );
+add_shortcode( 'internet-service-provider-pro-services', 'internet_service_provider_pro_section_services_shortcode' );
 
 function internet_service_provider_pro_section_kitchen_tab_shortcode( ){
   ob_start();
@@ -234,12 +234,12 @@ function internet_service_provider_pro_section_kitchen_tab_shortcode( ){
 }
 add_shortcode( 'internet-service-provider-pro-kitchen-tab', 'internet_service_provider_pro_section_kitchen_tab_shortcode' );
 
-function internet_service_provider_pro_section_project_shortcode( ){
+function internet_service_provider_pro_section_map_area_shortcode( ){
   ob_start();
-  echo get_template_part( 'template-parts/home/section-projects' );
+  echo get_template_part( 'template-parts/home/section-map-area' );
   return ob_get_clean();
 }
-add_shortcode( 'internet-service-provider-pro-projects', 'internet_service_provider_pro_section_project_shortcode' );
+add_shortcode( 'internet-service-provider-pro-map-area', 'internet_service_provider_pro_section_map_area_shortcode' );
 
 function internet_service_provider_pro_section_testimonials_shortcode( ){
   ob_start();
@@ -255,12 +255,12 @@ function internet_service_provider_pro_section_latest_news_shortcode( ){
 }
 add_shortcode( 'internet-service-provider-pro-latest-news', 'internet_service_provider_pro_section_latest_news_shortcode' );
 
-function internet_service_provider_pro_section_team_shortcode( ){
+function internet_service_provider_pro_section_plan_shortcode( ){
   ob_start();
-  echo get_template_part( 'template-parts/home/section-team' );
+  echo get_template_part( 'template-parts/home/section-pricing-plan' );
   return ob_get_clean();
 }
-add_shortcode( 'internet-service-provider-pro-team', 'internet_service_provider_pro_section_team_shortcode' );
+add_shortcode( 'internet-service-provider-pro-pricing-plan', 'internet_service_provider_pro_section_plan_shortcode' );
 
 function internet_service_provider_pro_section_why_choose_us_shortcode( ){
   ob_start();
@@ -269,12 +269,12 @@ function internet_service_provider_pro_section_why_choose_us_shortcode( ){
 }
 add_shortcode( 'internet-service-provider-pro-why-choose-us', 'internet_service_provider_pro_section_why_choose_us_shortcode' );
 
-function internet_service_provider_pro_section_sustainability_commitment_shortcode( ){
+function internet_service_provider_pro_section_exclusive_offers_shortcode( ){
   ob_start();
-  echo get_template_part( 'template-parts/home/section-sustainability-commitment' );
+  echo get_template_part( 'template-parts/home/section-exclusive-offers' );
   return ob_get_clean();
 }
-add_shortcode( 'internet-service-provider-pro-sustainability-commitment', 'internet_service_provider_pro_section_sustainability_commitment_shortcode' );
+add_shortcode( 'internet-service-provider-pro-exclusive-offers', 'internet_service_provider_pro_section_exclusive_offers_shortcode' );
 
 
 if (!function_exists('bmp_dimension_css')) {

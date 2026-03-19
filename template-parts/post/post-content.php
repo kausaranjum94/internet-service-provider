@@ -20,7 +20,7 @@
 ?>
 <div class="col-xl-6 col-lg-6 col-md-6 mb-4">
     <div class="news-box <?php echo esc_attr($amp_class); ?>" data-aos="zoom-in-up" data-aos-duration="2000">
-        <div class="box">
+        <div class="news-box-block">
             <div class="post-image-block">
             <?php
                 if(has_post_thumbnail()){
@@ -29,19 +29,24 @@
             ?>
             </div>
             <div class="box-content">
-            <div class="box-content-inner">
-                <h5 class="p-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                <div class="news-text">
-                <?php the_excerpt(); ?>
+                <div class="box-content-inner">
+                    <h5 class="p-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+
+                    <div class="meta-details d-flex align-items-center">
+                        <div class="entry-date meta-heading">
+                            <?php the_author(); ?>
+                        </div>
+                        <span class="seperator"></span>
+                        <?php if ( get_theme_mod('internet_service_provider_pro_post_general_settings_post_date',true) == "1" ) { ?>
+                            <div class="entry-date meta-heading">
+                                <?php echo get_the_date( 'F j , Y' ); ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <div class="news-text">
+                        <?php the_excerpt(); ?>
+                    </div>
                 </div>
-            </div>
-            <div class="news-icon" data-aos="fade-up" data-aos-duration="1100">
-                <a href="<?php the_permalink(); ?>">
-                <?php if( get_theme_mod( 'internet_service_provider_pro_projects_button_icon',true) != '') { ?>
-                    <span class="button-icon"><i class="fa-solid fa-arrow-right"></i></span>
-                <?php } ?>
-                </a>
-            </div>
             </div>
         </div>
     </div>

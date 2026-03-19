@@ -40,23 +40,23 @@ if( get_theme_mod('internet_service_provider_pro_section_footer_bgcolor','') ) {
 			}
 
 			if ( $count == 1 ) {
-			 $colmd = 'col-lg-12 col-sm-6';
-			 $collg = 'col-lg-12 col-sm-6';
-			 $colsm = 'col-lg-12 col-sm-6';
-		 } elseif ( $count == 2 ) {
-			 $colmd = 'col-lg-6 col-sm-6';
-			 $collg = 'col-lg-6 col-sm-6';
-			 $colsm = 'col-lg-6 col-sm-6';
-		 } elseif ( $count == 3 ){
-			 $colmd = 'col-lg-4 col-sm-6';
-			 $collg = 'col-lg-4 col-sm-6';
-			 $colsm = 'col-lg-4 col-sm-6';
-		 } else {
-			 $colmd = 'col-lg-4 col-sm-6';
-			 $colsm = 'col-lg-2 col-sm-6';
-			 $collg = 'col-lg-2 col-sm-4';
-			 $colxl = 'col-lg-4 col-sm-8';
-		 }
+				$colmd = 'col-lg-12 col-sm-6';
+				$collg = 'col-lg-12 col-sm-6';
+				$colsm = 'col-lg-12 col-sm-6';
+			} elseif ( $count == 2 ) {
+				$colmd = 'col-lg-6 col-sm-6';
+				$collg = 'col-lg-6 col-sm-6';
+				$colsm = 'col-lg-6 col-sm-6';
+			} elseif ( $count == 3 ){
+				$colmd = 'col-lg-4 col-sm-6';
+				$collg = 'col-lg-4 col-sm-6';
+				$colsm = 'col-lg-4 col-sm-6';
+			} else {
+				$colmd = 'col-lg-4 col-sm-6';
+				$colsm = 'col-lg-2 col-sm-6';
+				$collg = 'col-lg-2 col-sm-4';
+				$colxl = 'col-lg-4 col-sm-8';
+			}
 			?>
             <div class="row">
 				<div class="<?php if ( is_active_sidebar('footer-1') == '' ) { echo 'footer_hide'; } else { echo esc_html( $colmd ); } ?> footer-col-one">
@@ -77,8 +77,6 @@ if( get_theme_mod('internet_service_provider_pro_section_footer_bgcolor','') ) {
             </div>
           
         </div><!-- .container -->
-
-		<?php get_template_part( 'template-parts/footer/footer-contact' ); ?>
 		
 		<?php get_template_part( 'template-parts/footer/copyright' ); ?>
 		

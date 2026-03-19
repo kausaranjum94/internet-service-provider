@@ -39,6 +39,13 @@ function internet_service_provider_pro_register_recommended_plugins() {
 			'required'         => true,
 			'force_activation' => false,
 		),
+		array(
+			'name'             => __( 'Theme My Login', 'internet-service-provider-pro' ),
+			'slug'             => 'theme-my-login',
+			'source'           => get_template_directory() .'/inc/plugins/vw-title-banner-image.zip',
+			'required'         => true,
+			'force_activation' => false,
+		),
 	);
 	$internet_service_provider_pro_config = array();
 	tgmpa( $plugins, $internet_service_provider_pro_config );

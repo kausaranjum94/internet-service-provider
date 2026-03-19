@@ -26,14 +26,15 @@
 <section id="single-post">
     <div class="container">
         <div class="row">
-            <div class="col-lg-9 col-md-8">
+            <div class="single-post-img">
+                <?php if ( has_post_thumbnail() ) { ?>
                 <div class="single-post-img">
-                    <?php if ( has_post_thumbnail() ) { ?>
-                    <div class="single-post-img">
-                        <img src="<?php the_post_thumbnail_url( 'full' ); ?>">
-                    </div>
-                    <?php } ?>
+                    <?php the_post_thumbnail();?>
                 </div>
+                <?php } ?>
+            </div>
+            
+            <div class="post-content-wrap">
                 <div class="post-meta py-3">
                     <div class="d-flex justify-content-between align-items-center post-meta-inner">
                         <div class="single-post-author">
@@ -50,9 +51,9 @@
                         </div>
                         <div class="single-post-date">
                             <?php if ( get_theme_mod('internet_service_provider_pro_post_general_settings_post_date',true) == "1" ) { ?>
-                            <div class="entry-date meta-heading">
-                                <?php echo get_the_date( 'F j , Y' ); ?>
-                            </div>
+                                <div class="entry-date meta-heading">
+                                    <?php echo get_the_date( 'F j , Y' ); ?>
+                                </div>
                             <?php } ?>
                         </div>
                         <div class="single-post-comment">
@@ -61,56 +62,55 @@
                                 <a href="#comments">
                                     <a href="#comments" class="meta-heading">
                                         <?php
-																$get_comments_number = get_comments_number(get_the_ID()) != 0 ? get_comments_number(get_the_ID()) : 0;
-																	echo $get_comments_number . ' Comments'; ?>
+                                                                $get_comments_number = get_comments_number(get_the_ID()) != 0 ? get_comments_number(get_the_ID()) : 0;
+                                                                    echo $get_comments_number . ' Comments'; ?>
                                     </a>
                                 </a>
                             </div>
                             <?php } ?>
                         </div>
-                       <?php 
-                        if ( 
-                            get_theme_mod('internet_service_provider_pro_post_general_settings_category_setting', true) == "1" 
-                            && !empty($posts_category_name) 
-                        ) { 
-                        ?>
-                            <div class="single-post-category">
-                                <p class="mb-0 meta-heading">
-                                    <span>
-                                        Categories: <?php echo esc_html($posts_category_name); ?>
-                                    </span>
-                                </p>
-                            </div>
-                        <?php 
-                        } 
-                        ?>
-
-
-                        <div class="single-post-icons">
-                            <?php if ( get_theme_mod('internet_service_provider_pro_post_general_settings_post_share',true) ) {
-													if ( function_exists('internet_service_provider_pro_social_share') ) {
-														internet_service_provider_pro_social_share();
-													}
-															} ?>
-                        </div>
+                    
                     </div>
                 </div>
                 <div class="single-blog-content">
                     <?php the_content(); ?>
                 </div>
-                 <div class="single-post-comment mt-4 mb-5">
-                <?php
-                    if ( comments_open() || '0' != get_comments_number() ) {
-                            comments_template();
-                    }
-                ?>
-            </div>
-            </div>
-            <div class="col-lg-3 col-md-4" id="sidebar">
-                <?php get_sidebar('sidebar-1'); ?>
-            </div>
+                  <div class="post-meta-wrap d-flex align-items-center justify-content-between">
 
-           
+                    <?php 
+                    if ( 
+                        get_theme_mod('internet_service_provider_pro_post_general_settings_category_setting', true) == "1" 
+                        && !empty($posts_category_name) 
+                    ) { 
+                    ?>
+                        <div class="single-post-category">
+                            <p class="mb-0 meta-heading">
+                                <span>
+                                    <?php echo esc_html($posts_category_name); ?>
+                                </span>
+                            </p>
+                        </div>
+                    <?php 
+                    } 
+                    ?>
+
+
+                    <div class="single-post-icons">
+                        <?php if ( get_theme_mod('internet_service_provider_pro_post_general_settings_post_share',true) ) {
+                            if ( function_exists('internet_service_provider_pro_social_share') ) {
+                                internet_service_provider_pro_social_share();
+                            }
+                        } ?>
+                    </div>
+                </div>
+                <div class="single-post-comment mt-4 mb-5">
+                    <?php
+                        if ( comments_open() || '0' != get_comments_number() ) {
+                                comments_template();
+                        }
+                    ?>
+                </div>
+            </div>
         </div>
         <div class="row justify-content-center mt-3">
             <div class="col-lg-8 col-md-8">
@@ -126,17 +126,17 @@
             <div class="recent-blogs row mt-3 pt-3">
                 <?php
 					$args = array(
-						'post_type' => 'post',
-						'tax_query' => array(
-								array(
-										'taxonomy' => 'category',
-										'field'    => 'term_id',
-										'terms'    => wp_get_post_terms( get_the_ID(), 'category', array( 'fields' => 'ids' ) ),
-								)
-						),
-						'posts_per_page' => 3,
-						'post__not_in'   => array( get_the_ID() )
-				);
+                    'post_type' => 'post',
+                    'tax_query' => array(
+                            array(
+                                    'taxonomy' => 'category',
+                                    'field'    => 'term_id',
+                                    'terms'    => wp_get_post_terms( get_the_ID(), 'category', array( 'fields' => 'ids' ) ),
+                            )
+                    ),
+                    'posts_per_page' => 3,
+                    'post__not_in'   => array( get_the_ID() )
+                );
 				$new = new WP_Query($args);
 				$loop_index = 0; $i=1;
 					while ( $new->have_posts() ){
@@ -154,34 +154,35 @@
 
 				?>
                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
-                        <div class="blog-wrap left-blog-contet d-flex flex-column gap-2">
-                            <div class="blog-img">
-                                <?php if (has_post_thumbnail()){ ?>
-                                <?php the_post_thumbnail(); ?>
-                                <?php } ?>
-                            </div>
-                            <div class="d-md-flex text-md-start text-sm-center text-center d-lg-flex d-md-grid d-sm-flex d-grid blog-main-meta gap-md-4 gap-sm-3 gap-2">
-                            <div class="home-blog-meta d-flex align-items-center gap-2 justify-content-ms-start justify-content-sm-center justify-content-start">
-                                <?php echo $date_svg; ?>
-                                <h6><?php echo get_the_date( 'j M, Y'); ?></h6>
-                            </div>
-                            <div class="home-blog-meta d-flex align-items-center gap-2 justify-content-ms-start justify-content-sm-center justify-content-start">
-                                <?php echo $admin_svg; ?>
-                                <h6><?php the_author(); ?></h6>
-                            </div>
-                            <div class="home-blog-meta d-flex align-items-center gap-2 justify-content-ms-start justify-content-sm-center justify-content-start">                     
-                                <?php echo $catgory_svg; ?>
-                                <h6><a href="<?php echo $category_link; ?>"><?php echo wp_get_post_terms(get_the_ID(), 'category')[0]->name;  ?></a></h6>
-                            </div>
-                            </div>
-                            <div class="blog-title ">
-                                <h5 class="text-md-start text-sm-center text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                            </div>
-                            <div class="blog-content">
-                            <?php
-                                                $excerpt = get_the_excerpt();
-                                                echo esc_html(internet_service_provider_pro_string_limit_words($excerpt,('20')));
-                                            ?>
+                        <div class="news-box" data-aos="zoom-in-up" data-aos-duration="2000">
+                            <div class="news-box-block">
+                                <div class="post-image-block">
+                                <?php
+                                    if(has_post_thumbnail()){
+                                    the_post_thumbnail(); 
+                                    }
+                                ?>
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-content-inner">
+                                        <h5 class="p-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+
+                                        <div class="meta-details d-flex align-items-center">
+                                            <div class="entry-date meta-heading">
+                                                <?php the_author(); ?>
+                                            </div>
+                                            <span class="seperator"></span>
+                                            <?php if ( get_theme_mod('internet_service_provider_pro_post_general_settings_post_date',true) == "1" ) { ?>
+                                                <div class="entry-date meta-heading">
+                                                    <?php echo get_the_date( 'F j , Y' ); ?>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+                                        <div class="news-text">
+                                            <?php the_excerpt(); ?>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

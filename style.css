@@ -172,10 +172,10 @@ input::-webkit-input-placeholder {
 }
 
 section {
-  background-size: 100% 100%;
-  background-repeat: no-repeat !important;
-  padding: 70px 0;
-  background-attachment: scroll;
+    background-size: 100% 100%;
+    background-repeat: no-repeat !important;
+    padding: 54px 0;
+    background-attachment: scroll;
 }
 
 .btn-wrap {
@@ -394,10 +394,9 @@ a.theme_button.theme_button2:before {
     position: fixed;
     bottom: 10px;
     right: 20px !important;
-    background: var(--primary-color);
+    background: #383838;
     width: 55px;
     height: 55px;
-    line-height: 69px;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -407,7 +406,9 @@ a.theme_button.theme_button2:before {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     z-index: 2;
-   
+    border: 2px solid var(--primary-color);
+    padding: 14px 10px;
+    border-radius: 50%;
 }
 
 #return-to-top i {
@@ -1723,7 +1724,7 @@ a.header-contact-text,
 .product-item h5 a,
 .news-box .box h5 a,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
-.main-banner-btn a {
+.main-banner-btn a, .news-box h5 a {
   position: relative;
   display: inline !important;
   transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
@@ -1751,10 +1752,11 @@ a.header-contact-text:hover,
 .product-title-box h5 a:hover,
 .product-item h5 a:hover,
 .news-box .box:hover h5 a,
-.woocommerce ul.products li.product .woocommerce-loop-product__title:hover {
+.woocommerce ul.products li.product .woocommerce-loop-product__title:hover, .news-box h5 a:hover {
   background-size: 100% 2px;
 }
 /* ----------- Latest News ------------- */
+
 .news-box .box-content a.comment-tag {
   color: white;
   border: 2px solid var(--primary-color);
@@ -1765,17 +1767,13 @@ a.header-contact-text:hover,
   display: inline-block;
 }
 .news-box h5 a {
-    color: white;
-    font-size: 15px;
-}
-.box-content-inner {
-    max-width: 81%;
+  color: #1C1C1F;
+  font-size: 20px;
 }
 .news-text p {
-  color: white;
-  font-size: 13px;
+  color: #656565;
+  font-size: 15px;
   margin-bottom: 0;
-  line-height: 18px;
 }
 .news-text {
     margin: 10px 0;
@@ -1810,13 +1808,12 @@ a.header-contact-text:hover,
     transition: 0.5s;
 }
 .news-box .box-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 23px 16px;
 }
-.news-box .box-content h5, .news-box .box-content .news-text p{
-  opacity: 0;
-} 
 .news-box .box:hover .box-content h5, .news-box .box:hover .box-content .news-text p{
   opacity: 1;
 }
@@ -2197,6 +2194,45 @@ margin-bottom: 15px;
     object-fit: cover;
 }
 
+/*------------------- Theme my Login -----------------------*/
+
+.tml.tml-login {
+  max-width: 41%;
+  margin: 0 auto;
+  padding: 29px;
+  border-radius: 30px;
+  border: 2px solid var(--primary-color);
+}
+.tml .tml-field {
+    background-color: #f0f0f0;
+    padding: 15px 15px;
+    color: white;
+}
+button.tml-button, button.tml-button {
+    padding: 12px 31px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 32px;
+    box-shadow: none;
+    font-size: 17px;
+    position: relative;
+    margin-left: 0;
+    border: none;
+}
+button.tml-button:hover,  button.tml-button:hover{
+  background-color: #1C1C1F;
+  color: white;
+}
+.tml .tml-field {
+  background-color: #f0f0f0;
+  padding: 15px 15px;
+  color: black;
+}
+
+.tml  ul {
+   margin: 0;
+}
+
 /* Gutenburg CSS*/
 
 /*--------- Main Banner ---------------*/
@@ -2250,6 +2286,9 @@ margin-bottom: 15px;
 }
 .ive-internet-service-provider-pro-border-radius-20, .ive-internet-service-provider-pro-border-radius-20 img{
   border-radius: 20px;
+}
+.ive-internet-service-provider-pro-border{
+    border: 1px solid var(--primary-color);
 }
 .ive-internet-service-provider-pro-icon-url {
     width: 42px !important;

@@ -752,31 +752,26 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		        'menu-item-status' => 'publish'));
 
 				wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' =>  __('About Us','internet-service-provider-pro'),
+					'menu-item-title' =>  __('Services','internet-service-provider-pro'),
 					'menu-item-classes' => 'about',
-					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('About')),
+					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Services')),
 					'menu-item-type' => 'custom',
 					'menu-item-status' => 'publish'
 				));
 				wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' => __('Kitchens','internet-service-provider-pro'),
-					'menu-item-classes' => 'kitchens',
-					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Kitchens')),
+					'menu-item-title' => __('Tools','internet-service-provider-pro'),
+					'menu-item-classes' => '',
+					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Tools')),
 					'menu-item-status' => 'publish',
 				));
 
-				wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' => __('Portfolio','internet-service-provider-pro'),
-					'menu-item-classes' => 'portfolio',
-					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Portfolio')),
+				$blog_page_item =  wp_update_nav_menu_item($menu_id, 0, array(
+					'menu-item-title' => __('Feature','internet-service-provider-pro'),
+					'menu-item-classes' => '',
+					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Feature')),
 					'menu-item-status' => 'publish',
 				));
 				
-				$blog_page_item = wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' =>  __('Blog','internet-service-provider-pro'),
-					'menu-item-classes' => 'page',
-					'menu-item-status' => 'publish'
-				));
 				wp_update_nav_menu_item($menu_id, 0, array(
 					'menu-item-title' => __('Blog With No Sidebar','internet-service-provider-pro'),
 					'menu-item-classes' => 'blog-left-sidebar',
@@ -834,16 +829,16 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 				wp_update_nav_menu_item($menu_id, 0, array(
 					'menu-item-title' =>  __('Home','internet-service-provider-pro'),
-					'menu-item-classes' => 'about',
+					'menu-item-classes' => '',
 					'menu-item-url' => home_url( '/' ),
 					'menu-item-type' => 'custom',
 					'menu-item-status' => 'publish'
 				));
 
 				wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' =>  __('About','internet-service-provider-pro'),
-					'menu-item-classes' => 'about',
-					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('About')),
+					'menu-item-title' =>  __('About Us','internet-service-provider-pro'),
+					'menu-item-classes' => '',
+					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('About Us')),
 					'menu-item-type' => 'custom',
 					'menu-item-status' => 'publish'
 				));
@@ -856,23 +851,16 @@ function moveArrayPosition(&$array, $key, $new_position) {
 				));
 
 				wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' =>  __('Portfolio','internet-service-provider-pro'),
-					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Portfolio')),
+					'menu-item-title' =>  __('Pricing Plans','internet-service-provider-pro'),
+					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Pricing Plans')),
 					'menu-item-type' => 'custom',
 					'menu-item-status' => 'publish'
 				));
 				
 				wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' =>  __('Blogs','internet-service-provider-pro'),
+					'menu-item-title' =>  __('Coverage Area','internet-service-provider-pro'),
 					'menu-item-classes' => 'page',
-					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Blog')),
-					'menu-item-status' => 'publish'
-				));
-
-				wp_update_nav_menu_item($menu_id, 0, array(
-					'menu-item-title' =>  __('Contact','internet-service-provider-pro'),
-					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Contact')),
-					'menu-item-type' => 'custom',
+					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Coverage Area')),
 					'menu-item-status' => 'publish'
 				));
 				
@@ -884,97 +872,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			}
 		}
 
-
-	// ------- Create Footer Menu --------
-	public function theme_create_customizer_footer_customer_resources_menu() {
-		$menuname = 'Resources';
-		$bpmenulocation = '';
-		$menu_exists = wp_get_nav_menu_object( $menuname );
-
-		if( !$menu_exists){
-			$menu_id = wp_create_nav_menu($menuname);
-
-
-			// echo $menu_id . '  Help & Support';echo "<br>";
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('FAQs','archaeology-museums-pro'),
-				'menu-item-classes' => 'faq',
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('FAQ')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Kitchen Planner','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Kitchen Planner')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Care & Maintenance Guide','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Care & Maintenance Guide')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Design Inspiration','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Design Inspiration')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Sustainability','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Sustainability')),
-				'menu-item-status' => 'publish',
-			));
-			if( !has_nav_menu( $bpmenulocation ) ){
-				$locations = get_theme_mod('nav_menu_locations');
-				$locations[$bpmenulocation] = $menu_id;
-				set_theme_mod( 'nav_menu_locations', $locations );
-			}
-		}
-	}
-
-	public function theme_create_customizer_footer_customer_services_menu() {
-		$menuname = 'Services';
-		$bpmenulocation = '';
-		$menu_exists = wp_get_nav_menu_object( $menuname );
-
-		if( !$menu_exists){
-			$menu_id = wp_create_nav_menu($menuname);
-
-
-			// echo $menu_id . '  Help & Support';echo "<br>";
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Modular Kitchen Design','archaeology-museums-pro'),
-				'menu-item-classes' => 'faq',
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Modular Kitchen Design')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Custom Cabinets','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Custom Cabinets')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Countertops & Finishes','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Countertops & Finishes')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Kitchen Accessories','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Kitchen Accessories')),
-				'menu-item-status' => 'publish',
-			));
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Renovation & Remodeling','internet-service-provider-pro'),
-				'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Renovation & Remodeling')),
-				'menu-item-status' => 'publish',
-			));
-			if( !has_nav_menu( $bpmenulocation ) ){
-				$locations = get_theme_mod('nav_menu_locations');
-				$locations[$bpmenulocation] = $menu_id;
-				set_theme_mod( 'nav_menu_locations', $locations );
-			}
-		}
-	}
 	
-
 	/**
 	 * Imports the Demo Content
 	 * @since 1.1.0
@@ -1182,36 +1080,206 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 
 		//-----Gallery-------
-		$kitchen_title = 'Kitchens';
-		$kitchen_check = get_page_by_title($kitchen_title);
-		$kitchen = array(
+		$services_title = 'Service';
+		$services_check = get_page_by_title($services_title);
+		$services = array(
 			'post_type' => 'page',
-			'post_title' => $kitchen_title,
+			'post_title' => $services_title,
+			'post_content' => '[internet-service-provider-pro-services]',
 			'post_status' => 'publish',
 			'post_author' => 1,
-			'post_slug' => 'kitchen'
+			'post_slug' => 'service'
 		);
-		$kitchen_id = wp_insert_post($kitchen);
+		$services_id = wp_insert_post($services);
 
-		add_post_meta( $kitchen_id, '_wp_page_template', 'page-template/kitchens-template.php' );
-		add_post_meta( $kitchen_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
+		add_post_meta( $services_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
+
+		/* Tools Page */
+
+		$tools_content = '
+			<!-- wp:group {"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group"><!-- wp:columns -->
+			<div class="wp-block-columns"><!-- wp:column {"className":" py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30","backgroundColor":"black"} -->
+			<div class="wp-block-column  py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30 has-black-background-color has-background"><!-- wp:heading {"level":6,"className":"d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"color":{"background":"#06b6d4"}},"textColor":"white"} -->
+			<h6 class="wp-block-heading d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4"><em>Check</em></h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:spacer -->
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- /wp:spacer -->
+
+			<!-- wp:heading {"level":4,"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"30px"}},"textColor":"white"} -->
+			<h4 class="wp-block-heading mb-3 has-white-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:600">Speed Test</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"#bababa"}}},"color":{"text":"#bababa"}}} -->
+			<p class="has-text-color has-link-color" style="color:#bababa">Let users check their internet speed directly on your site</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":" py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30","backgroundColor":"black"} -->
+			<div class="wp-block-column  py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30 has-black-background-color has-background"><!-- wp:heading {"level":6,"className":"d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"color":{"background":"#06b6d4"}},"textColor":"white"} -->
+			<h6 class="wp-block-heading d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4"><em><em>Locate</em></em></h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:spacer -->
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- /wp:spacer -->
+
+			<!-- wp:heading {"level":4,"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"30px"}},"textColor":"white"} -->
+			<h4 class="wp-block-heading mb-3 has-white-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:600">Coverage Map</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"#bababa"}}},"color":{"text":"#bababa"}}} -->
+			<p class="has-text-color has-link-color" style="color:#bababa">Interactive map showing service availability by city/region.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":" py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30","backgroundColor":"black"} -->
+			<div class="wp-block-column  py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30 has-black-background-color has-background"><!-- wp:heading {"level":6,"className":"d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"color":{"background":"#06b6d4"}},"textColor":"white"} -->
+			<h6 class="wp-block-heading d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4"><em><em>Choose</em></em></h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:spacer -->
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- /wp:spacer -->
+
+			<!-- wp:heading {"level":4,"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"30px"}},"textColor":"white"} -->
+			<h4 class="wp-block-heading mb-3 has-white-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:600">Plan Comparison</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"#bababa"}}},"color":{"text":"#bababa"}}} -->
+			<p class="has-text-color has-link-color" style="color:#bababa">Side‑by‑side comparison of different ISP packages.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns -->
+
+			<!-- wp:columns -->
+			<div class="wp-block-columns"><!-- wp:column {"className":" py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30","backgroundColor":"black"} -->
+			<div class="wp-block-column  py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30 has-black-background-color has-background"><!-- wp:heading {"level":6,"className":"d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"color":{"background":"#06b6d4"}},"textColor":"white"} -->
+			<h6 class="wp-block-heading d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4"><em><em>Estimate</em></em></h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:spacer -->
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- /wp:spacer -->
+
+			<!-- wp:heading {"level":4,"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"30px"}},"textColor":"white"} -->
+			<h4 class="wp-block-heading mb-3 has-white-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:600">Bill Calculator</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"#bababa"}}},"color":{"text":"#bababa"}}} -->
+			<p class="has-text-color has-link-color" style="color:#bababa">Estimate monthly costs based on selected plan and add‑ons.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":" py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30","backgroundColor":"black"} -->
+			<div class="wp-block-column  py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30 has-black-background-color has-background"><!-- wp:heading {"level":6,"className":"d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"color":{"background":"#06b6d4"}},"textColor":"white"} -->
+			<h6 class="wp-block-heading d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4"><em><em>Help</em></em></h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:spacer -->
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- /wp:spacer -->
+
+			<!-- wp:heading {"level":4,"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"30px"}},"textColor":"white"} -->
+			<h4 class="wp-block-heading mb-3 has-white-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:600">Support Center</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"#bababa"}}},"color":{"text":"#bababa"}}} -->
+			<p class="has-text-color has-link-color" style="color:#bababa">Quick links to FAQs, troubleshooting guides, or live chat.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":" py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30","backgroundColor":"black"} -->
+			<div class="wp-block-column  py-5 px-5 mb-3 ive-internet-service-provider-pro-border-radius-30 has-black-background-color has-background"><!-- wp:heading {"level":6,"className":"d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"color":{"background":"#06b6d4"}},"textColor":"white"} -->
+			<h6 class="wp-block-heading d-inline-block px-5 py-3 ive-internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4"><em><em>Access</em></em></h6>
+			<!-- /wp:heading -->
+
+			<!-- wp:spacer -->
+			<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- /wp:spacer -->
+
+			<!-- wp:heading {"level":4,"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"600","fontSize":"30px"}},"textColor":"white"} -->
+			<h4 class="wp-block-heading mb-3 has-white-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:600">Download Center</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"#bababa"}}},"color":{"text":"#bababa"}}} -->
+			<p class="has-text-color has-link-color" style="color:#bababa">User manuals, router setup guides, or app links.</p>
+			<!-- /wp:paragraph --></div>
+			<!-- /wp:column --></div>
+			<!-- /wp:columns --></div>
+			<!-- /wp:group -->
+
+			<!-- wp:paragraph -->
+			<p></p>
+			<!-- /wp:paragraph -->
+		';
+
+		$tools_title = 'Tools';
+		$tools_check = get_page_by_title($tools_title);
+		$tools = array(
+			'post_type' => 'page',
+			'post_title' => $tools_title,
+			'post_content' => $tools_content,
+			'post_status' => 'publish',
+			'post_author' => 1,
+			'post_slug' => 'tools'
+		);
+		$tools_id = wp_insert_post($tools);
+
+		add_post_meta( $tools_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 		
 		//-----Portfolio-------
-		$portfolio_title = 'Portfolio';
-		$portfolio_check = get_page_by_title($portfolio_title);
-		$portfolio = array(
+		$feature_title = 'Feature';
+		$feature_check = get_page_by_title($feature_title);
+		$feature = array(
 			'post_type' => 'page',
-			'post_title' => $portfolio_title,
+			'post_title' => $feature_title,
+			'post_content' => "[internet-service-provider-pro-why-choose-us]",
 			'post_status' => 'publish',
 			'post_author' => 1,
-			'post_slug' => 'portfolio'
+			'post_slug' => 'feature'
 		);
-		$portfolio_id = wp_insert_post($portfolio);
+		$feature_id = wp_insert_post($feature);
 
-		add_post_meta( $portfolio_id, '_wp_page_template', 'page-template/portfolio-template.php' );
+		add_post_meta( $feature_id, '_wp_page_template', 'page-template/fullwidth-template.php' );
 
-		add_post_meta( $portfolio_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
+		add_post_meta( $feature_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
+		//-----Pricing Plans-------
+		$plan_title = 'Pricing Plans';
+		$plan_check = get_page_by_title($plan_title);
+		$plan = array(
+			'post_type' => 'page',
+			'post_title' => $plan_title,
+			'post_content' => "[internet-service-provider-pro-pricing-plan]",
+			'post_status' => 'publish',
+			'post_author' => 1,
+			'post_slug' => 'plan'
+		);
+		$plan_id = wp_insert_post($plan);
+
+		add_post_meta( $plan_id, '_wp_page_template', 'page-template/fullwidth-template.php' );
+
+		add_post_meta( $plan_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
+
+		//-----Pricing Plans-------
+		$plan_title = 'Coverage Area';
+		$plan_check = get_page_by_title($plan_title);
+		$plan = array(
+			'post_type' => 'page',
+			'post_title' => $plan_title,
+			'post_content' => "[internet-service-provider-pro-map-area]",
+			'post_status' => 'publish',
+			'post_author' => 1,
+			'post_slug' => 'plan'
+		);
+		$plan_id = wp_insert_post($plan);
+
+		add_post_meta( $plan_id, '_wp_page_template', 'page-template/fullwidth-template.php' );
+
+		add_post_meta( $plan_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
 		//---------------FAQ-------------
 
@@ -1229,241 +1297,6 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		add_post_meta( $faq_id, '_wp_page_template', 'page-template/faq.php' );
 		add_post_meta( $faq_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
-
-
-		// / Create a Terms page and assigned the template
-
-		$page_name = 'Refund and Returns Policy';//
-        $page_id = ThemeWhizzie::get_page_id_by_title($page_name);
-        if ($page_id) {
-            $my_post = array(
-                'ID'           => $page_id,
-                        'post_status' => 'publish'
-            );
-            $privacy_id = wp_update_post( $my_post );
-			add_post_meta( $privacy_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-        }
-		
-
-		
-		//Privacy Policy page
-			$privacy_content = '
-			<h2>Privacy Policy</h2>
-			<p>Pests Control Services is committed to protecting the privacy and security of your personal information. This Privacy Policy describes how we collect, use, and disclose information through our website and services.</p>
-
-			<h2>Information We Collect</h2>
-			<p>We may collect personal information that you provide to us, such as your name, address, email address, phone number, and payment information when you:</p>
-			<ul>
-				<li>Request a quote or schedule a service</li>
-				<li>Contact us through our website or by phone</li>
-				<li>Participate in surveys or promotions</li>
-				<li>Submit reviews or testimonials</li>
-			</ul>
-			<p>We may also collect information automatically when you visit our website, including your IP address, browser type, device type, and browsing behavior.</p>
-
-			<h2>How We Use Your Information</h2>
-			<p>We use the information we collect for the following purposes:</p>
-			<ul class="">
-				<li>To provide and improve our services</li>
-				<li>To communicate with you about your inquiries, appointments, and account</li>
-				<li>To send you promotional offers, newsletters, and updates (you may opt out at any time)</li>
-				<li>To analyze website usage and trends</li>
-				<li>To prevent fraud and enhance security</li>
-			</ul>
-
-			<h2>Information Sharing</h2>
-			<p>We may share your personal information with third parties for the following purposes:</p>
-			<ul>
-				<li>Service providers: We may share your information with contractors, vendors, and other third parties who help us provide and improve our services.</li>
-				<li>Legal purposes: We may disclose your information in response to legal requests, court orders, or to comply with applicable laws and regulations.</li>
-				<li>Business transfers: In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</li>
-			</ul>
-
-			<h2>Data Security</h2>
-			<p>We take reasonable measures to protect the security and integrity of your personal information. However, please note that no method of transmission over the internet or electronic storage is 100% secure.</p>
-
-			<h2>Your Choices</h2>
-			<p>You may update, correct, or delete your personal information by contacting us. You may also unsubscribe from promotional emails by following the instructions provided in the email.</p>
-
-			<h2>Childrens Privacy</h2>
-			<p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe that we have inadvertently collected information from a child, please contact us immediately.</p>
-
-			<h2>Changes to this Privacy Policy</h2>
-			<p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
-
-			<h2>Contact Us</h2>
-			<p>If you have any questions or concerns about our Privacy Policy, please contact us at <a href="mailto:contact@example.com">contact@example.com</a>.</p>
-		';
-
-		$page_name = 'Kitchen Planner';//
-			$page_id = ThemeWhizzie::get_page_id_by_title($page_name);
-			if ($page_id) {
-				$my_post = array(
-					'ID'           => $page_id,
-							'post_status' => 'publish',
-					'post_content' => $privacy_content
-				);
-				$privacy_id = wp_update_post( $my_post );
-					add_post_meta( $privacy_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-			}
-			
-
-					//Terms Condition page
-
-				$terms_page = 'Care & Maintenance Guide';
-				$content = '
-				<div id="care-maintenance-guide">
-					<h2>1. Acceptance of Care Guidelines</h2>
-					<p>By using and maintaining your modular kitchen, you agree to follow these care and maintenance practices. These guidelines are designed to help you preserve the beauty, functionality, and durability of your kitchen.</p>
-
-					<h2>2. Daily Care</h2>
-					<p>Wipe surfaces with a soft cloth and mild detergent. Avoid harsh chemicals or abrasive scrubbers that may damage finishes. Clean spills immediately to prevent stains or moisture damage.</p>
-
-					<h2>3. Cabinet Maintenance</h2>
-					<p>Keep cabinets dry and free from prolonged exposure to water. Use gentle cleaners and avoid overloading shelves to maintain structural integrity. Hinges and handles should be checked regularly and tightened if needed.</p>
-
-					<h2>4. Countertop Care</h2>
-					<p>Use cutting boards and trivets to protect countertops from scratches and heat. Avoid placing hot pans directly on surfaces. Clean with non-abrasive cleaners suitable for the material of your countertop.</p>
-
-					<h2>5. Appliance Care</h2>
-					<p>Follow manufacturer instructions for cleaning and servicing appliances. Regularly check electrical connections and ensure proper ventilation for built-in appliances.</p>
-
-					<h2>6. Flooring & Hardware</h2>
-					<p>Clean flooring with appropriate solutions based on the material (tiles, wood, laminate). Inspect drawer channels, hinges, and sliders periodically to ensure smooth operation.</p>
-
-					<h2>7. Warranty & Service</h2>
-					<p>Our Internet Service Provider Products come with a warranty covering manufacturing defects. For service requests, please contact our support team within the warranty period. Proper care and maintenance are required to keep the warranty valid.</p>
-
-					<h2>8. Safety Precautions</h2>
-					<p>Do not overload cabinets or shelves. Keep flammable items away from cooking areas. Ensure proper ventilation to avoid moisture buildup and maintain indoor air quality.</p>
-
-					<h2>9. Updates to Care Guide</h2>
-					<p>We may update these care and maintenance guidelines periodically to reflect new materials, technologies, or best practices. Please review them regularly to keep your kitchen in top condition.</p>
-
-					<h2>10. Contact Us</h2>
-					<p>If you have any questions or need assistance with care and maintenance, please contact us at <a href="mailto:care@example.com">care@example.com</a>. Our team is here to help you keep your modular kitchen beautiful and functional for years to come.</p>
-				</div>
-
-					';
-				$menu = array(
-					'post_type' 	=> 'page',
-					'post_title' 	=> $terms_page,
-					'post_content'  => $content,
-					'post_status' => 'publish',
-					'post_author' => 1,
-					'post_slug' 	=> 'page'
-				);
-				$menu_id = wp_insert_post($menu);
-
-				add_post_meta( $menu_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-
-				//Design Inspiration page
-
-				$customer_services_page = 'Design Inspiration';
-				$content = '
-				<h2>Design Inspiration & Customer Care</h2>
-
-				<h4>Dear Customers, Future Designers, and Friends!</h4>
-
-				<p>Our customer care interface is here not only to solve your problems but also to inspire your creativity. Whether you’re exploring modern layouts, minimalistic styles, or bold modular kitchen concepts, we’re ready to listen to your ideas and guide you. Share your vision with us, and we promise to respond within 24 hours—because inspired customers make inspired kitchens.</p>
-
-				<hr>
-
-				<h4>If you have design or product-related issues on your site, please provide the following:</h4>
-
-				<ul class="half-width">
-				<li>Link to your site: To review your current design setup.</li>
-				<li>FTP access (optional): Sometimes deeper troubleshooting requires it.</li>
-				<li>Admin account: To explore your site’s design and functionality more thoroughly.</li>
-				<li>Important: Please ensure your domain is added to our domain list. Registered domains receive priority support.</li>
-				<li>Order ID: To identify your purchase and assist you faster.</li>
-				</ul>
-
-				<hr>
-
-				<h4>How to Write a Customer Care Message</h4>
-
-				<ul class="d-block">
-				<li>Language: Please write to us in English.</li>
-				<li>Be clear and creative: Share your issue or design idea directly. We especially welcome suggestions that help us inspire new modular kitchen layouts and aesthetics.</li>
-				</ul>
-
-				<h2 class="mt-5">Contact Us</h2>
-
-				<h4>We’re here to inspire your kitchen design journey</h4>
-
-				<ul class="d-block">
-				<li class="mb-2">Our team is passionate about modular kitchen design, blending functionality with beauty.</li>
-				<li>Every message you send helps us refine not only your experience but also our design inspiration library. Together, we can create kitchens that are stylish, practical, and uniquely yours.</li>
-				</ul>
-
-				';
-				$customer_services = array(
-					'post_type' 	=> 'page',
-					'post_title' 	=> $customer_services_page,
-					'post_content'  => $content,
-					'post_status' => 'publish',
-					'post_author' => 1,
-					'post_slug' 	=> 'page'
-				);
-				$customer_services_id = wp_insert_post($customer_services);
-
-				//Set the blog with right sidebar template
-				add_post_meta( $customer_services_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-
-				//Sustainability page
-
-				$customer_services_page = 'Sustainability';
-				$content = '
-					<h2>Customer Care & Sustainability Commitment</h2>
-
-					<h4>Dear Customers, Future Partners, and Friends!</h4>
-
-					<p>Our customer care interface is designed to not only solve your problems but also to listen to your ideas for a greener, more sustainable future. Simply choose your department and share your questions or feedback. We value your voice and promise to respond within 24 hours—because satisfied customers and a sustainable planet go hand in hand.</p>
-
-					<hr>
-
-					<h4>If you face product-related issues on your site, please provide the following:</h4>
-
-					<ul class="half-width">
-					<li>Link to your site: To review your setup and provide tailored solutions.</li>
-					<li>FTP access (optional): Sometimes deeper troubleshooting requires it.</li>
-					<li>Admin account: To analyze your site thoroughly and resolve issues efficiently.</li>
-					<li>Important: Please ensure your domain is added to our domain list. Registered domains receive priority support.</li>
-					<li>Order ID: To identify your purchase and assist you faster.</li>
-					</ul>
-
-					<hr>
-
-					<h4>How to Write a Customer Care Message</h4>
-
-					<ul class="d-block">
-					<li>Language: Please write to us in English.</li>
-					<li>Be clear and concise: Share your issue or idea directly. We especially welcome suggestions that help us improve sustainability in modular kitchen solutions.</li>
-					</ul>
-
-					<h2 class="mt-5">Contact Us</h2>
-
-					<h4>We’re here to support you sustainably</h4>
-
-					<ul class="d-block">
-					<li class="mb-2">Our team is committed to eco-friendly practices in design, service, and support.</li>
-					<li>Every message you send helps us refine not only your experience but also our journey toward sustainable modular kitchen solutions. Together, we can build smarter, greener homes.</li>
-					</ul>
-
-				';
-				$customer_services = array(
-					'post_type' 	=> 'page',
-					'post_title' 	=> $customer_services_page,
-					'post_content'  => $content,
-					'post_status' => 'publish',
-					'post_author' => 1,
-					'post_slug' 	=> 'page'
-				);
-				$customer_services_id = wp_insert_post($customer_services);
-
-				//Set the blog with right sidebar template
-				add_post_meta( $customer_services_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
 		// $menu_title = '2 Columns';
 		// $content = '[products  columns="2" orderby="date" order="DESC" visibility="visible"]';
@@ -1512,7 +1345,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		// $menu_id = wp_insert_post($menu);
 
 
-		$aboutus_title = 'About';
+		$aboutus_title = 'About Us';
 	  	$aboutus= array(
 			'post_type' 	=> 'page',
 			'post_title' 	=> $aboutus_title,
@@ -1522,8 +1355,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			'post_slug' 	=> 'aboutus'
 		);
 		$aboutus_id = wp_insert_post($aboutus);
-
-
+		add_post_meta( $error_id, '_wp_page_template', 'fullwidth-template.php' );
 		add_post_meta( $aboutus_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
 		$error_title = '404';
@@ -1539,20 +1371,6 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		//Set the single testimonial with right sidebar template
 		add_post_meta( $error_id, '_wp_page_template', '404.php' );
 		add_post_meta( $error_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
-
-		$team_title = 'Team';
-		$team= array(
-			'post_type' 	=> 'page',
-			'post_title' 	=> $team_title,
-			'post_status' => 'publish',
-			'post_author' => 1,
-			'post_slug' 	=> 'team'
-		);
-		$team_id = wp_insert_post($team);
-
-
-		add_post_meta( $team_id, '_wp_page_template', 'page-template/team.php' );
-		add_post_meta( $team_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
 		// $login_title = 'Login';
 		// $login_check = get_page_by_title($login_title);
@@ -1612,7 +1430,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod( 'internet_service_provider_pro_headerpinterest_icon', 'fa-brands fa-pinterest' );
 			
 		set_theme_mod( 'internet_service_provider_pro_header_button_title', 'Login' );
-		set_theme_mod( 'internet_service_provider_pro_header_button_url', home_url('/contact') );
+		set_theme_mod( 'internet_service_provider_pro_header_button_url', home_url('/?action=login') );
 
 		/* -------------- Footer Contact ----------------- */
 
@@ -1920,7 +1738,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod('internet_service_provider_pro_testimonials_main_heading', 'Customer Experiences with DataNest');
 		set_theme_mod('internet_service_provider_pro_testimonials_text', 'Here’s how DataNest is changing the way people experience the internet across Indonesia.');
 
-		set_theme_mod('internet_service_provider_pro_testimonials_number', '4');
+		set_theme_mod('internet_service_provider_pro_testimonials_number', '2');
 
 		$testimonials_title = array(
 			'Michael S.',
@@ -2010,99 +1828,96 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 	// -------------- Latest News -----------------
 
-		set_theme_mod( 'internet_service_provider_pro_latest_news_tagline', 'Kitchen Inspiration Blog' );
-		set_theme_mod( 'internet_service_provider_pro_latest_news_main_heading', 'Fresh Ideas for Your Dream Kitchen' );
-
-		set_theme_mod( 'internet_service_provider_pro_latest_news_number', '6' );
 
 		$posttitle = [
-			"Top Modular Kitchen Layouts for Modern Homes",
-			"Space-Saving Ideas for Small Modular Kitchens",
-			"Best Materials for Durable Modular Kitchen Cabinets",
-			"Stylish Countertop Options to Elevate Your Kitchen",
-			"Lighting Tips to Brighten Your Modular Kitchen",
-			"Smart Storage Solutions for a Clutter-Free Kitchen",
-			"Latest Modular Kitchen Design Trends in 2026",
-			"Budget-Friendly Modular Kitchen Makeover Ideas",
-			"How to Maintain Your Modular Kitchen for Longevity",
-			"Eco-Friendly Modular Kitchen Designs for Sustainable Living"
+			"Top Internet Plans for Modern Homes",
+			"Space-Saving Router Placement Ideas",
+			"Best Equipment for Reliable Broadband",
+			"Stylish Wi-Fi Devices to Elevate Your Setup",
+			"Lighting-Fast Tips to Boost Your Connection",
+			"Smart Data Solutions for a Clutter-Free Network",
+			"Latest Internet Service Trends in 2026",
+			"Budget-Friendly Broadband Upgrade Ideas",
+			"How to Maintain Your Internet Speed",
+			"Eco-Friendly ISP Solutions for Sustainable Living"
 		];
 
-     	// for($i=1;$i<=10;$i++){
 
-		// 	$content = '
-		// 	<h3>Introduction</h3>
-		// 	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry\'s standard dummy text ever since the 1500s.</p>
+     	for($i=1;$i<=10;$i++){
 
-		// 	<h4>Design Inspiration</h4>
-		// 	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-		// 	<p>Lorem Ipsum passages are often used to demonstrate visual form without relying on meaningful content.</p>
+			$content = '
+			<h3>Introduction</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry\'s standard dummy text ever since the 1500s.</p>
 
-		// 	<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC. Regular cleaning and proper care ensure longevity and durability of any design element.</p>
+			<h4>Design Inspiration</h4>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+			<p>Lorem Ipsum passages are often used to demonstrate visual form without relying on meaningful content.</p>
 
-		// 	<p>Our support team is always ready to assist. Lorem Ipsum helps to focus on design rather than content during development stages. Feedback and queries are answered within 24 hours, ensuring customer satisfaction.</p>
+			<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC. Regular cleaning and proper care ensure longevity and durability of any design element.</p>
 
-		// 	<p>Lorem Ipsum is dummy text, but it plays a crucial role in design mockups and layouts. It allows designers to visualize structure without distraction.</p>
-		// 	';
+			<p>Our support team is always ready to assist. Lorem Ipsum helps to focus on design rather than content during development stages. Feedback and queries are answered within 24 hours, ensuring customer satisfaction.</p>
 
-		// 	$excerpt = 'Discover this year’s hottest kitchen styles — from bold color accents to eco-friendly finishes that redefine modern living.';
+			<p>Lorem Ipsum is dummy text, but it plays a crucial role in design mockups and layouts. It allows designers to visualize structure without distraction.</p>
+			';
 
-        //     // Create post object
-        //     $my_post = array(
-        //        'post_title'    => $posttitle[$i-1],
-        //        'post_content'  => $content,
-		// 	   'post_excerpt'  => $excerpt,
-        //        'post_status'   => 'publish',
-        //        'post_type'     => 'post',
-        //        'post_category' => ''
-        //     );
-        //      // Insert the post into the database
-        //     $tcpost_id = wp_insert_post( $my_post );
+			$excerpt = 'Discover this year’s hottest internet trends — from lightning‑fast speeds to eco‑friendly solutions that redefine modern connectivity.';
 
-		// 	add_post_meta( $tcpost_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
+            // Create post object
+            $my_post = array(
+               'post_title'    => $posttitle[$i-1],
+               'post_content'  => $content,
+			   'post_excerpt'  => $excerpt,
+               'post_status'   => 'publish',
+               'post_type'     => 'post',
+               'post_category' => ''
+            );
+             // Insert the post into the database
+            $tcpost_id = wp_insert_post( $my_post );
 
-        //     $image_url = get_template_directory_uri().'/assets/images/blog/blog'.$i.'.png';
+			add_post_meta( $tcpost_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
-        //     $image_name= 'blog'.$i.'.png';
-        //     $upload_dir       = wp_upload_dir();
-        //     // Set upload folder
-        //     $image_data       = file_get_contents($image_url);
-        //     // Get image data
-        //     $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name );
-        //     // Generate unique name
-        //     $filename= basename( $unique_file_name );
-        //     // Create image file name
-        //     // Check folder permission and define file location
-        //     if( wp_mkdir_p( $upload_dir['path'] ) ) {
-        //        $file = $upload_dir['path'] . '/' . $filename;
-        //     } else {
-        //        $file = $upload_dir['basedir'] . '/' . $filename;
-        //     }
-        //     // Create the image  file on the server
-        //     file_put_contents( $file, $image_data );
-        //     // Check image file type
-        //     $wp_filetype = wp_check_filetype( $filename, null );
-        //     // Set attachment data
-        //     $attachment = array(
-        //        'post_mime_type' => $wp_filetype['type'],
-        //        'post_title'     => sanitize_file_name( $filename ),
-        //        'post_content'   => '',
-		// 	   'post_excerpt'  => $excerpt,
-        //        'post_type'     => 'post',
-        //        'post_status'    => 'inherit'
-        //     );
+            $image_url = get_template_directory_uri().'/assets/images/blog/blog'.$i.'.webp';
 
-        //     // Create the attachment
-        //     $attach_id = wp_insert_attachment( $attachment, $file, $tcpost_id );
-        //     // Include image.php
-        //     require_once(ABSPATH . 'wp-admin/includes/image.php');
-        //     // Define attachment metadata
-        //     $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-        //     // Assign metadata to attachment
-        //      wp_update_attachment_metadata( $attach_id, $attach_data );
-        //     // And finally assign featured image to post
-        //     set_post_thumbnail( $tcpost_id, $attach_id );
-        // }
+            $image_name= 'blog'.$i.'.webp';
+            $upload_dir       = wp_upload_dir();
+            // Set upload folder
+            $image_data       = file_get_contents($image_url);
+            // Get image data
+            $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name );
+            // Generate unique name
+            $filename= basename( $unique_file_name );
+            // Create image file name
+            // Check folder permission and define file location
+            if( wp_mkdir_p( $upload_dir['path'] ) ) {
+               $file = $upload_dir['path'] . '/' . $filename;
+            } else {
+               $file = $upload_dir['basedir'] . '/' . $filename;
+            }
+            // Create the image  file on the server
+            file_put_contents( $file, $image_data );
+            // Check image file type
+            $wp_filetype = wp_check_filetype( $filename, null );
+            // Set attachment data
+            $attachment = array(
+               'post_mime_type' => $wp_filetype['type'],
+               'post_title'     => sanitize_file_name( $filename ),
+               'post_content'   => '',
+			   'post_excerpt'  => $excerpt,
+               'post_type'     => 'post',
+               'post_status'    => 'inherit'
+            );
+
+            // Create the attachment
+            $attach_id = wp_insert_attachment( $attachment, $file, $tcpost_id );
+            // Include image.php
+            require_once(ABSPATH . 'wp-admin/includes/image.php');
+            // Define attachment metadata
+            $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+            // Assign metadata to attachment
+             wp_update_attachment_metadata( $attach_id, $attach_data );
+            // And finally assign featured image to post
+            set_post_thumbnail( $tcpost_id, $attach_id );
+        }
 
         //Insert Image for Hello World
 

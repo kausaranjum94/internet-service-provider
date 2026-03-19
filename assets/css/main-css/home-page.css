@@ -14,6 +14,9 @@
     height: 100%;
     object-fit: cover;
 }
+#about-us span.section-tagline {
+    color: white;
+}
 #main-banner {
     overflow: hidden;
 }
