@@ -1570,7 +1570,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		
 
 		// -------------- Section Ordering ---------------
-		set_theme_mod( 'internet_service_provider_pro_section_ordering_settings_repeater', 'main-banner,about-us,services,why-choose-us,design-philosophy,kitchen-style,kitchen-tab,process,smart-storage,projects,testimonials,latest-news,sustainability-commitment,pormotional-banner,team,content-area');
+		set_theme_mod( 'internet_service_provider_pro_section_ordering_settings_repeater', 'main-banner,about-us,services,why-choose-us,exclusive-offers,map-area,design-philosophy,kitchen-style,kitchen-tab,process,smart-storage,projects,testimonials,latest-news,sustainability-commitment,pormotional-banner,team,content-area');
 
 		// topbar
 
@@ -1765,6 +1765,81 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod( 'internet_service_provider_pro_why_choose_us_bottom_block_speed_text', 'Speed up to');
 
 		set_theme_mod( 'internet_service_provider_pro_why_choose_us_bottom_block_speed', '350 Mbps');
+
+		// ------------- _Exclusive offer -------------
+
+		set_theme_mod( 'internet_service_provider_pro_exclusive_offers_bgimage', get_template_directory_uri().'/assets/images/exclusive-offers-bg.png');
+
+		set_theme_mod( 'internet_service_provider_pro_exclusive_offers_tagline', 'Exclusive Offers' );
+        set_theme_mod( 'internet_service_provider_pro_exclusive_offers_main_heading', 'DataNest Exclusive Internet Plans' );
+
+		set_theme_mod( 'internet_service_provider_pro_exclusive_offers_text', 'This Month’s Exclusive Deals Because You Deserve More Than Just Internet' );
+
+		set_theme_mod( 'internet_service_provider_pro_exclusive_offers_listing_number', '3' );
+
+		$exclusive_offers_list = array('Free Installation','30-Day Risk-Free Trial','GamerX Bonus Plan');
+
+		for($i=1; $i<=3; $i++)
+        {	
+        	set_theme_mod( 'internet_service_provider_pro_exclusive_offers_listing'.$i, $exclusive_offers_list[$i-1] );
+		} 
+
+		set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_number', '2');
+
+        $why_choose_box_title = array('GamerX Boost Plan','Pro Arena Bundle','Secure & Private');
+		$why_choose_box_speed = array('350 Mbps','500 Mbps');
+		$why_choose_box_package = array('$59/month','$109/month');
+
+        for($i=1; $i<=2; $i++)
+        {	
+        	set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_title'.$i, $why_choose_box_title[$i-1] );
+			set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_speed'.$i, $why_choose_box_speed[$i-1] );
+			set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_package'.$i, $why_choose_box_package[$i-1] );
+		} 
+
+		// ------------- Map Area -------------
+
+		
+
+		set_theme_mod( 'internet_service_provider_pro_map_area_tagline', 'Map Area' );
+        set_theme_mod( 'internet_service_provider_pro_map_area_main_heading', 'Enjoy Blazing-Fast Connectivity Everywhere' );
+
+		set_theme_mod( 'internet_service_provider_pro_map_area_text', 'Orbitix is expanding nationwide, providing reliable high-speed internet to more homes and cities daily.' );
+
+		set_theme_mod( 'internet_service_provider_pro_map_area_areas_number', '20' );
+
+		$orbitix_coverage_areas = [
+			"Jakarta",
+			"Surabaya",
+			"Makasar",
+			"Semarang",
+			"Yogyakarta",
+			"Medan",
+			"Lampung",
+			"Metro",
+			"Palembang",
+			"Bandung",
+			"Madiun",
+			"Bali",
+			"Tangerang",
+			"Bekasi",
+			"Depok",
+			"Bogor",
+			"Batam",
+			"Pontianak",
+			"Balikpapan",
+			"Manado"
+		];
+
+
+
+		for($i=1; $i<=20; $i++)
+        {	
+        	set_theme_mod( 'internet_service_provider_pro_map_area_name'.$i, $orbitix_coverage_areas[$i-1] );
+		} 
+
+		set_theme_mod( 'internet_service_provider_pro_map_area_map_image', get_template_directory_uri().'/assets/images/map-image.png');
+
 
 		// ------------- Design Philosophy -------------
 

@@ -617,6 +617,97 @@ span.why-choose-us-step {
   padding: 2em 2em;
   border-radius: 20px;
 }
+/*--------------------- Exclusive Offers ------------------------*/
+#exclusive-offers .section_main_head span.section-tagline {
+  color: white;
+}
+#exclusive-offers .section_main_head h3 {
+  color: white;
+  font-weight: 700;
+}
+#exclusive-offers .section-text {
+    color: #BABABA;
+    max-width: 70%;
+    margin-top: 22px;
+    font-size: 20px;
+}
+.exclusive-offers-head-listing li {
+    color: #BABABA;
+    list-style: none;
+    font-size: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+}
+.exclusive-offers-icon {
+    background-color: var(--primary-color);
+    color: white;
+    width: 30px;
+    display: inline-flex;
+    font-size: 11px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 11px;
+}
+.exclusive-offers-block {
+    box-shadow: 0px 23px 27.3px -11px #1B1E3040;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.exclusive-offers-block h6 {
+    color: #1C1C1F;
+    font-weight: 700;
+    font-size: 32px;
+    max-width: 76%;
+}
+.exclusive-offers-speed {
+    color: #1C1C1F;
+    font-weight: 300;
+    font-size: 36px;
+    margin-top: 75px;
+    display: block;
+}
+.exclusive-offers-package {
+  background-color: var(--primary-color);
+  padding: 7px 14px;
+  color: white;
+  border-radius: 10px;
+  margin: 10px 0 0 0;
+  display: inline-block;
+}
+.exclusive-offers-head-listing {
+  padding-bottom: 9em;
+}
+.exclusive-offers-block:after {
+    content: '';
+    background-color: #1C1C1F;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(100%);
+    border-radius: 20px;
+}
+.exclusive-offers-block:hover:after {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 0.5s;
+}
+.exclusive-offers-block:hover .exclusive-offers-speed, .exclusive-offers-block:hover h6 {
+    color: white;
+}
+.exclusive-offers-block-inner{
+  z-index: 9;
+}
 /*--------------------- Design Philosophy ------------------------*/
 
 .design-philosophy-head {
