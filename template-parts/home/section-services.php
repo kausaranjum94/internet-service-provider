@@ -57,13 +57,13 @@
             
         </div>
          <div class="about-head-outer mt-4">
-            <div class="row services-icon-box">
+            <div class="row services-icon-box justify-content-center">
                 <?php
                     $about_list_no = get_theme_mod('internet_service_provider_pro_services_box_number');
                     for($i=1; $i<=$about_list_no; $i++)
                     {
                 ?>
-                <div class="col-lg-4 col-md-4 col-sm-6 mb-4 services-box" data-aos="fade-up"
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-4 services-box" data-aos="fade-up"
                     data-aos-duration="2000">
                     <div class="services-block">
                         <?php if(get_theme_mod('internet_service_provider_pro_services_box_image'.$i)!=''){ ?>

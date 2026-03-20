@@ -204,7 +204,7 @@ jQuery(document).ready(function ($) {
         items: 2
       },
       768: {
-        items: 3,
+        items: 2,
       },
       900: {
         items: 3,
@@ -268,10 +268,10 @@ jQuery(document).ready(function ($) {
         items: 2
       },
       768: {
-        items: 3
+        items: 2
       },
       900: {
-        items: 3
+        items: 2
       },
       1024: {
         items: 3

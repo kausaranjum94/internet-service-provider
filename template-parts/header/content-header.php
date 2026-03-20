@@ -14,7 +14,7 @@
 <div id="vw-sticky-menu">
     <div class="container header-inner">
         <div class="row align-items-center ">
-            <div class="col-lg-3 col-md-4 col-12">
+            <div class="col-lg-3 col-md-4 col-5">
                 <div class="vw-logo" id="site-sticky-menu1">
                     <?php
                  $logo= get_theme_mod( 'custom_logo' );
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-md-8 col-12 d-flex align-items-center justify-content-end">
+            <div class="col-lg-9 col-md-8 col-7 d-flex align-items-center justify-content-end">
                 <div class="header-menu-wrap d-flex align-items-center justify-content-end">
                     <div class="innermenubox">
                         <div class="toggle-nav mobile-menu">

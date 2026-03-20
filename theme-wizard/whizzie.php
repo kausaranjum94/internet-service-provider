@@ -1080,7 +1080,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 
 		//-----Gallery-------
-		$services_title = 'Service';
+		$services_title = 'Services';
 		$services_check = get_page_by_title($services_title);
 		$services = array(
 			'post_type' => 'page',

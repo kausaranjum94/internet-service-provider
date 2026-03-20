@@ -44,9 +44,9 @@ if( get_theme_mod('internet_service_provider_pro_section_footer_bgcolor','') ) {
 				$collg = 'col-lg-12 col-sm-6';
 				$colsm = 'col-lg-12 col-sm-6';
 			} elseif ( $count == 2 ) {
-				$colmd = 'col-lg-6 col-sm-6';
-				$collg = 'col-lg-6 col-sm-6';
-				$colsm = 'col-lg-6 col-sm-6';
+				$colmd = 'col-lg-6 col-sm-12';
+				$collg = 'col-lg-6 col-sm-12';
+				$colsm = 'col-lg-6 col-sm-12';
 			} elseif ( $count == 3 ){
 				$colmd = 'col-lg-4 col-sm-6';
 				$collg = 'col-lg-4 col-sm-6';

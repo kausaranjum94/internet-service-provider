@@ -172,10 +172,10 @@ input::-webkit-input-placeholder {
 }
 
 section {
-    background-size: 100% 100%;
-    background-repeat: no-repeat !important;
-    padding: 54px 0;
-    background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  padding: 54px 0;
+  background-attachment: scroll;
 }
 
 .btn-wrap {
@@ -2232,7 +2232,15 @@ button.tml-button:hover,  button.tml-button:hover{
 .tml  ul {
    margin: 0;
 }
-
+.footer-cols ul.wp-block-list li {
+  padding: 10px 7px !important;
+}
+.footer-cols ul.wp-block-list li:last-child {
+  padding-right: 0 !important;
+}
+.location.media {
+    margin-top: 3em;
+}
 /* Gutenburg CSS*/
 
 /*--------- Main Banner ---------------*/
@@ -2387,4 +2395,8 @@ figure{
 }
 .main-banner-btn a.anchrstyle:hover{
   color: var(--secondary-color);
+}
+
+.wpcf7-spinner {
+    display: none;
 }

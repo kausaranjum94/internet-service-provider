@@ -48,7 +48,7 @@
                                 <?php echo get_theme_mod('internet_service_provider_pro_main_banner_text'); ?>
                             </div>
                         <?php } ?>
-                        <div class="d-flex align-items-center my-3">
+                        <div class="d-flex align-items-center my-3 bth-block">
                             <?php if(get_theme_mod('internet_service_provider_pro_main_banner_button_title')!=''){ ?>
                                 <div class="main-banner-button" data-aos="fade-up" data-aos-duration="1100">
                                     <a class="theme_button" href="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_button_url')); ?>">
@@ -64,7 +64,7 @@
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="d-flex align-items-center my-3">
+                        <div class="d-flex align-items-center my-3 rating-blk-wrap">
                             <div class="rating-blk">
                                 <?php if(get_theme_mod('internet_service_provider_pro_main_banner_rating_text')!=''){ ?>
                                     <div class="rating-box" data-aos="fade-up" data-aos-duration="800">

@@ -86,14 +86,14 @@
                       <path d="M44.9647 43.392L44.9647 81.792L80.3215 81.792L80.3215 46.464L63.4117 -1.50536e-06L44.9647 -3.14758e-06L59.1843 43.392L44.9647 43.392ZM-1.8984e-05 43.392L-2.22807e-05 81.792L35.3568 81.792L35.3568 46.464L18.447 -5.50827e-06L-1.52588e-05 -7.15048e-06L14.2196 43.392L-1.8984e-05 43.392Z" fill="#E1E1E1"/>
                       </svg>
                     <div class="row">
-                      <div class="col-lg-4 col-md-4">
+                      <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="testimonials_image h-100 full-height-width-image">
                             <?php if(has_post_thumbnail()){
                                 the_post_thumbnail();
                             } ?>
                         </div>
                       </div>
-                      <div class="col-lg-8 col-md-8 d-flex align-items-center">
+                      <div class="col-lg-8 col-md-8 col-sm-6 d-flex align-items-center">
                         <div class="testimonial-content">
                           <?php the_content(); ?>
                           <h5 class="testimonial-title">
