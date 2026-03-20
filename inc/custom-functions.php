@@ -75,7 +75,7 @@ if ( !function_exists('internet_service_provider_pro_social_share') ) {
                 <div class="socila_share position-relative">
                     <?php if(get_theme_mod('internet_service_provider_pro_post_general_settings_post_share_facebook',true)==1 || get_theme_mod('internet_service_provider_pro_post_general_settings_post_share_linkedin',true)==1 || get_theme_mod('internet_service_provider_pro_post_general_settings_post_share_twitter',true)==1){ ?>
 
-                    <div class="meta-heading" style="cursor:pointer"><?php echo esc_html('Share  ','internet-service-provider-pro'); ?><i class="fa-solid fa-chevron-down"></i></div>
+                   
 
                   <?php }?>
                   <div class="social-share-icon-main">

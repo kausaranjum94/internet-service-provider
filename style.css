@@ -267,7 +267,6 @@ a.custom_read_more {
 
 a.theme_button, .woocommerce a.button, .woocommerce button.button.alt, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce a.added_to_cart, input[type="submit"], a.custom_read_more, .custom_cart a, table.compare-list .add-to-cart td a:not(.unstyled_button), button#bmi_submit, .contact-box .contac_form input[type="submit"], input[type="submit"], .contact_shortcode input[type="submit"] {
     font: 400 14px var(--primary-font);
-    display: inline-block;
     padding: 11px 24px;
     border-radius: 47px;
     border: none;

@@ -104,9 +104,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 testonials-block-bottom">
+                <div class="col-lg-3 col-md-3 testonials-block-bottom image-hover-effect">
                   <?php if(get_post_meta(get_the_ID(),'internet_service_provider_pro_posttype_testimonial_image_2',true)){ ?>
-                    <div class="testimonials--video-image full-height-width-image" data-aos="flip-up" data-aos-duration="1000">
+                    <div class="testimonials--video-image full-height-width-image box ive-internet-service-provider-pro-border-radius-20" data-aos="flip-up" data-aos-duration="1000">
                       <img src="<?php echo esc_url(get_post_meta(get_the_ID(),'internet_service_provider_pro_posttype_testimonial_image_2',true)); ?>">
                       <div class="video-block-innner">
                         <?php 

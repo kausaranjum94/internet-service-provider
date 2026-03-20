@@ -34,7 +34,6 @@
 	$internet_service_provider_pro_para_font_size = get_theme_mod('internet_service_provider_pro_para_font_size');
 	$internet_service_provider_pro_para_color = get_theme_mod('internet_service_provider_pro_para_color');
 	$internet_service_provider_pro_hi_first_color = get_theme_mod('internet_service_provider_pro_hi_first_color');
-	$internet_service_provider_pro_hi_scnd_color = get_theme_mod('internet_service_provider_pro_hi_scnd_color');
 
 // Top bar / Header
 
@@ -232,17 +231,17 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	/*-------------------Primary Color --------------------*/
 	if($internet_service_provider_pro_hi_first_color != false){
 		$custom_css .='.main-sub-head,ins .woocommerce-Price-amount bdi, .woocommerce-Price-amount bdi, .product-price ins .woocommerce-Price-amount.amount, .item-details-table ins .woocommerce-Price-amount.amount, ins.wc-block-components-product-price__value.is-discounted,
-		.home-blog-meta h6, .home-blog-meta h6 a,#sidebar .widget-title, .wp-block-heading,.single.single-product .single_add_to_cart_button,.privacy-product-btn,#footer ul li a:hover, span.section-tagline, span.heading-span, .why-choose-us-block:hover h6, .why-choose-us-block:hover .box-text, .icon-url a, .design-philosophy-block:hover h6, .design-philosophy-block:hover .box-text, .kitchen-style_outer:hover .kitchen-icon-url a, .smart-storage-box:hover h6, .smart-storage-box:hover .smart_storage-box-text, .testimonial-block:hover h5.testimonial-title, .testimonial-block:hover .t-location, .news-box .box:hover .box-content .news-icon a, #footer ul li a:hover, .widget_wpb_widget a:hover, a.footer-contact-text:hover, .contact-email i, .contact-address i, .contact-phone i, .theme_button .button-icon, .socialbox a:hover{
+		.home-blog-meta h6, .home-blog-meta h6 a,#sidebar .widget-title, .wp-block-heading,.single.single-product .single_add_to_cart_button,.privacy-product-btn,#footer ul li a:hover, span.section-tagline, span.heading-span, .why-choose-us-block:hover h6, .why-choose-us-block:hover .box-text, .icon-url a, .design-philosophy-block:hover h6, .design-philosophy-block:hover .box-text, .kitchen-style_outer:hover .kitchen-icon-url a, .smart-storage-box:hover h6, .smart-storage-box:hover .smart_storage-box-text, .testimonial-block:hover h5.testimonial-title, .testimonial-block:hover .t-location, .news-box .box:hover .box-content .news-icon a, #footer ul li a:hover, .widget_wpb_widget a:hover, a.footer-contact-text:hover, .contact-email i, .contact-address i, .contact-phone i, .theme_button .button-icon, .socialbox a:hover, .plan_price, .video-block-innner a:hover, .newsletter_shortcode input[type="submit"]:hover, #footer ul li a:hover, .widget_wpb_widget a:hover, .news-box h5 a:hover{
 				color: '.esc_html($internet_service_provider_pro_hi_first_color).';
 		}';
 	}
 	if($internet_service_provider_pro_hi_first_color != false){
-		$custom_css .='.shop.shop-product .accordion-body, #new-arrival .accordion-body,#sidebar aside,.woocommerce .quantity input,.single.single-product .single_add_to_cart_button, .video-block a:hover{
+		$custom_css .='.shop.shop-product .accordion-body, #new-arrival .accordion-body,#sidebar aside,.woocommerce .quantity input,.single.single-product .single_add_to_cart_button, .video-block a:hover, .side-navigation ul li.current_page_item > a, .side-navigation ul li.current-menu-item > a, .section_main_head span.section-tagline, span.why-choose-us-step, .newsletter_shortcode input[type="text"], .newsletter_shortcode input[type="tel"], .newsletter_shortcode input[type="email"], .newsletter_shortcode input[type="phno"], .newsletter_shortcode input[type="password"], .newsletter_shortcode textarea, #return-to-top{
 				border-color: '.esc_html($internet_service_provider_pro_hi_first_color).';
 		}';
 	}
 	if($internet_service_provider_pro_hi_first_color != false){
-		$custom_css .='.main-navigation .current-menu-item::before,.main-navigation .current-menu-item a:after,.three-dots .dot.active,.btn-wrap:before, .benefits-box:hover .benefits-icon-wrap,.abt-img-box,.banner-per-shape,.banner-shape-two, .banner-shape-one,.banner-box,.banner-shape-three,.owl-nav button:hover,.testimonial-box.slick-slide.slick-current.slick-active.slick-center,#return-to-top, .shop.shop-product .accordion-button, #new-arrival .accordion-button,.ui-slider-horizontal .ui-slider-range,a.page-numbers, span.page-numbers.current, .widget_wpb_widget a:hover,#sidebar .wp-block-search__button, .single.single-product .single_add_to_cart_button:hover, .summary.entry-summary .wishlist_text i:hover, .wishlist-items-wrapper .product-add-to-cart a:hover,.single.single-product .meta-field-call,.single.single-product .form-submit .submit, #faq-sec .accordion-button:not(.collapsed), #faq-page .accordion-button:not(.collapsed), a.theme_button, .main-banner-btn, .main-banner-btn:after, .why-choose-us-block:hover .icon-url a, .kitchen-style_outer:hover .kitchen-content, #kitchen-tabs .nav-tabs a.nav-link.active, #kitchen-tabs .nav-tabs a.nav-link:hover, .kitchn-media-body:after, .process-box:after, .smart-storage-box:hover .smart-storage-icon-image, .video-block a:hover, .sustainability-commitment-box:hover .sustainability-commitment-icon-image, .team-box:hover .team-box-inner, .team-box:hover .team-box-inner:before, .team-box:hover .team-box-inner, .team-box:hover .team-box-inner:before, .team-box:hover .team-box-inner, .team-box:hover .team-box-inner:before, .newsletter-container, .inner-cont:hover .c_icon, #accordionfaq button.accordion-button, a.theme_button:hover, .sustainability-commitment-box:hover, .eco-box{
+		$custom_css .='.main-navigation .current-menu-item::before,.main-navigation .current-menu-item a:after,.three-dots .dot.active,.btn-wrap:before, .benefits-box:hover .benefits-icon-wrap,.abt-img-box,.banner-per-shape,.banner-shape-two, .banner-shape-one,.banner-box,.banner-shape-three,.owl-nav button:hover,.testimonial-box.slick-slide.slick-current.slick-active.slick-center,#return-to-top, .shop.shop-product .accordion-button, #new-arrival .accordion-button,.ui-slider-horizontal .ui-slider-range,a.page-numbers, span.page-numbers.current, .widget_wpb_widget a:hover,#sidebar .wp-block-search__button, .single.single-product .single_add_to_cart_button:hover, .summary.entry-summary .wishlist_text i:hover, .wishlist-items-wrapper .product-add-to-cart a:hover,.single.single-product .meta-field-call,.single.single-product .form-submit .submit, #faq-sec .accordion-button:not(.collapsed), #faq-page .accordion-button:not(.collapsed), a.theme_button, .main-banner-btn, .main-banner-btn:after, .why-choose-us-block:hover .icon-url a, .kitchen-style_outer:hover .kitchen-content, #kitchen-tabs .nav-tabs a.nav-link.active, #kitchen-tabs .nav-tabs a.nav-link:hover, .kitchn-media-body:after, .process-box:after, .smart-storage-box:hover .smart-storage-icon-image, .video-block a:hover, .sustainability-commitment-box:hover .sustainability-commitment-icon-image, .team-box:hover .team-box-inner, .team-box:hover .team-box-inner:before, .team-box:hover .team-box-inner, .team-box:hover .team-box-inner:before, .team-box:hover .team-box-inner, .team-box:hover .team-box-inner:before, .newsletter-container, .inner-cont:hover .c_icon, #accordionfaq button.accordion-button, a.theme_button:hover, .sustainability-commitment-box:hover, .eco-box, a.theme_button.theme_button2:before, a.theme_button, span.pricing-text, .image-hover-effect .box:before, .image-hover-effect .box:after, span.start-now-pricing, span.image-caption-img, .caption-icon-url a, .why-choose-us-bottom-tagline, .exclusive-offers-icon, .exclusive-offers-package, .recommended_box .plan-info, .plan-info:hover, .plan-feature-icon, .video-block-innner a, .video-block-innner a, .newsletter_shortcode input[type="submit"], .inner-cont:hover .c_icon, .search-btn:hover, .social-share-icon-main a:hover, #comments input[type="submit"].submit{
 				background-color: '.esc_html($internet_service_provider_pro_hi_first_color).';
 		}';
 	}
@@ -259,34 +258,6 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	if($internet_service_provider_pro_hi_first_color != false){
 		$custom_css .='.makers-svg-1 svg path,#yellow-svg {
 				fill: '.esc_html($internet_service_provider_pro_hi_first_color).';
-		}';
-	}
-
-	/*-------------------Secondry Color --------------------*/
-	
-	if($internet_service_provider_pro_hi_scnd_color != false){
-		$custom_css .='#site_top, .kitchen-style-wrapper:before, .kitchen-style-wrapper:after, .kitchen-icon-url a, #kitchen-tabs .nav-tabs .nav-link, .kitchn-media-body, #process, #latest-news, .kitchen-icon-url a, .smart-storage-icon-image, .projects-container, .sustainability-commitment-icon-image, .team-box-inner, .team-box-inner:before, #footer, #why-choose-us{
-			background-color: '.esc_html($internet_service_provider_pro_hi_scnd_color).';
-		}';
-	}
-	if($internet_service_provider_pro_hi_scnd_color != false){
-		$custom_css .='.owl-carousel button.owl-dot.active, button.owl-dot.active, .news-box .box .box-content, .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next, .owl-nav button.owl-prev, .owl-nav button.owl-next{
-			background-color: '.esc_html($internet_service_provider_pro_hi_scnd_color).'!important;
-		}';
-	}
-	if($internet_service_provider_pro_hi_scnd_color != false){
-		$custom_css .='.kitchn-media-body .kitchen-icon-url a, .process-block h6, h1, h2, h3, h4, h5, h6, h5.testimonial-title, .t-location, .process-box-text, .kitchen-style-title, .design-philosophy-block h6, #about-us h3{
-			color: '.esc_html($internet_service_provider_pro_hi_scnd_color).';
-		}';
-	}
-	if($internet_service_provider_pro_hi_scnd_color != false){
-		$custom_css .='{
-			color: '.esc_html($internet_service_provider_pro_hi_scnd_color).'!important;
-		}';
-	}
-	if($internet_service_provider_pro_hi_scnd_color != false){
-		$custom_css .='{
-				fill: '.esc_html($internet_service_provider_pro_hi_scnd_color).';
 		}';
 	}
 

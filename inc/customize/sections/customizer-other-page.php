@@ -88,16 +88,6 @@
   )
   ) );
 
-  $wp_customize->add_setting('internet_service_provider_pro_contact_page_contact_details_heading',array(
-      'default'   => '',
-      'sanitize_callback' => 'sanitize_text_field',
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_contact_page_contact_details_heading',array(
-      'label' => __('Heading','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_contact_page_section',
-      'setting'   => 'internet_service_provider_pro_contact_page_contact_details_heading',
-      'type'  => 'text'
-  ));
 
   $wp_customize->add_setting( 'internet_service_provider_pro_contact_page_address_setting',
   array(

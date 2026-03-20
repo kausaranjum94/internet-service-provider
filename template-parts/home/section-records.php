@@ -39,8 +39,8 @@
   <div class="container">
     <div class="records-row">
       <div class="row align-items-center">
-        <div class="col-lg-5 col-md-5">
-          <div class="records-image full-height-width-image h-100" data-aos="flip-up" data-aos-duration="1000">
+        <div class="col-lg-5 col-md-5 image-hover-effect">
+          <div class="records-image full-height-width-image h-100 box ive-internet-service-provider-pro-border-radius-20" data-aos="flip-up" data-aos-duration="1000">
             <?php if(get_theme_mod('internet_service_provider_pro_records_image')!=''){ ?>
               <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_records_image')); ?>">
             <?php } ?>

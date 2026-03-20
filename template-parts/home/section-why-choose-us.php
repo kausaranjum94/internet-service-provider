@@ -47,8 +47,8 @@
             <?php } ?>
         </div>
         <div class="row align-items-end">
-            <div class="col-lg-5 col-md-5">
-                <div class="why-choose-us-image full-height-width-image" data-aos="flip-up" data-aos-duration="1000">
+            <div class="col-lg-5 col-md-5 image-hover-effect">
+                <div class="why-choose-us-image full-height-width-image box ive-internet-service-provider-pro-border-radius-20" data-aos="flip-up" data-aos-duration="1000">
                     <?php if(get_theme_mod('internet_service_provider_pro_why_choose_us_column_image')!=''){ ?>
                         <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_why_choose_us_column_image')); ?>">
                     <?php } ?>

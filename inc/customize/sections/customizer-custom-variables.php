@@ -460,13 +460,3 @@
     'section' => 'internet_service_provider_pro_color_pallette',
     'settings' => 'internet_service_provider_pro_hi_first_color',
   )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_hi_scnd_color', array(
-    'default' => '#1C1C1F',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_hi_scnd_color', array(
-    'label' => __('Secondry Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_color_pallette',
-    'settings' => 'internet_service_provider_pro_hi_scnd_color',
-  )));

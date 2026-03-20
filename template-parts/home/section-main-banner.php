@@ -40,6 +40,9 @@
                                 <?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_main_heading2')); ?>
                             </span>
                             <?php } ?>
+                             <?php if(get_theme_mod('internet_service_provider_pro_main_banner_heading_image')!=''){ ?>
+                                <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_heading_image')); ?>">
+                            <?php } ?>
                         </h1>
                         <?php } ?>
 
@@ -48,7 +51,7 @@
                                 <?php echo get_theme_mod('internet_service_provider_pro_main_banner_text'); ?>
                             </div>
                         <?php } ?>
-                        <div class="d-flex align-items-center my-3 bth-block">
+                        <div class="d-flex align-items-center my-4 bth-block">
                             <?php if(get_theme_mod('internet_service_provider_pro_main_banner_button_title')!=''){ ?>
                                 <div class="main-banner-button" data-aos="fade-up" data-aos-duration="1100">
                                     <a class="theme_button" href="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_button_url')); ?>">
@@ -64,7 +67,7 @@
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="d-flex align-items-center my-3 rating-blk-wrap">
+                        <div class="d-flex align-items-center my-4 rating-blk-wrap">
                             <div class="rating-blk">
                                 <?php if(get_theme_mod('internet_service_provider_pro_main_banner_rating_text')!=''){ ?>
                                     <div class="rating-box" data-aos="fade-up" data-aos-duration="800">
@@ -126,16 +129,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-3 col-md-3 image-hover-effect">
                 <div class="banner-roght-column-image">
                     <?php if(get_theme_mod('internet_service_provider_pro_main_banner_last_column_text')!=''){ ?>
                         <span class="right-column-text" data-aos="fade-up" data-aos-duration="1100">
                             <?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_last_column_text')); ?>
                         </span>
                     <?php } ?>
-                    <?php if(get_theme_mod('internet_service_provider_pro_main_banner_column_image2')!=''){ ?>
-                        <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_column_image2')); ?>">
-                    <?php } ?>
+                    <div class="box my-4 ive-internet-service-provider-pro-border-radius-20">
+                        <?php if(get_theme_mod('internet_service_provider_pro_main_banner_column_image2')!=''){ ?>
+                            <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_column_image2')); ?>">
+                        <?php } ?>
+                    </div>
                     <?php if(get_theme_mod('internet_service_provider_pro_main_banner_last_column_text2')!=''){ ?>
                         <span class="right-column-text2" data-aos="fade-up" data-aos-duration="1100">
                             <?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_last_column_text2')); ?>

@@ -758,14 +758,14 @@ function moveArrayPosition(&$array, $key, $new_position) {
 					'menu-item-type' => 'custom',
 					'menu-item-status' => 'publish'
 				));
-				wp_update_nav_menu_item($menu_id, 0, array(
+				$blog_page_item = wp_update_nav_menu_item($menu_id, 0, array(
 					'menu-item-title' => __('Tools','internet-service-provider-pro'),
 					'menu-item-classes' => '',
 					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Tools')),
 					'menu-item-status' => 'publish',
 				));
 
-				$blog_page_item =  wp_update_nav_menu_item($menu_id, 0, array(
+				  wp_update_nav_menu_item($menu_id, 0, array(
 					'menu-item-title' => __('Feature','internet-service-provider-pro'),
 					'menu-item-classes' => '',
 					'menu-item-url' => get_permalink(ThemeWhizzie::get_page_id_by_title('Feature')),
@@ -1344,18 +1344,30 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		// );
 		// $menu_id = wp_insert_post($menu);
 
+		$content = '<!-- wp:shortcode -->
+		[internet-service-provider-pro-testimonials]
+		<!-- /wp:shortcode -->
+
+		<!-- wp:shortcode -->
+		[internet-service-provider-pro-about-us]
+		<!-- /wp:shortcode -->
+
+		<!-- wp:paragraph -->
+		<p></p>
+		<!-- /wp:paragraph -->';
+
 
 		$aboutus_title = 'About Us';
 	  	$aboutus= array(
 			'post_type' 	=> 'page',
 			'post_title' 	=> $aboutus_title,
-			'post_content' 	=> '[internet-service-provider-pro-about-us]',
+			'post_content' 	=> $content,
 			'post_status' => 'publish',
 			'post_author' => 1,
 			'post_slug' 	=> 'aboutus'
 		);
 		$aboutus_id = wp_insert_post($aboutus);
-		add_post_meta( $error_id, '_wp_page_template', 'fullwidth-template.php' );
+		add_post_meta( $aboutus_id, '_wp_page_template', 'fullwidth-template.php' );
 		add_post_meta( $aboutus_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
 		$error_title = '404';
@@ -1432,16 +1444,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod( 'internet_service_provider_pro_header_button_title', 'Login' );
 		set_theme_mod( 'internet_service_provider_pro_header_button_url', home_url('/?action=login') );
 
-		/* -------------- Footer Contact ----------------- */
-
-		set_theme_mod( 'internet_service_provider_pro_footer_contact_email_icon', 'fas fa-envelope' );
-		set_theme_mod( 'internet_service_provider_pro_footer_contact_email', 'kitchencraftstudio@example.com' );
-
-		set_theme_mod( 'internet_service_provider_pro_footer_contact_phone_number_icon', 'fas fa-phone' );
-		set_theme_mod( 'internet_service_provider_pro_footer_contact_phone_number', '+1234567890' );
-
-		set_theme_mod( 'internet_service_provider_pro_footer_contact_location_icon', 'fa-solid fa-location-dot' );
-		set_theme_mod( 'internet_service_provider_pro_footer_contact_location', 'kitchencraftstudio 1200 Madison Ave, New York, NY 10016, USA' );
+		
 
 		// ------------  Main Banner  ------------
 
@@ -1453,6 +1456,8 @@ function moveArrayPosition(&$array, $key, $new_position) {
 	        set_theme_mod( 'internet_service_provider_pro_main_banner_main_heading', 'Internet Speed ' );
 			set_theme_mod( 'internet_service_provider_pro_main_banner_main_heading2', ' You Can Trust.' );
 	        set_theme_mod( 'internet_service_provider_pro_main_banner_text', 'Experience seamless browsing, streaming, and gaming with our ultra-fast and stable internet connection.' );
+
+			set_theme_mod( 'internet_service_provider_pro_main_banner_heading_image', get_template_directory_uri().'/assets/images/banner-icon.png');
 
 			set_theme_mod( 'internet_service_provider_pro_main_banner_button_title', 'Start Now' );
 			set_theme_mod( 'internet_service_provider_pro_main_banner_button_url', home_url('/contact') );

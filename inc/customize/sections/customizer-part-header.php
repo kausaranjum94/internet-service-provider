@@ -16,7 +16,7 @@
         'transport' => 'postMessage',
         'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
     ));
-    $wp_customize->add_control( new internet_service_provider_pro_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_header_search_setting',
+    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_header_search_setting',
       array(
         'label' => __('Product Search','internet-service-provider-pro'),
         'section' => 'internet_service_provider_pro_header_content_section'

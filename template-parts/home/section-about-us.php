@@ -64,8 +64,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="about-image full-height-width-image" data-aos="flip-up" data-aos-duration="1000">
+            <div class="col-lg-6 col-md-6 image-hover-effect">
+                <div class="about-image full-height-width-image box ive-internet-service-provider-pro-border-radius-20" data-aos="flip-up" data-aos-duration="1000">
                     <?php if(get_theme_mod('internet_service_provider_pro_about_us_column_image')!=''){ ?>
                         <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_about_us_column_image')); ?>">
                     <?php } ?>
