@@ -433,7 +433,7 @@
     'sanitize_callback' => 'sanitize_hex_color'
   ));
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_para_color', array(
-      'label' => __('ra color', 'internet-service-provider-pro'),
+      'label' => __('color', 'internet-service-provider-pro'),
       'section' => 'internet_service_provider_pro_color_pallette',
       'settings' => 'internet_service_provider_pro_para_color',
     )

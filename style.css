@@ -91,7 +91,7 @@ body a {
 
 a:hover {
   text-decoration: none;
-  color: black;
+  color: var(--primary-color);
 }
 
 a:focus,

@@ -271,14 +271,13 @@ select.header-search-select {
     margin-left: 14px;
 }
 .header-menu-wrap {
-  background-color: white;
   padding: 0;
   border-radius: 20px;
   padding-left: 12px;
 }
 #masthead {
   width: 100%;
-  z-index: 9;
+  z-index: 99;
 }
 .head-togle{
   text-align: end;
@@ -413,6 +412,9 @@ select.header-search-select {
     border-radius: 0;
     color: var(--primary-color);
 }
+.side-navigation ul ul li.current_page_item>a, .side-navigation ul ul li.current-menu-item>a {
+    border: none !important;
+}
 /* .side-navigation ul li.current_page_item:before, .side-navigation ul li.current-menu-item:before {
   content: '';
   background-color: var(--primary-color);
@@ -452,9 +454,11 @@ select.header-search-select {
   min-width: 230px;
   z-index: 9999;
   display: none;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   padding-bottom: 16px;
+  border-top: 2px solid var(--primary-color);
+  box-shadow: 0px 4px 8px -2px #0000001A;
 }
 .side-navigation ul ul ul{
   left: 100%;
@@ -471,7 +475,6 @@ select.header-search-select {
 .side-navigation ul ul li a {
   padding: 0;
   display: block;
-  border-bottom: 1px dashed #ccc;
   padding-bottom: 14px;
   position: relative;
    transition: all 520ms ease;
@@ -483,31 +486,32 @@ select.header-search-select {
     position: absolute;
     content: "";
     left: -5px;
-    top: 37%;
-    width: 5px;
-    height: 5px;
+    /* top: 37%; */
+    width: 100%;
+    height: 2px;
     opacity: 0;
     visibility: hidden;
     background-color: var(--primary-color);
     transform: translateY(-50%);
     transition: all 520ms ease;
     border-radius: 50%;
+    bottom: 0;
 }
 .side-navigation ul ul li:hover>a:before, .side-navigation ul ul li.current_page_item > a:before, .side-navigation ul ul li.current-menu-item > a:before{
     opacity: 1;
     visibility: visible;
     left: 0;
 }
-.side-navigation ul ul li:hover>a, .side-navigation ul ul li.current_page_item>a,.side-navigation ul ul li.current-menu-item>a{
+/* .side-navigation ul ul li:hover>a, .side-navigation ul ul li.current_page_item>a,.side-navigation ul ul li.current-menu-item>a{
   padding-left: 15px;
-}
+} */
 .side-navigation ul ul li:last-child a {
     border: none;
 }
 .side-navigation ul li:hover > ul{
   display: block;
-  animation: fadeInUp 1.5s ease;
-  -webkit-animation: fadeInUp 1.5s ease;
+  animation: fadeInLeft 0.5s ease;
+  -webkit-animation: fadeInLeft 0.5s ease;
 }
 .side-navigation ul li.menu-item-has-children>a:after {
     content: "\2b";

@@ -174,14 +174,14 @@
         'section' => 'internet_service_provider_pro_sec_header_section'
     )));
 
-	$wp_customize->add_setting( 'internet_service_provider_pro_header_menu_bgcolor', array(
+	$wp_customize->add_setting( 'internet_service_provider_pro_header_bgcolor', array(
 		'default' => '',
 		'sanitize_callback'	=> 'sanitize_hex_color'
 	));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_menu_bgcolor', array(
-		'label' => __('Menu Background Color', 'internet-service-provider-pro'),
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_bgcolor', array(
+		'label' => __('Header Background Color', 'internet-service-provider-pro'),
 		'section' => 'internet_service_provider_pro_sec_header_section',
-		'settings' => 'internet_service_provider_pro_header_menu_bgcolor'
+		'settings' => 'internet_service_provider_pro_header_bgcolor'
 	)));
 
 	// This is Header Menu Color picker setting
@@ -242,6 +242,15 @@
         'section' => 'internet_service_provider_pro_sec_header_section',
         'settings' => 'internet_service_provider_pro_header_menu_active_bgcolor'
     )));
+    $wp_customize->add_setting( 'internet_service_provider_pro_header_menu_active_border_color', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color'
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_menu_active_border_color', array(
+        'label' => __('Active Menu Border Color', 'internet-service-provider-pro'),
+        'section' => 'internet_service_provider_pro_sec_header_section',
+        'settings' => 'internet_service_provider_pro_header_menu_active_border_color'
+    )));
 
 	$wp_customize->add_setting( 'internet_service_provider_pro_header_menu_hovercolor', array(
 		'default' => '',
@@ -299,6 +308,16 @@
         'label' => __('Dropdown Background Color', 'internet-service-provider-pro'),
         'section' => 'internet_service_provider_pro_sec_header_section',
         'settings' => 'internet_service_provider_pro_dropdown_bgcolor'
+    )));
+
+    $wp_customize->add_setting( 'internet_service_provider_pro_dropdown_border_color', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_hex_color'
+    ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_dropdown_border_color', array(
+        'label' => __('Dropdown Border Color', 'internet-service-provider-pro'),
+        'section' => 'internet_service_provider_pro_sec_header_section',
+        'settings' => 'internet_service_provider_pro_dropdown_border_color'
     )));
 
 	$wp_customize->add_setting( 'internet_service_provider_pro_dropdown_item_hover_color', array(
@@ -543,46 +562,6 @@
       'settings' => 'internet_service_provider_pro_sec_header_section_button_bgcolor',
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_header_button_icon_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_button_icon_color', array(
-      'label' => __('Icon Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sec_header_section',
-      'settings' => 'internet_service_provider_pro_header_button_icon_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_header_button_icon_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_button_icon_bgcolor', array(
-      'label' => __('Icon Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sec_header_section',
-      'settings' => 'internet_service_provider_pro_header_button_icon_bgcolor',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_header_button_icon_hover_color', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_button_icon_hover_color', array(
-      'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sec_header_section',
-      'settings' => 'internet_service_provider_pro_header_button_icon_hover_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_header_button_icon_hover_bgcolor', array(
-      'default' => '',
-      'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_button_icon_hover_bgcolor', array(
-      'label' => __('Icon Hover Background Color', 'internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_sec_header_section',
-      'settings' => 'internet_service_provider_pro_header_button_icon_hover_bgcolor',
-  )));
-
   $wp_customize->add_setting( 'internet_service_provider_pro_sec_header_section_button_hover_bgcolor', array(
       'default' => '',
       'sanitize_callback' => 'sanitize_hex_color'
@@ -601,4 +580,56 @@
       'label' => __('Hover Text Color', 'internet-service-provider-pro'),
       'section' => 'internet_service_provider_pro_sec_header_section',
       'settings' => 'internet_service_provider_pro_header_button_text_color_hover',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_header_search_ct_pallete',
+  array(
+    'default' => '',
+    'transport' => 'postMessage',
+    'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_header_search_ct_pallete',
+      array(
+      'label' => __('Search Typography ','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_sec_header_section'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_header_search_color', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_search_color', array(
+      'label' => __('Icon Color', 'internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_sec_header_section',
+      'settings' => 'internet_service_provider_pro_header_search_color',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_header_search_bgcolor', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_search_bgcolor', array(
+      'label' => __('Icon Background Color', 'internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_sec_header_section',
+      'settings' => 'internet_service_provider_pro_header_search_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_header_search_hover_color', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_search_hover_color', array(
+      'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_sec_header_section',
+      'settings' => 'internet_service_provider_pro_header_search_hover_color',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_header_search_hover_bgcolor', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_header_search_hover_bgcolor', array(
+      'label' => __('Icon Hover Background Color', 'internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_sec_header_section',
+      'settings' => 'internet_service_provider_pro_header_search_hover_bgcolor',
   )));

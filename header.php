@@ -37,7 +37,7 @@ if ( get_theme_mod('internet_service_provider_pro_header_section_sticky',true) =
       }
     ?>
 
-  <header id="masthead"   class="<?php echo esc_attr($img_bg); ?> site-head
+  <header id="masthead" class="<?php echo esc_attr($img_bg); ?> site-head">
     
     <?php if ( get_theme_mod('internet_service_provider_pro_products_spinner_enable',true) == "1" ) { ?>
       <div class="eco-box">
