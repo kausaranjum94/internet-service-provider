@@ -2349,8 +2349,6 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 		$this->theme_create_customizer_nav_menu();
 		$this->theme_create_customizer_footer_quick_links();
-		$this->theme_create_customizer_footer_customer_resources_menu();
-		$this->theme_create_customizer_footer_customer_services_menu();
 		
 		$VW_Widget_Importer = new VW_Widget_Importer;
 		$VW_Widget_Importer->import_widgets( $this->widget_file_url );

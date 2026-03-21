@@ -887,6 +887,7 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 		'unit' => 'px',
 		'responsive' => false
 	));
+	
 
 	/*---------------- Partner ----------------*/
 
@@ -921,7 +922,7 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	$internet_service_provider_pro_about_us_tagline_color = get_theme_mod('internet_service_provider_pro_about_us_tagline_color');
 	$internet_service_provider_pro_about_us_tagline_font_family = get_theme_mod('internet_service_provider_pro_about_us_tagline_font_family');
 	$internet_service_provider_pro_about_us_tagline_font_size = get_theme_mod('internet_service_provider_pro_about_us_tagline_font_size');
-	
+
 	$internet_service_provider_pro_about_us_tagline_border_color = get_theme_mod('internet_service_provider_pro_about_us_tagline_border_color');
 
 	$internet_service_provider_pro_about_us_main_heading_color = get_theme_mod('internet_service_provider_pro_about_us_main_heading_color');
@@ -1100,12 +1101,205 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 		'responsive' => false
 	));
 
+	/*---------------- Services ----------------*/
+
+	$internet_service_provider_pro_services_tagline_color = get_theme_mod('internet_service_provider_pro_services_tagline_color');
+	$internet_service_provider_pro_services_tagline_font_family = get_theme_mod('internet_service_provider_pro_services_tagline_font_family');
+	$internet_service_provider_pro_services_tagline_font_size = get_theme_mod('internet_service_provider_pro_services_tagline_font_size');
+
+	$internet_service_provider_pro_services_tagline_border_color = get_theme_mod('internet_service_provider_pro_services_tagline_border_color');
+
+	$internet_service_provider_pro_services_main_heading_color = get_theme_mod('internet_service_provider_pro_services_main_heading_color');
+	$internet_service_provider_pro_services_main_heading_font_family = get_theme_mod('internet_service_provider_pro_services_main_heading_font_family');
+	$internet_service_provider_pro_services_main_heading_font_size = get_theme_mod('internet_service_provider_pro_services_main_heading_font_size');
+
+	$internet_service_provider_pro_services_text_color = get_theme_mod('internet_service_provider_pro_services_text_color');
+	$internet_service_provider_pro_services_text_font_family = get_theme_mod('internet_service_provider_pro_services_text_font_family');
+	$internet_service_provider_pro_services_text_font_size = get_theme_mod('internet_service_provider_pro_services_text_font_size');
+
+	$internet_service_provider_pro_services_box_title_color = get_theme_mod('internet_service_provider_pro_services_box_title_color');
+	$internet_service_provider_pro_services_box_title_font_family = get_theme_mod('internet_service_provider_pro_services_box_title_font_family');
+	$internet_service_provider_pro_services_box_title_font_size = get_theme_mod('internet_service_provider_pro_services_box_title_font_size');
+
+	$internet_service_provider_pro_services_box_text_color = get_theme_mod('internet_service_provider_pro_services_box_text_color');
+	$internet_service_provider_pro_services_box_text_font_family = get_theme_mod('internet_service_provider_pro_services_box_text_font_family');
+	$internet_service_provider_pro_services_box_text_font_size = get_theme_mod('internet_service_provider_pro_services_box_text_font_size');
+
+	$internet_service_provider_pro_services_box_pricing_title_color = get_theme_mod('internet_service_provider_pro_services_box_pricing_title_color');
+	$internet_service_provider_pro_services_box_pricing_title_font_family = get_theme_mod('internet_service_provider_pro_services_box_pricing_title_font_family');
+	$internet_service_provider_pro_services_box_pricing_title_font_size = get_theme_mod('internet_service_provider_pro_services_box_pricing_title_font_size');
+
+	$internet_service_provider_pro_services_box_pricing_price_color = get_theme_mod('internet_service_provider_pro_services_box_pricing_price_color');
+	$internet_service_provider_pro_services_box_pricing_price_font_family = get_theme_mod('internet_service_provider_pro_services_box_pricing_price_font_family');
+	$internet_service_provider_pro_services_box_pricing_price_font_size = get_theme_mod('internet_service_provider_pro_services_box_pricing_price_font_size');
+
+	$internet_service_provider_pro_services_box_pricing_price_bgcolor = get_theme_mod('internet_service_provider_pro_services_box_pricing_price_bgcolor');
+
+	$internet_service_provider_pro_services_box_pricing_icon_color = get_theme_mod('internet_service_provider_pro_services_box_pricing_icon_color');
+
+	$internet_service_provider_pro_services_box_pricing_box_bgcolor = get_theme_mod('internet_service_provider_pro_services_box_pricing_box_bgcolor');
+
+	$internet_service_provider_pro_services_box_bgcolor = get_theme_mod('internet_service_provider_pro_services_box_bgcolor');
+
+	$internet_service_provider_pro_services_box_overlay_color = get_theme_mod('internet_service_provider_pro_services_box_overlay_color');
+	$internet_service_provider_pro_services_box_overlay_hover_color = get_theme_mod('internet_service_provider_pro_services_box_overlay_hover_color');
+
+	if($internet_service_provider_pro_services_tagline_color != false || $internet_service_provider_pro_services_tagline_font_family != false || $internet_service_provider_pro_services_tagline_font_size != false ){
+		$custom_css .='#services span.section-tagline{';
+			if($internet_service_provider_pro_services_tagline_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_services_tagline_color).';';
+			}
+			if($internet_service_provider_pro_services_tagline_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_services_tagline_font_family).';';
+			}
+			if($internet_service_provider_pro_services_tagline_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_services_tagline_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_services_tagline_border_color != false){
+		$custom_css .='#services span.section-tagline{
+			border-color:'.esc_html($internet_service_provider_pro_services_tagline_border_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_services_main_heading_color != false || $internet_service_provider_pro_services_main_heading_font_family != false || $internet_service_provider_pro_services_main_heading_font_size != false){
+		$custom_css .='#services .section_main_head h3{';
+			if($internet_service_provider_pro_services_main_heading_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_services_main_heading_color).';';
+			}
+			if($internet_service_provider_pro_services_main_heading_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_services_main_heading_font_family).';';
+			}
+			if($internet_service_provider_pro_services_main_heading_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_services_main_heading_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_services_text_color != false || $internet_service_provider_pro_services_text_font_family != false || $internet_service_provider_pro_services_text_font_size != false){
+		$custom_css .='span.section-text{';
+			if($internet_service_provider_pro_services_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_services_text_color).';';
+			}
+			if($internet_service_provider_pro_services_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_services_text_font_family).';';
+			}
+			if($internet_service_provider_pro_services_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_services_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_services_box_title_color != false || $internet_service_provider_pro_services_box_title_font_family != false || $internet_service_provider_pro_services_box_title_font_size != false){
+		$custom_css .='.services-block-bottom-content h6{';
+			if($internet_service_provider_pro_services_box_title_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_services_box_title_color).';';
+			}
+			if($internet_service_provider_pro_services_box_title_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_services_box_title_font_family).';';
+			}
+			if($internet_service_provider_pro_services_box_title_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_services_box_title_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_services_box_text_color != false || $internet_service_provider_pro_services_box_text_font_family != false || $internet_service_provider_pro_services_box_text_font_size != false){
+		$custom_css .='.services-block-bottom-content .box-text{';
+			if($internet_service_provider_pro_services_box_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_services_box_text_color).';';
+			}
+			if($internet_service_provider_pro_services_box_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_services_box_text_font_family).';';
+			}
+			if($internet_service_provider_pro_services_box_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_services_box_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_services_box_pricing_title_color != false || $internet_service_provider_pro_services_box_pricing_title_font_family != false || $internet_service_provider_pro_services_box_pricing_title_font_size != false){
+		$custom_css .='#services .start-now{';
+			if($internet_service_provider_pro_services_box_pricing_title_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_services_box_pricing_title_color).';';
+			}
+			if($internet_service_provider_pro_services_box_pricing_title_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_services_box_pricing_title_font_family).';';
+			}
+			if($internet_service_provider_pro_services_box_pricing_title_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_services_box_pricing_title_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_services_box_pricing_price_color != false || $internet_service_provider_pro_services_box_pricing_price_font_family != false || $internet_service_provider_pro_services_box_pricing_price_font_size != false){
+		$custom_css .='#services span.start-now-pricing{';
+			if($internet_service_provider_pro_services_box_pricing_price_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_services_box_pricing_price_color).';';
+			}
+			if($internet_service_provider_pro_services_box_pricing_price_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_services_box_pricing_price_font_family).';';
+			}
+			if($internet_service_provider_pro_services_box_pricing_price_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_services_box_pricing_price_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+	
+	if($internet_service_provider_pro_services_box_pricing_price_bgcolor != false){
+		$custom_css .='#services span.start-now-pricing{
+			background-color:'.esc_html($internet_service_provider_pro_services_box_pricing_price_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_services_box_pricing_icon_color != false){
+		$custom_css .='#services .pricing-box-title a i{
+			color:'.esc_html($internet_service_provider_pro_services_box_pricing_icon_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_services_box_pricing_box_bgcolor != false){
+		$custom_css .='#services .pricing-box{
+			background-color:'.esc_html($internet_service_provider_pro_services_box_pricing_box_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_services_box_bgcolor != false){
+		$custom_css .='#services .services-box:first-child .services-block-content{
+			background:'.esc_html($internet_service_provider_pro_services_box_bgcolor).' !important;
+		}';
+	}
+
+	if($internet_service_provider_pro_services_box_overlay_color != false){
+		$custom_css .='#services .services-block-content{
+			background:linear-gradient(180deg, rgba(28, 28, 31, 0) 22.42%, '.esc_html($internet_service_provider_pro_services_box_overlay_color).' 84.15%);
+		}';
+	}
+
+	if($internet_service_provider_pro_services_box_overlay_hover_color != false){
+		$custom_css .='#services .services-box:hover .services-block-content{
+			background:linear-gradient(180deg, rgba(212, 229, 236, 0) 22.42%, '.esc_html($internet_service_provider_pro_services_box_overlay_hover_color).' 84.15%);
+		}';
+	}
+
+	$custom_css .= bmp_dimension_css('internet_service_provider_pro_services_spacing', array(
+		'position' => array('left', 'top', 'bottom', 'right'),
+		'selector' => '#services',
+		'type' => 'padding',
+		'unit' => 'px',
+		'responsive' => false
+	));
+	
 
 	/*---------------- Why Choose us ----------------*/
 
 	$internet_service_provider_pro_why_choose_us_tagline_color = get_theme_mod('internet_service_provider_pro_why_choose_us_tagline_color');
 	$internet_service_provider_pro_why_choose_us_tagline_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_tagline_font_family');
 	$internet_service_provider_pro_why_choose_us_tagline_font_size = get_theme_mod('internet_service_provider_pro_why_choose_us_tagline_font_size');
+
+	$internet_service_provider_pro_why_choose_us_tagline_border_color = get_theme_mod('internet_service_provider_pro_why_choose_us_tagline_border_color');
 
 	$internet_service_provider_pro_why_choose_us_main_heading_color = get_theme_mod('internet_service_provider_pro_why_choose_us_main_heading_color');
 	$internet_service_provider_pro_why_choose_us_main_heading_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_main_heading_font_family');
@@ -1119,12 +1313,44 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	$internet_service_provider_pro_why_choose_us_box_text_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_box_text_font_family');
 	$internet_service_provider_pro_why_choose_us_box_text_font_size = get_theme_mod('internet_service_provider_pro_why_choose_us_box_text_font_size');
 
-	$internet_service_provider_pro_why_choose_us_box_icon_color = get_theme_mod('internet_service_provider_pro_why_choose_us_box_icon_color');
-	$internet_service_provider_pro_why_choose_us_box_icon_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_box_icon_bgcolor');
-	$internet_service_provider_pro_why_choose_us_box_icon_hover_color = get_theme_mod('internet_service_provider_pro_why_choose_us_box_icon_hover_color');
-	$internet_service_provider_pro_why_choose_us_box_icon_hover_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_box_icon_hover_bgcolor');
+	$internet_service_provider_pro_why_choose_us_box_step_color = get_theme_mod('internet_service_provider_pro_why_choose_us_box_step_color');
+	$internet_service_provider_pro_why_choose_us_box_step_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_box_step_font_family');
+	$internet_service_provider_pro_why_choose_us_box_step_font_size = get_theme_mod('internet_service_provider_pro_why_choose_us_box_step_font_size');
 
-	$internet_service_provider_pro_why_choose_us_box_hover_text_color = get_theme_mod('internet_service_provider_pro_why_choose_us_box_hover_text_color');
+	$internet_service_provider_pro_why_choose_us_box_step_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_box_step_bgcolor');
+	$internet_service_provider_pro_why_choose_us_box_step_border_color = get_theme_mod('internet_service_provider_pro_why_choose_us_box_step_border_color');
+	$internet_service_provider_pro_why_choose_us_box_row_border_color = get_theme_mod('internet_service_provider_pro_why_choose_us_box_row_border_color');
+
+	$internet_service_provider_pro_why_choose_us_bottom_box_tagline_color = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_tagline_color');
+	$internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_family');
+	$internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_size = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_size');
+
+	$internet_service_provider_pro_why_choose_us_bottom_box_tagline_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_tagline_bgcolor');
+
+	$internet_service_provider_pro_why_choose_us_bottom_box_title_color = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_title_color');
+	$internet_service_provider_pro_why_choose_us_bottom_box_title_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_title_font_family');
+	$internet_service_provider_pro_why_choose_us_bottom_box_title_font_size = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_title_font_size');
+
+	$internet_service_provider_pro_why_choose_us_bottom_box_text_color = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_text_color');
+	$internet_service_provider_pro_why_choose_us_bottom_box_text_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_text_font_family');
+	$internet_service_provider_pro_why_choose_us_bottom_box_text_font_size = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_text_font_size');
+
+	$internet_service_provider_pro_why_choose_us_bottom_box_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_bottom_box_bgcolor');
+
+	$internet_service_provider_pro_why_choose_us_image_text_color = get_theme_mod('internet_service_provider_pro_why_choose_us_image_text_color');
+	$internet_service_provider_pro_why_choose_us_image_text_font_family = get_theme_mod('internet_service_provider_pro_why_choose_us_image_text_font_family');
+	$internet_service_provider_pro_why_choose_us_image_text_font_size = get_theme_mod('internet_service_provider_pro_why_choose_us_image_text_font_size');
+
+	$internet_service_provider_pro_why_choose_us_image_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_image_bgcolor');
+
+	$internet_service_provider_pro_why_choose_us_text_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_text_bgcolor');
+
+	$internet_service_provider_pro_why_choose_us_link_color = get_theme_mod('internet_service_provider_pro_why_choose_us_link_color');
+	$internet_service_provider_pro_why_choose_us_link_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_link_bgcolor');
+	$internet_service_provider_pro_why_choose_us_link_hover_color = get_theme_mod('internet_service_provider_pro_why_choose_us_link_hover_color');
+	$internet_service_provider_pro_why_choose_us_link_hover_bgcolor = get_theme_mod('internet_service_provider_pro_why_choose_us_link_hover_bgcolor');
+
+	$internet_service_provider_pro_why_choose_us_column_image_overlay_color = get_theme_mod('internet_service_provider_pro_why_choose_us_column_image_overlay_color');
 
 	if($internet_service_provider_pro_why_choose_us_tagline_color != false || $internet_service_provider_pro_why_choose_us_tagline_font_family != false || $internet_service_provider_pro_why_choose_us_tagline_font_size != false ){
 		$custom_css .='#why-choose-us span.section-tagline{';
@@ -1140,8 +1366,14 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 		$custom_css .='}';
 	}
 
+	if($internet_service_provider_pro_why_choose_us_tagline_border_color != false){
+		$custom_css .='#why-choose-us span.section-tagline{
+			border-color:'.esc_html($internet_service_provider_pro_why_choose_us_tagline_border_color).';
+		}';
+	}
+
 	if($internet_service_provider_pro_why_choose_us_main_heading_color != false || $internet_service_provider_pro_why_choose_us_main_heading_font_family != false || $internet_service_provider_pro_why_choose_us_main_heading_font_size != false){
-		$custom_css .='#why-choose-us h3{';
+		$custom_css .='#why-choose-us .section_main_head h3{';
 			if($internet_service_provider_pro_why_choose_us_main_heading_color != false){
 				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_main_heading_color).';';
 			}
@@ -1169,7 +1401,7 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	}
 
 	if($internet_service_provider_pro_why_choose_us_box_text_color != false || $internet_service_provider_pro_why_choose_us_box_text_font_family != false || $internet_service_provider_pro_why_choose_us_box_text_font_size != false){
-		$custom_css .='#why-choose-us .box-text{';
+		$custom_css .='#why-choose-us .why-choose-us-col-right .box-text, span.why-choose-us-bottom-text{';
 			if($internet_service_provider_pro_why_choose_us_box_text_color != false){
 				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_box_text_color).';';
 			}
@@ -1182,37 +1414,787 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 		$custom_css .='}';
 	}
 
-	if($internet_service_provider_pro_why_choose_us_box_icon_color != false || $internet_service_provider_pro_why_choose_us_box_icon_bgcolor != false){
-		$custom_css .='.why-choose-us-block .icon-url a{';
-			if($internet_service_provider_pro_why_choose_us_box_icon_color != false){
-				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_box_icon_color).';';
+	if($internet_service_provider_pro_why_choose_us_box_step_color != false || $internet_service_provider_pro_why_choose_us_box_step_bgcolor != false || $internet_service_provider_pro_why_choose_us_box_step_border_color != false){
+		$custom_css .='span.why-choose-us-step{';
+			if($internet_service_provider_pro_why_choose_us_box_step_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_box_step_color).';';
 			}
-			if($internet_service_provider_pro_why_choose_us_box_icon_bgcolor != false){
-				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_why_choose_us_box_icon_bgcolor).';';
+			if($internet_service_provider_pro_why_choose_us_box_step_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_why_choose_us_box_step_bgcolor).';';
 			}
-		$custom_css .='}';
-	}
-
-	if($internet_service_provider_pro_why_choose_us_box_icon_hover_color != false || $internet_service_provider_pro_why_choose_us_box_icon_hover_bgcolor != false){
-		$custom_css .='.why-choose-us-block:hover .icon-url a{';
-			if($internet_service_provider_pro_why_choose_us_box_icon_hover_color != false){
-				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_box_icon_hover_color).';';
-			}
-			if($internet_service_provider_pro_why_choose_us_box_icon_hover_bgcolor != false){
-				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_why_choose_us_box_icon_hover_bgcolor).';';
+			if($internet_service_provider_pro_why_choose_us_box_step_border_color != false){
+				$custom_css .='border-color:'.esc_html($internet_service_provider_pro_why_choose_us_box_step_border_color).';';
 			}
 		$custom_css .='}';
 	}
 
-	if($internet_service_provider_pro_why_choose_us_box_hover_text_color != false){
-		$custom_css .='#why-choose-us .why-choose-us-block:hover h6, #why-choose-us .why-choose-us-block:hover .box-text{
-			color:'.esc_html($internet_service_provider_pro_why_choose_us_box_hover_text_color).';
+	if($internet_service_provider_pro_why_choose_us_box_row_border_color != false){
+		$custom_css .='#why-choose-us .whychoose-box{
+			border-color:'.esc_html($internet_service_provider_pro_why_choose_us_box_row_border_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_bottom_box_tagline_color != false || $internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_family != false || $internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_size != false){
+		$custom_css .='#why-choose-us .why-choose-us-bottom-tagline{';
+			if($internet_service_provider_pro_why_choose_us_bottom_box_tagline_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_tagline_color).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_family).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_tagline_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_bottom_box_tagline_color != false){
+		$custom_css .='#why-choose-us .why-choose-us-bottom-tagline svg path{
+			fill:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_tagline_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_bottom_box_tagline_bgcolor != false){
+		$custom_css .='#why-choose-us .why-choose-us-bottom-tagline{
+			background-color:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_tagline_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_bottom_box_title_color != false || $internet_service_provider_pro_why_choose_us_bottom_box_title_font_family != false || $internet_service_provider_pro_why_choose_us_bottom_box_title_font_size != false){
+		$custom_css .='#why-choose-us .why-choose-us-bottom-speed-text{';
+			if($internet_service_provider_pro_why_choose_us_bottom_box_title_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_title_color).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_bottom_box_title_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_title_font_family).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_bottom_box_title_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_title_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_bottom_box_text_color != false || $internet_service_provider_pro_why_choose_us_bottom_box_text_font_family != false || $internet_service_provider_pro_why_choose_us_bottom_box_text_font_size != false){
+		$custom_css .='#why-choose-us .why-choose-us-bottom-speed{';
+			if($internet_service_provider_pro_why_choose_us_bottom_box_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_text_color).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_bottom_box_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_text_font_family).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_bottom_box_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_bottom_box_bgcolor != false){
+		$custom_css .='#why-choose-us .why-choose-us-bottom-block{
+			background-color:'.esc_html($internet_service_provider_pro_why_choose_us_bottom_box_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_image_text_color != false || $internet_service_provider_pro_why_choose_us_image_text_font_family != false || $internet_service_provider_pro_why_choose_us_image_text_font_size != false){
+		$custom_css .='#why-choose-us .image-caption .media-body{';
+			if($internet_service_provider_pro_why_choose_us_image_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_image_text_color).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_image_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_why_choose_us_image_text_font_family).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_image_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_why_choose_us_image_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_image_bgcolor != false){
+		$custom_css .='#why-choose-us span.image-caption-img{
+			background-color:'.esc_html($internet_service_provider_pro_why_choose_us_image_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_text_bgcolor != false){
+		$custom_css .='#why-choose-us .image-caption .media{
+			background-color:'.esc_html($internet_service_provider_pro_why_choose_us_text_bgcolor).';
+		}';
+	}
+
+	
+	if($internet_service_provider_pro_why_choose_us_link_color != false || $internet_service_provider_pro_why_choose_us_link_bgcolor != false){
+		$custom_css .='.caption-icon-url a{';
+			if($internet_service_provider_pro_why_choose_us_link_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_link_color).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_link_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_why_choose_us_link_bgcolor).';';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_link_hover_color != false || $internet_service_provider_pro_why_choose_us_link_hover_bgcolor != false){
+		$custom_css .='.caption-icon-url a:hover{';
+			if($internet_service_provider_pro_why_choose_us_link_hover_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_why_choose_us_link_hover_color).';';
+			}
+			if($internet_service_provider_pro_why_choose_us_link_hover_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_why_choose_us_link_hover_bgcolor).';';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_why_choose_us_column_image_overlay_color != false){
+		$custom_css .='#why-choose-us .image-hover-effect .box:before, #why-choose-us .image-hover-effect .box:after{
+			background-color:'.esc_html($internet_service_provider_pro_why_choose_us_column_image_overlay_color).';
 		}';
 	}
 
 	$custom_css .= bmp_dimension_css('internet_service_provider_pro_why_choose_us_spacing', array(
 		'position' => array('left', 'top', 'bottom', 'right'),
 		'selector' => '#why-choose-us',
+		'type' => 'padding',
+		'unit' => 'px',
+		'responsive' => false
+	));
+
+
+	/*---------------- Exclusive Offers ----------------*/
+
+	$internet_service_provider_pro_exclusive_offers_tagline_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_tagline_color');
+	$internet_service_provider_pro_exclusive_offers_tagline_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_tagline_font_family');
+	$internet_service_provider_pro_exclusive_offers_tagline_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_tagline_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_tagline_border_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_tagline_border_color');
+
+	$internet_service_provider_pro_exclusive_offers_main_heading_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_main_heading_color');
+	$internet_service_provider_pro_exclusive_offers_main_heading_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_main_heading_font_family');
+	$internet_service_provider_pro_exclusive_offers_main_heading_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_main_heading_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_text_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_text_color');
+	$internet_service_provider_pro_exclusive_offers_text_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_text_font_family');
+	$internet_service_provider_pro_exclusive_offers_text_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_text_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_icon_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_color');
+	$internet_service_provider_pro_exclusive_offers_icon_bgcolor = get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_bgcolor');
+
+	$internet_service_provider_pro_exclusive_offers_text_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_text_color');
+	$internet_service_provider_pro_exclusive_offers_text_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_text_font_family');
+	$internet_service_provider_pro_exclusive_offers_text_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_text_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_list_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_list_color');
+	$internet_service_provider_pro_exclusive_offers_list_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_list_font_family');
+	$internet_service_provider_pro_exclusive_offers_list_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_list_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_icon_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_color');
+	$internet_service_provider_pro_exclusive_offers_icon_bgcolor = get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_bgcolor');
+
+	$internet_service_provider_pro_exclusive_offers_box_title_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_title_color');
+	$internet_service_provider_pro_exclusive_offers_box_title_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_title_font_family');
+	$internet_service_provider_pro_exclusive_offers_box_title_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_title_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_box_text_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_text_color');
+	$internet_service_provider_pro_exclusive_offers_box_text_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_text_font_family');
+	$internet_service_provider_pro_exclusive_offers_box_text_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_text_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_box_speed_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_speed_color');
+	$internet_service_provider_pro_exclusive_offers_box_speed_font_family = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_speed_font_family');
+	$internet_service_provider_pro_exclusive_offers_box_speed_font_size = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_speed_font_size');
+
+	$internet_service_provider_pro_exclusive_offers_box_speed_bgcolor = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_speed_bgcolor');
+
+	$internet_service_provider_pro_exclusive_offers_box_speed_border_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_speed_border_color');
+
+	$internet_service_provider_pro_exclusive_offers_box_bgcolor = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_bgcolor');
+
+	$internet_service_provider_pro_exclusive_offers_box_hover_bgcolor = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_hover_bgcolor');
+
+	$internet_service_provider_pro_exclusive_offers_box_hover_title_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_hover_title_color');
+
+	$internet_service_provider_pro_exclusive_offers_box_hover_text_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_hover_text_color');
+
+	$internet_service_provider_pro_exclusive_offers_box_icon_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_icon_color');
+	$internet_service_provider_pro_exclusive_offers_box_icon_bgcolor = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_icon_bgcolor');
+	$internet_service_provider_pro_exclusive_offers_box_icon_hover_color = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_icon_hover_color');
+	$internet_service_provider_pro_exclusive_offers_box_icon_hover_bgcolor = get_theme_mod('internet_service_provider_pro_exclusive_offers_box_icon_hover_bgcolor');
+
+	if($internet_service_provider_pro_exclusive_offers_tagline_color != false || $internet_service_provider_pro_exclusive_offers_tagline_font_family != false || $internet_service_provider_pro_exclusive_offers_tagline_font_size != false ){
+		$custom_css .='#exclusive-offers .section_main_head span.section-tagline{';
+			if($internet_service_provider_pro_exclusive_offers_tagline_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_tagline_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_tagline_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_exclusive_offers_tagline_font_family).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_tagline_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_exclusive_offers_tagline_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_tagline_border_color != false){
+		$custom_css .='#exclusive-offers span.section-tagline{
+			border-color:'.esc_html($internet_service_provider_pro_exclusive_offers_tagline_border_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_main_heading_color != false || $internet_service_provider_pro_exclusive_offers_main_heading_font_family != false || $internet_service_provider_pro_exclusive_offers_main_heading_font_size != false){
+		$custom_css .='#exclusive-offers .section_main_head h3{';
+			if($internet_service_provider_pro_exclusive_offers_main_heading_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_main_heading_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_main_heading_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_exclusive_offers_main_heading_font_family).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_main_heading_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_exclusive_offers_main_heading_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_text_color != false || $internet_service_provider_pro_exclusive_offers_text_font_family != false || $internet_service_provider_pro_exclusive_offers_text_font_size != false){
+		$custom_css .='#exclusive-offers .section-text{';
+			if($internet_service_provider_pro_exclusive_offers_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_text_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_exclusive_offers_text_font_family).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_exclusive_offers_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_list_color != false || $internet_service_provider_pro_exclusive_offers_list_font_family != false || $internet_service_provider_pro_exclusive_offers_list_font_size != false){
+		$custom_css .='.exclusive-offers-head-listing li{';
+			if($internet_service_provider_pro_exclusive_offers_list_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_list_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_list_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_exclusive_offers_list_font_family).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_list_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_exclusive_offers_list_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_icon_color != false || $internet_service_provider_pro_exclusive_offers_icon_bgcolor != false ){
+		$custom_css .='.exclusive-offers-icon{';
+			if($internet_service_provider_pro_exclusive_offers_icon_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_icon_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_icon_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_exclusive_offers_icon_bgcolor).';';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_box_title_color != false || $internet_service_provider_pro_exclusive_offers_box_title_font_family != false || $internet_service_provider_pro_exclusive_offers_box_title_font_size != false){
+		$custom_css .='.exclusive-offers-block h6{';
+			if($internet_service_provider_pro_exclusive_offers_box_title_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_title_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_box_title_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_exclusive_offers_box_title_font_family).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_box_title_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_exclusive_offers_box_title_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_box_text_color != false || $internet_service_provider_pro_exclusive_offers_box_text_font_family != false || $internet_service_provider_pro_exclusive_offers_box_text_font_size != false){
+		$custom_css .='#exclusive-offers .exclusive-offers-speed{';
+			if($internet_service_provider_pro_exclusive_offers_box_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_text_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_box_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_exclusive_offers_box_text_font_family).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_box_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_exclusive_offers_box_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_box_speed_color != false || $internet_service_provider_pro_exclusive_offers_box_speed_bgcolor != false || $internet_service_provider_pro_exclusive_offers_box_speed_border_color != false){
+		$custom_css .='span.exclusive-offers-package{';
+			if($internet_service_provider_pro_exclusive_offers_box_speed_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_speed_color).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_box_speed_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_speed_bgcolor).';';
+			}
+			if($internet_service_provider_pro_exclusive_offers_box_speed_border_color != false){
+				$custom_css .='border-color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_speed_border_color).';';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_box_speed_bgcolor != false){
+		$custom_css .='span.exclusive-offers-package{
+			background-color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_speed_bgcolor).';
+		}';
+	}
+	if($internet_service_provider_pro_exclusive_offers_box_bgcolor != false){
+		$custom_css .='.exclusive-offers-block{
+			background-color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_bgcolor).';
+		}';
+	}
+	if($internet_service_provider_pro_exclusive_offers_box_hover_bgcolor != false){
+		$custom_css .='.exclusive-offers-block:after{
+			background-color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_hover_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_box_hover_title_color != false){
+		$custom_css .='.exclusive-offers-block:hover h6{
+			color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_hover_title_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_exclusive_offers_box_hover_text_color != false){
+		$custom_css .='#exclusive-offers .exclusive-offers-block:hover .exclusive-offers-speed{
+			color:'.esc_html($internet_service_provider_pro_exclusive_offers_box_hover_text_color).';
+		}';
+	}
+
+	$custom_css .= bmp_dimension_css('internet_service_provider_pro_exclusive_offers_spacing', array(
+		'position' => array('left', 'top', 'bottom', 'right'),
+		'selector' => '#exclusive-offers',
+		'type' => 'padding',
+		'unit' => 'px',
+		'responsive' => false
+	));
+
+	/*---------------- Map Area ----------------*/
+
+	$internet_service_provider_pro_map_area_tagline_color = get_theme_mod('internet_service_provider_pro_map_area_tagline_color');
+	$internet_service_provider_pro_map_area_tagline_font_family = get_theme_mod('internet_service_provider_pro_map_area_tagline_font_family');
+	$internet_service_provider_pro_map_area_tagline_font_size = get_theme_mod('internet_service_provider_pro_map_area_tagline_font_size');
+
+	$internet_service_provider_pro_map_area_tagline_border_color = get_theme_mod('internet_service_provider_pro_map_area_tagline_border_color');
+
+	$internet_service_provider_pro_map_area_main_heading_color = get_theme_mod('internet_service_provider_pro_map_area_main_heading_color');
+	$internet_service_provider_pro_map_area_main_heading_font_family = get_theme_mod('internet_service_provider_pro_map_area_main_heading_font_family');
+	$internet_service_provider_pro_map_area_main_heading_font_size = get_theme_mod('internet_service_provider_pro_map_area_main_heading_font_size');
+
+	$internet_service_provider_pro_map_area_text_color = get_theme_mod('internet_service_provider_pro_map_area_text_color');
+	$internet_service_provider_pro_map_area_text_font_family = get_theme_mod('internet_service_provider_pro_map_area_text_font_family');
+	$internet_service_provider_pro_map_area_text_font_size = get_theme_mod('internet_service_provider_pro_map_area_text_font_size');
+
+	$internet_service_provider_pro_map_area_box_name_color = get_theme_mod('internet_service_provider_pro_map_area_box_name_color');
+	$internet_service_provider_pro_map_area_box_name_font_family = get_theme_mod('internet_service_provider_pro_map_area_box_name_font_family');
+	$internet_service_provider_pro_map_area_box_name_font_size = get_theme_mod('internet_service_provider_pro_map_area_box_name_font_size');
+
+	$internet_service_provider_pro_map_area_box_name_bgcolor = get_theme_mod('internet_service_provider_pro_map_area_box_name_bgcolor');
+	$internet_service_provider_pro_map_area_box_name_border_color = get_theme_mod('internet_service_provider_pro_map_area_box_name_border_color');
+
+	
+	if($internet_service_provider_pro_map_area_tagline_color != false || $internet_service_provider_pro_map_area_tagline_font_family != false || $internet_service_provider_pro_map_area_tagline_font_size != false ){
+		$custom_css .='#map-area .section_main_head span.section-tagline{';
+			if($internet_service_provider_pro_map_area_tagline_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_map_area_tagline_color).';';
+			}
+			if($internet_service_provider_pro_map_area_tagline_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_map_area_tagline_font_family).';';
+			}
+			if($internet_service_provider_pro_map_area_tagline_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_map_area_tagline_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_map_area_tagline_border_color != false){
+		$custom_css .='#map-area span.section-tagline{
+			border-color:'.esc_html($internet_service_provider_pro_map_area_tagline_border_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_map_area_main_heading_color != false || $internet_service_provider_pro_map_area_main_heading_font_family != false || $internet_service_provider_pro_map_area_main_heading_font_size != false){
+		$custom_css .='#map-area .section_main_head h3{';
+			if($internet_service_provider_pro_map_area_main_heading_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_map_area_main_heading_color).';';
+			}
+			if($internet_service_provider_pro_map_area_main_heading_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_map_area_main_heading_font_family).';';
+			}
+			if($internet_service_provider_pro_map_area_main_heading_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_map_area_main_heading_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_map_area_text_color != false || $internet_service_provider_pro_map_area_text_font_family != false || $internet_service_provider_pro_map_area_text_font_size != false){
+		$custom_css .='#map-area .section-text{';
+			if($internet_service_provider_pro_map_area_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_map_area_text_color).';';
+			}
+			if($internet_service_provider_pro_map_area_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_map_area_text_font_family).';';
+			}
+			if($internet_service_provider_pro_map_area_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_map_area_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_map_area_box_name_color != false || $internet_service_provider_pro_map_area_box_name_font_family != false || $internet_service_provider_pro_map_area_box_name_font_size != false){
+		$custom_css .='.map-area-name{';
+			if($internet_service_provider_pro_map_area_box_name_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_map_area_box_name_color).';';
+			}
+			if($internet_service_provider_pro_map_area_box_name_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_map_area_box_name_font_family).';';
+			}
+			if($internet_service_provider_pro_map_area_box_name_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_map_area_box_name_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_map_area_box_name_border_color != false || $internet_service_provider_pro_map_area_box_name_bgcolor != false ){
+		$custom_css .='.map-area-name{';
+			if($internet_service_provider_pro_map_area_box_name_border_color != false){
+				$custom_css .='border-color:'.esc_html($internet_service_provider_pro_map_area_box_name_border_color).';';
+			}
+			if($internet_service_provider_pro_map_area_box_name_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_map_area_box_name_bgcolor).';';
+			}
+		$custom_css .='}';
+	}
+
+
+	$custom_css .= bmp_dimension_css('internet_service_provider_pro_map_area_spacing', array(
+		'position' => array('left', 'top', 'bottom', 'right'),
+		'selector' => '#map-area',
+		'type' => 'padding',
+		'unit' => 'px',
+		'responsive' => false
+	));
+
+	// ------------ Pricing Plans -------------
+
+	$internet_service_provider_pro_pricing_plan_tagline_color = get_theme_mod('internet_service_provider_pro_pricing_plan_tagline_color');
+	$internet_service_provider_pro_pricing_plan_tagline_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_tagline_font_family');
+	$internet_service_provider_pro_pricing_plan_tagline_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_tagline_font_size');
+
+	$internet_service_provider_pro_pricing_plan_tagline_border_color = get_theme_mod('internet_service_provider_pro_pricing_plan_tagline_border_color');
+
+	$internet_service_provider_pro_pricing_plan_main_heading_color = get_theme_mod('internet_service_provider_pro_pricing_plan_main_heading_color');
+	$internet_service_provider_pro_pricing_plan_main_heading_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_main_heading_font_family');
+	$internet_service_provider_pro_pricing_plan_main_heading_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_main_heading_font_size');
+
+	$internet_service_provider_pro_pricing_plan_image_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_image_bgcolor');
+	
+	$internet_service_provider_pro_pricing_plan_title_color = get_theme_mod('internet_service_provider_pro_pricing_plan_title_color');
+	$internet_service_provider_pro_pricing_plan_title_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_title_font_family');
+	$internet_service_provider_pro_pricing_plan_title_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_title_font_size');
+
+	$internet_service_provider_pro_pricing_plan_text_color = get_theme_mod('internet_service_provider_pro_pricing_plan_text_color');
+	$internet_service_provider_pro_pricing_plan_text_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_text_font_family');
+	$internet_service_provider_pro_pricing_plan_text_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_text_font_size');
+
+	$internet_service_provider_pro_pricing_plan_price_color = get_theme_mod('internet_service_provider_pro_pricing_plan_price_color');
+	$internet_service_provider_pro_pricing_plan_price_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_price_font_family');
+	$internet_service_provider_pro_pricing_plan_price_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_price_font_size');
+
+	$internet_service_provider_pro_pricing_plan_package_color = get_theme_mod('internet_service_provider_pro_pricing_plan_package_color');
+	$internet_service_provider_pro_pricing_plan_package_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_package_font_family');
+	$internet_service_provider_pro_pricing_plan_package_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_package_font_size');
+
+	$internet_service_provider_pro_pricing_plan_package_text_color = get_theme_mod('internet_service_provider_pro_pricing_plan_package_text_color');
+	$internet_service_provider_pro_pricing_plan_package_text_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_package_text_font_family');
+	$internet_service_provider_pro_pricing_plan_package_text_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_package_text_font_size');
+
+	$internet_service_provider_pro_pricing_plan_button_color = get_theme_mod('internet_service_provider_pro_pricing_plan_button_color');
+	$internet_service_provider_pro_pricing_plan_button_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_button_font_family');
+	$internet_service_provider_pro_pricing_plan_button_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_button_font_size');
+	$internet_service_provider_pro_pricing_plan_button_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_button_bgcolor');
+	$internet_service_provider_pro_pricing_plan_button_bgcolor_hover = get_theme_mod('internet_service_provider_pro_pricing_plan_button_bgcolor_hover');
+	$internet_service_provider_pro_pricing_plan_button_color_hover = get_theme_mod('internet_service_provider_pro_pricing_plan_button_color_hover');
+
+	$internet_service_provider_pro_pricing_plan_box_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_box_bgcolor');
+
+	$internet_service_provider_pro_pricing_plan_feature_heading_color = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_heading_color');
+	$internet_service_provider_pro_pricing_plan_feature_heading_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_heading_font_family');
+	$internet_service_provider_pro_pricing_plan_feature_heading_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_heading_font_size');
+
+	$internet_service_provider_pro_pricing_plan_feature_heading_border_color = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_heading_border_color');
+
+	$internet_service_provider_pro_pricing_plan_feature_color = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_color');
+	$internet_service_provider_pro_pricing_plan_feature_font_family = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_font_family');
+	$internet_service_provider_pro_pricing_plan_feature_font_size = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_font_size');
+
+	$internet_service_provider_pro_pricing_plan_feature_icon_color = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_icon_color');
+	$internet_service_provider_pro_pricing_plan_feature_icon_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_icon_bgcolor');
+
+	$internet_service_provider_pro_pricing_plan_feature_box_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_feature_box_bgcolor');
+
+	$internet_service_provider_pro_pricing_plan_recommended_box_content_color = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_content_color');
+	$internet_service_provider_pro_pricing_plan_recommended_box_button_color = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_button_color');
+	$internet_service_provider_pro_pricing_plan_recommended_box_button_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_button_bgcolor');
+
+	$internet_service_provider_pro_pricing_plan_recommended_box_button_hover_color = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_button_hover_color');
+	$internet_service_provider_pro_pricing_plan_recommended_box_button_hover_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_button_hover_bgcolor');
+	$internet_service_provider_pro_pricing_plan_recommended_box_image_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_image_bgcolor');
+
+	$internet_service_provider_pro_pricing_plan_recommended_box_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_bgcolor');
+
+	$internet_service_provider_pro_pricing_plan_recommended_box_feature_box_bgcolor = get_theme_mod('internet_service_provider_pro_pricing_plan_recommended_box_feature_box_bgcolor');
+
+	if($internet_service_provider_pro_pricing_plan_tagline_color != false || $internet_service_provider_pro_pricing_plan_tagline_font_family != false || $internet_service_provider_pro_pricing_plan_tagline_font_size != false ){
+		$custom_css .='#pricing-plan .section_main_head span.section-tagline{';
+			if($internet_service_provider_pro_pricing_plan_tagline_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_tagline_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_tagline_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_tagline_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_tagline_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_tagline_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_tagline_border_color != false){
+		$custom_css .='#pricing-plan .section_main_head span.section-tagline{
+			border-color: '.esc_html($internet_service_provider_pro_pricing_plan_tagline_border_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_main_heading_color != false || $internet_service_provider_pro_pricing_plan_main_heading_font_family != false || $internet_service_provider_pro_pricing_plan_main_heading_font_size != false ){
+		$custom_css .='#pricing-plan .section_main_head h3{';
+			if($internet_service_provider_pro_pricing_plan_main_heading_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_main_heading_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_main_heading_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_main_heading_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_main_heading_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_main_heading_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_title_color != false || $internet_service_provider_pro_pricing_plan_title_font_family != false || $internet_service_provider_pro_pricing_plan_title_font_size != false){
+		$custom_css .='.plan-heading h4{';
+			if($internet_service_provider_pro_pricing_plan_title_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_title_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_title_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_title_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_title_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_title_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_text_color != false || $internet_service_provider_pro_pricing_plan_text_font_family != false || $internet_service_provider_pro_pricing_plan_text_font_size != false){
+		$custom_css .='.plan-text{';
+			if($internet_service_provider_pro_pricing_plan_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_text_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_text_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_image_bgcolor != false){
+		$custom_css .='#pricing-plan .plan-image{
+			background-color: '.esc_html($internet_service_provider_pro_pricing_plan_image_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_price_color != false || $internet_service_provider_pro_pricing_plan_price_font_family != false || $internet_service_provider_pro_pricing_plan_price_font_size != false){
+		$custom_css .='.plan_price{';
+			if($internet_service_provider_pro_pricing_plan_price_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_price_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_price_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_price_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_price_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_price_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+	
+	if($internet_service_provider_pro_pricing_plan_package_color != false || $internet_service_provider_pro_pricing_plan_package_font_family != false || $internet_service_provider_pro_pricing_plan_package_font_size != false){
+		$custom_css .='span.plan_package{';
+			if($internet_service_provider_pro_pricing_plan_package_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_package_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_package_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_package_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_package_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_package_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+
+
+	if($internet_service_provider_pro_pricing_plan_package_text_color != false || $internet_service_provider_pro_pricing_plan_package_text_font_family != false || $internet_service_provider_pro_pricing_plan_package_text_font_size != false){
+		$custom_css .='span.plan-short-text{';
+			if($internet_service_provider_pro_pricing_plan_package_text_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_package_text_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_package_text_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_package_text_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_package_text_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_package_text_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_button_color != false || $internet_service_provider_pro_pricing_plan_button_font_family != false || $internet_service_provider_pro_pricing_plan_button_font_size != false || $internet_service_provider_pro_pricing_plan_button_bgcolor != false || $internet_service_provider_pro_pricing_plan_button_bgcolor != false){
+		$custom_css .='#pricing-plan .plan-btn a.theme_button{';
+			if($internet_service_provider_pro_pricing_plan_button_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_button_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_button_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_button_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_button_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_button_font_size).'px;';
+			}
+			if($internet_service_provider_pro_pricing_plan_button_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_pricing_plan_button_bgcolor).';';
+				
+			}
+		$custom_css .='}';
+	}
+	
+	if($internet_service_provider_pro_pricing_plan_button_color_hover != false ){
+		$custom_css .='#pricing-plan .plan-info:hover .plan-btn a.theme_button, #pricing-plan .plan-info .plan-btn a.theme_button:hover{';
+			if($internet_service_provider_pro_pricing_plan_button_color_hover != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_button_color_hover).';';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_button_bgcolor_hover != false){
+		$custom_css .='.plan-info:hover .plan-btn a.theme_button:before{
+				background-color: '.esc_html($internet_service_provider_pro_pricing_plan_button_bgcolor_hover).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_box_bgcolor != false){
+		$custom_css .='.plan-info{
+				background-color: '.esc_html($internet_service_provider_pro_pricing_plan_box_bgcolor).';
+		}';
+	}
+
+
+	if($internet_service_provider_pro_pricing_plan_feature_heading_color != false || $internet_service_provider_pro_pricing_plan_feature_heading_font_family != false || $internet_service_provider_pro_pricing_plan_feature_heading_font_size != false){
+		$custom_css .='.plan-feature-heading{';
+			if($internet_service_provider_pro_pricing_plan_feature_heading_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_feature_heading_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_feature_heading_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_feature_heading_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_feature_heading_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_feature_heading_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_feature_heading_border_color != false){
+		$custom_css .='.plan-feature-heading{
+				border-color: '.esc_html($internet_service_provider_pro_pricing_plan_feature_heading_border_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_feature_icon_color != false){
+		$custom_css .='.plan-feature-icon{
+			color: '.esc_html($internet_service_provider_pro_pricing_plan_feature_icon_color).';
+		}';
+	}
+	if($internet_service_provider_pro_pricing_plan_feature_icon_bgcolor != false){
+		$custom_css .='.plan-feature-icon{
+				background-color: '.esc_html($internet_service_provider_pro_pricing_plan_feature_icon_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_feature_box_bgcolor != false){
+		$custom_css .='.feature-box{
+				background-color: '.esc_html($internet_service_provider_pro_pricing_plan_feature_box_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_feature_color != false || $internet_service_provider_pro_pricing_plan_feature_font_family != false || $internet_service_provider_pro_pricing_plan_feature_font_size != false){
+		$custom_css .='.plan-features ul li{';
+			if($internet_service_provider_pro_pricing_plan_feature_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_pricing_plan_feature_color).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_feature_font_family != false){
+				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_feature_font_family).';';
+			}
+			if($internet_service_provider_pro_pricing_plan_feature_font_size != false){
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_feature_font_size).'px;';
+			}
+		$custom_css .='}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_recommended_box_bgcolor != false){
+		$custom_css .='.recommended_box .plan-info{
+			background-color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_bgcolor).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_recommended_box_content_color != false){
+		$custom_css .='.recommended_box .plan-info h4, .recommended_box .plan-info .plan_price, .recommended_box .plan-info span.plan_package, .recommended_box .plan-info .plan-text, .recommended_box .plan-info span.plan-short-text, .plan-info:hover h4, .plan-info:hover .plan_price, .plan-info:hover span.plan_package, .plan-info:hover .plan-text, .plan-info:hover span.plan-short-text{
+			color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_content_color).';
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_recommended_box_button_color != false){
+		$custom_css .='.recommended_box .plan-info .plan-btn a.theme_button{
+			color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_button_color).' !important;
+		}';
+	}
+	if($internet_service_provider_pro_pricing_plan_recommended_box_button_bgcolor != false){
+		$custom_css .='.recommended_box .plan-info .plan-btn a.theme_button, .plan-info:hover .plan-btn a.theme_button{
+			background-color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_button_bgcolor).' !important;
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_recommended_box_button_hover_color != false){
+		$custom_css .='.recommended_box .plan-info .plan-btn a.theme_button:hover{
+			color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_button_hover_color).' !important;
+		}';
+	}
+	if($internet_service_provider_pro_pricing_plan_recommended_box_button_hover_bgcolor != false){
+		$custom_css .='.recommended_box .plan-info .plan-btn .theme_button::before, .recommended_box:hover .plan-info .plan-btn .theme_button::before{
+			background-color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_button_hover_bgcolor).' !important;
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_recommended_box_image_bgcolor != false){
+		$custom_css .='.recommended_box .plan-image{
+			background-color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_image_bgcolor).' !important;
+		}';
+	}
+
+	if($internet_service_provider_pro_pricing_plan_recommended_box_feature_box_bgcolor != false){
+		$custom_css .='.recommended_box .plan-image{
+			background-color: '.esc_html($internet_service_provider_pro_pricing_plan_recommended_box_feature_box_bgcolor).';
+		}';
+	}
+
+	$custom_css .= bmp_dimension_css('internet_service_provider_pro_pricing_plan_spacing', array(
+		'position' => array('left', 'top', 'bottom', 'right'),
+		'selector' => '#pricing-plan',
 		'type' => 'padding',
 		'unit' => 'px',
 		'responsive' => false
