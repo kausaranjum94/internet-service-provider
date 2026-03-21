@@ -6015,6 +6015,16 @@
     'type'    => 'number'
   ));
 
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_tagline_border_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_tagline_border_color', array(
+    'label' => __('Border Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'settings' => 'internet_service_provider_pro_testimonials_tagline_border_color',
+  )));
+
   $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_main_heading_ct_pallete',
     array(
       'default' => '',
@@ -6061,7 +6071,53 @@
     'type'    => 'number'
   ));
 
-   $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_content_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_text_ct_pallete',
+    array(
+      'default' => '',
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
+  ));
+  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_testimonials_text_ct_pallete',
+    array(
+    'label' => __('Text Typography ','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials'
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_text_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_text_color', array(
+    'label' => __('Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'settings' => 'internet_service_provider_pro_testimonials_text_color',
+  )));
+
+  $wp_customize->add_setting('internet_service_provider_pro_testimonials_text_font_family',array(
+    'default' => '',
+    'capability' => 'edit_theme_options',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control(
+    'internet_service_provider_pro_testimonials_text_font_family', array(
+    'section'  => 'internet_service_provider_pro_testimonials',
+    'label'    => __('Font Family','internet-service-provider-pro'),
+    'type'     => 'select',
+    'choices'  => $font_array,
+  ));
+
+  $wp_customize->add_setting('internet_service_provider_pro_testimonials_text_font_size',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_testimonials_text_font_size',array(
+    'label' => __('Font Size','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'setting' => 'internet_service_provider_pro_testimonials_text_font_size',
+    'type'    => 'number'
+  ));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_content_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
@@ -6153,134 +6209,96 @@
     'type'    => 'number'
   ));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_name_hover_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_box_bgcolor', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_name_hover_color', array(
-    'label' => __('Hover Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_testimonials',
-    'settings' => 'internet_service_provider_pro_testimonials_name_hover_color',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_desig_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_testimonials_desig_ct_pallete',
-    array(
-    'label' => __('Testimonial Designation Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_testimonials'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_desig_color', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_desig_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_testimonials',
-    'settings' => 'internet_service_provider_pro_testimonials_desig_color',
-  )));
-  $wp_customize->add_setting('internet_service_provider_pro_testimonials_desig_font_family',array(
-    'default' => '',
-    'capability' => 'edit_theme_options',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control(
-    'internet_service_provider_pro_testimonials_desig_font_family', array(
-    'section'  => 'internet_service_provider_pro_testimonials',
-    'label'    => __('Font Family','internet-service-provider-pro'),
-    'type'     => 'select',
-    'choices'  => $font_array,
-  ));
-
-  $wp_customize->add_setting('internet_service_provider_pro_testimonials_desig_font_size',array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_text_field'
-  ));
-  $wp_customize->add_control('internet_service_provider_pro_testimonials_desig_font_size',array(
-    'label' => __('Font Size','internet-service-provider-pro'),
-    
-    'section' => 'internet_service_provider_pro_testimonials',
-    'setting' => 'internet_service_provider_pro_testimonials_desig_font_size',
-    'type'    => 'number'
-  ));
-
-   $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_reviews_ct_pallete',
-    array(
-      'default' => '',
-      'transport' => 'postMessage',
-      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
-  ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_testimonials_reviews_ct_pallete',
-    array(
-    'label' => __('Testimonial Reviews Typography ','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_testimonials'
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_star_color1', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_star_color1', array(
-    'label' => __('Star Color 1', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_testimonials',
-    'settings' => 'internet_service_provider_pro_testimonials_star_color1',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_star_color2', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_star_color2', array(
-    'label' => __('Star Color 2', 'internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_testimonials',
-    'settings' => 'internet_service_provider_pro_testimonials_star_color2',
-  )));
-
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_box_bgcolor', array(
-    'default' => '',
-    'sanitize_callback' => 'sanitize_hex_color'
-  ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_box_bgcolor', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_box_bgcolor', array(
     'label' => __('Box Background Color', 'internet-service-provider-pro'),
     'section' => 'internet_service_provider_pro_testimonials',
-    'settings' => 'internet_service_provider_pro_testimonials_box_bgcolor',
+    'settings' => 'internet_service_provider_pro_testimonials_video_box_bgcolor',
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_dots_ct_pallete',
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_box_hover_bgcolor', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_box_hover_bgcolor', array(
+    'label' => __('Box Hover Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'settings' => 'internet_service_provider_pro_testimonials_video_box_hover_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_box_hover_content_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_box_hover_content_color', array(
+    'label' => __('Box Hover Content Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'settings' => 'internet_service_provider_pro_testimonials_video_box_hover_content_color',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_icon_ct_pallete',
     array(
       'default' => '',
       'transport' => 'postMessage',
       'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
   ));
-  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_testimonials_dots_ct_pallete',
+  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_icon_ct_pallete',
     array(
-    'label' => __('Dots Typography ','internet-service-provider-pro'),
+    'label' => __('Video Icon Typography ','internet-service-provider-pro'),
     'section' => 'internet_service_provider_pro_testimonials'
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_dots_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_icon_color', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_dots_color', array(
-    'label' => __('Color', 'internet-service-provider-pro'),
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_icon_color', array(
+    'label' => __('Icon Color', 'internet-service-provider-pro'),
     'section' => 'internet_service_provider_pro_testimonials',
-    'settings' => 'internet_service_provider_pro_testimonials_dots_color',
+    'settings' => 'internet_service_provider_pro_testimonials_video_icon_color',
   )));
 
-  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_active_dots_color', array(
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_icon_bgcolor', array(
     'default' => '',
     'sanitize_callback' => 'sanitize_hex_color'
   ));
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_active_dots_color', array(
-    'label' => __('Active Dots Color', 'internet-service-provider-pro'),
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_icon_bgcolor', array(
+    'label' => __('Icon Background Color', 'internet-service-provider-pro'),
     'section' => 'internet_service_provider_pro_testimonials',
-    'settings' => 'internet_service_provider_pro_testimonials_active_dots_color',
+    'settings' => 'internet_service_provider_pro_testimonials_video_icon_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_icon_hover_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_icon_hover_color', array(
+    'label' => __('Icon Hover Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'settings' => 'internet_service_provider_pro_testimonials_video_icon_hover_color',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_icon_hover_bgcolor', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_icon_hover_bgcolor', array(
+    'label' => __('Icon Hover Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'settings' => 'internet_service_provider_pro_testimonials_video_icon_hover_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_testimonials_video_overlay_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_testimonials_video_overlay_color', array(
+    'label' => __('Overlay Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_testimonials',
+    'settings' => 'internet_service_provider_pro_testimonials_video_overlay_color',
   )));
 
   $wp_customize->add_setting('internet_service_provider_pro_testimonial_spacing_left_desktop', array(
