@@ -2324,24 +2324,16 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		/*---------------__Blog Page----------------------*/
 
 		// /footer\
+		set_theme_mod( 'internet_service_provider_pro_footer_copyright_text', 'Copyright 2026' );
 		set_theme_mod( 'internet_service_provider_pro_footer_copyright_para', 'All Rights Reserved.' );
-		set_theme_mod( 'internet_service_provider_pro_payment_images_count', 8);
-		$payment_url = array('https://payments.google.com/gp/w/home/signup','https://www.americanexpress.com/','https://www.discover.com/credit-cards/clicktopay/','https://stripe.com/in/payments/payment-links'
-		,'https://www.apple.com/apple-pay/','https://www.visa.co.in/pay-with-visa/click-to-pay-with-visa.html','https://www.mastercard.co.in/en-in.html','https://www.paypal.com/in/webapps/mpp/paypal-me');
-
-		for ($i=1; $i <=8; $i++) {
-			set_theme_mod( 'internet_service_provider_pro_payment_images'.$i,get_template_directory_uri().'/assets/images/footer/f-payment'.$i.'.png');
-			set_theme_mod( 'internet_service_provider_pro_payment_images_url'.$i, $payment_url[ $i - 1 ] );
-		}
-
-
+		
 
 	/*---------------__Blog Page----------------------*/
+
 		set_theme_mod('internet_service_provider_pro_blog_category_prev_title', 'Previous');
 		set_theme_mod('internet_service_provider_pro_blog_category_next_title','Next');
 		 
 
-		set_theme_mod( 'internet_service_provider_pro_error_temp_bg_images',get_template_directory_uri().'/assets/images/404.png' );
 		set_theme_mod( 'internet_service_provider_pro_404_page_heading', 'Page Not Found' );
 		set_theme_mod( 'internet_service_provider_pro_404_page_content', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' );
 		set_theme_mod( 'internet_service_provider_pro_404_page_button_text', 'Back to Home' );

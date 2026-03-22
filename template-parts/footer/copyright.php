@@ -15,11 +15,11 @@ $img_bg = get_theme_mod('internet_service_provider_pro_footer_copyright_image_bg
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <?php //if ( get_theme_mod('internet_service_provider_pro_footer_copyright_para') != ''): ?>
 
-                    <p class="copyright-text text-center">Copyright 2025 -
-                        <?php if( get_theme_mod( 'vw_furniture_pro_credit_link',true) != '') { ?>
-                        <span class="credit_link"><?php echo esc_html( internet_service_provider_pro_credit_link() ); ?></span>
+                    <p class="copyright-text text-center">
+                        <?php echo get_theme_mod( 'internet_service_provider_pro_footer_copyright_text'); ?>
+                        <?php if( get_theme_mod( 'internet_service_provider_pro_footer_copyright_para',true) != '') { ?>
+                            <span class="credit_link"><?php echo esc_html( internet_service_provider_pro_credit_link() ); ?></span>
                         <?php echo get_theme_mod( 'internet_service_provider_pro_footer_copyright_para'); ?>
                     </p>
                     <?php } ?>

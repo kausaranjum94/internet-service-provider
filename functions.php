@@ -353,7 +353,7 @@ require get_parent_theme_file_path('custom-filter.php' );
 define('internet_service_provider_pro_SITE_URL','https://www.vwthemes.com/');
 /* Theme Credit link */
 function internet_service_provider_pro_credit_link() {
-	echo esc_html_e('','internet-service-provider-pro'). "<a href=".esc_url(internet_service_provider_pro_SITE_URL)." target='_blank'>  KitchenCraft </a>";
+	echo esc_html('','internet-service-provider-pro'). "<a href=".esc_url(internet_service_provider_pro_SITE_URL)." target='_blank'>  Internet Service Provider </a>";
 }
 /*Radio Button sanitization*/
 function internet_service_provider_pro_sanitize_choices( $input, $setting ) {
