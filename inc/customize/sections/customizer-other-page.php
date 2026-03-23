@@ -980,6 +980,16 @@
      )
   ));
 
+  $wp_customize->add_setting('internet_service_provider_pro_single_post_page_related_post_heading',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_single_post_page_related_post_heading',array(
+    'label' => __('Add Heading','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_main_banner',
+    'setting' => 'internet_service_provider_pro_single_post_page_related_post_heading',
+    'type'    => 'text'
+  ));
 
   // Page Title layout
 

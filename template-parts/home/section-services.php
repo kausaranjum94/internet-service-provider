@@ -59,70 +59,68 @@
          <div class="about-head-outer mt-4">
             <div class="row services-icon-box justify-content-center">
                 <?php
-                    $about_list_no = get_theme_mod('internet_service_provider_pro_services_box_number');
-                    for($i=1; $i<=$about_list_no; $i++)
-                    {
+                $services = new WP_Query(array(
+                    'post_type'      => 'services',
+                    'posts_per_page' => -1,
+                    'order'          => 'ASC',
+                ));
+
+                if($services->have_posts()):
+                    while($services->have_posts()): $services->the_post();
+                        $price_text       = get_post_meta(get_the_ID(), '_price_text', true);
+                        $price            = get_post_meta(get_the_ID(), '_price', true);
+                        $short_description= get_post_meta(get_the_ID(), '_short_description', true);
+                        $bg               = get_post_meta(get_the_ID(), '_background_style', true);
+                        $images           = get_post_meta(get_the_ID(), '_customer_images', true);
+                        $images_array     = !empty($images) ? explode(',', $images) : array();
                 ?>
-                <div class="col-lg-4 col-md-6 col-sm-6 mb-4 services-box" data-aos="fade-up"
-                    data-aos-duration="2000">
-                    <div class="services-block">
-                        <?php if(get_theme_mod('internet_service_provider_pro_services_box_image'.$i)!=''){ ?>
-                            <img src="<?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_image'.$i)); ?>" >
-                        <?php } ?>
+                <div class="col-lg-4 col-md-6 col-sm-6 mb-4 services-box <?php echo esc_attr($bg); ?>" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="services-block ">
+                        <?php if(has_post_thumbnail()): ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                        <?php endif; ?>
                         <div class="services-block-content">
                             <div class="services-block-top-content">
                                 <div class="customer-image-box">
                                     <div class="customer-image">
-                                        <?php
-                                            for($j=1; $j<=3; $j++)
-                                            {
-                                            ?>
-                                                <img src="<?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_customer_image'.$i.$j)); ?>"
-                                            >
-                                        <?php } ?>
+                                        <?php 
+                                        $count = 0;
+                                        foreach($images_array as $id){
+                                            if($count >= 3) break; // limit to 3
+                                            echo wp_get_attachment_image((int) $id, 'thumbnail');
+                                            $count++;
+                                        }
+                                        ?>
+                                        
                                         <span class="more-customer"><i class="fa-solid fa-plus"></i></span>
                                     </div>
                                 </div>
                                 <div class="pricing-box">
                                     <div class="pricing-box-title d-flex align-items-center justify-content-between mb-2">
-                                        <?php if(get_theme_mod('internet_service_provider_pro_services_box_start_now'.$i)!=''){ ?>
-                                            <span class="start-now">
-                                                <?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_start_now'.$i)); ?>
-                                            </span>
-                                        <?php } ?>
-                                         <?php if(get_theme_mod('internet_service_provider_pro_services_box_link_icon'.$i)!=''){ ?>
-                                            <a
-                                                href="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_services_box_link_icon_url'.$i)); ?>">
-                                                <?php if( get_theme_mod( 'internet_service_provider_pro_services_box_link_icon'.$i,true) != '') { ?>
-                                                <i
-                                                    class="<?php echo esc_attr(get_theme_mod('internet_service_provider_pro_services_box_link_icon'.$i)); ?>"></i>
-                                                <?php } ?>
-                                            </a>
-                                        <?php } ?>
+                                        <?php if(!empty($price_text)): ?>
+                                            <span class="start-now"><?php echo esc_html($price_text); ?></span>
+                                        <?php endif; ?>
+                                        
+                                        <a href="<?php the_permalink(); ?>">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
                                     </div>
-                                    <?php if(get_theme_mod('internet_service_provider_pro_services_box_start_now_pricing'.$i)!=''){ ?>
-                                        <span class="start-now-pricing">
-                                            <?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_start_now_pricing'.$i)); ?>
-                                        </span>
-                                    <?php } ?>
+                                    <?php if(!empty($price)): ?>
+                                        <span class="start-now-pricing"><?php echo esc_html($price); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="services-block-bottom-content">
-                                <?php if(get_theme_mod('internet_service_provider_pro_services_box_title'.$i)!=''){ ?>
-                                    <h6>
-                                        <?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_title'.$i)); ?>
-                                    </h6>
-                                <?php } ?>
-                                <?php if(get_theme_mod('internet_service_provider_pro_services_box_text'.$i)!=''){ ?>
-                                    <div class="box-text">
-                                        <?php echo esc_html(get_theme_mod('internet_service_provider_pro_services_box_text'.$i)); ?>
-                                    </div>
-                                <?php } ?>
+                                <h6><?php the_title(); ?></h6>
+                                <?php if(!empty($short_description)): ?>
+                                    <div class="box-text"><?php echo esc_html($short_description); ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php } ?>
+                <?php endwhile; wp_reset_postdata(); endif; ?>
             </div>
+
         </div>
 </section>

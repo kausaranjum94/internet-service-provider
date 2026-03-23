@@ -405,16 +405,16 @@ span.section-text {
 .customer-image-box {
     display: none;
 }
-.services-box:first-child .customer-image-box {
+.services-box.dark .customer-image-box {
     display: block;
 }
-.services-box:first-child .pricing-box {
+.services-box.dark .pricing-box {
     background-color: transparent;
 }
-.services-box:first-child .start-now {
+.services-box.dark .start-now {
     color: white;
 }
-.services-box:first-child .services-block-content {
+.services-box.dark .services-block-content {
     background: black;
 }
 .services-block {
@@ -464,7 +464,6 @@ span.start-now-pricing {
   color: white;
   font-size: 32px;
   font-weight: 400;
-  max-width: 57%;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -478,7 +477,7 @@ span.start-now-pricing {
   font-size: 16px;
   color: white;
 }
-.services-box:first-child:hover .services-block-content{
+.services-box.dark:hover .services-block-content{
   background: #1C1C1F;
 }
 .services-block-top-content {
@@ -504,7 +503,7 @@ span.more-customer {
 .services-block-bottom-content {
     padding-top: 22px;
 }
-.services-box:first-child .services-block-bottom-content {
+.services-box.dark .services-block-bottom-content {
     border-top: 1px solid #3C3C3C;
 }
 /* Why Choose us */
@@ -904,12 +903,17 @@ span.why-choose-us-step {
   padding-bottom: 16px;
 }
 .plan-features ul li {
-    color: #BABABA;
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 6px;
-    list-style: none;
-    margin-bottom: 17px;
+  color: #BABABA;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  list-style: none;
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center;
+}
+.plan-feature-text {
+    flex: 1;
 }
 .plan-feature-icon {
     background-color: var(--primary-color);
@@ -935,6 +939,9 @@ span.why-choose-us-step {
 .plan-head .plan-info a.theme_button2:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
+}
+.plan-info:hover .plan-image{
+  background-color: white;
 }
 .plan-price {
   margin-top: 23px;
@@ -1154,7 +1161,6 @@ button.owl-dot.active {
     justify-content: center;
     padding: 17px;
     border-radius: 50%;
-    margin-right: 12px;
     color: white;
     position: relative;
     z-index: 9;

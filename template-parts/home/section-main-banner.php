@@ -23,7 +23,7 @@
     
     <div class="container">
         <div class="main-banner-row row">
-            <div class="col-lg-5 col-md-5" data-aos="fade-right" data-aos-duration="2000">
+            <div class="col-lg-5 col-md-5" data-aos="fade-up" data-aos-duration="2000">
                 <div class="banner-head-outer">
                     <div class="banner-head pb-2">
                         <?php if(get_theme_mod('internet_service_provider_pro_main_banner_tagline')!=''){ ?>
@@ -106,10 +106,12 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4">
-                <div class="banner-column-image">
-                    <?php if(get_theme_mod('internet_service_provider_pro_main_banner_column_image')!=''){ ?>
-                        <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_column_image')); ?>">
-                    <?php } ?>
+                <div class="banner-column-image image-zoom-effect">
+                    <div class="banner-column-image-inner position-relative box">
+                        <?php if(get_theme_mod('internet_service_provider_pro_main_banner_column_image')!=''){ ?>
+                            <img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_main_banner_column_image')); ?>">
+                        <?php } ?>
+                    </div>
                     <div class="rating-records">
                         <?php if(get_theme_mod('internet_service_provider_pro_main_banner_column_image_pricing_text')!=''){ ?>
                             <span class="pricing-text" data-aos="fade-up" data-aos-duration="1100">

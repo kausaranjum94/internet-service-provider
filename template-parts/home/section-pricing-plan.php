@@ -130,9 +130,9 @@
                       { 
                       ?>
                         <?php if(get_theme_mod('internet_service_provider_pro_pricing_plan_feature_title'.$i.$j)!=''){ ?>
-                          <li>    
+                          <li>
                             <span class="plan-feature-icon"><i class="fa-solid fa-plus"></i></span>
-                            <?php echo esc_html(get_theme_mod('internet_service_provider_pro_pricing_plan_feature_title'.$i.$j)); ?>
+                            <span class="plan-feature-text"><?php echo esc_html(get_theme_mod('internet_service_provider_pro_pricing_plan_feature_title'.$i.$j)); ?></span>
                           </li>
                         <?php } } ?>
                     </ul>

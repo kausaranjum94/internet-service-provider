@@ -344,6 +344,9 @@ require get_template_directory().'/inc/license-expiry-timer.php';
 */
 require get_parent_theme_file_path( 'inc/custom-functions.php');
 
+/** Breadcrumb */
+require get_parent_theme_file_path( 'inc/breadcrumbs.php');
+
 require get_template_directory().'/inc/verify_theme_version.php';
 /* Theme Wizard */
 require get_template_directory() . '/theme-wizard/config.php';

@@ -114,32 +114,6 @@ if ( !function_exists('internet_service_provider_pro_social_share') ) {
 }
 
 
-function internet_service_provider_pro_the_breadcrumb() {
-    if (!is_home()) {
-      echo '<a href="';
-        echo esc_url(home_url());
-      echo '">';
-       echo ' Home /';
-      echo "</a> ";
-      if (is_category() || is_single()) {
-        the_category(', ');
-        if (is_single()) {
-          echo "<span> ";
-            the_title();
-          echo "</span> ";
-        }
-      } elseif (is_page()) {
-        echo "<span> ";
-          the_title();
-        echo "</span> ";
-      } elseif (is_tax()) {
-        echo '<span>';
-        single_term_title();
-        echo '</span>';
-      }
-    }
-}
-
 function internet_service_provider_pro_string_limit_words($string, $word_limit) {
   $words = explode(' ', $string, ($word_limit + 1));
   if(count($words) > $word_limit)

@@ -1344,12 +1344,12 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		// );
 		// $menu_id = wp_insert_post($menu);
 
-		$content = '<!-- wp:shortcode -->
-		[internet-service-provider-pro-testimonials]
-		<!-- /wp:shortcode -->
-
+		$content = '
 		<!-- wp:shortcode -->
 		[internet-service-provider-pro-about-us]
+		<!-- /wp:shortcode -->
+		<!-- wp:shortcode -->
+		[internet-service-provider-pro-testimonials]
 		<!-- /wp:shortcode -->
 
 		<!-- wp:paragraph -->
@@ -1444,7 +1444,9 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod( 'internet_service_provider_pro_header_button_title', 'Login' );
 		set_theme_mod( 'internet_service_provider_pro_header_button_url', home_url('/?action=login') );
 
-		
+		set_theme_mod( 'internet_service_provider_pro_header_serach_input_placeholder_text', 'Search Here');
+
+		set_theme_mod( 'internet_service_provider_pro_single_post_page_related_post_heading', 'Related Post');
 
 		// ------------  Main Banner  ------------
 
@@ -1534,26 +1536,128 @@ function moveArrayPosition(&$array, $key, $new_position) {
         set_theme_mod( 'internet_service_provider_pro_services_main_heading', 'Internet Services Built for Your Digital Life' );
 		set_theme_mod( 'internet_service_provider_pro_services_text', 'Because Fast Isn’t Enough You Need Internet You Can Trust.' );
 
-		set_theme_mod( 'internet_service_provider_pro_services_box_number', '3');
+			// Define demo data
+			$services_title = array(
+				'High-Speed Fiber Internet',
+				'Business Connectivity',
+				'GamerX Package'
+			);
 
-        $services_title = array('High-Speed Fiber Internet','Business Connectivity','GamerX Package');
-		$services_text = array('Reliable internet solutions for home and business.','High-speed bandwidth and static IPs for modern businesses.','Ultra-low latency internet for serious gamers. No lag. Just play.');
-		$services_price = array('$29/month','$49/month','$79/month');
+			$services_text = array(
+				'Reliable internet solutions for home and business.',
+				'High-speed bandwidth and static IPs for modern businesses.',
+				'Ultra-low latency internet for serious gamers. No lag. Just play.'
+			);
 
-        for($i=1; $i<=3; $i++)
-        {	
-			set_theme_mod( 'internet_service_provider_pro_services_box_image'.$i, get_template_directory_uri().'/assets/images/services/service'.$i.'.png');
-        	set_theme_mod( 'internet_service_provider_pro_services_box_title'.$i, $services_title[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_services_box_text'.$i, $services_text[$i-1] );
-			set_theme_mod( 'internet_service_provider_pro_services_box_start_now'.$i, 'Start on' );
-			set_theme_mod( 'internet_service_provider_pro_services_box_start_now_pricing'.$i, $services_price[$i-1] );
-			for($j=1; $j<=3; $j++)
-        	{
-				set_theme_mod( 'internet_service_provider_pro_services_box_customer_image'.$i.$j, get_template_directory_uri().'/assets/images/services/customer'.$j.'.png');
+			$services_price = array(
+				'$29/month',
+				'$49/month',
+				'$79/month'
+			);
+
+			$services_price_text = array(
+				'Start on',
+				'Start on',
+				'Start on'
+			);
+
+			// Demo images (from theme assets)
+			$service_images = array(
+				get_template_directory_uri().'/assets/images/services/service1.png',
+				get_template_directory_uri().'/assets/images/services/service2.png',
+				get_template_directory_uri().'/assets/images/services/service3.png'
+			);
+
+			$customer_images = array(
+				get_template_directory_uri().'/assets/images/services/customer1.png',
+				get_template_directory_uri().'/assets/images/services/customer2.png',
+				get_template_directory_uri().'/assets/images/services/customer3.png'
+			);
+
+			// Loop through demo services
+			for($i=0; $i<3; $i++) {
+				$post_id = wp_insert_post(array(
+					'post_title'   => wp_strip_all_tags($services_title[$i]),
+					'post_content' => '',
+					'post_type'    => 'services',
+					'post_status'  => 'publish',
+				));
+
+				if($post_id) {
+					// Add meta fields
+					update_post_meta($post_id, '_price_text', sanitize_text_field($services_price_text[$i]));
+					update_post_meta($post_id, '_price', sanitize_text_field($services_price[$i]));
+					update_post_meta($post_id, '_short_description', sanitize_textarea_field($services_text[$i]));
+					update_post_meta($post_id, '_background_style', ($i==0 ? 'dark' : 'light'));
+
+					// Import featured image
+					require_once(ABSPATH . 'wp-admin/includes/image.php');
+					require_once(ABSPATH . 'wp-admin/includes/file.php');
+					require_once(ABSPATH . 'wp-admin/includes/media.php');
+
+					$image_url = $service_images[$i];
+					$tmp = download_url($image_url);
+					if(!is_wp_error($tmp)){
+						$file_array = array(
+							'name'     => basename($image_url),
+							'tmp_name' => $tmp
+						);
+						$image_id = media_handle_sideload($file_array, $post_id);
+						if(!is_wp_error($image_id)){
+							set_post_thumbnail($post_id, $image_id);
+						} else {
+							@unlink($file_array['tmp_name']);
+						}
+					}
+
+					// Import customer images
+					$customer_ids = array();
+					foreach($customer_images as $url){
+						$tmp = download_url($url);
+						if(!is_wp_error($tmp)){
+							$file_array = array(
+								'name'     => basename($url),
+								'tmp_name' => $tmp
+							);
+							$cid = media_handle_sideload($file_array, $post_id);
+							if(!is_wp_error($cid)){
+								$customer_ids[] = $cid;
+							} else {
+								@unlink($file_array['tmp_name']);
+							}
+						}
+					}
+					if(!empty($customer_ids)){
+						update_post_meta($post_id, '_customer_images', implode(',', $customer_ids));
+					}
+
+					// Optional: link icon meta
+					// update_post_meta($post_id, '_link_icon_class', 'fa-solid fa-arrow-right');
+					// update_post_meta($post_id, '_link_icon_url', home_url('/contact'));
+				}
 			}
-			set_theme_mod( 'internet_service_provider_pro_services_box_link_icon'.$i, 'fa-solid fa-arrow-right' );
-			set_theme_mod( 'internet_service_provider_pro_services_box_link_icon_url'.$i, home_url('/contact') );
-		} 
+
+
+		// set_theme_mod( 'internet_service_provider_pro_services_box_number', '3');
+
+        // $services_title = array('High-Speed Fiber Internet','Business Connectivity','GamerX Package');
+		// $services_text = array('Reliable internet solutions for home and business.','High-speed bandwidth and static IPs for modern businesses.','Ultra-low latency internet for serious gamers. No lag. Just play.');
+		// $services_price = array('$29/month','$49/month','$79/month');
+
+        // for($i=1; $i<=3; $i++)
+        // {	
+		// 	set_theme_mod( 'internet_service_provider_pro_services_box_image'.$i, get_template_directory_uri().'/assets/images/services/service'.$i.'.png');
+        // 	set_theme_mod( 'internet_service_provider_pro_services_box_title'.$i, $services_title[$i-1] );
+		// 	set_theme_mod( 'internet_service_provider_pro_services_box_text'.$i, $services_text[$i-1] );
+		// 	set_theme_mod( 'internet_service_provider_pro_services_box_start_now'.$i, 'Start on' );
+		// 	set_theme_mod( 'internet_service_provider_pro_services_box_start_now_pricing'.$i, $services_price[$i-1] );
+		// 	for($j=1; $j<=3; $j++)
+        // 	{
+		// 		set_theme_mod( 'internet_service_provider_pro_services_box_customer_image'.$i.$j, get_template_directory_uri().'/assets/images/services/customer'.$j.'.png');
+		// 	}
+		// 	set_theme_mod( 'internet_service_provider_pro_services_box_link_icon'.$i, 'fa-solid fa-arrow-right' );
+		// 	set_theme_mod( 'internet_service_provider_pro_services_box_link_icon_url'.$i, home_url('/contact') );
+		// } 
 
 		// ------------- Why Choose Us -------------
 
@@ -2081,7 +2185,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			<div class="cf7-row">
 				<div class="cf7-col">
 					<label>Phone Number</label>
-					[tel phone class:cf7-input placeholder "+91 9876543210"]
+					[tel* phone class:cf7-input placeholder "+91 9876543210"]
 				</div>
 				<div class="cf7-col">
 					<label>Preferred Installation Date</label>
@@ -2091,39 +2195,40 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 			<div class="cf7-row">
 				<div class="cf7-col">
-					<label>Kitchen Size / Layout</label>
-					[text kitchen-layout class:cf7-input placeholder "L-Shaped, U-Shaped, Island..."]
+					<label>Service Address</label>
+					[text* service-address class:cf7-input placeholder "Street, City, ZIP"]
 				</div>
 				<div class="cf7-col">
-					<label>Budget Range</label>
-					[text budget class:cf7-input placeholder "₹2,00,000 - ₹5,00,000"]
+					<label>Plan Selection</label>
+					[select* plan class:cf7-input "Basic Broadband" "High-Speed Fiber" "Business Package" "Unlimited Data"]
 				</div>
 			</div>
 
 			<div class="cf7-row">
 				<div class="cf7-col">
-					<label>Services Required</label>
-					[checkbox services class:cf7-checkbox "Design Consultation" "Installation" "Appliance Integration" "Lighting Setup" "Full Kitchen Solution"]
+					<label>Additional Services</label>
+					[checkbox services class:cf7-checkbox "Wi-Fi Router Setup" "Static IP" "VoIP Connection" "Network Security"]
 				</div>
 				<div class="cf7-col">
-					<label>Preferred Contact Date</label>
-					[date contact-date class:cf7-input]
-				</div>
-			</div>
-
-			<div class="cf7-row">
-				<div class="cf7-col-full">
-					<label>Tell Us About Your Kitchen Vision</label>
-					[textarea kitchen-details class:cf7-textarea placeholder "Share your design ideas, style preferences, and special requests..."]
+					<label>Preferred Contact Time</label>
+					[select contact-time class:cf7-input "Morning" "Afternoon" "Evening"]
 				</div>
 			</div>
 
 			<div class="cf7-row">
 				<div class="cf7-col-full">
-					[submit "Submit Inquiry"]
+					<label>Tell Us About Your Internet Needs</label>
+					[textarea requirements class:cf7-textarea placeholder "Share your usage needs, devices, or special requests..."]
+				</div>
+			</div>
+
+			<div class="cf7-row">
+				<div class="cf7-col-full">
+					[submit "Submit Request"]
 				</div>
 			</div>
 		</div>
+
 
 		 [_site_title] "[your-subject]"
 		 [_site_title] <themespride@gmail.com>
@@ -2191,7 +2296,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			<div class="cf7-row">
 				<div class="cf7-col">
 					<label>Phone Number</label>
-					[tel phone class:cf7-input placeholder "+91 9876543210"]
+					[tel* phone class:cf7-input placeholder "+91 9876543210"]
 				</div>
 				<div class="cf7-col">
 					<label>Preferred Installation Date</label>
@@ -2201,42 +2306,39 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 			<div class="cf7-row">
 				<div class="cf7-col">
-					<label>Kitchen Size / Layout</label>
-					[text kitchen-layout class:cf7-input placeholder "L-Shaped, U-Shaped, Island..."]
+					<label>Service Address</label>
+					[text* service-address class:cf7-input placeholder "Street, City, ZIP"]
 				</div>
 				<div class="cf7-col">
-					<label>Budget Range</label>
-					[text budget class:cf7-input placeholder "₹2,00,000 - ₹5,00,000"]
+					<label>Plan Selection</label>
+					[select* plan class:cf7-input "Basic Broadband" "High-Speed Fiber" "Business Package" "Unlimited Data"]
 				</div>
 			</div>
 
 			<div class="cf7-row">
 				<div class="cf7-col">
-					<label>Services Required</label>
-					[checkbox services class:cf7-checkbox "Design Consultation" "Installation" "Appliance Integration" "Lighting Setup" "Full Kitchen Solution"]
+					<label>Additional Services</label>
+					[checkbox services class:cf7-checkbox "Wi-Fi Router Setup" "Static IP" "VoIP Connection" "Network Security"]
 				</div>
 				<div class="cf7-col">
-					<label>Preferred Contact Date</label>
-					[date contact-date class:cf7-input]
-				</div>
-			</div>
-
-			<div class="cf7-row">
-				<div class="cf7-col-full">
-					<label>Tell Us About Your Kitchen Vision</label>
-					[textarea kitchen-details class:cf7-textarea placeholder "Share your design ideas, style preferences, and special requests..."]
+					<label>Preferred Contact Time</label>
+					[select contact-time class:cf7-input "Morning" "Afternoon" "Evening"]
 				</div>
 			</div>
 
 			<div class="cf7-row">
 				<div class="cf7-col-full">
-					[submit "Submit Inquiry"]
+					<label>Tell Us About Your Internet Needs</label>
+					[textarea requirements class:cf7-textarea placeholder "Share your usage needs, devices, or special requests..."]
+				</div>
+			</div>
+
+			<div class="cf7-row">
+				<div class="cf7-col-full">
+					[submit "Submit Request"]
 				</div>
 			</div>
 		</div>
-
-
-
 		');
 
 		$cf7mail_data = array(
@@ -2278,7 +2380,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod('internet_service_provider_pro_contact_page_contact_details_text', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.');
 		//Email Title text
 		set_theme_mod('internet_service_provider_pro_contactpage_email_title', 'Email Address');
-		set_theme_mod('internet_service_provider_pro_contactpage_email', 'wedding@gmail.com');
+		set_theme_mod('internet_service_provider_pro_contactpage_email', 'themexyz@gmail.com');
 		//Address Title text
 		set_theme_mod('internet_service_provider_pro_address_title', 'Our Location');
 		set_theme_mod('internet_service_provider_pro_address', 'R77 Franklin st, San Francisco');
@@ -2326,6 +2428,8 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		// /footer\
 		set_theme_mod( 'internet_service_provider_pro_footer_copyright_text', 'Copyright 2026' );
 		set_theme_mod( 'internet_service_provider_pro_footer_copyright_para', 'All Rights Reserved.' );
+
+		set_theme_mod('internet_service_provider_pro_header_skip_link', 'Skip to main content');
 		
 
 	/*---------------__Blog Page----------------------*/

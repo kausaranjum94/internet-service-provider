@@ -18,10 +18,10 @@ $catgory_svg = file_get_contents(get_template_directory_uri().'/assets/images/ca
     <div class="container">
         <div class="middle-align">
             <div class="row">
-                <div class="col-lg-4 col-md-5" id="sidebar">
+                <div class="col-lg-4 col-md-4" id="sidebar">
                     <?php get_sidebar('sidebar-1'); ?>
                 </div>
-                <div class="col-lg-8 col-md-7 content_page">
+                <div class="col-lg-8 col-md-8 content_page">
                     <div class="row">
                         <?php if ( have_posts() ) : ?>
                         <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

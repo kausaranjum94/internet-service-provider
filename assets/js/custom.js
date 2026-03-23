@@ -203,13 +203,13 @@ jQuery('document').ready(function () {
 
   // offer section
 
-    jQuery(".whychoose-box").mouseover(function () {
-      jQuery(this).find("img").attr('src', jQuery(this).find("img").data("hover"));
-    }).mouseout(function () {
-      jQuery(this).find("img").attr('src', jQuery(this).find("img").data("src"));
-    });
+    // jQuery(".whychoose-box").mouseover(function () {
+    //   jQuery(this).find("img").attr('src', jQuery(this).find("img").data("hover"));
+    // }).mouseout(function () {
+    //   jQuery(this).find("img").attr('src', jQuery(this).find("img").data("src"));
+    // });
 
-    jQuery(".process-box").mouseover(function () {
+    jQuery(".plan-info").mouseover(function () {
       jQuery(this).find("img").attr('src', jQuery(this).find("img").data("hover"));
     }).mouseout(function () {
       jQuery(this).find("img").attr('src', jQuery(this).find("img").data("src"));

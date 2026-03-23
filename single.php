@@ -123,71 +123,78 @@
                     <?php echo esc_html(get_theme_mod('internet_service_provider_pro_recent_blog_paragraph')); ?></p>
                 <?php } ?>
             </div>
-            <div class="recent-blogs row mt-3 pt-3">
-                <?php
-					$args = array(
-                    'post_type' => 'post',
-                    'tax_query' => array(
-                            array(
-                                    'taxonomy' => 'category',
-                                    'field'    => 'term_id',
-                                    'terms'    => wp_get_post_terms( get_the_ID(), 'category', array( 'fields' => 'ids' ) ),
-                            )
-                    ),
-                    'posts_per_page' => 3,
-                    'post__not_in'   => array( get_the_ID() )
-                );
-				$new = new WP_Query($args);
-				$loop_index = 0; $i=1;
-					while ( $new->have_posts() ){
-					$new->the_post();
+            <div class="recent-blogs mt-3 pt-3">
+                <?php if(get_theme_mod('internet_service_provider_pro_single_post_page_related_post_heading')!=''){ ?>
+                    <h3 class="mb-md-3 mb-lg-5 text-center">
+                        <?php echo esc_html(get_theme_mod('internet_service_provider_pro_single_post_page_related_post_heading')); ?>
+                    </h3>
+                <?php } ?>
+                <div class="row">
+                    <?php
+                        $args = array(
+                        'post_type' => 'post',
+                        'tax_query' => array(
+                                array(
+                                        'taxonomy' => 'category',
+                                        'field'    => 'term_id',
+                                        'terms'    => wp_get_post_terms( get_the_ID(), 'category', array( 'fields' => 'ids' ) ),
+                                )
+                        ),
+                        'posts_per_page' => 3,
+                        'post__not_in'   => array( get_the_ID() )
+                    );
+                    $new = new WP_Query($args);
+                    $loop_index = 0; $i=1;
+                        while ( $new->have_posts() ){
+                        $new->the_post();
 
-					$post_id = get_the_ID();
+                        $post_id = get_the_ID();
 
-					$assigned_category = get_the_terms( $post_id, 'category' );
+                        $assigned_category = get_the_terms( $post_id, 'category' );
 
-					$assigned_category_name = '';$category_link = '#';
-					if (!empty($assigned_category)) {
-						$assigned_category_name = $assigned_category[0]->name;
-						$category_link = get_category_link( $assigned_category[0]->term_id );
-					}
+                        $assigned_category_name = '';$category_link = '#';
+                        if (!empty($assigned_category)) {
+                            $assigned_category_name = $assigned_category[0]->name;
+                            $category_link = get_category_link( $assigned_category[0]->term_id );
+                        }
 
-				?>
-                   <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
-                        <div class="news-box" data-aos="zoom-in-up" data-aos-duration="2000">
-                            <div class="news-box-block">
-                                <div class="post-image-block">
-                                <?php
-                                    if(has_post_thumbnail()){
-                                    the_post_thumbnail(); 
-                                    }
-                                ?>
-                                </div>
-                                <div class="box-content">
-                                    <div class="box-content-inner">
-                                        <h5 class="p-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                    ?>
+                    <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                            <div class="news-box" data-aos="zoom-in-up" data-aos-duration="2000">
+                                <div class="news-box-block">
+                                    <div class="post-image-block">
+                                    <?php
+                                        if(has_post_thumbnail()){
+                                        the_post_thumbnail(); 
+                                        }
+                                    ?>
+                                    </div>
+                                    <div class="box-content">
+                                        <div class="box-content-inner">
+                                            <h5 class="p-0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
-                                        <div class="meta-details d-flex align-items-center">
-                                            <div class="entry-date meta-heading">
-                                                <?php the_author(); ?>
-                                            </div>
-                                            <span class="seperator"></span>
-                                            <?php if ( get_theme_mod('internet_service_provider_pro_post_general_settings_post_date',true) == "1" ) { ?>
+                                            <div class="meta-details d-flex align-items-center">
                                                 <div class="entry-date meta-heading">
-                                                    <?php echo get_the_date( 'F j , Y' ); ?>
+                                                    <?php the_author(); ?>
                                                 </div>
-                                            <?php } ?>
-                                        </div>
-                                        <div class="news-text">
-                                            <?php the_excerpt(); ?>
+                                                <span class="seperator"></span>
+                                                <?php if ( get_theme_mod('internet_service_provider_pro_post_general_settings_post_date',true) == "1" ) { ?>
+                                                    <div class="entry-date meta-heading">
+                                                        <?php echo get_the_date( 'F j , Y' ); ?>
+                                                    </div>
+                                                <?php } ?>
+                                            </div>
+                                            <div class="news-text">
+                                                <?php the_excerpt(); ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php $i++; }
-					wp_reset_query(); ?>
+                    <?php $i++; }
+                        wp_reset_query(); ?>
+                </div>
             </div>
         </div>
     </div>

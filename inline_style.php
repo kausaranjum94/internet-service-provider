@@ -1267,7 +1267,7 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	}
 
 	if($internet_service_provider_pro_services_box_bgcolor != false){
-		$custom_css .='#services .services-box:first-child .services-block-content{
+		$custom_css .='#services .services-box.dark .services-block-content{
 			background:'.esc_html($internet_service_provider_pro_services_box_bgcolor).' !important;
 		}';
 	}

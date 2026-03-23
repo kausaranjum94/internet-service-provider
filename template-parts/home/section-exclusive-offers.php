@@ -24,7 +24,7 @@
     <div class="container">
         
         <div class="row align-items-end">
-            <div class="col-lg-5 col-md-5 exclusive-offers-head-listing">
+            <div class="col-lg-5 col-md-7 exclusive-offers-head-listing">
                 <div class="exclusive-offers-head section_main_head pb-5">
                     <?php if(get_theme_mod('internet_service_provider_pro_exclusive_offers_tagline')!=''){ ?>
                         <span class="section-tagline">
@@ -60,14 +60,14 @@
                     <?php } ?>
                 </ul>
             </div>
-            <div class="col-lg-7 col-md-7">
+            <div class="col-lg-7 col-md-5">
                 <div class="exclusive-offers-icon-box row">
                     <?php
                       $about_list_no = get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_number');
                       for($i=1; $i<=$about_list_no; $i++)
                       {
                     ?>
-                    <div class="col-lg-6 col-md-6 col-sm-6 exclusive-offers-box" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="col-lg-6 col-md-12 col-sm-6 mb-md-3 mb-lg-0 exclusive-offers-box" data-aos="fade-up" data-aos-duration="2000">
                         <div class="exclusive-offers-block">
                             <div class="exclusive-offers-block-inner position-relative">
                                 <?php if(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_title'.$i)!=''){ ?>

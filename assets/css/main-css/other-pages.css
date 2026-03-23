@@ -293,7 +293,6 @@ aside#search-3 {
   justify-content: center;
 }
 .bradcrumbs a , .bradcrumbs span{
-  font: 600 18px / 30px var(--primary-font);
   color: #fff;
 }
 
@@ -1098,13 +1097,6 @@ a.button.yith-wcqv-button{
   display: none ;
 } */
 
-
-
-
-
-#blog-left-sidebar, #blog-right-sidebar{
-    padding: 80px 0;
-}
 #blog-left-sidebar #latest_post {
     padding: 0
 }

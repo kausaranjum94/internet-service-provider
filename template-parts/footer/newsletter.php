@@ -16,7 +16,7 @@ if ( 'Disable' == $about_section ) {
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-6">
           <div class="newsletter_head  position-relative">
-            <div class="section_main_head" data-aos="fade-left" data-aos-duration="2000">
+            <div class="section_main_head" >
               <?php if(get_theme_mod('internet_service_provider_pro_newsletter_main_heading')!=''){ ?>
                 <h3>
                   <?php echo esc_html(get_theme_mod('internet_service_provider_pro_newsletter_main_heading')); ?>

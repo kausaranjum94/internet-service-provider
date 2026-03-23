@@ -27,7 +27,7 @@ $banner_img = !empty($img) ? $img : $default_img;
                     <h1><?php the_title();?></h1>
                     <?php if ( get_theme_mod('vw_education_pro_site_breadcrumb_enable', true) != '' ) { ?>
                         <div class="bradcrumbs">
-                            <?php internet_service_provider_pro_the_breadcrumb(); ?>
+                            <?php echo internet_service_provider_pro_the_breadcrumb(); ?>
                         </div>
                     <?php } ?>
                 </div>
@@ -39,8 +39,8 @@ $banner_img = !empty($img) ? $img : $default_img;
 <div class="container main_title" <?php echo esc_attr($display_title_bbanner); ?>>
     <h1><?php the_title();?></h1>
     <?php if ( get_theme_mod('internet_service_provider_pro_site_breadcrumb_enable', true) != '' ) { ?>
-        <div class="container bradcrumbs py-3 b2">
-            <?php internet_service_provider_pro_the_breadcrumb(); ?>
+        <div class="bradcrumbs py-3 b2">
+            <?php echo internet_service_provider_pro_the_breadcrumb(); ?>
         </div>
     <?php } ?>
 </div>

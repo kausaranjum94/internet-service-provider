@@ -470,27 +470,27 @@ a.theme_button.theme_button2:before {
 }
 
 .eco-box .loader {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    perspective: 1000px;
-    margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  perspective: 1000px;
+  margin: 0 auto;
 }
 .eco-box .cube {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    animation: spin 3s infinite linear;
-    margin: 50px auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: spin 3s infinite linear;
+  margin: 50px auto;
 }
 .eco-box .side {
-    background: rgba(255, 255, 255, 0.1);
-    border: 7px solid rgba(0, 209, 255, 0.6);
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    /* box-shadow: 0 0 10px rgba(0, 209, 255, 0.8), inset 0 0 15px rgba(0, 209, 255, 0.6); */
+  background: rgba(255, 255, 255, 0.1);
+  border: 7px solid rgba(0, 209, 255, 0.6);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  /* box-shadow: 0 0 10px rgba(0, 209, 255, 0.8), inset 0 0 15px rgba(0, 209, 255, 0.6); */
 }
 .eco-box .front { transform: rotateY(0deg) translateZ(60px); }
 .eco-box .back { transform: rotateY(180deg) translateZ(60px); }
@@ -2240,6 +2240,22 @@ button.tml-button:hover,  button.tml-button:hover{
 .location.media {
     margin-top: 3em;
 }
+/*-------------------- Image zoo effect   --------------------*/
+.image-zoom-effect .box{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 20px;
+}
+.image-zoom-effect .box img{
+    width: 100%;
+    height: auto;
+    transform: scale3d(1.1, 1.1, 1);
+    transition: all 0.25s linear;
+}
+.image-zoom-effect .box:hover img{
+    transform: scale(1.25);
+}
 /* Gutenburg CSS*/
 
 /*--------- Main Banner ---------------*/
@@ -2298,15 +2314,15 @@ button.tml-button:hover,  button.tml-button:hover{
     border: 1px solid var(--primary-color);
 }
 .ive-internet-service-provider-pro-icon-url {
-    width: 42px !important;
-    height: 42px !important;
-    background-color: white;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: var(--primary-color);
-    margin-top: 17px;
+  width: 42px !important;
+  height: 42px !important;
+  background-color: white;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: var(--primary-color);
+  margin-top: 17px;
 }
 .ive-internet-service-provider-pro-smart-storage-icon-image {
     background-color: var(--secondary-color);

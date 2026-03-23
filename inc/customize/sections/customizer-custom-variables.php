@@ -460,3 +460,16 @@
     'section' => 'internet_service_provider_pro_color_pallette',
     'settings' => 'internet_service_provider_pro_hi_first_color',
   )));
+
+  $wp_customize->add_setting('internet_service_provider_pro_header_skip_link',array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field'
+    )
+  );
+  $wp_customize->add_control('internet_service_provider_pro_header_skip_link',array(
+      'label' => __('Skip to main content','internet-service-provider-pro'),
+      'section' => 'internet_service_provider_pro_color_pallette',
+      'setting' => 'internet_service_provider_pro_header_skip_link',
+      'type'    => 'text'
+    )
+  );
