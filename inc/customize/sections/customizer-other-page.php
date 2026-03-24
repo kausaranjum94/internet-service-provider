@@ -667,16 +667,19 @@
      'vw-fixed'      => __( 'Fixed', 'internet-service-provider-pro' ),
      'vw-scroll'      => __( 'Scroll', 'internet-service-provider-pro' ),
  )));
- $wp_customize->add_setting('internet_service_provider_pro_404_page_heading',array(
-   'default'=> '',
-   'sanitize_callback' => 'sanitize_text_field'
- ));
 
- $wp_customize->add_control('internet_service_provider_pro_404_page_heading',array(
-   'label' => __('Add Title','internet-service-provider-pro'),
-   'section'=> 'internet_service_provider_pro_404_page',
-   'type'=> 'text'
+ $wp_customize->add_setting('internet_service_provider_pro_404_image',array(
+     'default'   => '',
+     'sanitize_callback' => 'esc_url_raw',
  ));
+ $wp_customize->add_control(
+     new WP_Customize_Image_Control($wp_customize,'internet_service_provider_pro_404_image',
+         array(
+         'label' => __('Add image','internet-service-provider-pro'),
+         'section' => 'internet_service_provider_pro_404_page',
+         'settings' => 'internet_service_provider_pro_404_image'
+ )));
+
  $wp_customize->add_setting('internet_service_provider_pro_404_page_content',array(
    'default'=> '',
    'sanitize_callback' => 'sanitize_text_field'
@@ -718,41 +721,9 @@
  ));
  $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_404_page_color_settings',
  array(
-   'label' => __('Heading Typography','internet-service-provider-pro'),
+   'label' => __('Content Typography','internet-service-provider-pro'),
    'section' => 'internet_service_provider_pro_404_page'
  )));
- $wp_customize->add_setting( 'internet_service_provider_pro_404_page_title_color', array(
- 'default' => '',
- 'sanitize_callback'	=> 'sanitize_hex_color'
- ));
- $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_404_page_title_color',array(
- 'label' => __('Heading Color', 'internet-service-provider-pro'),
- 'section' => 'internet_service_provider_pro_404_page',
- 'settings' => 'internet_service_provider_pro_404_page_title_color',
- )));
- $wp_customize->add_setting('internet_service_provider_pro_404_page_title_font_family',array(
- 'default' => '',
- 'capability' => 'edit_theme_options',
- 'sanitize_callback' => 'internet_service_provider_pro_sanitize_choices'
- ));
- $wp_customize->add_control(
-   'internet_service_provider_pro_404_page_title_font_family', array(
-   'section'  => 'internet_service_provider_pro_404_page',
-   'label'    => __( 'Heading Font Family','internet-service-provider-pro'),
-   'type'     => 'select',
-   'choices'  => $font_array
- ));
- $wp_customize->add_setting('internet_service_provider_pro_404_page_title_font_size',array(
- 'default' => '',
- 'sanitize_callback' => 'sanitize_text_field'
- ));
- $wp_customize->add_control('internet_service_provider_pro_404_page_title_font_size',array(
- 'label' => __('Heading Font Size','internet-service-provider-pro'),
- 'description' => __('Add font size in px','internet-service-provider-pro'),
- 'section' => 'internet_service_provider_pro_404_page',
- 'setting' => 'internet_service_provider_pro_404_page_title_font_size',
- 'type'    => 'number'
- ));
 
  $wp_customize->add_setting( 'internet_service_provider_pro_404_page_content_color', array(
  'default' => '',

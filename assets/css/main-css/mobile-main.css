@@ -11,6 +11,9 @@
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1320px;
   }
+  .record-blocks-inner {
+    margin-left: 9%;
+  }
   .services-block-bottom-content h6 {
     max-width: 57%;
   } 
@@ -27,9 +30,15 @@
   .services-block-bottom-content h6 {
     font-size: 23px;
   }
+  span.right-column-text, span.right-column-text2 {
+    max-width: 95%;
+  }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 1025px) {
+  #map-area embed {
+    height: 600px;
+  }
   .side-navigation a {
     padding: 13px 11px;
   }
@@ -145,6 +154,9 @@
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 992px) {
+  #map-area embed {
+    height: 450px;
+  }
   
    #footer ul li a {
     padding-right: 13px;
@@ -164,10 +176,20 @@
     padding: 15px;
   }
   .services-block-bottom-content h6 {
-    font-size: 18px;
+    font-size: 22px;
   }
   .why-choose-us-bottom-speed-text {
     margin-top: 5em;
+  }
+  .image-caption {
+    padding: 9px;
+  }
+  .image-caption .media {
+    padding: 10px 9px 11px 9px;
+  }
+  .caption-icon-url a {
+    width: 52px;
+    height: 52px;
   }
   .box-text {
     font-size: 14px;
@@ -219,6 +241,7 @@
   }
   span.right-column-text, span.right-column-text2 {
     max-width: 100%;
+    font-size: 14px;
   }
   .feature-box {
     padding: 11px;
@@ -575,6 +598,15 @@
   }
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {
+  .image-hover-effect .box {
+    margin: 10px 0 !important;
+  }
+  .banner-roght-column-image {
+    margin-top: 0;
+  } 
+  #map-area embed {
+    height: 300px;
+  }
   .newsletter_shortcode p {
     display: block !important;
   } 
@@ -606,7 +638,7 @@
       font: 700 36px / 50px var(--primary-font);
   }
   span.pricing-text2 {
-    font-size: 21px;
+    font-size: 18px;
   }
   span.section-tagline {
     font-size: 16px;
@@ -644,7 +676,8 @@
     font-size: 23px;
   }
   .section_main_head h3 {
-    font-size: 26px;
+    font-size: 23px;
+    margin-bottom: 0;
   }
  
   .pricing-box {
@@ -706,10 +739,19 @@
   #map-area .section-text, #testimonials .section-text{
     max-width: 100%;
   }
+  .services-block-bottom-content .box-text {
+    font-size: 13px;
+  }
+  .customer-records {
+    margin-left: 16px;
+  }
+  .rating-box {
+    margin-bottom: 7px;
+  }
   .rating-records {
     padding: 19px 12px;
     bottom: 11em;
-    left: -37px;
+    left: -26px;
   }
   #exclusive-offers .section-text {
     font-size: 20px;
@@ -869,6 +911,29 @@
   
 }
 @media screen and (max-width:767px) {
+  .logo-images {
+    text-align: center;
+  }
+  #map-area embed {
+    height: 400px;
+  } 
+  .caption-icon-url a {
+    width: 31px;
+    height: 31px;
+  }
+  .image-caption {
+    padding: 8px;
+  }
+  .image-caption .media-body {
+    font-size: 12px;
+  }
+  .image-caption .media {
+    padding: 8px 10px 8px 7px;
+  }
+  .exclusive-offers-head-listing li {
+    font-size: 15px;
+    margin-bottom: 13px;
+  }
   .newsletter_shortcode p {
     display: block !important;
     margin-top: 10px;

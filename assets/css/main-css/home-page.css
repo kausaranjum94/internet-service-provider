@@ -20,6 +20,12 @@
     height: 100%;
     object-fit: cover;
 }
+#about-us .owl-dots, #about-us .owl-nav {
+    display: none !important;
+}
+#our-partner {
+    padding-bottom: 4em;
+}
 .about-head-outer a.theme_button:before {
   background-color: white;
   color: black;
@@ -326,6 +332,12 @@ span.pricing-text2 {
 #our-partner {
   padding-bottom: 8em;
 }
+.logo-images {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* ---------------------- Records ------------------------ */
 .records-row {
   border: 1px solid #3C3C3C;
@@ -402,6 +414,10 @@ span.section-text {
   font-weight: 400;
   font-size: 48px;
 }
+.single-service-page .customer-image-box {
+  display: block;
+  margin-bottom: 19px;
+}
 .customer-image-box {
     display: none;
 }
@@ -438,7 +454,6 @@ span.section-text {
 }
 .pricing-box {
   background-color: white;
-  max-width: 44%;
   padding: 14px 17px;
   text-align: center;
   margin: 0 0 0 auto;
@@ -748,32 +763,40 @@ span.why-choose-us-step {
     padding: 10px 0;
 }
 .map-area-name {
-    border: 1px solid #BABABA;
-    padding: 9px 17px;
-    border-radius: 40px;
-    color: #1C1C1F;
-    font-size: 20px;
+  border: 1px solid #BABABA !important;
+  padding: 9px 17px;
+  border-radius: 62px !important;
+  color: #1C1C1F;
+  font-size: 18px;
+  display: inline-block;
+}
+.map-area-name.active {
+  border-color: var(--primary-color) !important;
+  color: white !important;
+  background-color: var(--primary-color) !important;
 }
 .ticker {
-    display: inline-flex;
-    animation: ticker-scroll 30s linear infinite;
+  display: inline-flex;
+  animation: ticker-scroll 30s linear infinite;
+  flex-wrap: nowrap;
 }
 
 .ticker li {
-    display: inline-block;
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
+  display: inline-block;
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
 }
 
 @keyframes ticker-scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 #map-area ul {
     margin: 0 !important;
+    border-bottom: none;
 }
 
 #map-container {
@@ -1121,6 +1144,9 @@ button.owl-dot.active {
     background-color: #EFEFEF;
     padding: 30px;
     border-radius: 30px;
+    height: 100%;
+}
+.testonials-block-top-content .row {
     height: 100%;
 }
 .testimonial-content p, .testimonial-content {

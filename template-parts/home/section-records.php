@@ -46,7 +46,7 @@
             <?php } ?>
           </div>
         </div>
-        <div class="offset-lg-1 col-lg-6 col-md-7">
+        <div class="col-lg-7 col-md-7">
           <div class="record-blocks-inner position-relative">
             <div class="<?php echo esc_attr($amp_row); ?>">
               <?php

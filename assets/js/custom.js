@@ -258,16 +258,16 @@ jQuery(document).ready(function ($) {
 
 });
 
-const elem = document.getElementById('map-image');
-  const panzoom = Panzoom(elem, {
-    maxScale: 5,
-    minScale: 1,
-    step: 0.3,
-    contain: 'outside'   // allows zoom beyond container edges
-  });
+// const elem = document.getElementById('map-image');
+//   const panzoom = Panzoom(elem, {
+//     maxScale: 5,
+//     minScale: 1,
+//     step: 0.3,
+//     contain: 'outside'   // allows zoom beyond container edges
+//   });
 
-  // Enable wheel zoom
-  elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+//   // Enable wheel zoom
+//   elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
-  // Optional: start zoomed in so it fills nicely
-  panzoom.zoom(1.2);
+//   // Optional: start zoomed in so it fills nicely
+//   panzoom.zoom(1.2);

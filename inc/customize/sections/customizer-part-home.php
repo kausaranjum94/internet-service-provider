@@ -2278,6 +2278,17 @@
     
   }
 
+  $wp_customize->add_setting('internet_service_provider_pro_services_form_shortcode',array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ));
+  $wp_customize->add_control('internet_service_provider_pro_services_form_shortcode',array(
+    'label' => __('Single Services Form Shortcode','internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_services',
+    'setting' => 'internet_service_provider_pro_services_form_shortcode',
+    'type'    => 'text'
+  ));
+
   $wp_customize->add_setting( 'internet_service_provider_pro_services_color_settings',
     array(
     'default' => '',
@@ -4511,20 +4522,96 @@
 
   $exclusive_offers_icon_box = get_theme_mod('internet_service_provider_pro_map_area_areas_number');
 
-  for($i=1;$i<=$exclusive_offers_icon_box;$i++)
-  {
-
-    $wp_customize->add_setting('internet_service_provider_pro_map_area_name'.$i,array(
+  for ( $i = 1; $i <= get_theme_mod('internet_service_provider_pro_map_area_areas_number'); $i++ ) {
+    $wp_customize->add_setting( 'internet_service_provider_pro_map_area_name_sep'.$i,
+      array(
       'default' => '',
-      'sanitize_callback' => 'sanitize_text_field'
+      'transport' => 'postMessage',
+      'sanitize_callback' => 'internet_service_provider_pro_text_sanitization'
     ));
-    $wp_customize->add_control('internet_service_provider_pro_map_area_name'.$i,array(
-      'label' => __('Area Name ','internet-service-provider-pro'),
-      'section' => 'internet_service_provider_pro_map_area',
-      'setting' => 'internet_service_provider_pro_map_area_name'.$i,
-      'type'    => 'text'
-    ));
+    $wp_customize->add_control( new VW_Themes_Seperator_custom_Control( $wp_customize, 'internet_service_provider_pro_map_area_name_sep'.$i,
+      array(
+      'label' => __('Area ','internet-service-provider-pro').$i,
+      'section' => 'internet_service_provider_pro_map_area'
+    )));
+    // Area Name
+    $wp_customize->add_setting( "internet_service_provider_pro_map_area_name_$i", [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control( "internet_service_provider_pro_map_area_name_$i", [
+        'label'   => __( "Area Name", 'internet-service-provider-pro' ),
+        'section' => 'internet_service_provider_pro_map_area',
+        'type'    => 'text',
+    ]);
+
+    // Choice: Image or Map
+    $wp_customize->add_setting( "internet_service_provider_pro_map_area_type_$i", [
+        'default'           => 'image',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control( "internet_service_provider_pro_map_area_type_$i", [
+        'label'   => __( "Display Type", 'internet-service-provider-pro' ),
+        'section' => 'internet_service_provider_pro_map_area',
+        'type'    => 'radio',
+        'choices' => [
+            'image' => __( 'Image', 'internet-service-provider-pro' ),
+            'map'   => __( 'Map', 'internet-service-provider-pro' ),
+        ],
+    ]);
+
+    // Image Upload (only if Image selected)
+    $wp_customize->add_setting( "internet_service_provider_pro_map_area_image_$i", [
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, "internet_service_provider_pro_map_area_image_$i", [
+        'label'           => __( "Upload Image", 'internet-service-provider-pro' ),
+        'section'         => 'internet_service_provider_pro_map_area',
+        'active_callback' => function() use ( $i ) {
+            return get_theme_mod("internet_service_provider_pro_map_area_type_$i") === 'image';
+        },
+    ]));
+
+    // Latitude (only if Map selected)
+    $wp_customize->add_setting( "internet_service_provider_pro_map_area_lat_$i", [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control( "internet_service_provider_pro_map_area_lat_$i", [
+        'label'           => __( "Latitude $i", 'internet-service-provider-pro' ),
+        'section'         => 'internet_service_provider_pro_map_area',
+        'type'            => 'text',
+        'active_callback' => function() use ( $i ) {
+            return get_theme_mod("internet_service_provider_pro_map_area_type_$i") === 'map';
+        },
+    ]);
+
+    // Longitude (only if Map selected)
+    $wp_customize->add_setting( "internet_service_provider_pro_map_area_lng_$i", [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control( "internet_service_provider_pro_map_area_lng_$i", [
+        'label'           => __( "Longitude $i", 'internet-service-provider-pro' ),
+        'section'         => 'internet_service_provider_pro_map_area',
+        'type'            => 'text',
+        'active_callback' => function() use ( $i ) {
+            return get_theme_mod("internet_service_provider_pro_map_area_type_$i") === 'map';
+        },
+    ]);
   }
+
+  $wp_customize->add_setting( "internet_service_provider_pro_map_area_api_key_map", [
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+    $wp_customize->add_control( "internet_service_provider_pro_map_area_api_key_map", [
+        'label'   => __( "Map API key", 'internet-service-provider-pro' ),
+        'section' => 'internet_service_provider_pro_map_area',
+        'type'    => 'text',
+    ]);
+
 
   $wp_customize->add_setting('internet_service_provider_pro_map_area_map_image',array(
     'default' => '',
@@ -4762,6 +4849,26 @@
     'label' => __('Border Color', 'internet-service-provider-pro'),
     'section' => 'internet_service_provider_pro_map_area',
     'settings' => 'internet_service_provider_pro_map_area_box_name_border_color',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_map_area_box_name_active_bgcolor', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_map_area_box_name_active_bgcolor', array(
+    'label' => __('Active Background Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_map_area',
+    'settings' => 'internet_service_provider_pro_map_area_box_name_active_bgcolor',
+  )));
+
+  $wp_customize->add_setting( 'internet_service_provider_pro_map_area_box_name_active_color', array(
+    'default' => '',
+    'sanitize_callback' => 'sanitize_hex_color'
+  ));
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'internet_service_provider_pro_map_area_box_name_active_color', array(
+    'label' => __('Active Color', 'internet-service-provider-pro'),
+    'section' => 'internet_service_provider_pro_map_area',
+    'settings' => 'internet_service_provider_pro_map_area_box_name_active_color',
   )));
 
   $wp_customize->add_setting('internet_service_provider_pro_map_area_spacing_left_desktop', array(

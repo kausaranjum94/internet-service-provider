@@ -1346,8 +1346,13 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 		$content = '
 		<!-- wp:shortcode -->
+		[internet-service-provider-pro-partner]
+		<!-- /wp:shortcode -->
+
+		<!-- wp:shortcode -->
 		[internet-service-provider-pro-about-us]
 		<!-- /wp:shortcode -->
+
 		<!-- wp:shortcode -->
 		[internet-service-provider-pro-testimonials]
 		<!-- /wp:shortcode -->
@@ -1367,7 +1372,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			'post_slug' 	=> 'aboutus'
 		);
 		$aboutus_id = wp_insert_post($aboutus);
-		add_post_meta( $aboutus_id, '_wp_page_template', 'fullwidth-template.php' );
+		add_post_meta( $aboutus_id, '_wp_page_template', 'page-template/fullwidth-template.php' );
 		add_post_meta( $aboutus_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
 		$error_title = '404';
@@ -1380,8 +1385,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		);
 		$error_id = wp_insert_post($error);
 
-		//Set the single testimonial with right sidebar template
-		add_post_meta( $error_id, '_wp_page_template', '404.php' );
+		//Set the single testimonial with right sidebar templatex
 		add_post_meta( $error_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
 		// $login_title = 'Login';
@@ -1536,6 +1540,10 @@ function moveArrayPosition(&$array, $key, $new_position) {
         set_theme_mod( 'internet_service_provider_pro_services_main_heading', 'Internet Services Built for Your Digital Life' );
 		set_theme_mod( 'internet_service_provider_pro_services_text', 'Because Fast Isn’t Enough You Need Internet You Can Trust.' );
 
+		set_theme_mod( 'internet_service_provider_pro_services_box_number', '3' );
+
+		$service_content_editor = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed faucibus neque. Ut convallis placerat ligula quis varius. Sed vehicula tellus blandit cursus fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque eu porttitor nisl. Curabitur consectetur est a feugiat vehicula. Phasellus mollis rhoncus neque id interdum. Pellentesque suscipit vel magna vitae elementum.";
+
 			// Define demo data
 			$services_title = array(
 				'High-Speed Fiber Internet',
@@ -1578,7 +1586,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			for($i=0; $i<3; $i++) {
 				$post_id = wp_insert_post(array(
 					'post_title'   => wp_strip_all_tags($services_title[$i]),
-					'post_content' => '',
+					'post_content' => $service_content_editor,
 					'post_type'    => 'services',
 					'post_status'  => 'publish',
 				));
@@ -1630,34 +1638,8 @@ function moveArrayPosition(&$array, $key, $new_position) {
 					if(!empty($customer_ids)){
 						update_post_meta($post_id, '_customer_images', implode(',', $customer_ids));
 					}
-
-					// Optional: link icon meta
-					// update_post_meta($post_id, '_link_icon_class', 'fa-solid fa-arrow-right');
-					// update_post_meta($post_id, '_link_icon_url', home_url('/contact'));
 				}
 			}
-
-
-		// set_theme_mod( 'internet_service_provider_pro_services_box_number', '3');
-
-        // $services_title = array('High-Speed Fiber Internet','Business Connectivity','GamerX Package');
-		// $services_text = array('Reliable internet solutions for home and business.','High-speed bandwidth and static IPs for modern businesses.','Ultra-low latency internet for serious gamers. No lag. Just play.');
-		// $services_price = array('$29/month','$49/month','$79/month');
-
-        // for($i=1; $i<=3; $i++)
-        // {	
-		// 	set_theme_mod( 'internet_service_provider_pro_services_box_image'.$i, get_template_directory_uri().'/assets/images/services/service'.$i.'.png');
-        // 	set_theme_mod( 'internet_service_provider_pro_services_box_title'.$i, $services_title[$i-1] );
-		// 	set_theme_mod( 'internet_service_provider_pro_services_box_text'.$i, $services_text[$i-1] );
-		// 	set_theme_mod( 'internet_service_provider_pro_services_box_start_now'.$i, 'Start on' );
-		// 	set_theme_mod( 'internet_service_provider_pro_services_box_start_now_pricing'.$i, $services_price[$i-1] );
-		// 	for($j=1; $j<=3; $j++)
-        // 	{
-		// 		set_theme_mod( 'internet_service_provider_pro_services_box_customer_image'.$i.$j, get_template_directory_uri().'/assets/images/services/customer'.$j.'.png');
-		// 	}
-		// 	set_theme_mod( 'internet_service_provider_pro_services_box_link_icon'.$i, 'fa-solid fa-arrow-right' );
-		// 	set_theme_mod( 'internet_service_provider_pro_services_box_link_icon_url'.$i, home_url('/contact') );
-		// } 
 
 		// ------------- Why Choose Us -------------
 
@@ -1731,39 +1713,50 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 		set_theme_mod( 'internet_service_provider_pro_map_area_text', 'Orbitix is expanding nationwide, providing reliable high-speed internet to more homes and cities daily.' );
 
-		set_theme_mod( 'internet_service_provider_pro_map_area_areas_number', '20' );
+		// Number of areas
+		set_theme_mod( 'internet_service_provider_pro_map_area_areas_number', 20 );
 
 		$orbitix_coverage_areas = [
-			"Jakarta",
-			"Surabaya",
-			"Makasar",
-			"Semarang",
-			"Yogyakarta",
-			"Medan",
-			"Lampung",
-			"Metro",
-			"Palembang",
-			"Bandung",
-			"Madiun",
-			"Bali",
-			"Tangerang",
-			"Bekasi",
-			"Depok",
-			"Bogor",
-			"Batam",
-			"Pontianak",
-			"Balikpapan",
-			"Manado"
+			"Jakarta","Surabaya","Makasar","Semarang","Yogyakarta",
+			"Medan","Lampung","Metro","Palembang","Bandung",
+			"Madiun","Bali","Tangerang","Bekasi","Depok",
+			"Bogor","Batam","Pontianak","Balikpapan","Manado"
 		];
 
+		// Example lat/lng for demo (city centers)
+		$orbitix_latlng = [
+			["-6.175110","106.865036"], // Jakarta
+			["-7.257472","112.752090"], // Surabaya
+			["-6.254730","-6.254730"], // Makasar
+			["-6.9667","110.4167"], // Semarang
+			["-7.7972","110.3688"], // Yogyakarta
+			["3.5952","98.6722"],   // Medan
+			["-5.45","105.2667"],   // Lampung
+			["-5.113","105.306"],   // Metro
+			["-2.9761","104.7754"], // Palembang
+			["-6.9175","107.6191"], // Bandung
+			["-7.629","111.523"],   // Madiun
+			["-8.65","115.2167"],   // Bali
+			["-6.1781","106.63"],   // Tangerang
+			["-6.2349","106.9896"], // Bekasi
+			["-6.4025","106.7942"], // Depok
+			["-6.6","106.8"],       // Bogor
+			["1.135","104.015"],    // Batam
+			["-0.022","109.341"],   // Pontianak
+			["-1.267","116.828"],   // Balikpapan
+			["1.474","124.842"],    // Manado
+		];
 
+		for($i=1; $i<=20; $i++) {
+			set_theme_mod( 'internet_service_provider_pro_map_area_name_'.$i, $orbitix_coverage_areas[$i-1] );
+			set_theme_mod( 'internet_service_provider_pro_map_area_type_'.$i, 'map' );
+			set_theme_mod( 'internet_service_provider_pro_map_area_lat_'.$i, $orbitix_latlng[$i-1][0] );
+			set_theme_mod( 'internet_service_provider_pro_map_area_lng_'.$i, $orbitix_latlng[$i-1][1] );
+		}
 
-		for($i=1; $i<=20; $i++)
-        {	
-        	set_theme_mod( 'internet_service_provider_pro_map_area_name'.$i, $orbitix_coverage_areas[$i-1] );
-		} 
+		set_theme_mod( 'internet_service_provider_pro_map_area_api_key_map', 'AIzaSyAEfCdefAUOsIoZKeDtLMXzPlU4UXL03nI' );
 
-		set_theme_mod( 'internet_service_provider_pro_map_area_map_image', get_template_directory_uri().'/assets/images/map-image.png');
+		// set_theme_mod( 'internet_service_provider_pro_map_area_map_image', get_template_directory_uri().'/assets/images/map-image.png');
 
 
 		// -------------- Pricing Plans -----------------
@@ -2165,6 +2158,100 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 		set_theme_mod( 'internet_service_provider_pro_newsletter_form_shortcode', $cf7shortcode );
 
+
+		// contact form shortcode
+		$cf7title = "Service Contact Page";
+		$cf7content = '
+		[hidden service-title default:get default:get ""] 
+		[text* your-name placeholder "Your Name"]
+		[email* your-email placeholder "Your Email"]
+		[textarea your-message placeholder "Your Message"]
+		[submit "Send Inquiry"]
+
+		 [_site_title] "[your-subject]"
+		 [_site_title] <themespride@gmail.com>
+		 From: [your-name] <[your-email]>
+		 Subject: [your-subject]
+
+		 Message Body:
+		 [your-message]
+
+		 --
+		 This e-mail was sent from a contact form on [_site_title] ([_site_url])
+		 [_site_admin_email]
+		 Reply-To: [your-email]
+
+		 0
+		 0
+
+		 [_site_title] "[your-subject]"
+		 [_site_title] <themespride@gmail.com>
+		 Message Body:
+		 [your-message]
+
+		 --
+		 This e-mail was sent from a contact form on [_site_title] ([_site_url])
+		 [your-email]
+		 Reply-To: [_site_admin_email]
+
+		 0
+		 0
+		 Thank you for your message. It has been sent.
+		 There was an error trying to send your message. Please try again later.
+		 One or more fields have an error. Please check and try again.
+		 There was an error trying to send your message. Please try again later.
+		 You must accept the terms and conditions before sending your message.
+		 The field is required.
+		 The field is too long.
+		 The field is too short.
+		 There was an unknown error uploading the file.
+		 You are not allowed to upload files of this type.
+		 The file is too big.
+		 There was an error uploading the file.';
+
+		$cf7_post = array(
+			'post_title' => wp_strip_all_tags($cf7title),
+			'post_content' => $cf7content,
+			'post_status' => 'publish',
+			'post_type' => 'wpcf7_contact_form',
+		);
+		// Insert the post into the database
+		$cf7post_id = wp_insert_post($cf7_post);
+
+		add_post_meta($cf7post_id, "_form", '
+		[hidden service-title default:get default:get ""] 
+		[text* your-name placeholder "Your Name"]
+		[email* your-email placeholder "Your Email"]
+		[textarea your-message placeholder "Your Message"]
+		[submit "Send Inquiry"]
+		');
+
+		$cf7mail_data = array(
+			'subject' => '[_site_title] "[your-subject]"',
+			'sender' => '[_site_title] <themespride@gmail.com>',
+			'body' => 'From: [your-name] <[your-email]>
+		 Subject: [your-subject]
+
+		 Message Body:
+		 [your-message]
+
+		 --
+		 This e-mail was sent from a contact form on [_site_title] ([_site_url])',
+			'recipient' => '[_site_admin_email]',
+			'additional_headers' => 'Reply-To: [your-email]',
+			'attachments' => '',
+			'use_html' => 0,
+			'exclude_blank' => 0
+		);
+
+		add_post_meta($cf7post_id, "_mail", $cf7mail_data);
+		// Gets term object from Tree in the database.
+
+		$cf7shortcode = '[contact-form-7 id="' . $cf7post_id . '" title="' . $cf7title . '"]';
+
+		set_theme_mod('internet_service_provider_pro_services_form_shortcode', $cf7shortcode);
+
+
 		//Contact Page
 
 		// contact form shortcode
@@ -2437,7 +2524,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		set_theme_mod('internet_service_provider_pro_blog_category_prev_title', 'Previous');
 		set_theme_mod('internet_service_provider_pro_blog_category_next_title','Next');
 		 
-
+		set_theme_mod('internet_service_provider_pro_404_image', get_template_directory_uri() . '/assets/images/404.png');
 		set_theme_mod( 'internet_service_provider_pro_404_page_heading', 'Page Not Found' );
 		set_theme_mod( 'internet_service_provider_pro_404_page_content', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' );
 		set_theme_mod( 'internet_service_provider_pro_404_page_button_text', 'Back to Home' );

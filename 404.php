@@ -22,11 +22,12 @@
 		<div class="row text-center justify-content-center">
 			<div class="col-lg-7">
 				<div class="page-content error_bgs d-flex flex-column gap-2">
-					<?php if ( get_theme_mod('internet_service_provider_pro_404_page_heading') != ''): ?>
-						<h2 class="error-heading">
-							<?php echo esc_html(get_theme_mod('internet_service_provider_pro_404_page_heading')); ?>
-						</h2>
-					<?php endif; ?>
+					<div class="404-image" data-aos="flip-up" data-aos-duration="1000">
+						<?php if(get_theme_mod('internet_service_provider_pro_404_image')!=''){ ?>
+							<img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_404_image')); ?>">
+						<?php } ?>
+					</div>
+					
 					<?php if ( get_theme_mod('internet_service_provider_pro_404_page_content') != ''): ?>
 						<p class="error-para mb-0">
 							<?php echo esc_html(get_theme_mod('internet_service_provider_pro_404_page_content')); ?>

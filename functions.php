@@ -273,6 +273,8 @@ function internet_service_provider_pro_scripts() {
 
 	wp_enqueue_style( 'jquery.fancybox.min', get_template_directory_uri().'/assets/css/jquery.fancybox.min.css' );
 
+	wp_enqueue_style( 'leaflet.css', get_template_directory_uri().'/assets/css/leaflet.css' );
+
 
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array('jquery'), true);
 	wp_enqueue_script( 'tether', get_template_directory_uri() . '/assets/js/tether.js', array('jquery'), '',true);
@@ -282,6 +284,8 @@ function internet_service_provider_pro_scripts() {
 	wp_enqueue_script( 'animation-aos', get_template_directory_uri() . '/assets/js/aos.js', array( 'jquery' ) );
 
 	wp_enqueue_script( 'jquery.fancybox.min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array('jquery'),'', true );
+
+	wp_enqueue_script( 'leaflet.js', get_template_directory_uri() . '/assets/js/leaflet.js', array('jquery'),'', true );
 
 	wp_enqueue_script( 'panzoom.min', get_template_directory_uri() . '/assets/js/panzoom.min.js', array('jquery'),'', true );
 

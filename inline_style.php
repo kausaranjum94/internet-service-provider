@@ -1791,6 +1791,9 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	$internet_service_provider_pro_map_area_box_name_bgcolor = get_theme_mod('internet_service_provider_pro_map_area_box_name_bgcolor');
 	$internet_service_provider_pro_map_area_box_name_border_color = get_theme_mod('internet_service_provider_pro_map_area_box_name_border_color');
 
+	$internet_service_provider_pro_map_area_box_name_active_bgcolor = get_theme_mod('internet_service_provider_pro_map_area_box_name_active_bgcolor');
+	$internet_service_provider_pro_map_area_box_name_active_color = get_theme_mod('internet_service_provider_pro_map_area_box_name_active_color');
+
 	
 	if($internet_service_provider_pro_map_area_tagline_color != false || $internet_service_provider_pro_map_area_tagline_font_family != false || $internet_service_provider_pro_map_area_tagline_font_size != false ){
 		$custom_css .='#map-area .section_main_head span.section-tagline{';
@@ -1843,7 +1846,7 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	if($internet_service_provider_pro_map_area_box_name_color != false || $internet_service_provider_pro_map_area_box_name_font_family != false || $internet_service_provider_pro_map_area_box_name_font_size != false){
 		$custom_css .='.map-area-name{';
 			if($internet_service_provider_pro_map_area_box_name_color != false){
-				$custom_css .='color:'.esc_html($internet_service_provider_pro_map_area_box_name_color).';';
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_map_area_box_name_color).' !important;';
 			}
 			if($internet_service_provider_pro_map_area_box_name_font_family != false){
 				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_map_area_box_name_font_family).';';
@@ -1857,14 +1860,25 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 	if($internet_service_provider_pro_map_area_box_name_border_color != false || $internet_service_provider_pro_map_area_box_name_bgcolor != false ){
 		$custom_css .='.map-area-name{';
 			if($internet_service_provider_pro_map_area_box_name_border_color != false){
-				$custom_css .='border-color:'.esc_html($internet_service_provider_pro_map_area_box_name_border_color).';';
+				$custom_css .='border-color:'.esc_html($internet_service_provider_pro_map_area_box_name_border_color).' !important;';
 			}
 			if($internet_service_provider_pro_map_area_box_name_bgcolor != false){
-				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_map_area_box_name_bgcolor).';';
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_map_area_box_name_bgcolor).' !important;';
 			}
 		$custom_css .='}';
 	}
 
+	if($internet_service_provider_pro_map_area_box_name_active_color != false || $internet_service_provider_pro_map_area_box_name_active_bgcolor != false ){
+		$custom_css .='.map-area-name.active{';
+			if($internet_service_provider_pro_map_area_box_name_active_color != false){
+				$custom_css .='color:'.esc_html($internet_service_provider_pro_map_area_box_name_active_color).' !important;';
+			}
+			if($internet_service_provider_pro_map_area_box_name_active_bgcolor != false){
+				$custom_css .='background-color:'.esc_html($internet_service_provider_pro_map_area_box_name_active_bgcolor).' !important;';
+				$custom_css .='border-color:'.esc_html($internet_service_provider_pro_map_area_box_name_active_bgcolor).' !important;';
+			}
+		$custom_css .='}';
+	}
 
 	$custom_css .= bmp_dimension_css('internet_service_provider_pro_map_area_spacing', array(
 		'position' => array('left', 'top', 'bottom', 'right'),
@@ -2141,7 +2155,7 @@ $custom_css .='html body,h1,h2,h3,h4,h5,h6,a,div,label,button,p,#header .main-na
 				$custom_css .='font-family:'.esc_html($internet_service_provider_pro_pricing_plan_feature_font_family).';';
 			}
 			if($internet_service_provider_pro_pricing_plan_feature_font_size != false){
-				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_feature_font_size).'px;';
+				$custom_css .='font-size:'.esc_html($internet_service_provider_pro_pricing_plan_feature_font_size).'px !important;';
 			}
 		$custom_css .='}';
 	}

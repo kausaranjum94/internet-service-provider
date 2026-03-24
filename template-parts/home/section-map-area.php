@@ -48,38 +48,58 @@
     </div>
     <ul>
 
-    <div class="ticker-wrapper mb-5">
-        <ul class="ticker">
-            <?php
-            $about_list_no = get_theme_mod('internet_service_provider_pro_map_area_areas_number');
-            for($i=1; $i<=$about_list_no; $i++) {
-                if(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)!=''){ ?>
-                    <li>
-                        <span class="map-area-name">
-                            <?php echo esc_html(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)); ?>
-                        </span>
-                    </li>
-                <?php }
-            } ?>
+    <?php
+        $about_list_no = get_theme_mod('internet_service_provider_pro_map_area_areas_number');
+        ?>
 
-            <!-- Duplicate list for seamless loop -->
-            <?php
-            for($i=1; $i<=$about_list_no; $i++) {
-                if(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)!=''){ ?>
-                    <li>
-                        <span class="map-area-name">
-                            <?php echo esc_html(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)); ?>
-                        </span>
-                    </li>
-                <?php }
-            } ?>
-        </ul>
-    </div>
+        <!-- Ticker -->
+        <div class="ticker-wrapper mb-5">
+            <ul class="ticker nav nav-tabs">
+                <?php for($i=1; $i<=$about_list_no; $i++): ?>
+                    <?php if(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)!=''): ?>
+                        <li class="nav-item">
+                            <button class="nav-link map-area-name"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#map-area-<?php echo $i; ?>">
+                                <?php echo esc_html(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)); ?>
+                            </button>
+                        </li>
+                    <?php endif; ?>
+                <?php endfor; ?>
+            </ul>
+        </div>
 
+        <!-- Bootstrap Tabs Content -->
+        <div class="tab-content">
+            <?php $api_key = get_theme_mod('internet_service_provider_pro_map_area_api_key_map'); ?>
 
-    <div id="map-container" class=" map-imgae full-height-width-image">
-        <?php if(get_theme_mod('internet_service_provider_pro_map_area_map_image')!=''){ ?>
-            <img id="map-image" src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_map_area_map_image')); ?>">
-        <?php } ?>
-    </div>
+            <?php for($i=1; $i<=$about_list_no; $i++): ?>
+                <div class="tab-pane fade <?php echo ($i == 1) ? 'show active' : ''; ?>" id="map-area-<?php echo $i; ?>">
+                    <?php 
+                    $type = get_theme_mod('internet_service_provider_pro_map_area_type_'.$i);
+                    $name = get_theme_mod('internet_service_provider_pro_map_area_name_'.$i);
+                    ?>
+                    <?php if($name): ?>
+                        <?php if($type === 'image'): ?>
+                            <?php $img = get_theme_mod('internet_service_provider_pro_map_area_image_'.$i); ?>
+                            <?php if($img): ?>
+                                <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($name); ?>" class="img-fluid rounded shadow">
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <?php 
+                            $lat = trim(get_theme_mod('internet_service_provider_pro_map_area_lat'.$i));
+                            $lng = trim(get_theme_mod('internet_service_provider_pro_map_area_lng'.$i));
+
+                            ?>
+                            <?php if($lat && $lng): ?>
+                                <?php if ($lat != "" && $lng ) { ?>
+                                    <embed width="100%" height="793" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?php echo esc_attr($lat); ?>,<?php echo esc_attr($lng); ?>&hl=es;z=14&amp;output=embed"></embed>
+                                <?php } ?>
+
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+            <?php endfor; ?>
+        </div>
 </section>

@@ -61,7 +61,7 @@
                 <?php
                 $services = new WP_Query(array(
                     'post_type'      => 'services',
-                    'posts_per_page' => -1,
+                    'posts_per_page' => get_theme_mod('internet_service_provider_pro_services_box_number'),
                     'order'          => 'ASC',
                 ));
 

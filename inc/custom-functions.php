@@ -250,6 +250,13 @@ function internet_service_provider_pro_section_exclusive_offers_shortcode( ){
 }
 add_shortcode( 'internet-service-provider-pro-exclusive-offers', 'internet_service_provider_pro_section_exclusive_offers_shortcode' );
 
+function internet_service_provider_pro_section_partner_shortcode( ){
+  ob_start();
+  echo get_template_part( 'template-parts/home/section-partner' );
+  return ob_get_clean();
+}
+add_shortcode( 'internet-service-provider-pro-partner', 'internet_service_provider_pro_section_partner_shortcode' );
+
 
 if (!function_exists('bmp_dimension_css')) {
 
