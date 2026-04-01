@@ -31,11 +31,11 @@ function internet_service_provider_pro_customize_register( $wp_customize ) {
 
     $wp_customize->selective_refresh->add_partial( 'blogname', array(
         'selector' => '.logo a',
-        'render_callback' => 'twentyfifteen_customize_partial_blogname',
+        'render_callback' => 'internet_service_provider_pro_customize_partial_blogname',
     ) );
     $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
         'selector' => '.site-description',
-        'render_callback' => 'twentyfifteen_customize_partial_blogdescription',
+        'render_callback' => 'internet_service_provider_pro_customize_partial_blogdescription',
     ) );
 
     $wp_customize->add_setting('internet_service_provider_pro_display_title',array(

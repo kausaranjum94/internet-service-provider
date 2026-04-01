@@ -27,7 +27,7 @@
   }
 }
 @media screen and (max-width: 1399px) and (min-width: 1200px) {
-  .services-block-bottom-content h6 {
+  .services-block-bottom-content h6 a{
     font-size: 23px;
   }
   span.right-column-text, span.right-column-text2 {
@@ -51,7 +51,7 @@
   .rating-records {
     left: -18px;
   }
-  .services-block-bottom-content h6 {
+  .services-block-bottom-content h6 a {
     font-size: 19px;
   }
   .banner-details {
@@ -175,7 +175,7 @@
   .services-block-content {
     padding: 15px;
   }
-  .services-block-bottom-content h6 {
+  .services-block-bottom-content h6 a {
     font-size: 22px;
   }
   .why-choose-us-bottom-speed-text {
@@ -598,6 +598,12 @@
   }
 }
 @media screen and (max-width: 991px) and (min-width: 768px) {
+  #exclusive-offers .row {
+    align-items: self-start !important;
+  }
+  .exclusive-offers-bottom-block {
+    margin-top: 0;
+  }
   .image-hover-effect .box {
     margin: 10px 0 !important;
   }
@@ -610,14 +616,13 @@
   .newsletter_shortcode p {
     display: block !important;
   } 
-  .services-block-bottom-content h6 {
+  .services-block-bottom-content h6 a {
     font-size: 20px;
   } 
   .header-btn {
     margin-left: 15px;
   }  
   .services-block-bottom-content h6 {
-      font-size: 20px;
       max-width: 100%;
   }
   h4.wp-block-heading {
@@ -766,7 +771,7 @@
     display: block;
   }
   .exclusive-offers-block h6 {
-    font-size: 16px;
+    font-size: 21px;
     max-width: 100%;
   }
   .banner-head-outer {
@@ -1017,7 +1022,7 @@
   #our-partner {
     padding-bottom: 1em;
   }
-  .services-block-bottom-content h6 {
+  .services-block-bottom-content h6 a {
     font-size: 20px;
   }
   .customer-image img {

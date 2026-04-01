@@ -56,12 +56,12 @@
         <div class="ticker-wrapper mb-5">
             <ul class="ticker nav nav-tabs">
                 <?php for($i=1; $i<=$about_list_no; $i++): ?>
-                    <?php if(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)!=''): ?>
+                    <?php if(get_theme_mod('internet_service_provider_pro_map_area_name_'.$i)!=''): ?>
                         <li class="nav-item">
                             <button class="nav-link map-area-name"
                                     data-bs-toggle="tab"
                                     data-bs-target="#map-area-<?php echo $i; ?>">
-                                <?php echo esc_html(get_theme_mod('internet_service_provider_pro_map_area_name'.$i)); ?>
+                                <?php echo esc_html(get_theme_mod('internet_service_provider_pro_map_area_name_'.$i)); ?>
                             </button>
                         </li>
                     <?php endif; ?>
@@ -87,8 +87,8 @@
                             <?php endif; ?>
                         <?php else: ?>
                             <?php 
-                            $lat = trim(get_theme_mod('internet_service_provider_pro_map_area_lat'.$i));
-                            $lng = trim(get_theme_mod('internet_service_provider_pro_map_area_lng'.$i));
+                            $lat = trim(get_theme_mod('internet_service_provider_pro_map_area_lat_'.$i));
+                            $lng = trim(get_theme_mod('internet_service_provider_pro_map_area_lng_'.$i));
 
                             ?>
                             <?php if($lat && $lng): ?>

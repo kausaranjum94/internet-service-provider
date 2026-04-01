@@ -10,16 +10,16 @@
     return;
   }
   $img_bg = get_theme_mod('internet_service_provider_pro_main_banner_bgimage_setting');
-  if( get_theme_mod('internet_service_provider_pro_main_banner_bgcolor','') ) {
-    $about_backg = esc_attr(get_theme_mod('internet_service_provider_pro_main_banner_bgcolor',''));
+   if( get_theme_mod('internet_service_provider_pro_main_banner_bgcolor','') ) {
+    $about_backg = 'background-color:'.esc_attr(get_theme_mod('internet_service_provider_pro_main_banner_bgcolor','')).';';
   }elseif( get_theme_mod('internet_service_provider_pro_main_banner_bgimage','') ){
-    $about_backg = esc_attr(get_theme_mod('internet_service_provider_pro_main_banner_bgimage',''));
+    $about_backg = 'background-image:url(\''.esc_url(get_theme_mod('internet_service_provider_pro_main_banner_bgimage')).'\')';
   }else{
     $about_backg='';
   }
   
 ?>
-<section id="main-banner" class="<?php echo esc_attr($img_bg); ?>  position-relative">
+<section id="main-banner" class="<?php echo esc_attr($img_bg); ?>  position-relative" style="<?php echo esc_attr($about_backg); ?>">
     
     <div class="container">
         <div class="main-banner-row row">
@@ -71,11 +71,20 @@
                             <div class="rating-blk">
                                 <?php if(get_theme_mod('internet_service_provider_pro_main_banner_rating_text')!=''){ ?>
                                     <div class="rating-box" data-aos="fade-up" data-aos-duration="800">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
+                                        <?php 
+                                            $rating_count = get_theme_mod('internet_service_provider_pro_main_banner_rating_count');
+
+                                            $rating_count = max(0, min(5, (int)$rating_count));
+
+                                            for ($i = 1; $i <= $rating_count; $i++) {
+                                                echo '<i class="fa-solid fa-star star-active"></i>';
+                                            }
+
+                                            for ($i = $rating_count + 1; $i <= 5; $i++) {
+                                                echo '<i class="fa-solid fa-star star-inactive"></i>';
+                                            }
+                                        ?>
+
                                         <span class="rating-tagline" data-aos="fade-up" data-aos-duration="800"><?php echo esc_html(get_theme_mod('internet_service_provider_pro_main_banner_rating_text')); ?></span>
                                     </div>
                                 <?php } ?>

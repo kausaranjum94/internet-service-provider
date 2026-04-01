@@ -76,17 +76,27 @@
                                     </h6>
                                 <?php } ?>
                                 <div class="exclusive-offers-bottom-block">
-                                    <?php if(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_speed'.$i)!=''){ ?>
-                                        <span class="exclusive-offers-speed">
-                                            <?php echo esc_html(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_speed'.$i)); ?>
-                                        </span>
-                                    <?php } ?>
+                                    <div class="exclusive-offers-bottom-block-content">
+                                        <?php if(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_speed'.$i)!=''){ ?>
+                                            <span class="exclusive-offers-speed">
+                                                <?php echo esc_html(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_speed'.$i)); ?>
+                                            </span>
+                                        <?php } ?>
 
-                                    <?php if(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_package'.$i)!=''){ ?>
-                                        <span class="exclusive-offers-package">
-                                            <?php echo esc_html(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_package'.$i)); ?>
-                                        </span>
-                                    <?php } ?>
+                                        <?php if(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_package'.$i)!=''){ ?>
+                                            <span class="exclusive-offers-package">
+                                                <?php echo esc_html(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_package'.$i)); ?>
+                                            </span>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="exclusive-offers-bottom-block-link">
+                                        <a href="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_exclusive_offers_icon_box_url'.$i)); ?>">
+                                            <?php if(get_theme_mod('internet_service_provider_pro_exclusive_offers_box_icon'.$i)!=''){ ?>
+                                                <i class="<?php echo esc_html(get_theme_mod('internet_service_provider_pro_exclusive_offers_box_icon'.$i)); ?>">
+                                                </i>
+                                            <?php } ?>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

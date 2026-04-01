@@ -1723,7 +1723,7 @@ a.header-contact-text,
 .product-item h5 a,
 .news-box .box h5 a,
 .woocommerce ul.products li.product .woocommerce-loop-product__title,
-.main-banner-btn a, .news-box h5 a {
+.main-banner-btn a, .news-box h5 a, .services-block-bottom-content h6 a {
   position: relative;
   display: inline !important;
   transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
@@ -1751,7 +1751,7 @@ a.header-contact-text:hover,
 .product-title-box h5 a:hover,
 .product-item h5 a:hover,
 .news-box .box:hover h5 a,
-.woocommerce ul.products li.product .woocommerce-loop-product__title:hover, .news-box h5 a:hover {
+.woocommerce ul.products li.product .woocommerce-loop-product__title:hover, .news-box h5 a:hover, .services-block-bottom-content h6 a:hover {
   background-size: 100% 2px;
 }
 /* ----------- Latest News ------------- */
@@ -2414,4 +2414,32 @@ figure{
 
 .wpcf7-spinner {
     display: none;
+}
+
+/*----------------------- Guten burg CSS --------------*/
+
+.internet-service-provider-pro-section-tagline {
+    color: #1C1C1F;
+    margin-bottom: 16px;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #1C1C1F;
+    border-radius: 38px;
+    padding: 7px 18px;
+    display: inline-block;
+    position: relative;
+}
+.internet-service-provider-pro-border-radius-20 {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.internet-service-provider-pro-border-radius-10{
+  border-radius: 20px;
+}
+.internet-service-provider-pro-border-radius-30{
+  border-radius: 20px;
+}
+.internet-service-provider-pro-box-shadow{
+ box-shadow: 0px 23px 27.3px -11px #1B1E3040;
 }

@@ -1385,6 +1385,8 @@ function moveArrayPosition(&$array, $key, $new_position) {
 		);
 		$error_id = wp_insert_post($error);
 
+		add_post_meta( $error_id, '_wp_page_template', '404.php' );
+
 		//Set the single testimonial with right sidebar templatex
 		add_post_meta( $error_id, 'vw_title_banner_image_wp_custom_attachment', $banner_attachment_url );
 
@@ -1454,7 +1456,7 @@ function moveArrayPosition(&$array, $key, $new_position) {
 
 		// ------------  Main Banner  ------------
 
-			set_theme_mod( 'internet_service_provider_pro_main_banner_bgimage', '');
+			set_theme_mod( 'internet_service_provider_pro_main_banner_rating_count', '5');
 
 	        set_theme_mod( 'internet_service_provider_pro_main_banner_vector_image', get_template_directory_uri().'/assets/images/curve.png');
 
@@ -1704,6 +1706,8 @@ function moveArrayPosition(&$array, $key, $new_position) {
         	set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_title'.$i, $why_choose_box_title[$i-1] );
 			set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_speed'.$i, $why_choose_box_speed[$i-1] );
 			set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_package'.$i, $why_choose_box_package[$i-1] );
+			set_theme_mod( 'internet_service_provider_pro_exclusive_offers_box_icon'.$i, 'fa-solid fa-arrow-right' );
+			set_theme_mod( 'internet_service_provider_pro_exclusive_offers_icon_box_url'.$i, home_url('/contact') );
 		} 
 
 		// ------------- Map Area -------------
@@ -1830,7 +1834,9 @@ function moveArrayPosition(&$array, $key, $new_position) {
 			set_theme_mod( 'internet_service_provider_pro_pricing_plan_button_url'.$i, home_url('/contact') ); 
 
 			if($i == 2){
-				set_theme_mod( 'internet_service_provider_pro_pricing_plan_recommended'.$i, '1' ); 
+				set_theme_mod( 'internet_service_provider_pro_pricing_plan_recommended'.$i, true ); 
+			} else {
+				set_theme_mod( 'internet_service_provider_pro_pricing_plan_recommended'.$i, false ); 
 			}
         }
 

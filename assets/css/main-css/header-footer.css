@@ -658,10 +658,10 @@ span.contact_widget_head {
   margin: 20px 0;
   font: 400 14px / 30px var(--primary-font);
 }
-.copyright p {
+.outer-footer .copyright p {
   font: 400 17px / 30px var(--primary-font);
   margin-bottom: 0;
-  color: #fff;
+  color: #fff !important;
 }
 .copyright a {
     color: var(--primary-color);

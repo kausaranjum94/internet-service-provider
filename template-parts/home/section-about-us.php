@@ -42,9 +42,9 @@
                             </span>
                         <?php } ?>
                         <?php if(get_theme_mod('internet_service_provider_pro_about_us_main_heading')!=''){ ?>
-                            <h3 data-aos="fade-right" data-aos-duration="800">
+                            <h2 data-aos="fade-right" data-aos-duration="800">
                                 <?php echo esc_html(get_theme_mod('internet_service_provider_pro_about_us_main_heading')); ?>
-                            </h3>
+                            </h2>
                         <?php } ?>
 
                         <?php if(get_theme_mod('internet_service_provider_pro_about_us_text')!=''){ ?>

@@ -675,7 +675,7 @@
  $wp_customize->add_control(
      new WP_Customize_Image_Control($wp_customize,'internet_service_provider_pro_404_image',
          array(
-         'label' => __('Add image','internet-service-provider-pro'),
+         'label' => __('404 image','internet-service-provider-pro'),
          'section' => 'internet_service_provider_pro_404_page',
          'settings' => 'internet_service_provider_pro_404_image'
  )));
@@ -702,17 +702,6 @@
    'section'=> 'internet_service_provider_pro_404_page',
    'type'=> 'text'
  ));
- $wp_customize->add_setting('internet_service_provider_pro_error_temp_bg_images',array(
-     'default'   => '',
-     'sanitize_callback' => 'esc_url_raw',
- ));
- $wp_customize->add_control(
-     new WP_Customize_Image_Control($wp_customize,'internet_service_provider_pro_error_temp_bg_images',
-         array(
-         'label' => __('404 Image','internet-service-provider-pro'),
-         'section' => 'internet_service_provider_pro_404_page',
-         'settings' => 'internet_service_provider_pro_error_temp_bg_images'
- )));
  $wp_customize->add_setting( 'internet_service_provider_pro_404_page_color_settings',
  array(
    'default' => '',
@@ -957,7 +946,7 @@
   ));
   $wp_customize->add_control('internet_service_provider_pro_single_post_page_related_post_heading',array(
     'label' => __('Add Heading','internet-service-provider-pro'),
-    'section' => 'internet_service_provider_pro_main_banner',
+    'section' => 'internet_service_provider_pro_post_general_settings',
     'setting' => 'internet_service_provider_pro_single_post_page_related_post_heading',
     'type'    => 'text'
   ));

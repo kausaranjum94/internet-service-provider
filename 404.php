@@ -15,14 +15,13 @@
 		$error_page_back='';
 	}
 	$img_bg = get_theme_mod('internet_service_provider_pro_404_page_bg_attachment');
-	$btn_svg = file_get_contents(get_template_directory_uri().'/assets/images/btn-icon.svg');
 ?>
 <section class="content_page error-page <?php echo esc_attr($img_bg); ?>" style="<?php echo esc_attr($error_page_back);?>">
 	<div class="container">
 		<div class="row text-center justify-content-center">
 			<div class="col-lg-7">
 				<div class="page-content error_bgs d-flex flex-column gap-2">
-					<div class="404-image" data-aos="flip-up" data-aos-duration="1000">
+					<div class="404-image dfdf" data-aos="flip-up" data-aos-duration="1000">
 						<?php if(get_theme_mod('internet_service_provider_pro_404_image')!=''){ ?>
 							<img src="<?php echo esc_url(get_theme_mod('internet_service_provider_pro_404_image')); ?>">
 						<?php } ?>

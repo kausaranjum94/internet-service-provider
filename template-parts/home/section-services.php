@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="services-block-bottom-content">
-                                <h6><?php the_title(); ?></h6>
+                                <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                                 <?php if(!empty($short_description)): ?>
                                     <div class="box-text"><?php echo esc_html($short_description); ?></div>
                                 <?php endif; ?>
