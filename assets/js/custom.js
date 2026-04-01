@@ -152,6 +152,7 @@ jQuery(document).ready(function ($) {
     autoplayHoverPause: true,
     mouseDrag: true
   });
+  
 
   var owl = jQuery('#records .owl-carousel');
     owl.owlCarousel({

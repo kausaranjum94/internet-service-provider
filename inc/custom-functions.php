@@ -201,12 +201,6 @@ function internet_service_provider_pro_section_services_shortcode( ){
 }
 add_shortcode( 'internet-service-provider-pro-services', 'internet_service_provider_pro_section_services_shortcode' );
 
-function internet_service_provider_pro_section_kitchen_tab_shortcode( ){
-  ob_start();
-  echo get_template_part( 'template-parts/home/section-kitchen-tab' );
-  return ob_get_clean();
-}
-add_shortcode( 'internet-service-provider-pro-kitchen-tab', 'internet_service_provider_pro_section_kitchen_tab_shortcode' );
 
 function internet_service_provider_pro_section_map_area_shortcode( ){
   ob_start();

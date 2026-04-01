@@ -2430,6 +2430,15 @@ figure{
     display: inline-block;
     position: relative;
 }
+.internet-service-provider-pro-section-tagline:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #1C1C1F;
+    border-radius: 10px;
+    margin-right: 4px;
+}
 .internet-service-provider-pro-border-radius-20 {
     border-radius: 20px;
     overflow: hidden;
@@ -2442,4 +2451,54 @@ figure{
 }
 .internet-service-provider-pro-box-shadow{
  box-shadow: 0px 23px 27.3px -11px #1B1E3040;
+}
+.internet-service-provider-pro-customer-image figure {
+  margin-left: -15px;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.internet-service-provider-pro-customer-image figure:first-child {
+    margin-left: 0;
+}
+.internet-service-provider-pro-rating-records svg {
+    color: #1C1C1F;
+    transform: rotate(-56deg);
+    font-size: 24px;
+    margin-left: 9px;
+}
+.wp-theme-internet-service-provider-pro .wp-block-ive-carousel {
+    background-color: #1C1C1F;
+}
+.wp-theme-internet-service-provider-pro .wp-block-ive-carousel .owl-carousel .owl-item img {
+    width: auto;
+}
+.wp-theme-internet-service-provider-pro .ive-carousel-id_a0d779-1f .ive-carousel-content-wrap {
+    border: none !important;
+}
+.internet-service-provider-pro-main-banner {
+    padding-bottom: 8em;
+}
+.internet-service-provider-pro-section-tagline {
+  border-color: #06B6D4;
+}
+.internet-service-provider-pro-section-tagline:before {
+    background-color: #06B6D4;
+}
+.internet-service-provider-pro-why-choose-us-steps {
+  width: 39px;
+  height: 40px;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #1C1C1F;
+  border: 1px solid var(--primary-color);
+  margin-right: 12px !important;
+}
+
+.internet-service-provider-pro-why-choose-us-steps-border{
+  border-bottom: 1px solid #D9D9D9;
 }
