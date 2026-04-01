@@ -2502,3 +2502,28 @@ figure{
 .internet-service-provider-pro-why-choose-us-steps-border{
   border-bottom: 1px solid #D9D9D9;
 }
+.internet-service-provider-pro-why-choose-us-icon {
+  background-color: var(--primary-color);
+  width: 29px;
+  height: 29px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 6px;
+  color: white;
+}
+.internet-service-provider-pro-why-choose-us-icon-block p{
+    margin: 0;
+}
+.internet-service-provider-pro-why-choose-us-icon-text {
+    display: inline-block;
+    background-color: white;
+    border-radius: 61px;
+}
+.internet-service-provider-pro-why-choose-us-icon-block{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding: 18px;
+}

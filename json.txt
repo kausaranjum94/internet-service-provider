@@ -278,10 +278,30 @@
 <!-- wp:group {"className":"pt-5 container","layout":{"type":"constrained"}} -->
 <div class="wp-block-group pt-5 container"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:group {"className":" image-hover-effect ","layout":{"type":"constrained"}} -->
-<div class="wp-block-group  image-hover-effect"><!-- wp:image {"id":234,"sizeSlug":"full","linkDestination":"none","className":"box internet-service-provider-pro-border-radius-20"} -->
+<div class="wp-block-column"><!-- wp:group {"className":" image-hover-effect  position-relative internet-service-provider-pro-why-choose-us-image","layout":{"type":"constrained"}} -->
+<div class="wp-block-group  image-hover-effect position-relative internet-service-provider-pro-why-choose-us-image"><!-- wp:image {"id":234,"sizeSlug":"full","linkDestination":"none","className":"box internet-service-provider-pro-border-radius-20"} -->
 <figure class="wp-block-image size-full box internet-service-provider-pro-border-radius-20"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/why-choose-us-column-image.png" alt="" class="wp-image-234"/></figure>
-<!-- /wp:image --></div>
+<!-- /wp:image -->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:columns {"className":"internet-service-provider-pro-why-choose-us-icon-block"} -->
+<div class="wp-block-columns internet-service-provider-pro-why-choose-us-icon-block"><!-- wp:column {"width":"66.66%","className":"d-flex align-items-center internet-service-provider-pro-why-choose-us-icon-text"} -->
+<div class="wp-block-column d-flex align-items-center internet-service-provider-pro-why-choose-us-icon-text" style="flex-basis:66.66%"><!-- wp:font-awesome/icon {"iconLayers":[{"iconDefinition":{"iconName":"comment-dots","prefix":"fas","icon":[512,512,null,null,"M256 480c141.4 0 256-107.5 256-240S397.4 0 256 0 0 107.5 0 240c0 54.3 19.2 104.3 51.6 144.5L2.8 476.8c-4.8 9-3.3 20 3.6 27.5s17.8 9.8 27.1 5.8l118.4-50.7C183.7 472.6 218.9 480 256 480zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"]},"spin":false,"transform":null}],"className":"internet-service-provider-pro-why-choose-us-icon"} -->
+<div class="wp-block-font-awesome-icon wp-font-awesome-icon internet-service-provider-pro-why-choose-us-icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment-dots" class="svg-inline--fa fa-comment-dots " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 480c141.4 0 256-107.5 256-240S397.4 0 256 0 0 107.5 0 240c0 54.3 19.2 104.3 51.6 144.5L2.8 476.8c-4.8 9-3.3 20 3.6 27.5s17.8 9.8 27.1 5.8l118.4-50.7C183.7 472.6 218.9 480 256 480zM128 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm128 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm96 32a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg></div>
+<!-- /wp:font-awesome/icon -->
+
+<!-- wp:paragraph {"className":"p-0"} -->
+<p class="p-0">Join the 250k+ DataNest users</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_2be8a3-b1","btns":[{"text":"","link":"","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"center","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":10,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"color":"#ffffff","background":"#06b6d4","border":"#555555","borderRadius":38,"borderWidth":0,"colorHover":"#ffffff","backgroundHover":"#000000","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":0,"iconpaddingbottom":0,"iconpaddingtop":0,"iconpaddingright":0,"iconHover":false,"iconSvg":"fas fa-arrow-right","iconSvgLeft":"","marginleft":0,"marginright":0}],"iconDisable":true,"iconsize":[18,12,12],"iconColor":"#ffffff","iconBGColor":"#06b6d4","iconhoverColor":"#ffffff","iconhoverBGColor":"#000000"} -->
+<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_2be8a3-b1"><div class="ive-btn-wrap ive-btn-unique_2be8a3-b1 undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-center text-xl-center "><a class="anchrstyle ive-button-ad_2be8a3-b1 ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-false" href="#" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text"><div class="ive-right-icon-parent ive-button-icon-padding0"><i class="fas fa-arrow-right"></i></div></span></a></div></div>
+<!-- /wp:ive/ibtana-visual-editorbtn --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
 
@@ -347,7 +367,27 @@
 <!-- /wp:columns -->
 
 <!-- wp:columns {"className":"internet-service-provider-pro-why-choose-us-steps-border pb-5 mb-5"} -->
-<div class="wp-block-columns internet-service-provider-pro-why-choose-us-steps-border pb-5 mb-5"><!-- wp:column {"width":"","className":"d-flex align-items-end"} -->
+<div class="wp-block-columns internet-service-provider-pro-why-choose-us-steps-border pb-5 mb-5"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"className":"internet-service-provider-pro-why-choose-us-steps"} -->
+<p class="internet-service-provider-pro-why-choose-us-steps">03</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"left","level":5} -->
+<h5 class="wp-block-heading has-text-align-left">Secure &amp; Private</h5>
+<!-- /wp:heading --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph {"align":"left","style":{"color":{"text":"#656565"},"elements":{"link":{"color":{"text":"#656565"}}}}} -->
+<p class="has-text-align-left has-text-color has-link-color" style="color:#656565">Advanced network protection keeps your data safe from threats.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:columns {"className":"pb-5 mb-5"} -->
+<div class="wp-block-columns pb-5 mb-5"><!-- wp:column {"width":"","className":"d-flex align-items-end"} -->
 <div class="wp-block-column d-flex align-items-end"><!-- wp:paragraph {"align":"left"} -->
 <p class="has-text-align-left">Smooth streaming, gaming, and downloading at all times</p>
 <!-- /wp:paragraph --></div>
@@ -355,8 +395,8 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"className":"p-4 internet-service-provider-pro-border-radius-20","style":{"color":{"background":"#1c1c1f"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group p-4 internet-service-provider-pro-border-radius-20 has-background" style="background-color:#1c1c1f"><!-- wp:paragraph {"style":{"color":{"background":"#06b6d4"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
-<p class="has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4">Guaranteed</p>
+<div class="wp-block-group p-4 internet-service-provider-pro-border-radius-20 has-background" style="background-color:#1c1c1f"><!-- wp:paragraph {"align":"right","className":"d-inline-block px-4 py-2 internet-service-provider-pro-border-radius-10","style":{"color":{"background":"#06b6d4"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<p class="has-text-align-right d-inline-block px-4 py-2 internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4">Guaranteed</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"left","className":"mt-5","style":{"elements":{"link":{"color":{"text":"#bababa"}}},"color":{"text":"#bababa"}}} -->
