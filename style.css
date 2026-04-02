@@ -2552,3 +2552,30 @@ figure{
     flex-wrap: nowrap;
     overflow: hidden;
 }
+.internet-service-provider-pricing-plan a {
+    display: block !important;
+    text-align: center;
+}
+.wp-theme-internet-service-provider-pro .wp-block-group ul.wp-block-list li:before {
+    content: "\2b";
+    background-color: var(--primary-color);
+    color: white;
+    width: 30px;
+    display: inline-flex;
+    font-size: 11px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 11px;
+    font-size: 19px;
+}
+.wp-theme-internet-service-provider-pro .wp-block-group ul.wp-block-list {
+    margin: 0;
+}
+.wp-theme-internet-service-provider-pro .wp-block-group ul.wp-block-list li {
+    list-style: none;
+}
+.wp-block-ive-carousel .owl-carousel.owl-loaded {
+    border: none !important;
+}
