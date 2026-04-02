@@ -2449,6 +2449,9 @@ figure{
 .internet-service-provider-pro-border-radius-30{
   border-radius: 20px;
 }
+.internet-service-provider-pro-border-radius-50{
+  border-radius: 50%;
+}
 .internet-service-provider-pro-box-shadow{
  box-shadow: 0px 23px 27.3px -11px #1B1E3040;
 }
@@ -2520,10 +2523,32 @@ figure{
     display: inline-block;
     background-color: white;
     border-radius: 61px;
+    padding: 10px;
 }
-.internet-service-provider-pro-why-choose-us-icon-block{
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    padding: 18px;
+.internet-service-provider-pro-why-choose-us-icon-block {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  padding: 18px;
+  z-index: 9;
+}
+.internet-service-provider-pro-why-choose-us-icon-block .ive-btn-main-parent_534c8c-1d.btn-inner-wrap {
+    margin: 0 !important;
+}
+.internet-service-provider-pro-why-choose-us-btn-bl .ive-right-icon-parent.ive-button-icon-padding0 {
+  color: white !important;
+}
+.internet-service-provider-pro-map-area ul.ive-tabs-title-list {
+  background-color: transparent !important;
+}
+.internet-service-provider-pro-map-area .wp-block-ive-tabs .ive-tabs-title-list li a.ive-tab-title {
+    border-radius: 43px !important;
+}
+.internet-service-provider-pro-map-area .ive-tabs-id_c43e70-a5 .ive-tabs-content-wrap {
+    border: none !important;
+    padding: 0 !important;
+}
+.internet-service-provider-pro-map-area .wp-block-ive-tabs .ive-tabs-title-list {
+    flex-wrap: nowrap;
+    overflow: hidden;
 }

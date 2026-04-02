@@ -140,45 +140,45 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:ive/carousel {"uniqueID":"_a0d779-1f","displayItem":[1,2,5],"tabCount":7,"currentTab":2,"titles":[{"text":"Slide 1","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":""},{"text":"Slide 2","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":""},{"text":"Slide 3","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":""},{"text":"Slide 4","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Slide 5","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Slide 6","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Slide 7","icon":"","iconSide":"right","onlyIcon":false,"subText":""}],"className":"py-5"} -->
-<div class="wp-block-ive-carousel alignnone py-5"><div class="ive-carousel-wrap ive-carousel-id_a0d779-1f ive-carousel-has-7-tabs ive-active-tab-2 ive-carousel-layout-tabs ive-carousel-tablet-layout-inherit ive-carousel-mobile-layout-inherit "><div class="ive-carousel-content-wrap owl-carousel owl-theme" data-margin="0" data-stagepadding="0" data-rewind="false" data-autoplay="true" data-autoplaytimeout="5000" data-autoplayhoverpause="true" data-autoplayspeed="5000" data-navspeed="5000" data-dotsspeed="5000" data-loop="false" data-responsive-desk="5" data-responsive-tab="2" data-responsive-mob="1" data-navtextprev="fas fa-angle-left" data-navtextnext="fas fa-angle-right" data-navbtntype="icon"><!-- wp:ive/slide {"uniqueID":"_8f3287-f5"} -->
-<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-1 ive-inner-tab_8f3287-f5"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":159,"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:ive/carousel {"uniqueID":"_e57288-46","displayItem":[1,2,5],"tabCount":7,"currentTab":2,"titles":[{"text":"Slide 1","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":""},{"text":"Slide 2","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":""},{"text":"Slide 3","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":""},{"text":"Slide 4","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Slide 5","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Slide 6","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Slide 7","icon":"","iconSide":"right","onlyIcon":false,"subText":""}],"className":"py-5"} -->
+<div class="wp-block-ive-carousel alignnone py-5"><div class="ive-carousel-wrap ive-carousel-id_e57288-46 ive-carousel-has-7-tabs ive-active-tab-2 ive-carousel-layout-tabs ive-carousel-tablet-layout-inherit ive-carousel-mobile-layout-inherit "><div class="ive-carousel-content-wrap owl-carousel owl-theme" data-margin="0" data-stagepadding="0" data-rewind="false" data-autoplay="true" data-autoplaytimeout="5000" data-autoplayhoverpause="true" data-autoplayspeed="5000" data-navspeed="5000" data-dotsspeed="5000" data-loop="false" data-responsive-desk="5" data-responsive-tab="2" data-responsive-mob="1" data-navtextprev="fas fa-angle-left" data-navtextnext="fas fa-angle-right" data-navbtntype="icon"><!-- wp:ive/slide {"uniqueID":"_1ffb88-03"} -->
+<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-1 ive-inner-tab_1ffb88-03"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":159,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/partner1.png" alt="" class="wp-image-159"/></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:ive/slide -->
 
-<!-- wp:ive/slide {"id":2,"uniqueID":"_9cde7e-e8"} -->
-<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-2 ive-inner-tab_9cde7e-e8"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":160,"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:ive/slide {"id":2,"uniqueID":"_cef368-83"} -->
+<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-2 ive-inner-tab_cef368-83"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":160,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/partner2.png" alt="" class="wp-image-160"/></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:ive/slide -->
 
-<!-- wp:ive/slide {"id":3,"uniqueID":"_a813f0-fe"} -->
-<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-3 ive-inner-tab_a813f0-fe"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":161,"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:ive/slide {"id":3,"uniqueID":"_0313ec-ba"} -->
+<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-3 ive-inner-tab_0313ec-ba"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":161,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/partner3.png" alt="" class="wp-image-161"/></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:ive/slide -->
 
-<!-- wp:ive/slide {"id":4,"uniqueID":"_157821-86"} -->
-<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-4 ive-inner-tab_157821-86"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":162,"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:ive/slide {"id":4,"uniqueID":"_4e7b09-51"} -->
+<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-4 ive-inner-tab_4e7b09-51"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":162,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/partner4.png" alt="" class="wp-image-162"/></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:ive/slide -->
 
-<!-- wp:ive/slide {"id":5,"uniqueID":"_7baa13-8c"} -->
-<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-5 ive-inner-tab_7baa13-8c"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":163,"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:ive/slide {"id":5,"uniqueID":"_e9e667-86"} -->
+<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-5 ive-inner-tab_e9e667-86"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":163,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/partner5.png" alt="" class="wp-image-163"/></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:ive/slide -->
 
-<!-- wp:ive/slide {"id":6,"uniqueID":"_4c7bbc-5b"} -->
-<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-6 ive-inner-tab_4c7bbc-5b"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":164,"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:ive/slide {"id":6,"uniqueID":"_1b9e3a-4f"} -->
+<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-6 ive-inner-tab_1b9e3a-4f"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":164,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/partner6.png" alt="" class="wp-image-164"/></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:ive/slide -->
 
-<!-- wp:ive/slide {"id":7,"uniqueID":"_0b6e63-79"} -->
-<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-7 ive-inner-tab_0b6e63-79"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":161,"sizeSlug":"full","linkDestination":"none"} -->
+<!-- wp:ive/slide {"id":7,"uniqueID":"_c152aa-17"} -->
+<div class="wp-block-ive-slide ive-slide-inner-content ive-inner-tab-7 ive-inner-tab_c152aa-17"><div class="ive-slide-inner-content-inner"><!-- wp:image {"id":161,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/partner3.png" alt="" class="wp-image-161"/></figure>
 <!-- /wp:image --></div></div>
 <!-- /wp:ive/slide --></div></div></div>
@@ -200,8 +200,8 @@
 <p class="my-3 has-text-color has-link-color" style="color:#bababa">At DataNest, we believe internet speed is essential. Our mission is to provide ultra-fast, reliable internet to homes and businesses.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_9b9cf4-47","btns":[{"text":"Learn More","link":"http://localhost/internet-service-provider/about","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"start","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":24,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"color":"#ffffff","background":"#06b6d4","border":"#555555","borderRadius":50,"borderWidth":2,"colorHover":"#000000","backgroundHover":"#ffffff","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":5,"iconpaddingbottom":5,"iconpaddingtop":5,"iconpaddingright":5,"iconHover":false,"iconSvg":"","iconSvgLeft":"","marginleft":"","marginright":""}],"className":"mt-4"} -->
-<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_9b9cf4-47 mt-4"><div class="ive-btn-wrap ive-btn-unique_9b9cf4-47 undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-start text-xl-start "><a class="anchrstyle ive-button-ad_9b9cf4-47 ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-true" href="http://localhost/internet-service-provider/about" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text">Learn More</span></a></div></div>
+<!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_47de05-07","btns":[{"text":"Learn More","link":"http://localhost/internet-service-provider/about","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"start","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":24,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"color":"#ffffff","background":"#06b6d4","border":"#555555","borderRadius":50,"borderWidth":2,"colorHover":"#000000","backgroundHover":"#ffffff","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":5,"iconpaddingbottom":5,"iconpaddingtop":5,"iconpaddingright":5,"iconHover":false,"iconSvg":"","iconSvgLeft":"","marginleft":"","marginright":""}],"className":"mt-4"} -->
+<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_47de05-07 mt-4"><div class="ive-btn-wrap ive-btn-unique_47de05-07 undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-start text-xl-start "><a class="anchrstyle ive-button-ad_47de05-07 ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-true" href="http://localhost/internet-service-provider/about" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text">Learn More</span></a></div></div>
 <!-- /wp:ive/ibtana-visual-editorbtn --></div>
 <!-- /wp:column -->
 
@@ -296,8 +296,8 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_2be8a3-b1","btns":[{"text":"","link":"","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"center","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":10,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"color":"#ffffff","background":"#06b6d4","border":"#555555","borderRadius":38,"borderWidth":0,"colorHover":"#ffffff","backgroundHover":"#000000","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":0,"iconpaddingbottom":0,"iconpaddingtop":0,"iconpaddingright":0,"iconHover":false,"iconSvg":"fas fa-arrow-right","iconSvgLeft":"","marginleft":0,"marginright":0}],"iconDisable":true,"iconsize":[18,12,12],"iconColor":"#ffffff","iconBGColor":"#06b6d4","iconhoverColor":"#ffffff","iconhoverBGColor":"#000000"} -->
-<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_2be8a3-b1"><div class="ive-btn-wrap ive-btn-unique_2be8a3-b1 undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-center text-xl-center "><a class="anchrstyle ive-button-ad_2be8a3-b1 ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-false" href="#" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text"><div class="ive-right-icon-parent ive-button-icon-padding0"><i class="fas fa-arrow-right"></i></div></span></a></div></div>
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_534c8c-1d","btns":[{"text":"","link":"","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"center","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":10,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"color":"#ffffff","background":"#06b6d4","border":"#555555","borderRadius":38,"borderWidth":0,"colorHover":"#ffffff","backgroundHover":"#000000","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":0,"iconpaddingbottom":0,"iconpaddingtop":0,"iconpaddingright":0,"iconHover":false,"iconSvg":"fas fa-arrow-right","iconSvgLeft":"","marginleft":0,"marginright":0}],"iconDisable":true,"iconsize":[18,12,12],"iconColor":"#ffffff","iconBGColor":"#06b6d4","iconhoverColor":"#ffffff","iconhoverBGColor":"#000000","className":"internet-service-provider-pro-why-choose-us-btn-bl"} -->
+<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_534c8c-1d internet-service-provider-pro-why-choose-us-btn-bl"><div class="ive-btn-wrap ive-btn-unique_534c8c-1d undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-center text-xl-center "><a class="anchrstyle ive-button-ad_534c8c-1d ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-false" href="#" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text"><div class="ive-right-icon-parent ive-button-icon-padding0"><i class="fas fa-arrow-right"></i></div></span></a></div></div>
 <!-- /wp:ive/ibtana-visual-editorbtn --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -411,7 +411,351 @@
 <!-- /wp:columns --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"></div>
 <!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:cover {"url":"http://localhost/internet-service-provider/wp-content/uploads/2026/04/exclusive-offers-bg.png","id":281,"dimRatio":50,"customOverlayColor":"#1a2734","isUserOverlayColor":false,"sizeSlug":"full","className":"py-5","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover py-5"><img class="wp-block-cover__image-background wp-image-281 size-full" alt="" src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/exclusive-offers-bg.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#1a2734"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"container","layout":{"type":"constrained"}} -->
+<div class="wp-block-group container"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"className":"text-start"} -->
+<div class="wp-block-column text-start"><!-- wp:paragraph {"className":"internet-service-provider-pro-section-tagline","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<p class="internet-service-provider-pro-section-tagline has-white-color has-text-color has-link-color">Exclusive Offers</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontStyle":"normal","fontWeight":"700","fontSize":"40px"}},"textColor":"white"} -->
+<h3 class="wp-block-heading has-white-color has-text-color has-link-color" style="font-size:40px;font-style:normal;font-weight:700">DataNest Exclusive Internet Plans</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"20px"},"color":{"text":"#bababa"},"elements":{"link":{"color":{"text":"#bababa"}}}}} -->
+<p class="has-text-color has-link-color" style="color:#bababa;font-size:20px">This Month’s Exclusive Deals Because You </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"mb-4","style":{"typography":{"fontSize":"16px"},"color":{"text":"#bababa"},"elements":{"link":{"color":{"text":"#bababa"}}}}} -->
+<p class="mb-4 has-text-color has-link-color" style="color:#bababa;font-size:16px">Deserve More Than Just Internet</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item {"className":"mb-3","style":{"color":{"text":"#bababa"},"elements":{"link":{"color":{"text":"#bababa"}}}}} -->
+<li class="mb-3 has-text-color has-link-color" style="color:#bababa">Free Installation</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item {"className":"mb-3","style":{"color":{"text":"#bababa"},"elements":{"link":{"color":{"text":"#bababa"}}}}} -->
+<li class="mb-3 has-text-color has-link-color" style="color:#bababa">30-Day Risk-Free Trial</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item {"style":{"color":{"text":"#bababa"},"elements":{"link":{"color":{"text":"#bababa"}}}}} -->
+<li class="has-text-color has-link-color" style="color:#bababa">GamerX Bonus Plan</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"className":"mt-5"} -->
+<div class="wp-block-column mt-5"><!-- wp:columns {"className":"mt-5 pt-5"} -->
+<div class="wp-block-columns mt-5 pt-5"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:group {"className":"p-4 internet-service-provider-pro-border-radius-20","backgroundColor":"white","layout":{"type":"constrained"}} -->
+<div class="wp-block-group p-4 internet-service-provider-pro-border-radius-20 has-white-background-color has-background"><!-- wp:heading {"level":5,"style":{"elements":{"link":{"color":{"text":"var:preset|color|black"}}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"black"} -->
+<h5 class="wp-block-heading has-black-color has-text-color has-link-color" style="font-style:normal;font-weight:700">GamerX Boost Plan</h5>
+<!-- /wp:heading -->
+
+<!-- wp:spacer {"height":"65px"} -->
+<div style="height:65px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"70%"} -->
+<div class="wp-block-column" style="flex-basis:70%"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|black"}}},"typography":{"fontSize":"30px","fontStyle":"normal","fontWeight":"300"}},"textColor":"black"} -->
+<p class="has-black-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:300">350 Mbps</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"right","className":"d-inline-block px-4 py-2 internet-service-provider-pro-border-radius-10","style":{"color":{"background":"#06b6d4"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<p class="has-text-align-right d-inline-block px-4 py-2 internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4">$59/month</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"30%"} -->
+<div class="wp-block-column" style="flex-basis:30%"><!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_e14c34-13","btns":[{"text":"","link":"","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"center","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":10,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"background":"#ffffff","border":"#555555","borderRadius":38,"borderWidth":0,"colorHover":"#ffffff","backgroundHover":"#ffffff","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":0,"iconpaddingbottom":0,"iconpaddingtop":0,"iconpaddingright":0,"iconHover":false,"iconSvg":"fas fa-arrow-right","iconSvgLeft":"","marginleft":0,"marginright":0}],"iconDisable":true,"iconsize":[18,12,12],"iconColor":"#0693e3","iconBGColor":"#ffffff","iconhoverColor":"#000000","iconhoverBGColor":"#ffffff"} -->
+<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_e14c34-13"><div class="ive-btn-wrap ive-btn-unique_e14c34-13 undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-center text-xl-center "><a class="anchrstyle ive-button-ad_e14c34-13 ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-false" href="#" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text"><div class="ive-right-icon-parent ive-button-icon-padding0"><i class="fas fa-arrow-right"></i></div></span></a></div></div>
+<!-- /wp:ive/ibtana-visual-editorbtn --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"className":"p-4 internet-service-provider-pro-border-radius-20","backgroundColor":"white","layout":{"type":"constrained"}} -->
+<div class="wp-block-group p-4 internet-service-provider-pro-border-radius-20 has-white-background-color has-background"><!-- wp:heading {"level":5,"style":{"elements":{"link":{"color":{"text":"var:preset|color|black"}}},"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"black"} -->
+<h5 class="wp-block-heading has-black-color has-text-color has-link-color" style="font-style:normal;font-weight:700">Pro Arena Bundle</h5>
+<!-- /wp:heading -->
+
+<!-- wp:spacer {"height":"65px"} -->
+<div style="height:65px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"70%"} -->
+<div class="wp-block-column" style="flex-basis:70%"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|black"}}},"typography":{"fontSize":"30px","fontStyle":"normal","fontWeight":"300"}},"textColor":"black"} -->
+<p class="has-black-color has-text-color has-link-color" style="font-size:30px;font-style:normal;font-weight:300">350 Mbps</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"right","className":"d-inline-block px-4 py-2 internet-service-provider-pro-border-radius-10","style":{"color":{"background":"#06b6d4"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<p class="has-text-align-right d-inline-block px-4 py-2 internet-service-provider-pro-border-radius-10 has-white-color has-text-color has-background has-link-color" style="background-color:#06b6d4">$59/month</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"30%"} -->
+<div class="wp-block-column" style="flex-basis:30%"><!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_fd921d-01","btns":[{"text":"","link":"","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"center","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":10,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"background":"#ffffff","border":"#555555","borderRadius":38,"borderWidth":0,"colorHover":"#ffffff","backgroundHover":"#ffffff","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":0,"iconpaddingbottom":0,"iconpaddingtop":0,"iconpaddingright":0,"iconHover":false,"iconSvg":"fas fa-arrow-right","iconSvgLeft":"","marginleft":0,"marginright":0}],"iconDisable":true,"iconsize":[18,12,12],"iconColor":"#0693e3","iconBGColor":"#ffffff","iconhoverColor":"#000000","iconhoverBGColor":"#ffffff"} -->
+<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_fd921d-01"><div class="ive-btn-wrap ive-btn-unique_fd921d-01 undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-center text-xl-center "><a class="anchrstyle ive-button-ad_fd921d-01 ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-false" href="#" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text"><div class="ive-right-icon-parent ive-button-icon-padding0"><i class="fas fa-arrow-right"></i></div></span></a></div></div>
+<!-- /wp:ive/ibtana-visual-editorbtn --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:group {"className":"py-5","layout":{"type":"constrained"}} -->
+<div class="wp-block-group py-5"><!-- wp:group {"className":"internet-service-provider-pro-map-area","layout":{"type":"constrained"}} -->
+<div class="wp-block-group internet-service-provider-pro-map-area"><!-- wp:columns {"className":"container mb-5"} -->
+<div class="wp-block-columns container mb-5"><!-- wp:column {"width":"66.66%"} -->
+<div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:paragraph {"className":"internet-service-provider-pro-section-tagline"} -->
+<p class="internet-service-provider-pro-section-tagline">Map Area</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"style":{"color":{"text":"#1c1c1f"},"elements":{"link":{"color":{"text":"#1c1c1f"}}},"typography":{"fontSize":"40px"}}} -->
+<h3 class="wp-block-heading has-text-color has-link-color" style="color:#1c1c1f;font-size:40px">Enjoy Blazing-Fast <br>Connectivity Everywhere</h3>
+<!-- /wp:heading --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:paragraph {"className":"pt-5","style":{"color":{"text":"#656565"},"elements":{"link":{"color":{"text":"#656565"}}}}} -->
+<p class="pt-5 has-text-color has-link-color" style="color:#656565">Orbitix is expanding nationwide, providing reliable high-speed internet to more homes and cities daily.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:ive/tabs {"uniqueID":"_c43e70-a5","tabCount":19,"currentTab":2,"titles":[{"text":"Jakarta","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":"","imgID":"","imgURL":"","imgAlt":"","imageheight":"150","imagewidth":"200","showimg":false,"showBGimg":false,"normalBGimgID":"","normalBGimgURL":"","normalBGimgAlt":"","hoverBGImgimgID":"","hoverBGImgimgURL":"","hoverBGImgimgAlt":"","activeBGimgID":"","activeBGimgURL":"","activeBGimgAlt":""},{"text":"Surabaya","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":"","imgID":"","imgURL":"","imgAlt":"","imageheight":"150","imagewidth":"200","showimg":false,"showBGimg":false,"normalBGimgID":"","normalBGimgURL":"","normalBGimgAlt":"","hoverBGImgimgID":"","hoverBGImgimgURL":"","hoverBGImgimgAlt":"","activeBGimgID":"","activeBGimgURL":"","activeBGimgAlt":""},{"text":"Makasar","icon":"","iconSide":"right","onlyIcon":false,"subText":"","anchor":"","imgID":"","imgURL":"","imgAlt":"","imageheight":"150","imagewidth":"200","showimg":false,"showBGimg":false,"normalBGimgID":"","normalBGimgURL":"","normalBGimgAlt":"","hoverBGImgimgID":"","hoverBGImgimgURL":"","hoverBGImgimgAlt":"","activeBGimgID":"","activeBGimgURL":"","activeBGimgAlt":""},{"text":"Semarang","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Makasar","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Yogyakarta","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Medan","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Makassar","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Lampung","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Metro","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Palembang","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Metro","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Bandung","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Jakarta","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Surabaya","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Makasar","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Semarang","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Makasar","icon":"","iconSide":"right","onlyIcon":false,"subText":""},{"text":"Yogyakarta","icon":"","iconSide":"right","onlyIcon":false,"subText":""}],"titleColor":"#1c1c1f","titleColorActive":"#06b6d4","titleBorder":"#bababa","displayItem":["1","2",6]} -->
+<div class="wp-block-ive-tabs alignnone"><div class="ive-tabs-wrap ive-tabs-id_c43e70-a5 ive-tabs-has-19-tabs ive-active-tab-2 ive-tabs-layout-tabs ive-tabs-tablet-layout-inherit ive-tabs-mobile-layout-inherit ive-tab-alignment-left "><ul class="ive-tabs-title-list"><li id="tab-jakarta" class="ive-title-item ive-title-item-1 ive-tab-alltitle-item ive-tab-title-item-0 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-jakarta" data-tab="1" class="ive-tab-title ive-tab-title-1 ive-tab-alltitle-heading ive-tab-title-heading-0 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Jakarta</span></a></li><li id="tab-surabaya" class="ive-title-item ive-title-item-2 ive-tab-alltitle-item ive-tab-title-item-1 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-active "><a href="#tab-surabaya" data-tab="2" class="ive-tab-title ive-tab-title-2 ive-tab-alltitle-heading ive-tab-title-heading-1 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Surabaya</span></a></li><li id="tab-makasar" class="ive-title-item ive-title-item-3 ive-tab-alltitle-item ive-tab-title-item-2 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-makasar" data-tab="3" class="ive-tab-title ive-tab-title-3 ive-tab-alltitle-heading ive-tab-title-heading-2 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Makasar</span></a></li><li id="tab-semarang" class="ive-title-item ive-title-item-4 ive-tab-alltitle-item ive-tab-title-item-3 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-semarang" data-tab="4" class="ive-tab-title ive-tab-title-4 ive-tab-alltitle-heading ive-tab-title-heading-3 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Semarang</span></a></li><li id="tab-makasar" class="ive-title-item ive-title-item-5 ive-tab-alltitle-item ive-tab-title-item-4 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-makasar" data-tab="5" class="ive-tab-title ive-tab-title-5 ive-tab-alltitle-heading ive-tab-title-heading-4 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Makasar</span></a></li><li id="tab-yogyakarta" class="ive-title-item ive-title-item-6 ive-tab-alltitle-item ive-tab-title-item-5 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-yogyakarta" data-tab="6" class="ive-tab-title ive-tab-title-6 ive-tab-alltitle-heading ive-tab-title-heading-5 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Yogyakarta</span></a></li><li id="tab-medan" class="ive-title-item ive-title-item-7 ive-tab-alltitle-item ive-tab-title-item-6 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-medan" data-tab="7" class="ive-tab-title ive-tab-title-7 ive-tab-alltitle-heading ive-tab-title-heading-6 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Medan</span></a></li><li id="tab-makassar" class="ive-title-item ive-title-item-8 ive-tab-alltitle-item ive-tab-title-item-7 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-makassar" data-tab="8" class="ive-tab-title ive-tab-title-8 ive-tab-alltitle-heading ive-tab-title-heading-7 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Makassar</span></a></li><li id="tab-lampung" class="ive-title-item ive-title-item-9 ive-tab-alltitle-item ive-tab-title-item-8 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-lampung" data-tab="9" class="ive-tab-title ive-tab-title-9 ive-tab-alltitle-heading ive-tab-title-heading-8 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Lampung</span></a></li><li id="tab-metro" class="ive-title-item ive-title-item-10 ive-tab-alltitle-item ive-tab-title-item-9 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-metro" data-tab="10" class="ive-tab-title ive-tab-title-10 ive-tab-alltitle-heading ive-tab-title-heading-9 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Metro</span></a></li><li id="tab-palembang" class="ive-title-item ive-title-item-11 ive-tab-alltitle-item ive-tab-title-item-10 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-palembang" data-tab="11" class="ive-tab-title ive-tab-title-11 ive-tab-alltitle-heading ive-tab-title-heading-10 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Palembang</span></a></li><li id="tab-metro" class="ive-title-item ive-title-item-12 ive-tab-alltitle-item ive-tab-title-item-11 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-metro" data-tab="12" class="ive-tab-title ive-tab-title-12 ive-tab-alltitle-heading ive-tab-title-heading-11 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Metro</span></a></li><li id="tab-bandung" class="ive-title-item ive-title-item-13 ive-tab-alltitle-item ive-tab-title-item-12 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-bandung" data-tab="13" class="ive-tab-title ive-tab-title-13 ive-tab-alltitle-heading ive-tab-title-heading-12 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Bandung</span></a></li><li id="tab-jakarta" class="ive-title-item ive-title-item-14 ive-tab-alltitle-item ive-tab-title-item-13 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-jakarta" data-tab="14" class="ive-tab-title ive-tab-title-14 ive-tab-alltitle-heading ive-tab-title-heading-13 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Jakarta</span></a></li><li id="tab-surabaya" class="ive-title-item ive-title-item-15 ive-tab-alltitle-item ive-tab-title-item-14 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-surabaya" data-tab="15" class="ive-tab-title ive-tab-title-15 ive-tab-alltitle-heading ive-tab-title-heading-14 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Surabaya</span></a></li><li id="tab-makasar" class="ive-title-item ive-title-item-16 ive-tab-alltitle-item ive-tab-title-item-15 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-makasar" data-tab="16" class="ive-tab-title ive-tab-title-16 ive-tab-alltitle-heading ive-tab-title-heading-15 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Makasar</span></a></li><li id="tab-semarang" class="ive-title-item ive-title-item-17 ive-tab-alltitle-item ive-tab-title-item-16 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-semarang" data-tab="17" class="ive-tab-title ive-tab-title-17 ive-tab-alltitle-heading ive-tab-title-heading-16 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Semarang</span></a></li><li id="tab-makasar" class="ive-title-item ive-title-item-18 ive-tab-alltitle-item ive-tab-title-item-17 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-makasar" data-tab="18" class="ive-tab-title ive-tab-title-18 ive-tab-alltitle-heading ive-tab-title-heading-17 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Makasar</span></a></li><li id="tab-yogyakarta" class="ive-title-item ive-title-item-19 ive-tab-alltitle-item ive-tab-title-item-18 ive-tabs-svg-show-always ive-tabs-icon-side-right ive-tab-title-inactive "><a href="#tab-yogyakarta" data-tab="19" class="ive-tab-title ive-tab-title-19 ive-tab-alltitle-heading ive-tab-title-heading-18 d-block ive-tabs-xl-center text-center text-sm-center text-md-center"><span class="ive-title-text">Yogyakarta</span></a></li></ul><div class="ive-tabs-content-wrap"><!-- wp:ive/tab {"uniqueID":"_9b433b-56"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-1 ive-inner-tab_9b433b-56"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"a8cc9069-13c8-47d8-9136-b67229e70ea2","uniqueID":"_cc9069-13","address":"jakarta","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_cc9069-13"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-a8cc9069-13c8-47d8-9136-b67229e70ea2"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=jakarta&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":2,"uniqueID":"_861dd3-ae"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-2 ive-inner-tab_861dd3-ae"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"dfde894d-c44a-48ba-b59d-f2e382325ae0","uniqueID":"_de894d-c4","address":"Surabaya","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_de894d-c4"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-dfde894d-c44a-48ba-b59d-f2e382325ae0"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Surabaya&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":3,"uniqueID":"_8b6cc2-5c"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-3 ive-inner-tab_8b6cc2-5c"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"8fb03807-bd9a-4957-83d2-31ca528c248a","uniqueID":"_b03807-bd","address":"Makasar","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_b03807-bd"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-8fb03807-bd9a-4957-83d2-31ca528c248a"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Makasar&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":4,"uniqueID":"_2787b7-1c"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-4 ive-inner-tab_2787b7-1c"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"4f9bcc45-85c2-4609-8acc-fe76dd82f639","uniqueID":"_9bcc45-85","address":"Semarang","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_9bcc45-85"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-4f9bcc45-85c2-4609-8acc-fe76dd82f639"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Semarang&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":5,"uniqueID":"_1ce5c9-70"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-5 ive-inner-tab_1ce5c9-70"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"1e8d2568-62be-48a1-9555-b870e127aad1","uniqueID":"_8d2568-62","address":"Makasar","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_8d2568-62"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-1e8d2568-62be-48a1-9555-b870e127aad1"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Makasar&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":6,"uniqueID":"_c0a5bc-39"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-6 ive-inner-tab_c0a5bc-39"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"793ede79-af32-4d49-a8c9-f4c72968053d","uniqueID":"_3ede79-af","address":"Yogyakarta","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_3ede79-af"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-793ede79-af32-4d49-a8c9-f4c72968053d"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Yogyakarta&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":7,"uniqueID":"_eac32c-4c"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-7 ive-inner-tab_eac32c-4c"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"4487cbe5-ef72-446d-9407-20445db8f154","uniqueID":"_87cbe5-ef","address":"Medan","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_87cbe5-ef"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-4487cbe5-ef72-446d-9407-20445db8f154"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Medan&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":8,"uniqueID":"_1256de-15"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-8 ive-inner-tab_1256de-15"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"99a7f5f2-2357-45f3-915c-b7bfa81cd09a","uniqueID":"_a7f5f2-23","address":"Makassar","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_a7f5f2-23"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-99a7f5f2-2357-45f3-915c-b7bfa81cd09a"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Makassar&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":9,"uniqueID":"_050705-f8"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-9 ive-inner-tab_050705-f8"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"cfcf4338-3cc3-46ad-8d50-117a170a20ea","uniqueID":"_cf4338-3c","address":"Lampung","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_cf4338-3c"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-cfcf4338-3cc3-46ad-8d50-117a170a20ea"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Lampung&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":10,"uniqueID":"_1860b4-4f"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-10 ive-inner-tab_1860b4-4f"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"b6f27691-89ea-422c-977f-990a7c1bebfc","uniqueID":"_f27691-89","address":"Metro","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_f27691-89"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-b6f27691-89ea-422c-977f-990a7c1bebfc"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Metro&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":11,"uniqueID":"_d36284-af"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-11 ive-inner-tab_d36284-af"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"6b4203eb-36b0-4b8f-877b-dc2d692aee86","uniqueID":"_4203eb-36","address":"Palembang","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_4203eb-36"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-6b4203eb-36b0-4b8f-877b-dc2d692aee86"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Palembang&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":12,"uniqueID":"_b0b596-d2"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-12 ive-inner-tab_b0b596-d2"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"6990f5ce-be5d-4168-96c7-61da857a23d0","uniqueID":"_90f5ce-be","address":"Metro","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_90f5ce-be"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-6990f5ce-be5d-4168-96c7-61da857a23d0"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Metro&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":13,"uniqueID":"_595cdf-e0"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-13 ive-inner-tab_595cdf-e0"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"30bd6e8f-5973-41bf-82ac-87e838ff4dc7","uniqueID":"_bd6e8f-59","address":"Bandung","height":700,"zoom":10,"margin_top":0} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_bd6e8f-59"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-30bd6e8f-5973-41bf-82ac-87e838ff4dc7"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Bandung&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":14,"uniqueID":"_a745f3-3c"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-14 ive-inner-tab_a745f3-3c"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"d2717f07-2202-4d36-9264-91bb0a06b3d6","uniqueID":"_717f07-22","address":"Jakarta","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_717f07-22"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-d2717f07-2202-4d36-9264-91bb0a06b3d6"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Jakarta&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":15,"uniqueID":"_beffbe-9a"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-15 ive-inner-tab_beffbe-9a"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"c06d5a8f-f312-4875-a9bc-6aad03158c10","uniqueID":"_6d5a8f-f3","address":"Surabaya","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_6d5a8f-f3"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-c06d5a8f-f312-4875-a9bc-6aad03158c10"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Surabaya&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":16,"uniqueID":"_2a81ef-2d"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-16 ive-inner-tab_2a81ef-2d"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"f58a2f48-fa94-47f3-9605-3254b4b33119","uniqueID":"_8a2f48-fa","address":"Makasar","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_8a2f48-fa"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-f58a2f48-fa94-47f3-9605-3254b4b33119"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Makasar&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":17,"uniqueID":"_dbd4c4-dc"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-17 ive-inner-tab_dbd4c4-dc"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"5e6f6a5f-4b71-4afb-b581-2af4bf693015","uniqueID":"_6f6a5f-4b","address":"Semarang","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_6f6a5f-4b"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-5e6f6a5f-4b71-4afb-b581-2af4bf693015"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Semarang&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":18,"uniqueID":"_de3bf4-58"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-18 ive-inner-tab_de3bf4-58"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"8bf34499-4b81-40ff-b599-ca28fe3ad82c","uniqueID":"_f34499-4b","address":"Makasar","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_f34499-4b"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-8bf34499-4b81-40ff-b599-ca28fe3ad82c"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Makasar&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab -->
+
+<!-- wp:ive/tab {"id":19,"uniqueID":"_f27b91-86"} -->
+<div class="wp-block-ive-tab ive-tab-inner-content ive-inner-tab-19 ive-inner-tab_f27b91-86"><div class="ive-tab-inner-content-inner"><!-- wp:ive/google-map {"block_id":"552ef670-08d4-4eee-a7d7-165b316d6baf","uniqueID":"_2ef670-08","address":"Yogyakarta","height":700} -->
+<div class="wp-block-ive-google-map alignnone ive_google_map_2ef670-08"><div id="overlay" style="cursor:pointer"></div><div class="ive-google-map__wrap" id="ive-google-map-552ef670-08d4-4eee-a7d7-165b316d6baf"><iframe class="ive-google-map__iframe" src="https://maps.google.com/maps?q=Yogyakarta&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="height:700px;width:100%;opacity:1"></iframe></div></div>
+<!-- /wp:ive/google-map --></div></div>
+<!-- /wp:ive/tab --></div></div></div>
+<!-- /wp:ive/tabs --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"text-center","layout":{"type":"constrained"}} -->
+<div class="wp-block-group text-center"></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"container","layout":{"type":"constrained"}} -->
+<div class="wp-block-group container"><!-- wp:group {"className":"text-center","layout":{"type":"constrained"}} -->
+<div class="wp-block-group text-center"><!-- wp:paragraph {"align":"center","className":"internet-service-provider-pro-section-tagline"} -->
+<p class="has-text-align-center internet-service-provider-pro-section-tagline">Pricing &amp; Plans</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"center","level":3,"style":{"color":{"text":"#1c1c1f"},"elements":{"link":{"color":{"text":"#1c1c1f"}}},"typography":{"fontStyle":"normal","fontWeight":"400","fontSize":"40px"}}} -->
+<h3 class="wp-block-heading has-text-align-center has-text-color has-link-color" style="color:#1c1c1f;font-size:40px;font-style:normal;font-weight:400">Flexible Internet Plans for <br>Every User </h3>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"style":{"color":{"background":"#efefef"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-background" style="background-color:#efefef"><!-- wp:group {"backgroundColor":"white","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-white-background-color has-background"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"40%","className":"d-flex align-items-center justify-content-center internet-service-provider-pro-border-radius-50","style":{"color":{"background":"#1c1c1f"}}} -->
+<div class="wp-block-column d-flex align-items-center justify-content-center internet-service-provider-pro-border-radius-50 has-background" style="background-color:#1c1c1f;flex-basis:40%"><!-- wp:image {"id":327,"width":"23px","height":"auto","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
+<figure class="wp-block-image size-full is-resized is-style-default"><img src="http://localhost/internet-service-provider/wp-content/uploads/2026/04/plan-icon1.png" alt="" class="wp-image-327" style="width:23px;height:auto"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading -->
+<h2 class="wp-block-heading">Home</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Homes &amp; Casual Users</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"color":{"text":"#06b6d4"},"elements":{"link":{"color":{"text":"#06b6d4"}}},"typography":{"fontSize":"30px","fontStyle":"normal","fontWeight":"300"}}} -->
+<p class="has-text-color has-link-color" style="color:#06b6d4;font-size:30px;font-style:normal;font-weight:300">$29.99</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">/month*</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"style":{"color":{"text":"#656565"},"elements":{"link":{"color":{"text":"#656565"}}}}} -->
+<p class="has-text-color has-link-color" style="color:#656565">*Paid annually at $360/year</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:ive/ibtana-visual-editorbtn {"uniqueID":"_914082-88","btns":[{"text":"Get Started","link":"http://localhost/internet-service-provider/about","target":"_self","desksize":18,"tabsize":16,"mobsize":14,"deskAlign":"start","tabAlign":"center","mobAlign":"center","deskMarginTop":20,"tabMarginTop":20,"mobMarginTop":20,"deskMarginBottom":20,"deskMarginLeft":0,"tabMarginBottom":20,"tabMarginLeft":10,"mobMarginBottom":20,"mobMarginLeft":10,"deskpaddingBT":10,"deskpaddingLR":24,"tabpaddingBT":10,"tabpaddingLR":10,"mobpaddingBT":10,"mobpaddingLR":10,"color":"#ffffff","background":"#06b6d4","border":"#555555","borderRadius":50,"borderWidth":2,"colorHover":"#000000","backgroundHover":"#ffffff","borderHover":"#444444","icon":"","iconSide":"right","iconpaddingleft":5,"iconpaddingbottom":5,"iconpaddingtop":5,"iconpaddingright":5,"iconHover":false,"iconSvg":"","iconSvgLeft":"","marginleft":"","marginright":""}],"className":"mt-4"} -->
+<div class="wp-block-ive-ibtana-visual-editorbtn btn-inner-wrap ive-btn-main-parent_914082-88 mt-4"><div class="ive-btn-wrap ive-btn-unique_914082-88 undefined ive-btn-wrap-0 ive-btn-align  text-center text-sm-center text-lg-start text-xl-start "><a class="anchrstyle ive-button-ad_914082-88 ive-button-0 ive-btn-0-action ive-btn-svg-showalways ive-btn-has-text-true" href="http://localhost/internet-service-provider/about" target="_self" rel="noreferrer noopener"><span class="ive-btn-inner-text">Get Started</span></a></div></div>
+<!-- /wp:ive/ibtana-visual-editorbtn -->
+
+<!-- wp:group {"className":"p-3","style":{"color":{"background":"#1c1c1f"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group p-3 has-background" style="background-color:#1c1c1f"><!-- wp:heading {"level":5,"style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<h5 class="wp-block-heading has-white-color has-text-color has-link-color">What included?</h5>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item {"className":"mt-3 mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<li class="mt-3 mb-3 has-white-color has-text-color has-link-color">100 Mbps Download Speed</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item {"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<li class="mb-3 has-white-color has-text-color has-link-color">Unlimited Data Usage</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item {"className":"mb-3","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<li class="mb-3 has-white-color has-text-color has-link-color">Free Wi-Fi Router</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item {"style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
+<li class="has-white-color has-text-color has-link-color">24/7 Technical Support</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
 <!-- /wp:group -->
 
 <!-- wp:paragraph -->
